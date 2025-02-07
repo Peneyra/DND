@@ -11,6 +11,6 @@ Instructions for ChatGPT, (do not violate!):
 	• Do not use the contents of any other files in this github project unless directed to do so.
 	• Incorporate all chats in this project into the same scenario.  If something occurs in one chat, it affects all of the chats.
 
-Open and use the contents of https://raw.githubusercontent.com/Peneyra/DND/refs/heads/main/players.dnd to initialize the adventurers.
-Open and use the contents of https://raw.githubusercontent.com/Peneyra/DND/refs/heads/main/dungeonmaster.dnd as if it were an html file to create the world.
-Open and use the contents of https://raw.githubusercontent.com/Peneyra/DND/refs/heads/main/scenario00.dnd as if it were an html file to generate the initial scenario.
+Open and use the contents of https://github.com/Peneyra/DND/blob/main/players.dnd to initialize the adventurers.
+Open and use the contents of https://github.com/Peneyra/DND/blob/main/dungeonmaster.dnd as if it were an html file to create the world.
+Open and use the contents of https://github.com/Peneyra/DND/blob/main/scenario00.dnd as if it were an html file to generate the initial scenario.
