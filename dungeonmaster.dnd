@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dungeon Master Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dungeon Master Notes</h1>
+
+        <div class="section">
+            <h2>Scenario 00: Introduction</h2>
+            <p>The adventurer wakes up in Ye Ol' Fiddle without knowing why they are there. They were found unconscious by Elias in the sailors' quarters. If they have no backstory, they suffer from amnesia. Otherwise, they were in a fight the night before.</p>
+            <p>The adventurer starts with a dagger, ragged clothes, and a worn backpack, but their belongings were stolen. They are hungry and must either work for food or hunt rats in the cellar.</p>
+            <p>Two groups discuss rumors:</p>
+            <ul>
+                <li>By the door: Foreigners bought a warehouse and fired local workers.</li>
+                <li>By the stage: Bandits attacked a barge but were repelled.</li>
+            </ul>
+            <p>If the adventurer follows the first group, open <strong>Scenario 01</strong>. If they follow the second, open <strong>Scenario 02</strong>.</p>
+        </div>
+
+        <div class="section">
+            <h2>Scenario 01: The Suspicious Warehouse</h2>
+            <p><strong>Location:</strong> Port Dunwyd - Barge Docks</p>
+            <p><strong>Background:</strong> Councilor Astrid Haavik secretly acquired a warehouse to smuggle illegal magical items, bypassing Arcanum regulations. She dismissed local workers, replaced them with controlled labor, and hired corrupt police officials to secure the area.</p>
+            <h3>Key NPCs:</h3>
+            <ul>
+                <li><strong>Captain Darius Locke:</strong> Corrupt police officer managing security, motivated by greed.</li>
+                <li><strong>Einar Voss:</strong> Overseer, extremely loyal to Astrid, but feared by workers.</li>
+                <li><strong>Astrid Haavik:</strong> High-End Commerce representative, orchestrating the smuggling operation.</li>
+            </ul>
+            <h3>Security Details:</h3>
+            <ul>
+                <li>16 guards operate in shifts, wearing unmarked uniforms.</li>
+                <li>They prioritize keeping people out rather than securing the inside.</li>
+                <li>Workers are isolated inside the warehouse, hinting at coercion or forced labor.</li>
+            </ul>
+            <h3>Loot:</h3>
+            <ul>
+                <li>Basic crates contain low-value vanity items and minor health potions.</li>
+                <li>The <strong>Gilded Reliquary</strong> contains a <strong>Staff of Charming</strong> and coded shipping documents incriminating Astrid.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Scenario 02</h2>
+            <p><strong>Content:</strong> (The document contained inappropriate language and was left blank.)</p>
+        </div>
+
+        <div class="section">
+            <h2>World Mechanics</h2>
+            <p>Magic is categorized into:</p>
+            <ul>
+                <li><strong>Physical Magic:</strong> Enhances physical abilities but leads to exhaustion.</li>
+                <li><strong>Arcane Magic:</strong> Draws from nature/emotions and requires innate talent.</li>
+                <li><strong>Pious Magic:</strong> Comes from divine favor and can be revoked.</li>
+            </ul>
+            <p>The city's economy follows a standardized coin system (cp, sp, gp, pp) with heavy reliance on trade.</p>
+        </div>
+
+        <div class="section">
+            <h2>Port Dunwyd: Factions & Governance</h2>
+            <p>The city is ruled by a rotating <strong>Council of Five</strong>, each faction controlling a different aspect of governance:</p>
+            <ul>
+                <li><strong>Sentinel Authority:</strong> Military and law enforcement.</li>
+                <li><strong>Trade Consortium:</strong> Merchant interests, currently in power.</li>
+                <li><strong>Obsidian Veil:</strong> Arcanum, controlling knowledge and suppressing religion.</li>
+                <li><strong>Gilded Dominion:</strong> Aristocracy and wealth.</li>
+                <li><strong>Artisan Assembly:</strong> Craftsmen and industry.</li>
+            </ul>
+            <p>Each faction has its own hierarchy, internal conflicts, and hidden agendas, making political maneuvering a key element of the game.</p>
+        </div>
+
+        <div class="section">
+            <h2>Ye Ol' Fiddle Tavern</h2>
+            <p>A quiet retreat for laborers near the Barge Load Area.</p>
+            <h3>Key Characters:</h3>
+            <ul>
+                <li><strong>Corbin Duskwood:</strong> Gruff owner, dislikes most patrons but takes a liking to adventurers.</li>
+                <li><strong>Elias "Strings" Marrow:</strong> Fiddle player, knows rumors but speaks little.</li>
+            </ul>
+            <h3>Services:</h3>
+            <ul>
+                <li><strong>Food & Drink:</strong> Bitter Ale, River Rum, Fish Stew.</li>
+                <li><strong>Lodging:</strong> Shared common rooms, small private rooms, and long-term quarters.</li>
+                <li><strong>Stables:</strong> Basic horse lodging.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
