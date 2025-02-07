@@ -32,5 +32,5 @@ class player:
     self.classtype = "rogue"
     self.cantrips = []
     self.spells = []
-    
-  
+
+player1 = player("Tod")
