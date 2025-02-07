@@ -14,3 +14,5 @@ Instructions for ChatGPT, (do not violate!):
 Open and use the contents of https://raw.githubusercontent.com/Peneyra/DND/refs/heads/main/players.dnd to initialize the adventurers.
 Open and use the contents of https://raw.githubusercontent.com/Peneyra/DND/refs/heads/main/dungeonmaster.dnd as if it were an html file to create the world.
 Open and use the contents of https://raw.githubusercontent.com/Peneyra/DND/refs/heads/main/scenario00.dnd as if it were an html file to generate the initial scenario.
+
+start the game with no further prompting
