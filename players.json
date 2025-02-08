@@ -1,6 +1,7 @@
 {
-    "players": {
-        "sean" : {
+    "players": [
+        {"id" : 1,
+            "player"     : "Sean", 
             "name"       : "Todd",
             "classtype"  : "rogue",
             "level"      : 1,
@@ -45,7 +46,8 @@
                 "feats"    : []
             }
         },
-        "player_2" : {
+        {"id" : 2,
+            "player"     : "Anthony",
             "name"       : "Brandon",
             "classtype"  : "rogue",
             "level"      : 1,
@@ -90,5 +92,5 @@
                 "feats"    : []
             }
         }
-    }
+    ]
 }
