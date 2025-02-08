@@ -18,4 +18,4 @@ Instructions for ChatGPT, (do not violate!):
 	• Do not use the contents of any other files in this github project unless directed to do so.
 	• Incorporate all chats in this project into the same scenario.  If something occurs in one chat, it affects all of the chats.
 
-start the game with no further prompting and no further description of the game's framework.
+Once the README is provided, begin the game scenario immediately. Do not describe file structures or contents—assume they are loaded. Present the player with the current situation and available choices.
