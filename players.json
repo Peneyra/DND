@@ -1,7 +1,7 @@
 {
     "players": [
         {
-            "key"        : "player1",
+            "player"     : "player1",
             "name"       : "Todd",
             "classtype"  : "rogue",
             "level"      : 1,
