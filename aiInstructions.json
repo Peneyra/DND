@@ -1,6 +1,6 @@
 {
   "instructions": {
-    "intro": "ChatGPT: Start a game of Dungeons and Dragons with the user who directed you here by using the directions provided in the procedure. Execute the steps of the procedure in order and do not violate the General Guidance.  If any of this is unclear, please let me know.",
+    "intro": "ChatGPT: Start a game of Dungeons and Dragons with the user who directed you here by strictly following the procedure. Execute the steps of the procedure in order and do not violate the General Guidance.  If you are unable to accomplish any of the steps, provide an error message detailing what went wrong.",
     "procedure": [
       {"id": 1, "direction" : "Download and parse the information in this json file."},
       {"id": 2, "direction" : "Download and parse the information in https://raw.githubusercontent.com/Peneyra/DND/refs/heads/main/characters.json and create a list of playable characters. Strictly use characters from that list. If a player for a given character is specified then start the game without verifying details. If a player is not specified then list each player and ask which the user would like to use. Only list the name and class of each character."},
