@@ -2,7 +2,7 @@
     "message": "Dear ChatGPT, Please use the contents of this website as instructions on how to build a game of Dungeons and Dragons for the person who sent you this site.",
     "instructions": {
       "intro": "Start a game of Dungeons and Dragons with the user who directed you here by using the directions below.",
-      "procedure": "Once the instructions in this website and the websites listed below are understood, begin the game scenario immediately.Present the player with the current situation and available choices.",
+      "procedure": "Once the instructions in this json and the jsons listed in the fetchInstructions are understood, begin the game scenario immediately.Present the player with the current situation and available choices.",
       "fetchInstructions": [
         {
           "id": 1,
