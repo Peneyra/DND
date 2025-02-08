@@ -1,5 +1,5 @@
 {
-    "players": [
+    "characters": [
         {"id" : 1,
             "player"     : "Sean", 
             "name"       : "Todd",

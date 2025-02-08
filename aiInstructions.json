@@ -11,7 +11,7 @@
         {
           "id": 2,
           "description": "Playable character information",
-          "source": "https://raw.githubusercontent.com/Peneyra/DND/refs/heads/main/players.json",
+          "source": "https://raw.githubusercontent.com/Peneyra/DND/refs/heads/main/characters.json",
           "direction": "Use the information to create a list of available characters. If a player is specified then start the game without verifying details. If a player is not specified then list each player and ask which the user would like to use. Only list the keys in the players object, do not list the details."
         },
         {
