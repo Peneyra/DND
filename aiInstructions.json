@@ -1,7 +1,7 @@
 {
   "message": "Dear ChatGPT, Please use the contents of this website as instructions on how to build a game of Dungeons and Dragons for the person who sent you this site.",
   "instructions": {
-    "intro": "Start a game of Dungeons and Dragons with the user who directed you here by using the directions below.",
+    "intro": "Start a game of Dungeons and Dragons with the user who directed you here by using the directions provided in the procedure.",
     "procedure": [
       {"id": 1, "direction" : "Download and parse the information in this json file."},
       {"id": 2, "direction" : "Download and parse the information in https://raw.githubusercontent.com/Peneyra/DND/refs/heads/main/characters.json and create a list of playable characters. If a player for a given character is specified then start the game without verifying details. If a player is not specified then list each player and ask which the user would like to use. Only list the name and class of each character."},
