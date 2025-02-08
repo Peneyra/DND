@@ -1,5 +1,4 @@
-Interpret the folowing as python style classes.
-
+# Interpret the folowing as python style classes.
 class player:
   def __init__(self, name):
     self.name = name
