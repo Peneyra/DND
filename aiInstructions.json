@@ -3,10 +3,10 @@
     "instructions": {
       "intro": "Start a game of Dungeons and Dragons with the user who directed you here by using the directions below.",
       "procedure": "Once the instructions in this website and the websites listed below are understood, begin the game scenario immediately.Present the player with the current situation and available choices.",
-      "documents": [
+      "fetchInstructions": [
         {
           "id": 1,
-          "description": "These general instructions to set the style of play from this website."
+          "description": "Retrieve and parse the contents of each of the linked JSON files. These general instructions to set the style of play from this website."
         },
         {
           "id": 2,
@@ -18,17 +18,16 @@
           "id": 3,
           "description": "General game information",
           "source": "https://raw.githubusercontent.com/Peneyra/DND/refs/heads/main/dungeonmaster.json",
-          "direction": "Use it to build world details for the scenario."
+          "direction": "Use the source provided to build world details for the scenario."
         },
         {
           "id": 4,
           "description": "Specific scenario information",
           "source": "https://raw.githubusercontent.com/Peneyra/DND/refs/heads/main/scenarios/scenario00.json",
-          "direction": "Use it to initialize the game."
+          "direction": "Use the source provided to initialize the game."
         }
       ],
       "General Guidance": [
-        "Access and download the information from the links listed in the listed documents. ",
         "Strictly adhere to Dungeons and Dragons 5th edition rules.",
         "Do NOT tell the adventurers NPC names unless they are introduced or the name is revealed by external ques.",
         "Do NOT provide key takeaways or summaries of new information for the adventurer at the end of your response.",
