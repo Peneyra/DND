@@ -1,0 +1,57 @@
+{
+    "Types of Magic": {
+      "Physical Magic": {
+        "Description": "Governs abilities triggered by and affecting physical action.",
+        "Details": [
+          "Requires training, and anyone can perform it with enough practice.",
+          "Draws upon the user’s stamina, physical prowess, or trained techniques.",
+          "Often manifests through enhanced strength, speed, resilience, or precision.",
+          "May include techniques like kinetic redirection, internal energy reinforcement, or heightened reflexes.",
+          "Overuse can lead to exhaustion, physical strain, or bodily harm."
+        ]
+      },
+      "Arcane Magic": {
+        "Description": "Draws on nature or emotion to manifest effects.",
+        "Details": [
+          "Requires innate magical talent. Everyone is born with some level of arcane potential, but only a rare few have enough to harness it.",
+          "Can be channeled through rituals, emotions, or environmental influences.",
+          "May include elemental manipulation, illusions, telekinesis, or energy projection.",
+          "Risks include magical burnout, emotional instability, or unintended environmental consequences."
+        ]
+      },
+      "Pious Magic": {
+        "Description": "Harnesses the favor of the gods to execute divine power.",
+        "Details": [
+          "Can be learned and used through various methods, including rituals, divine contracts, or devotion.",
+          "Used for healing, smiting foes, blessings, curses, and spiritual manifestations.",
+          "Requires the wielder to uphold the tenets of their deity.",
+          "Can be revoked or diminished if the caster falls out of favor with their god.",
+          "Pious magic is subject to the whim of the god that powers it. If a person loses favor with that god, they generally lose the power to cast a particular spell."
+        ]
+      }
+    },
+    "Spellcasting Mechanics": {
+      "Details": [
+        "Cantrips do not require a spell slot.",
+        "All other spells require a spell slot of equal or higher level than the spell being cast.",
+        "Spell slots can be replenished through specific abilities, potions, or resting.",
+        "Some abilities allow spellcasting without consuming a spell slot.",
+        "Rituals can be used to cast certain spells without using a spell slot but require significant time to perform."
+      ]
+    },
+    "Casting & Limitations": {
+      "Details": [
+        "Spell Execution: Magic can require incantations, gestures, focus, or catalysts (e.g., runes, relics, or specific actions).",
+        "Energy Cost: Magic use may lead to exhaustion, mental fatigue, or divine scrutiny.",
+        "Replenishment: Rest, meditation, rituals, or divine communion are required to restore magical strength."
+      ]
+    },
+    "Interactions & Balance": {
+      "Details": [
+        "Different magic types can sometimes be combined, though with great difficulty or risk.",
+        "Rivalries exist between practitioners, particularly between the Arcane and Pious factions.",
+        "Certain regions, cultures, or individuals may have more affinity for specific magic types, affecting accessibility and mastery."
+      ]
+    },
+    "Conclusion": "This magic system provides a structured yet flexible framework for diverse magical expressions and conflicts within the world."
+  }  

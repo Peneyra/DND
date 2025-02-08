@@ -1,0 +1,313 @@
+{"World": {
+    "Magic": {
+        "Types of Magic": {
+        "Physical Magic": {
+            "Description": "Governs abilities triggered by and affecting physical action.",
+            "Details": [
+            "Requires training, and anyone can perform it with enough practice.",
+            "Draws upon the user’s stamina, physical prowess, or trained techniques.",
+            "Often manifests through enhanced strength, speed, resilience, or precision.",
+            "May include techniques like kinetic redirection, internal energy reinforcement, or heightened reflexes.",
+            "Overuse can lead to exhaustion, physical strain, or bodily harm."
+            ]
+        },
+        "Arcane Magic": {
+            "Description": "Draws on nature or emotion to manifest effects.",
+            "Details": [
+            "Requires innate magical talent. Everyone is born with some level of arcane potential, but only a rare few have enough to harness it.",
+            "Can be channeled through rituals, emotions, or environmental influences.",
+            "May include elemental manipulation, illusions, telekinesis, or energy projection.",
+            "Risks include magical burnout, emotional instability, or unintended environmental consequences."
+            ]
+        },
+        "Pious Magic": {
+            "Description": "Harnesses the favor of the gods to execute divine power.",
+            "Details": [
+            "Can be learned and used through various methods, including rituals, divine contracts, or devotion.",
+            "Used for healing, smiting foes, blessings, curses, and spiritual manifestations.",
+            "Requires the wielder to uphold the tenets of their deity.",
+            "Can be revoked or diminished if the caster falls out of favor with their god.",
+            "Pious magic is subject to the whim of the god that powers it. If a person loses favor with that god, they generally lose the power to cast a particular spell."
+            ]
+        }
+        },
+        "Spellcasting Mechanics": {
+        "Details": [
+            "Cantrips do not require a spell slot.",
+            "All other spells require a spell slot of equal or higher level than the spell being cast.",
+            "Spell slots can be replenished through specific abilities, potions, or resting.",
+            "Some abilities allow spellcasting without consuming a spell slot.",
+            "Rituals can be used to cast certain spells without using a spell slot but require significant time to perform."
+        ]
+        },
+        "Casting & Limitations": {
+        "Details": [
+            "Spell Execution: Magic can require incantations, gestures, focus, or catalysts (e.g., runes, relics, or specific actions).",
+            "Energy Cost: Magic use may lead to exhaustion, mental fatigue, or divine scrutiny.",
+            "Replenishment: Rest, meditation, rituals, or divine communion are required to restore magical strength."
+        ]
+        },
+        "Interactions & Balance": {
+        "Details": [
+            "Different magic types can sometimes be combined, though with great difficulty or risk.",
+            "Rivalries exist between practitioners, particularly between the Arcane and Pious factions.",
+            "Certain regions, cultures, or individuals may have more affinity for specific magic types, affecting accessibility and mastery."
+        ]
+        },
+        "Conclusion": "This magic system provides a structured yet flexible framework for diverse magical expressions and conflicts within the world."
+    },
+    "Religion": {
+        "The Pantheon": {
+        "Major Gods of the Pantheon": {
+            "Asmodeus": {
+            "Alignment": "Lawful Evil",
+            "Description": "God of Tyranny and Domination, ruler of the Nine Hells."
+            },
+            "Avandra": {
+            "Alignment": "Chaotic Good",
+            "Description": "Goddess of Change, Luck, and Travel, patron of halflings."
+            },
+            "Bahamut": {
+            "Alignment": "Lawful Good",
+            "Description": "Dragon god of Justice, Protection, and Nobility, patron of metallic dragons and good dragonborn."
+            },
+            "Bane": {
+            "Alignment": "Lawful Evil",
+            "Description": "God of War and Conquest, revered by goblinoids."
+            },
+            "Corellon": {
+            "Alignment": "Chaotic Good",
+            "Description": "Elven god of Beauty, Art, Magic, and the Fey, seasonal god of Spring, patron of eladrin."
+            },
+            "Erathis": {
+            "Alignment": "Lawful Neutral",
+            "Description": "Goddess of Civilization, Inventions, and Law."
+            },
+            "Gruumsh": {
+            "Alignment": "Chaotic Evil",
+            "Description": "Orcish god of Slaughter and Destruction, patron of orcs."
+            },
+            "Ioun": {
+            "Alignment": "Neutral",
+            "Description": "Goddess of Knowledge, Skill, and Prophecy."
+            },
+            "Kord": {
+            "Alignment": "Chaotic Neutral",
+            "Description": "God of Storms, Battle, and Strength."
+            },
+            "Lolth": {
+            "Alignment": "Chaotic Evil",
+            "Description": "Drow goddess of Shadow and Lies, patron of drow. She has severed her ties to the compact of heaven."
+            },
+            "Melora": {
+            "Alignment": "Neutral",
+            "Description": "Goddess of Wilderness, Nature, and the Sea."
+            },
+            "Moradin": {
+            "Alignment": "Lawful Good",
+            "Description": "Dwarven god of Family, Community, and Creation, patron of dwarves."
+            },
+            "Pelor": {
+            "Alignment": "Neutral Good",
+            "Description": "God of the Sun, Agriculture, and Time, seasonal god of Summer."
+            },
+            "Raven Queen": {
+            "Alignment": "Lawful Neutral",
+            "Description": "Goddess of Death, Fate, and Winter, youngest member of the pantheon, having usurped the previous god of death."
+            },
+            "Sehanine": {
+            "Alignment": "Chaotic Good",
+            "Description": "Elven goddess of Illusion, Love, and the Moon, seasonal goddess of Autumn, patron of wood elves."
+            },
+            "Tharizdun": {
+            "Alignment": "Chaotic Evil",
+            "Description": "The Chained God, also known as the Elder Elemental Eye, a prisoner watched by the pantheon."
+            },
+            "Tiamat": {
+            "Alignment": "Lawful Evil",
+            "Description": "Dragon goddess of Greed and Envy, patron of chromatic dragons and evil dragonborn."
+            },
+            "Torog": {
+            "Alignment": "Neutral Evil",
+            "Description": "God of the Underdark."
+            },
+            "Vecna": {
+            "Alignment": "Neutral Evil",
+            "Description": "God of the Undead and Necromancy, the newest member of the pantheon."
+            },
+            "Zehir": {
+            "Alignment": "Chaotic Evil",
+            "Description": "God of Darkness and Poison, favored deity of the yuan-ti."
+            }
+        }
+        },
+        "Regional Worship and Divine Influence": {
+        "Description": "Religion is highly regional, with different areas tending to worship one or two gods exclusively.",
+        "Details": [
+            "The power of the gods is tied to their worshippers—the more influence a deity has in a region, the stronger they are there.",
+            "Some gods have dominant territories, while others have scattered followers across multiple lands."
+        ]
+        },
+        "Future Development": {
+        "Description": "Further symbols, secret religious practices, and potential conflicts will be introduced as adventurers explore the city’s religious landscape.",
+        "Details": [
+            "If adventurers express interest, more details on hidden iconography and religious factions may be revealed."
+        ]
+        }
+    },
+    "Economics": {
+        "Currency System": {
+          "Description": "The world operates on a standardized monetary system based on four primary coin types.",
+          "Coin Types": {
+            "Copper Pieces (cp)": "Used for small transactions, such as food, simple tools, and minor services.",
+            "Silver Pieces (sp)": "The common currency for everyday trade, covering meals, lodging, and labor wages.",
+            "Electrum Pieces (ep)": "Rarely used in everyday trade.",
+            "Gold Pieces (gp)": "The standard currency for larger transactions, such as land deals, fine goods, and high-end services.",
+            "Platinum Pieces (pp)": "Rarely used in everyday trade, reserved for major financial dealings, noble transactions, and high-end mercantile exchanges."
+          },
+          "Exchange Rates": {
+            "10 cp": "1 sp",
+            "5 sp": "1 ep",
+            "2 ep": "1 gp",
+            "10 gp": "1 pp"
+          }
+        },
+        "Coinage and Minting": {
+          "Description": "Each society and kingdom mints its own currency, featuring unique designs that reflect their culture, rulers, or historical events.",
+          "Details": [
+            "All coinage is uniform in weight, allowing for universal trade across regions.",
+            "While styles and symbols vary, the intrinsic value remains consistent, ensuring widespread acceptance."
+          ]
+        },
+        "Bartering and Trade Practices": {
+          "Description": "Bartering is more common in rural and frontier regions, where standardized currency is scarce and goods and services are often exchanged directly.",
+          "Details": [
+            "Hard currency dominates in highly populated areas, such as cities and trade hubs, where monetary transactions streamline commerce."
+          ]
+        },
+        "Banking and Credit Systems": {
+          "Description": "Most cities operate their own banking institutions, offering services such as secure storage of wealth, currency exchange, loans, and money lending.",
+          "Services": [
+            "Secure storage of wealth.",
+            "Currency exchange between regional mints.",
+            "Loans and financial agreements.",
+            "Money lending for trade and enterprise."
+          ],
+          "Credit Negotiation": "Cities also maintain delegates in other cities to negotiate credit regionally, allowing merchants and travelers to conduct business without carrying large sums of money."
+        },
+        "Trade and Commerce": {
+          "Description": "Trade is the backbone of economic activity, with various regions specializing in unique goods and commodities.",
+          "Regions": {
+            "Urban economies": "Thrive on manufacturing, skilled crafts, luxury goods, and financial services.",
+            "Rural economies": "Focus on agriculture, raw materials, and artisanal production.",
+            "Maritime and overland trade routes": "Connect distant regions, facilitating commerce and cultural exchange."
+          }
+        },
+        "Conclusion": {
+          "Description": "The economic framework of the world is diverse yet interconnected, balancing localized economies with global trade networks.",
+          "Details": [
+            "While bartering and regional currencies persist, the overarching monetary system ensures a level of economic stability and cross-border commerce."
+          ]
+        }
+      }
+},
+"Port Dunwyd": {
+    "Geography and Natural Defenses": {
+      "Description": "Port Dunwyd is divided by elevation and bordered by water on multiple sides. The river flows southward before merging with the ocean, forming a crucial trade artery. The western cliffs provide a natural barrier, while the southern coastline hosts the city's main harbor and industrial sectors.",
+      "Details": [
+        "Despite its prime location for trade, the land surrounding Port Dunwyd is rocky and arid, with scarce vegetation.",
+        "The city relies heavily on imported goods, and its wealth is built on maritime commerce rather than agriculture."
+      ]
+    },
+    "The Districts of Port Dunwyd": {
+      "Description": "Port Dunwyd is structured around seven key districts, shaped by trade, social hierarchy, and geography.",
+      "Districts": {
+        "The Grand Harbor (Ocean Vessels and Merchants)": {
+          "Details": [
+            "The beating heart of the city, where massive deep-water docks handle merchant ships from across the world.",
+            "Customs houses, warehouses, port services, and merchant guild halls dominate the district, ensuring that taxes and tariffs are collected.",
+            "Market Row, located just inland of the warehouses, is packed with traders, fishmongers, and exotic goods."
+          ]
+        },
+        "The Sailor’s Quarter (Rowdy Dockside District)": {
+          "Details": [
+            "Located just inland from the Grand Harbor, this district caters to sailors, dockworkers, and travelers.",
+            "Taverns, gambling dens, brothels, and cheap lodgings line the streets, making it a hub of nightlife and crime.",
+            "The city’s naval presence ensures order, though smuggling and illicit deals remain common."
+          ]
+        },
+        "The Craftsman’s District (Industry & Shipbuilding)": {
+          "Details": [
+            "Masons, blacksmiths, shipwrights, and artisans fuel the city’s economy.",
+            "Shipyards along the river construct and repair merchant vessels and warships.",
+            "Watermills harness the river’s current, providing power for production."
+          ]
+        },
+        "The University District (Center of Knowledge & Magic)": {
+          "Details": [
+            "The Mage’s Tower and Collegium serve as the city’s center of education, arcane study, and innovation.",
+            "Positioned between the Craftsman’s District and the Noble Quarter, it bridges practical skill and scholarly pursuit.",
+            "Alchemists, scholars, and engineers work on maritime advancements and technological innovations."
+          ]
+        },
+        "The Noble Quarter (Seat of the Aristocracy)": {
+          "Details": [
+            "Built on the highest natural ground east of the river, the Noble Quarter enjoys expansive views and fresh sea breezes.",
+            "Gated manors, lush courtyards, and private gardens showcase the wealth and influence of Port Dunwyd’s elite.",
+            "The Temple District, featuring the city’s grand cathedral, dominates the religious landscape."
+          ]
+        },
+        "The Barracks & Fortress (Military Stronghold atop the Cliffs)": {
+          "Details": [
+            "Strategically placed atop the cliffs, the city’s fortress commands an unobstructed view of the ocean and surrounding territory.",
+            "Naval watchtowers and cannon emplacements line the cliff’s edge, ensuring Port Dunwyd’s coastal defense.",
+            "The barracks house the city’s standing army, elite guards, and naval officers."
+          ]
+        },
+        "The Minor Northern Docks (Trade Hub for River Commerce)": {
+          "Details": [
+            "Positioned just north of where the river meets the ocean, this facility is a critical transit point for raw materials and agricultural goods.",
+            "River barges offload materials from upstream and take back manufactured goods.",
+            "This area is constantly bustling with laborers, cranes, and cargo shipments."
+          ]
+        }
+      }
+    },
+    "Infrastructure & Law Enforcement": {
+      "Details": [
+        "The Grand Causeway: The city’s main road, cutting through its heart and linking all districts.",
+        "Limited Bridges & Ferries: The river divides the city, with ferries as the primary mode of cross-city transport.",
+        "Walls & Fortifications: Northern and eastern walls protect against land-based threats. The cliffs and ocean provide natural defenses, requiring little fortification.",
+        "Police Stations: Scattered throughout the city, acting as local law enforcement hubs connected to the Barracks & Fortress. Maintain order in high-crime areas, particularly the Sailor’s Quarter and Market Row."
+      ]
+    },
+    "Religion": {
+      "General Religious Climate": {
+        "Details": [
+          "The Arcanum covertly suppresses religion while publicly maintaining neutrality.",
+          "Small, personal signs of religious devotion are tolerated, but organized worship is subtly undermined.",
+          "Most religious individuals bring their faith from their homelands and practice privately.",
+          "Divine magic is not outlawed, but those who use it openly may face scrutiny."
+        ]
+      },
+      "Religious Sites & Worship Practices": {
+        "Details": [
+          "Scattered Chapels: Small, inconspicuous places of worship exist, often doubling as community spaces.",
+          "Private Shrines: Many worshipers maintain small household altars.",
+          "Symbolic Graffiti & Hidden Icons: Religious symbols exist throughout the city, but their meaning is understood only by those who seek them."
+        ]
+      },
+      "The Cult of Tiamat": {
+        "Details": [
+          "The only significant underground religious faction in Port Dunwyd.",
+          "Shielded by an artifact imbued with Tiamat’s scales, preventing detection by the Arcanum.",
+          "Operates in the Underdocks, a ruined subterranean harbor used as a periodic meeting place for worshipers.",
+          "Members live as normal citizens, blending into everyday life while secretly plotting.",
+          "Their ultimate goal is to summon Tiamat to Port Dunwyd, unleashing destruction so they can rise to power from the ashes.",
+          "Mostly dormant for now, but carefully plotting in the shadows."
+        ]
+      }
+    },
+    "Conclusion": "Despite its rugged exterior, Port Dunwyd is a flourishing trade city, where merchants, scholars, and warriors mingle under the sea breeze. It is a city where wealth, power, and ambition clash—and only the strong thrive."
+  }
+}

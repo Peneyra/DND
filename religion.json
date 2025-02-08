@@ -1,0 +1,101 @@
+{
+    "The Pantheon": {
+    "Major Gods of the Pantheon": {
+        "Asmodeus": {
+        "Alignment": "Lawful Evil",
+        "Description": "God of Tyranny and Domination, ruler of the Nine Hells."
+        },
+        "Avandra": {
+        "Alignment": "Chaotic Good",
+        "Description": "Goddess of Change, Luck, and Travel, patron of halflings."
+        },
+        "Bahamut": {
+        "Alignment": "Lawful Good",
+        "Description": "Dragon god of Justice, Protection, and Nobility, patron of metallic dragons and good dragonborn."
+        },
+        "Bane": {
+        "Alignment": "Lawful Evil",
+        "Description": "God of War and Conquest, revered by goblinoids."
+        },
+        "Corellon": {
+        "Alignment": "Chaotic Good",
+        "Description": "Elven god of Beauty, Art, Magic, and the Fey, seasonal god of Spring, patron of eladrin."
+        },
+        "Erathis": {
+        "Alignment": "Lawful Neutral",
+        "Description": "Goddess of Civilization, Inventions, and Law."
+        },
+        "Gruumsh": {
+        "Alignment": "Chaotic Evil",
+        "Description": "Orcish god of Slaughter and Destruction, patron of orcs."
+        },
+        "Ioun": {
+        "Alignment": "Neutral",
+        "Description": "Goddess of Knowledge, Skill, and Prophecy."
+        },
+        "Kord": {
+        "Alignment": "Chaotic Neutral",
+        "Description": "God of Storms, Battle, and Strength."
+        },
+        "Lolth": {
+        "Alignment": "Chaotic Evil",
+        "Description": "Drow goddess of Shadow and Lies, patron of drow. She has severed her ties to the compact of heaven."
+        },
+        "Melora": {
+        "Alignment": "Neutral",
+        "Description": "Goddess of Wilderness, Nature, and the Sea."
+        },
+        "Moradin": {
+        "Alignment": "Lawful Good",
+        "Description": "Dwarven god of Family, Community, and Creation, patron of dwarves."
+        },
+        "Pelor": {
+        "Alignment": "Neutral Good",
+        "Description": "God of the Sun, Agriculture, and Time, seasonal god of Summer."
+        },
+        "Raven Queen": {
+        "Alignment": "Lawful Neutral",
+        "Description": "Goddess of Death, Fate, and Winter, youngest member of the pantheon, having usurped the previous god of death."
+        },
+        "Sehanine": {
+        "Alignment": "Chaotic Good",
+        "Description": "Elven goddess of Illusion, Love, and the Moon, seasonal goddess of Autumn, patron of wood elves."
+        },
+        "Tharizdun": {
+        "Alignment": "Chaotic Evil",
+        "Description": "The Chained God, also known as the Elder Elemental Eye, a prisoner watched by the pantheon."
+        },
+        "Tiamat": {
+        "Alignment": "Lawful Evil",
+        "Description": "Dragon goddess of Greed and Envy, patron of chromatic dragons and evil dragonborn."
+        },
+        "Torog": {
+        "Alignment": "Neutral Evil",
+        "Description": "God of the Underdark."
+        },
+        "Vecna": {
+        "Alignment": "Neutral Evil",
+        "Description": "God of the Undead and Necromancy, the newest member of the pantheon."
+        },
+        "Zehir": {
+        "Alignment": "Chaotic Evil",
+        "Description": "God of Darkness and Poison, favored deity of the yuan-ti."
+        }
+    }
+    },
+    "Regional Worship and Divine Influence": {
+    "Description": "Religion is highly regional, with different areas tending to worship one or two gods exclusively.",
+    "Details": [
+        "The power of the gods is tied to their worshippers—the more influence a deity has in a region, the stronger they are there.",
+        "Some gods have dominant territories, while others have scattered followers across multiple lands."
+    ]
+    },
+    "Future Development": {
+    "Description": "Further symbols, secret religious practices, and potential conflicts will be introduced as adventurers explore the city’s religious landscape.",
+    "Details": [
+        "If adventurers express interest, more details on hidden iconography and religious factions may be revealed."
+    ]
+    }
+}
+  
+  

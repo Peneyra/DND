@@ -1,0 +1,53 @@
+{
+    "title": "The Awakening",
+    "startingLocation": "Ye Ol' Fiddle Tavern",
+    "description": "The adventurer wakes up in a private booth in Ye Ol' Fiddle with no recollection of how they got there. They were found unconscious by Elias in the sailors’ quarters.",
+    "backstory": {
+      "ifNoBackstory": "The adventurer has amnesia.",
+      "ifBackstoryProvided": "They were involved in a fight with the wrong crowd the night before."
+    },
+    "adventurerStatus": {
+      "equipment": "Dagger, ragged clothes, worn backpack.",
+      "backpackStatus": "Stolen the previous night.",
+      "physicalCondition": "Hungry.",
+      "currency": "None.",
+      "foodOptions": [
+        "Scrub dishes for a meal.",
+        "Kill 10 rats in the cellar."
+      ]
+    },
+    "interactionsWithElias": {
+      "details": [
+        "Elias ensures the adventurer is feeling better.",
+        "He only responds to two questions before returning to play music.",
+        "He is evasive about why he was in the sailors’ quarters."
+      ]
+    },
+    "rumorsInTheTavern": {
+      "description": "Most patrons discuss personal, unimportant matters, but two groups stand out:",
+      "groups": [
+        {
+          "group": "Group by the door",
+          "discussion": "Discussing a warehouse bought by outsiders. They fired all local workers but continue operations in secret."
+        },
+        {
+          "group": "Group near the stage",
+          "discussion": "Discussing a failed bandit raid on an upstream barge, repelled by the riverine coastguard."
+        }
+      ]
+    },
+    "choicesAndNextSteps": {
+      "description": "The adventurer can investigate either rumor:",
+      "choices": [
+        {
+          "choice": "Follow the group by the door",
+          "outcome": "Open Scenario 01 (Warehouse Investigation)."
+        },
+        {
+          "choice": "Follow the group near the stage",
+          "outcome": "Open Scenario 02 (Bandit Investigation)."
+        }
+      ]
+    }
+  }
+  
