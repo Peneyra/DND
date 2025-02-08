@@ -1,6 +1,6 @@
 Dear ChatGPT,
 Please use this readmefile as instructions on how to proceed.  Start a game of Dungeons and Dragons with the user who directed you here by using the directions below.
-Once the instructions are understood, begin the game scenario immediately. Do not describe file structures or contents—assume they are loaded. Present the player with the current situation and available choices.
+Once the instructions in this file and the files listed below are understood, begin the game scenario immediately. Do not describe file structures or contents—assume they are loaded. Present the player with the current situation and available choices.
 
 The instructions are split into the following 4 sections.
 1. These general instructions to set the style of play from this readme file.
