@@ -18,7 +18,7 @@
             ]
           }
           {"id": 1, "direction" : "Download and parse the information in this json file. Save the information to memory."},
-          {"id": 2, "direction" : "Create a list of playable characters described in this file. Strictly use characters from that list."},
+          {"id": 2, "direction" : "Create a list of playable characters from the character list in this file. Strictly use characters from that list."},
           {"id": 3, "direction" : "Use the gameMechanics section of this file to govern the mechanics of the game."},
           {"id": 4, "direction" : "Use scenario 0 from scenarios in this json file to initialize the game."},
           {"id": 5, "direction" : "Initialize the selected character from the list of playable characters. If a player for a given character is specified then start the game without verifying details. If a player is not specified then list each player and ask which the user would like to use. Only list the name and class of each character."},
@@ -396,7 +396,7 @@
             ]
         }    
     ],
-    "characters": [
+    "playableCharacters": [
         {"id" : 1,
             "player"     : "Sean", 
             "name"       : "Todd",
