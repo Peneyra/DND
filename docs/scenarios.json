@@ -1,0 +1,56 @@
+"scenarios" : [
+    {
+        "generalInstructions" : [
+            "Scenarios are divided into tasks which are structured into three distinct phases: an 'initialCondition', 'events', and 'completionInstructions'.",
+            "Proceed through the tasks sequentially, verifying the 'initialConditions' are met, then incorporating the 'events' and then excuting the 'completionInstructions'.",
+            "Begin the 'Scenario' only after all aspects of the 'initialCondition' have been fully met.",
+            "'completionInstructions' have 'requiredConditions' and 'results'.",
+            "Once the 'requiredConditions' of the 'completionInstructions' are met, follow the instructions of the 'results'."
+        ]
+    },
+    {
+        "idScene" : 0,
+        "title": "The Beginning",
+        "startingLocation": "Ye Ol' Fiddle Tavern",
+        "tasks" : [
+            {
+                "taskId" : 0,
+                "initialConditions" : "Null",
+                "events" : [
+                    "The adventurer wakes up in a private booth in Ye Ol' Fiddle with no recollection of how they got there. They were found unconcious by Elias in the sailors quarters. Elias took pity on the adventurers, loaded them into a hand cart, and brought them back to Ye Ol' Fiddle.",
+                    "Elias briefly makes sure the adventurer is feeling better, then ends the conversation to go play music as he is paid to do.",
+                    "The adventurer is every hungry and finds it hard to focus on anything until he eats.",
+                    "The adventurer's best source of food is asking Corbin for a meal and then eating the meal."
+                ],
+                "completionInstructions" : {
+                    "requiredConditions" : "The adventurer has eaten something.",
+                    "results" : [
+                        "The adventurer can now focus on his surroundings",
+                        {
+                            "Two conversations are within earshot" : [
+                                {
+                                    "group" : "By the door",
+                                    "discussion" : "A warehouse was bought by outsiders. They fired all local workers but continue operations in secret."
+                                },
+                                {
+                                    "group" : "By the stage",
+                                    "discussion" : "A warehouse was bought by outsiders. They fired all local workers but continue operations in secret."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "taskId" : 1,
+                "initialConditions" : "The adventurer focuses on the conversation the group by the door is having",
+                "events" : "Initiate scenario with idScene 1."
+            }
+            {
+                "taskId" : 2,
+                "initialConditions" : "The adventurer focuses on the conversation the group by the stage is having",
+                "events" : "Initiate scenario with idScene 2."
+            }
+        ]
+    }    
+]

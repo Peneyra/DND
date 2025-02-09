@@ -1,6 +1,6 @@
 {
     "characters": [
-        {"id" : 1,
+        {"id_char" : 1,
             "player"     : "Sean", 
             "name"       : "Todd",
             "classtype"  : "rogue",
@@ -46,7 +46,7 @@
                 "feats"    : []
             }
         },
-        {"id" : 2,
+        {"id_char" : 2,
             "player"     : "Anthony",
             "name"       : "Brandon",
             "classtype"  : "rogue",

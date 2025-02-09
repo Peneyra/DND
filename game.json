@@ -17,7 +17,7 @@
                 "Each time you print information for the adventurer, use the following format: A story of the adventurer's actions (if applicable), a description of the current situation, selection of four options for actions the adventurer may take.  Two should be related to the current scenario, two should be more mundane."
             ]
           },
-          {"step": 1, "direction" : "Download and parse the information in this json file. Save the information to memory."},
+          {"step": 1, "direction" : "Download and parse all of the information in this json file. Save all of the information to memory."},
           {"step": 2, "direction" : "Create a list of playable characters from the character list in this file. Strictly use characters from that list."},
           {"step": 3, "direction" : "Use the gameMechanics section of this file to govern the mechanics of the game."},
           {"step": 4, "direction" : "Use scenarios with idScene = 0 in this json file to initialize the game."},
