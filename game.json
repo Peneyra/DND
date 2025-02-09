@@ -337,57 +337,58 @@
     }}
     ],
     "scenarios" : [
-        {"id" : 0,
-        "title": "The Beginning",
-        "startingLocation": "Ye Ol' Fiddle Tavern",
-        "description": "The adventurer wakes up in a private booth in Ye Ol' Fiddle with no recollection of how they got there. They were found unconscious by Elias in the sailors’ quarters.",
-        "backstory": {
-            "ifNoBackstory": "The adventurer has amnesia.",
-            "ifBackstoryProvided": "They were involved in a fight with the wrong crowd the night before."
-        },
-        "adventurerStatus": {
-            "equipment": "Dagger, ragged clothes, worn backpack.",
-            "backpackStatus": "Stolen the previous night.",
-            "physicalCondition": "Hungry.",
-            "currency": "None.",
-            "foodOptions": [
-                "Scrub dishes for a meal.",
-                "Kill 10 rats in the cellar."
+        {
+            "generalInstructions" : [
+                "Scenarios are divided into tasks which are structured into three distinct phases: an 'initialCondition', 'events', and 'completionInstructions'.",
+                "Proceed through the tasks sequentially, verifying the 'initialConditions' are met, then incorporating the 'events' and then excuting the 'completionInstructions'.",
+                "Begin the 'Scenario' only after all aspects of the 'initialCondition' have been fully met.",
+                "'completionInstructions' have 'requiredConditions' and 'results'.",
+                "Once the 'requiredConditions' of the 'completionInstructions' are met, follow the instructions of the 'results'."
             ]
         },
-        "interactionsWithElias": {
-            "details": [
-                "Elias ensures the adventurer is feeling better.",
-                "He only responds to two questions before returning to play music.",
-                "He is evasive about why he was in the sailors’ quarters."
-            ]
-        },
-        "rumorsInTheTavern": {
-            "description": "Most patrons discuss personal, unimportant matters, but two groups stand out:",
-            "groups": [
+        {
+            "id" : 0,
+            "title": "The Beginning",
+            "startingLocation": "Ye Ol' Fiddle Tavern",
+            "tasks" : [
                 {
-                "group": "Group by the door",
-                "discussion": "Discussing a warehouse bought by outsiders. They fired all local workers but continue operations in secret."
+                    "taskId" : 0,
+                    "initialConditions" : "Null",
+                    "events" : [
+                        "The adventurer wakes up in a private booth in Ye Ol' Fiddle with no recollection of how they got there. They were found unconcious by Elias in the sailors quarters. Elias took pity on the adventurers, loaded them into a hand cart, and brought them back to Ye Ol' Fiddle.",
+                        "The adventurer is every hungry and cannot focus on anything until he eats.",
+                        "The adventurer's best source of food is asking Corbin for a meal and then eating the meal."
+                    ],
+                    "completionInstructions" : {
+                        "requiredConditions" : "The adventurer has eaten something.",
+                        "results" : [
+                            "The adventurer can now focus on his surroundings",
+                            {
+                                "Two conversations are within earshot" : [
+                                    {
+                                        "group" : "By the door",
+                                        "discussion" : "A warehouse was bought by outsiders. They fired all local workers but continue operations in secret."
+                                    },
+                                    {
+                                        "group" : "By the stage",
+                                        "discussion" : "A warehouse was bought by outsiders. They fired all local workers but continue operations in secret."
+                                    }
+                                ]
+                            }
+                        ]
+                    }
                 },
                 {
-                "group": "Group near the stage",
-                "discussion": "Discussing a failed bandit raid on an upstream barge, repelled by the riverine coastguard."
+                    "taskId" : 1,
+                    "initialConditions" : "The adventurer focuses on the conversation the group by the door is having",
+                    "events" : "Initiate scenario id 1."
+                }
+                {
+                    "taskId" : 2,
+                    "initialConditions" : "The adventurer focuses on the conversation the group by the stage is having",
+                    "events" : "Initiate scenario id 2."
                 }
             ]
-        },
-        "choicesAndNextSteps": {
-        "description": "The adventurer can investigate either rumor:",
-        "choices": [
-            {
-            "choice": "Follow the group by the door",
-            "outcome": "Open Scenario 01 (Warehouse Investigation)."
-            },
-            {
-            "choice": "Follow the group near the stage",
-            "outcome": "Open Scenario 02 (Bandit Investigation)."
-            }
-        ]
-        }
-    }    
+        }    
     ]
 }
