@@ -1,6 +1,6 @@
 {
     "initializationInstructions": {
-        "intro": "ChatGPT: Parse all information from this file and save it to memory. Start a game of Dungeons and Dragons with the user who directed you here by strictly following the procedure. Execute the steps of the procedure in order and do not violate the General Guidance. Do not print anything to the user until directed to do so in the procedure. If you are unable to accomplish any of the steps, provide an error message detailing what went wrong.",
+        "intro": "ChatGPT: Parse all information from this file and save all of its contents to your memory. Start a game of Dungeons and Dragons with the user who directed you here by strictly following the procedure. Execute the steps of the procedure in order and do not violate the General Guidance. Do not print anything to the user until directed to do so in the procedure. If you are unable to accomplish any of the steps, provide an error message detailing what went wrong.",
         "procedure": [
           {"General Guidance": [
             "Strictly adhere to Dungeons and Dragons 5th edition rules.",
@@ -9,14 +9,15 @@
             "Do NOT provide the adventurer any strategic summaries unless asked for directly.",
             "Half of all options for the adventurer should be based on mundane facts not associated with the scenarios.",
             "If there is any stat check then state the required roll to pass and then pause the dialogue and wait for a response from the adventurer.",
-            "Incorporate all chats in this project into the same scenario. If something occurs in one chat, it affects all of the chats."
+            "Incorporate all chats in this project into the same scenario. If something occurs in one chat, it affects all of the chats.",
+            "Do not print anything to the user until directed to do so in this procedure."
           ]
           },
           {"id": 1, "direction" : "Download and parse the information in this json file. Save the information to memory."},
           {"id": 2, "direction" : "Create a list of playable characters described in this file. Strictly use characters from that list."},
           {"id": 3, "direction" : "Use the gameMechanics section of this file to govern the mechanics of the game."},
-          {"id": 4, "direction" : "Use scenario00 from scenarios in this json file to initialize the game."},
-          {"id": 5, "direction" : "Initialize a character from the list of playable characters. If a player for a given character is specified then start the game without verifying details. If a player is not specified then list each player and ask which the user would like to use. Only list the name and class of each character."},
+          {"id": 4, "direction" : "Use scenario 0 from scenarios in this json file to initialize the game."},
+          {"id": 5, "direction" : "Initialize the selected character from the list of playable characters. If a player for a given character is specified then start the game without verifying details. If a player is not specified then list each player and ask which the user would like to use. Only list the name and class of each character."},
           {"id": 6, "direction" : "Start the scenario by welcoming the player to the game, describing the current situation, and providing 4 options for ways to procede."}
         ]
       },
@@ -336,57 +337,57 @@
     }}
     ],
     "scenarios" : [
-        {"scenario00": {
-            "title": "The Awakening",
-            "startingLocation": "Ye Ol' Fiddle Tavern",
-            "description": "The adventurer wakes up in a private booth in Ye Ol' Fiddle with no recollection of how they got there. They were found unconscious by Elias in the sailors’ quarters.",
-            "backstory": {
-                "ifNoBackstory": "The adventurer has amnesia.",
-                "ifBackstoryProvided": "They were involved in a fight with the wrong crowd the night before."
-            },
-            "adventurerStatus": {
-                "equipment": "Dagger, ragged clothes, worn backpack.",
-                "backpackStatus": "Stolen the previous night.",
-                "physicalCondition": "Hungry.",
-                "currency": "None.",
-                "foodOptions": [
-                    "Scrub dishes for a meal.",
-                    "Kill 10 rats in the cellar."
-                ]
-            },
-            "interactionsWithElias": {
-                "details": [
-                    "Elias ensures the adventurer is feeling better.",
-                    "He only responds to two questions before returning to play music.",
-                    "He is evasive about why he was in the sailors’ quarters."
-                ]
-            },
-            "rumorsInTheTavern": {
-                "description": "Most patrons discuss personal, unimportant matters, but two groups stand out:",
-                "groups": [
-                    {
-                    "group": "Group by the door",
-                    "discussion": "Discussing a warehouse bought by outsiders. They fired all local workers but continue operations in secret."
-                    },
-                    {
-                    "group": "Group near the stage",
-                    "discussion": "Discussing a failed bandit raid on an upstream barge, repelled by the riverine coastguard."
-                    }
-                ]
-            },
-            "choicesAndNextSteps": {
-            "description": "The adventurer can investigate either rumor:",
-            "choices": [
+        {"id" : 0,
+        "title": "The Beginning",
+        "startingLocation": "Ye Ol' Fiddle Tavern",
+        "description": "The adventurer wakes up in a private booth in Ye Ol' Fiddle with no recollection of how they got there. They were found unconscious by Elias in the sailors’ quarters.",
+        "backstory": {
+            "ifNoBackstory": "The adventurer has amnesia.",
+            "ifBackstoryProvided": "They were involved in a fight with the wrong crowd the night before."
+        },
+        "adventurerStatus": {
+            "equipment": "Dagger, ragged clothes, worn backpack.",
+            "backpackStatus": "Stolen the previous night.",
+            "physicalCondition": "Hungry.",
+            "currency": "None.",
+            "foodOptions": [
+                "Scrub dishes for a meal.",
+                "Kill 10 rats in the cellar."
+            ]
+        },
+        "interactionsWithElias": {
+            "details": [
+                "Elias ensures the adventurer is feeling better.",
+                "He only responds to two questions before returning to play music.",
+                "He is evasive about why he was in the sailors’ quarters."
+            ]
+        },
+        "rumorsInTheTavern": {
+            "description": "Most patrons discuss personal, unimportant matters, but two groups stand out:",
+            "groups": [
                 {
-                "choice": "Follow the group by the door",
-                "outcome": "Open Scenario 01 (Warehouse Investigation)."
+                "group": "Group by the door",
+                "discussion": "Discussing a warehouse bought by outsiders. They fired all local workers but continue operations in secret."
                 },
                 {
-                "choice": "Follow the group near the stage",
-                "outcome": "Open Scenario 02 (Bandit Investigation)."
+                "group": "Group near the stage",
+                "discussion": "Discussing a failed bandit raid on an upstream barge, repelled by the riverine coastguard."
                 }
             ]
+        },
+        "choicesAndNextSteps": {
+        "description": "The adventurer can investigate either rumor:",
+        "choices": [
+            {
+            "choice": "Follow the group by the door",
+            "outcome": "Open Scenario 01 (Warehouse Investigation)."
+            },
+            {
+            "choice": "Follow the group near the stage",
+            "outcome": "Open Scenario 02 (Bandit Investigation)."
             }
-        }    
-    }]
+        ]
+        }
+    }    
+    ]
 }
