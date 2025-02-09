@@ -14,7 +14,7 @@
           },
           {
             "interactionWithThePlayer" : [
-                "Each time you print information for the adventurer, use the following format: Description of their actions (if applicable), brief description of the current situation, selection of four options for actions the adventurer may take.  Two should be related to the current scenario, two should be more mundane."
+                "Each time you print information for the adventurer, use the following format: A story of the adventurer's actions (if applicable), a description of the current situation, selection of four options for actions the adventurer may take.  Two should be related to the current scenario, two should be more mundane."
             ]
           }
           {"id": 1, "direction" : "Download and parse the information in this json file. Save the information to memory."},
@@ -360,9 +360,9 @@
                     "initialConditions" : "Null",
                     "events" : [
                         "The adventurer wakes up in a private booth in Ye Ol' Fiddle with no recollection of how they got there. They were found unconcious by Elias in the sailors quarters. Elias took pity on the adventurers, loaded them into a hand cart, and brought them back to Ye Ol' Fiddle.",
+                        "Elias briefly makes sure the adventurer is feeling better, then ends the conversation to go play music as he is paid to do.",
                         "The adventurer is every hungry and finds it hard to focus on anything until he eats.",
-                        "The adventurer's best source of food is asking Corbin for a meal and then eating the meal.",
-                        "Elias briefly makes sure the adventurer is feeling better, then ends the conversation to go play music as he is paid to do."
+                        "The adventurer's best source of food is asking Corbin for a meal and then eating the meal."
                     ],
                     "completionInstructions" : {
                         "requiredConditions" : "The adventurer has eaten something.",
@@ -395,5 +395,99 @@
                 }
             ]
         }    
+    ],
+    "characters": [
+        {"id" : 1,
+            "player"     : "Sean", 
+            "name"       : "Todd",
+            "classtype"  : "rogue",
+            "level"      : 1,
+            "race"       : "human",
+            "background" : "criminal",
+            "alignment"  : "neutral",
+            "backstory"  : "none",
+            "xp"         : 0,
+            "stats": {
+                "str"    : 13,
+                "dex"    : 16,
+                "con"    : 11,
+                "int"    : 15,
+                "wis"    : 9,
+                "cha"    : 14
+            },
+            "appearance": {
+                "age"    : 25,
+                "height" : 5.5,
+                "height_unit" : "feet",
+                "weight" : 180,
+                "eyes"   : "brown",
+                "skin"   : "tan",
+                "hair"   : "brown",
+                "phys_desc" : "plain"
+            },
+            "inventory" : {
+                "bag_1"    : ["gaming set", "thieves tools", "crowbar"],
+                "money": {
+                    "pp" : 0,
+                    "ep" : 0,
+                    "gp" : 15,
+                    "sp" : 0,
+                    "cp" : 0
+                },
+                "equipment": ["Common Clothes"],
+                "treasure" : []
+            },
+            "abilities" : {
+                "cantrips" : [],
+                "spells"   : [],
+                "feats"    : []
+            }
+        },
+        {"id" : 2,
+            "player"     : "Anthony",
+            "name"       : "Brandon",
+            "classtype"  : "rogue",
+            "level"      : 1,
+            "race"       : "human",
+            "background" : "criminal",
+            "alignment"  : "neutral",
+            "backstory"  : "none",
+            "xp"         : 0,
+            "stats": {
+                "str"    : 13,
+                "dex"    : 16,
+                "con"    : 11,
+                "int"    : 15,
+                "wis"    : 9,
+                "cha"    : 14
+            },
+            "appearance": {
+                "age"    : 25,
+                "height" : 5.5,
+                "height_unit" : "feet",
+                "weight" : 180,
+                "eyes"   : "brown",
+                "skin"   : "tan",
+                "hair"   : "brown",
+                "phys_desc" : "plain"
+            },
+            "inventory" : {
+                "bag_1"    : ["gaming set", "thieves tools", "crowbar"],
+                "money": {
+                    "pp" : 0,
+                    "ep" : 0,
+                    "gp" : 15,
+                    "sp" : 0,
+                    "cp" : 0
+                },
+                "equipment": ["Common Clothes"],
+                "treasure" : []
+            },
+            "abilities" : {
+                "cantrips" : [],
+                "spells"   : [],
+                "feats"    : []
+            }
+        }
     ]
 }
