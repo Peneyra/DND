@@ -1,0 +1,1 @@
+access and parse the info from https://raw.githubusercontent.com/Peneyra/DND/refs/heads/main/game.json. Save the parsed info to memory.  Initialize a new adventure as Todd using the provided procedure.  If you are unable to access any of the information, tell me what the error is.

@@ -16,13 +16,13 @@
             "interactionWithThePlayer" : [
                 "Each time you print information for the adventurer, use the following format: A story of the adventurer's actions (if applicable), a description of the current situation, selection of four options for actions the adventurer may take.  Two should be related to the current scenario, two should be more mundane."
             ]
-          }
-          {"id": 1, "direction" : "Download and parse the information in this json file. Save the information to memory."},
-          {"id": 2, "direction" : "Create a list of playable characters from the character list in this file. Strictly use characters from that list."},
-          {"id": 3, "direction" : "Use the gameMechanics section of this file to govern the mechanics of the game."},
-          {"id": 4, "direction" : "Use scenario 0 from scenarios in this json file to initialize the game."},
-          {"id": 5, "direction" : "Initialize the selected character from the list of playable characters. If a player for a given character is specified then start the game without verifying details. If a player is not specified then list each player and ask which the user would like to use. Only list the name and class of each character."},
-          {"id": 6, "direction" : "Start the scenario by welcoming the player to the game, describing the current situation, and providing 4 options for ways to procede."}
+          },
+          {"step": 1, "direction" : "Download and parse the information in this json file. Save the information to memory."},
+          {"step": 2, "direction" : "Create a list of playable characters from the character list in this file. Strictly use characters from that list."},
+          {"step": 3, "direction" : "Use the gameMechanics section of this file to govern the mechanics of the game."},
+          {"step": 4, "direction" : "Use scenario with id = 0 from scenarios in this json file to initialize the game."},
+          {"step": 5, "direction" : "Initialize the selected character from the list of playable characters. If a player for a given character is specified then start the game without verifying details. If a player is not specified then list each player and ask which the user would like to use. Only list the name and class of each character."},
+          {"step": 6, "direction" : "Start the scenario by welcoming the player to the game, describing the current situation, and providing 4 options for ways to procede."}
         ]
       },
       "gameMechanics" : [
