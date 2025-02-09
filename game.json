@@ -7,12 +7,16 @@
             "Do NOT tell the adventurers NPC names unless they are introduced or the name is revealed by external ques.",
             "Do NOT provide key takeaways or summaries of new information for the adventurer at the end of your response.",
             "Do NOT provide the adventurer any strategic summaries unless asked for directly.",
-            "Half of all options for the adventurer should be based on mundane facts not associated with the scenarios.",
             "If there is any stat check then state the required roll to pass and then pause the dialogue and wait for a response from the adventurer.",
             "Incorporate all chats in this project into the same scenario. If something occurs in one chat, it affects all of the chats.",
             "Do not print anything to the user until directed to do so in this procedure."
           ]
           },
+          {
+            "interactionWithThePlayer" : [
+                "Each time you print information for the adventurer, use the following format: Description of their actions (if applicable), brief description of the current situation, selection of four options for actions the adventurer may take.  Two should be related to the current scenario, two should be more mundane."
+            ]
+          }
           {"id": 1, "direction" : "Download and parse the information in this json file. Save the information to memory."},
           {"id": 2, "direction" : "Create a list of playable characters described in this file. Strictly use characters from that list."},
           {"id": 3, "direction" : "Use the gameMechanics section of this file to govern the mechanics of the game."},
@@ -356,8 +360,9 @@
                     "initialConditions" : "Null",
                     "events" : [
                         "The adventurer wakes up in a private booth in Ye Ol' Fiddle with no recollection of how they got there. They were found unconcious by Elias in the sailors quarters. Elias took pity on the adventurers, loaded them into a hand cart, and brought them back to Ye Ol' Fiddle.",
-                        "The adventurer is every hungry and cannot focus on anything until he eats.",
-                        "The adventurer's best source of food is asking Corbin for a meal and then eating the meal."
+                        "The adventurer is every hungry and finds it hard to focus on anything until he eats.",
+                        "The adventurer's best source of food is asking Corbin for a meal and then eating the meal.",
+                        "Elias briefly makes sure the adventurer is feeling better, then ends the conversation to go play music as he is paid to do."
                     ],
                     "completionInstructions" : {
                         "requiredConditions" : "The adventurer has eaten something.",
