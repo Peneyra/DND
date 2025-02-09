@@ -20,7 +20,7 @@
           {"step": 1, "direction" : "Download and parse the information in this json file. Save the information to memory."},
           {"step": 2, "direction" : "Create a list of playable characters from the character list in this file. Strictly use characters from that list."},
           {"step": 3, "direction" : "Use the gameMechanics section of this file to govern the mechanics of the game."},
-          {"step": 4, "direction" : "Use scenario with id = 0 from scenarios in this json file to initialize the game."},
+          {"step": 4, "direction" : "Use scenarios with idScene = 0 in this json file to initialize the game."},
           {"step": 5, "direction" : "Initialize the selected character from the list of playable characters. If a player for a given character is specified then start the game without verifying details. If a player is not specified then list each player and ask which the user would like to use. Only list the name and class of each character."},
           {"step": 6, "direction" : "Start the scenario by welcoming the player to the game, describing the current situation, and providing 4 options for ways to procede."}
         ]
@@ -351,7 +351,7 @@
             ]
         },
         {
-            "id" : 0,
+            "idScene" : 0,
             "title": "The Beginning",
             "startingLocation": "Ye Ol' Fiddle Tavern",
             "tasks" : [
@@ -386,18 +386,18 @@
                 {
                     "taskId" : 1,
                     "initialConditions" : "The adventurer focuses on the conversation the group by the door is having",
-                    "events" : "Initiate scenario id 1."
+                    "events" : "Initiate scenario with idScene 1."
                 }
                 {
                     "taskId" : 2,
                     "initialConditions" : "The adventurer focuses on the conversation the group by the stage is having",
-                    "events" : "Initiate scenario id 2."
+                    "events" : "Initiate scenario with idScene 2."
                 }
             ]
         }    
     ],
     "playableCharacters": [
-        {"id" : 1,
+        {"idChar" : 1,
             "player"     : "Sean", 
             "name"       : "Todd",
             "classtype"  : "rogue",
@@ -443,7 +443,7 @@
                 "feats"    : []
             }
         },
-        {"id" : 2,
+        {"idChar" : 2,
             "player"     : "Anthony",
             "name"       : "Brandon",
             "classtype"  : "rogue",
