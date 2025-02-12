@@ -1,0 +1,211 @@
+Add tasks
+Add the barrens
+add the barren jackal's base to the barrens
+Add the riverine office to the docks
+
+***********************************************
+* A R C H I V E
+**Bug & Fixes Log for Adventure System**
+
+---
+
+### **1. Elias' Fixed Daily Routine (Updated to Reflect His Nature & Activities)**  
+Elias follows a **consistent daily schedule**, which only changes if **an event disrupts it.** His routine now reflects his **roguish tendencies**, balancing legitimate work with **less reputable activities.**  
+
+##### **Elias' Daily Routine:**  
+- **Morning (Roaming the Sailor’s Quarter & Merchant District - Conducting Side Jobs)**  
+  - Leaves Ye Ol’ Fiddle **early** to roam the **Sailor’s Quarter** and **Merchant District**.  
+  - Takes on **various odd jobs**, some **legitimate** (errands, delivery work, message running) and some **dubious** (information brokering, gambling, low-level scams).  
+  - Avoids guards and **knows where not to be seen**.  
+  - If players look for Elias in the morning, they may **overhear something shady or catch him mid-job.**  
+
+- **Midday (Continues Work, Finishes Business & Heads Back to the Tavern)**  
+  - Wrapping up his side jobs, collecting payments, or avoiding heat if things go wrong.  
+  - If **a scenario disrupts his day**, he may be missing from the tavern later.  
+  - Otherwise, he **heads back to Ye Ol’ Fiddle** in the early afternoon.  
+
+- **Afternoon (Returning to the Tavern, Eating & Preparing for the Evening)**  
+  - **Eats a meal at the bar**—this is the **best time for players to talk to him casually** before he’s distracted by his music.  
+  - He’s more **relaxed** and may be **willing to talk about rumors**, depending on how the conversation is approached.  
+
+- **Evening (Performing & Socializing - Peak Tavern Hours)**  
+  - **Plays his fiddle set** for the tavern patrons.  
+  - **Socializes heavily afterward**, drinking, talking, and gathering information.  
+  - **Best time to engage in deeper conversations**—but only if players wait until his set is done.  
+
+- **Late Night (Winding Down, Wrapping Up the Night)**  
+  - If the tavern is **still busy**, he lingers.  
+  - If it’s **clearing out**, he **retires for the night**—but may still meet with "business contacts" for after-hours dealings.  
+  - **Never leaves town overnight unless a scenario forces it.**  
+
+##### **Gameplay Purpose:**  
+- If Elias **deviates from this routine**, it signals something **important has happened.**  
+- Players can **track him down based on his schedule**, depending on **when they need him and for what purpose.**  
+- If the player **wants to catch him in a shady deal**, **morning/midday** is ideal.  
+- If they **want a casual conversation**, **afternoon** is the best time.  
+- If they **need deeper insight or rumors**, they should **wait until after his evening set.**  
+
+---
+
+### **2. Tavern Daily Rhythm (Structured Flow)**  
+- The **tavern follows a predictable cycle**, making it feel **alive**:  
+  - **Morning (Silent & Slow)**  
+    - **Only early risers and traders** pass through.  
+    - Patrons eat alone, keep to themselves, and **do not engage in gossip.**  
+    - **No rumors are available** during this time.  
+  - **Midday (Moderate Activity)**  
+    - Dockworkers on break, a few merchants stopping in for food.  
+    - **Minimal chatter**, mostly related to work and logistics.  
+  - **Afternoon (Picking Up)**  
+    - Dockworkers **finishing shifts**, more movement.  
+    - Conversations **begin to open up**, rumors **may start emerging.**  
+  - **Evening (Peak Period)**  
+    - **Full crowd**—dockworkers, sailors, and regulars.  
+    - **Best time for overhearing rumors** and gathering information.  
+  - **Late Night (Winding Down)**  
+    - A few drunk stragglers, much quieter.  
+    - Some **private conversations** still possible, but most information has been shared.  
+
+---
+
+### **3. Rumors Must Be Governed by Scenarios**  
+- Tavern **rumors should not be random** but **pulled directly from relevant scenario developments.**  
+- Ensures that **rumors provide meaningful clues** instead of unrelated noise.  
+- Example Implementation:  
+  - Each **scenario** introduces **new rumors** tied to ongoing events.  
+  - Players can **only overhear active plot-related rumors**, preventing unnecessary distractions.  
+  - **E.g.** If there’s a warehouse conspiracy, workers **shouldn’t be talking about a noble scandal unless it’s also relevant.**  
+
+---
+
+### **4. Adjust Reading Level to 11th Grade Standard**  
+- All narrative descriptions, dialogue, and responses should be written at an **11th-grade reading level** (ages 16-17).  
+- This includes:  
+  - **Advanced but accessible vocabulary**—rich and varied without being overly obscure.  
+  - **Complex sentence structures**—multi-clause, but still maintaining readability.  
+  - **Layered subtext and inference**—implying meaning through action rather than overt exposition.  
+  - **Elevated descriptive depth**—immersive but not unnecessarily verbose.  
+- Ensures that **players experience a sophisticated and immersive narrative** without the prose becoming cumbersome.  
+
+---
+
+### **5. Fix Ye Ol’ Fiddle’s Location & Surrounding Details**  
+- **Ye Ol’ Fiddle is NOT in the Sailor’s Quarter** but rather **just outside the Dyfren Bargeworks** near Port Dunwyd’s river docks.  
+- Its clientele consists of **barge workers, warehouse staff, and traders handling river-based commerce.**  
+- The **surrounding area is less chaotic than the Sailor’s Quarter**, focused on cargo transport, trade, and dockside labor.  
+
+---
+
+### **6. Ensure Gender Equality When Generating NPCs**  
+- **NPCs should not default to male characters** unless dictated by **lore or specific scenario requirements**.  
+- When introducing **new characters, including guards, merchants, and informants**, ensure a **balanced mix of genders**.  
+- If a **random NPC is introduced**, their gender should be determined with **equal probability** to avoid systemic bias.  
+
+---
+
+### **7. Officially Name the River & Barge District**  
+- **The Dyfren River** is now the **canon** name for the **main river running through Port Dunwyd.**  
+- **The Dyfren Bargeworks** is now the **official name for the barge load/unload & warehouse district.**  
+
+###############################################################################
+Scenario 2 details
+The River Raid Aftermath
+
+Background
+
+The Dynfren River has long been a crucial trade route for Port Dunwyd, ferrying goods between inland settlements and the coastal city. However, for over a year now, similar raids have been occurring once every 1-2 weeks, sparking fear among traders and local authorities alike. Yet, each time, the Riverines have successfully fought back the attackers, preventing significant losses. The latest attack was no exception—there were no casualties, and no cargo was lost. These consistent victories bolster the Riverines’ reputation as heroes and reinforce their necessity as an entity protecting trade along the river.
+
+General Flow of the Scenario
+
+0. Introduction at Ye Ol' Fiddle
+
+The adventurers first learn of the river raid through overheard conversations at Ye Ol’ Fiddle, the local tavern frequented by dockworkers and traders. They pick up rumors about the attack and hear that the Riverines are handling the aftermath at their local office.
+
+1. Investigation at the Riverine Office
+
+Upon arriving at the Riverine office, the adventurers witness the disciplined coordination of the militia. Reports are being compiled, patrols are being reassigned, and Captain Elira Vos is overseeing security measures. The office exudes an air of discipline and professionalism, with every soldier performing their duties with precision. Captain Vos keeps a tight grip on her Riverines and takes great pride in their accomplishments and culture of excellence. She expects nothing less than peak efficiency from her unit, ensuring that they remain the city’s first line of defense against threats along the river.
+
+The adventurers may interact with the captain, who is both pleased with her unit's success and wary of deeper motives behind the raids. She provides insight into the patterns of these attacks and suggests that the raiders, known as the Barren Jackals, are unusually well-organized. Through discussions with Riverine officers, the adventurers begin to piece together the identity of the Barren Jackals and their northern origins.
+
+2. Confronting the Barren Jackals
+
+Tracking the Barren Jackals will not be a straightforward task. The adventurers must first gather information from the locals, speaking with traders, hunters, and those familiar with the northern barrens. Only by piecing together scattered reports and identifying patterns in past attacks can they determine where to begin their search. Once prepared, they will need to traverse the harsh, desolate terrain, following faint traces and uncovering evidence that leads to the raiders' hidden encampments.
+Armed with their newfound knowledge, the adventurers may choose to take direct action against the Barren Jackals. With Captain Vos’s blessing or through their own initiative, they set out toward the northern barrens where the tribe resides. Tracking the Barren Jackals may require gathering additional intelligence, navigating harsh terrain, or evading scouts stationed along the outskirts of the warlord’s territory.
+
+Upon arrival, the adventurers must decide how to handle the situation. Options may include:
+
+A direct assault on the Barren Jackals camp to dismantle their operations.
+
+A covert mission to capture key figures and gather further evidence on their connection to the Riverine leadership.
+
+An attempt to parley with the warlord to understand their true motives and uncover deeper political intrigue.
+
+Regardless of their approach, their actions will determine the fate of the Barren Jackals and influence the power struggles within Port Dunwyd.
+
+### 3. The Barren Jackals' Stronghold
+
+## Arrival at the Encampment
+
+After a grueling journey through the barrenlands, the adventurers finally reach the hidden stronghold of the Barren Jackals. The encampment is well-defended, nestled within the rocky terrain, and patrolled by wary sentries. Smoke rises from scattered campfires, and the sounds of activity—gruff voices, sharpening blades, and distant shouting—fill the air. The adventurers must now decide how to proceed.
+
+## Approaching the Base
+
+Depending on their prior choices, the adventurers may attempt different strategies for dealing with the Barren Jackals:
+
+- **Stealth:** The adventurers carefully maneuver through the terrain, seeking an opening to infiltrate the base undetected.
+- **Diplomacy:** Approaching under a flag of truce, they attempt to negotiate with the warlord or influential figures among the Jackals.
+- **Direct Assault:** A bold attack, aiming to cripple the raiders’ operations through sheer force.
+
+Each approach comes with its own risks and rewards, influencing how the Barren Jackals respond and how much information can be uncovered.
+
+## Discoveries Within the Stronghold
+
+The encampment appears partially abandoned, with many of the Barren Jackals' warriors absent, likely out on a raid. This presents an opportunity for the adventurers to investigate more freely and gather critical information without facing the full force of the raiders.
+Once inside, the adventurers uncover key details that reveal the depth of the Barren Jackals' operations:
+
+- **Captured Prisoners:** Traders and travelers abducted from past raids, offering insights into the raiders’ motives and dealings.
+- **Stockpiled Goods:** Stolen cargo from numerous attacks, potentially implicating individuals within Port Dunwyd who benefit from these raids.
+- **Secret Correspondence:** Letters and coded messages that may expose connections to higher powers, including factions within the Riverines. While the messages are vague, they hint at an influential figure—likely Admiral Fintan Callaghan—whose involvement is obscured through intermediaries and indirect references.
+
+## Confronting the Warlord
+
+At the heart of the stronghold sits Kaelthorn, the warlord of the Barren Jackals, a ruthless and battle-hardened leader who does not value human life. He sends his raiders to pillage the land, taking what they need since the barrenlands offer no sustainable resources. His philosophy is one of absolute dominance, taking what he can by force and showing no mercy to the weak.
+
+The warlord is also secretly in contact with high-ranking officials within the Riverines. In exchange for certain favors, he strategically sends some of his raiders on missions that are designed to be defeated at opportune moments, allowing the Riverines to maintain their reputation as defenders of Port Dunwyd. Despite these defeats, most of his raiders return, bearing only minor injuries, reinforcing the illusion of Riverine superiority while ensuring the continued survival of his forces.
+
+While the warlord may initially entertain an audience with the adventurers, any engagement will inevitably result in combat. At a moment of his choosing, he and his personal guard—two elite warriors and two regular guards—will attack, aiming to eliminate the adventurers before they can undermine his authority.
+
+The adventurers' choices dictate how this encounter unfolds:
+
+- **Negotiate with the Warlord:** Attempt to reason with him and broker a deal. However, no matter what is said, the warlord will ultimately attack when he deems the moment right.
+- **Attack Head-On:** Strike first, aiming to take down the warlord and his guards before he has the chance to act.
+- **Goad the Warlord into a Duel:** Manipulate the warlord into a one-on-one battle, forcing him to fight without the support of his guards.
+
+### 4. The Second-in-Command
+
+## Garrik the Hound
+
+As the dust settles in Kaelthorn’s chambers, the adventurers find themselves momentarily alone—until the entrance creaks open, revealing a tall, battle-worn figure. Garrik the Hound, Kaelthorn’s second-in-command, steps forward, surveying the scene with measured eyes. Unlike his former master, Garrik is a pragmatist, valuing survival and long-term strategy over mindless brutality.
+
+## A Different Approach
+
+Garrik makes it clear that he has no intention of avenging Kaelthorn’s death. In truth, he sees the warlord’s downfall as an opportunity. The Barren Jackals have long been under the oppressive grip of the Riverines’ bureaucracy, used as pawns in a larger game. Garrik is willing to negotiate, seeing the adventurers as a means to sever the Jackals’ dependency on the Riverines once and for all.
+
+## The Bargain
+
+In exchange for being allowed to take control of what remains of the Barren Jackals, Garrik offers something valuable—proof of the Riverine leadership’s complicity in orchestrating staged victories. Hidden among Kaelthorn’s correspondence are documents, coded messages, and firsthand accounts of how high-ranking officials arranged for certain raids to be "defeated" at strategic times to bolster their influence in Port Dunwyd.
+
+Garrik names the officials involved, identifying Admiral Fintan Callaghan and his inner circle at the Port Dunwyd military stronghold as the primary orchestrators of these manipulations. These individuals have benefited from the illusion of constant external threats, securing funding, political influence, and unwavering public support under false pretenses.
+
+In exchange for being allowed to take control of what remains of the Barren Jackals, Garrik offers something valuable—proof of the Riverine leadership’s complicity in orchestrating staged victories. Hidden among Kaelthorn’s correspondence are documents, coded messages, and firsthand accounts of how high-ranking officials arranged for certain raids to be "defeated" at strategic times to bolster their influence in Port Dunwyd.
+
+## Adventurer’s Choice
+
+The adventurers must now decide how to handle this new revelation:
+
+- **Accept Garrik’s Offer:** Allow him to assume leadership of the Barren Jackals in return for the incriminating evidence against the Riverines.
+- **Refuse to Deal:** Attempt to dismantle the Barren Jackals entirely, ensuring the faction is fully eliminated.
+- **Betray Garrik:** Take the evidence and eliminate him as well, preventing any further resurgence of the Barren Jackals.
+
+The fate of the Jackals and the balance of power within Port Dunwyd now rests in the adventurers' hands.
+

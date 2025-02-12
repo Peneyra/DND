@@ -1,4 +1,5 @@
-{"World": {
+{
+  "World": {
     "Magic": {
         "Types of Magic": {
         "Physical Magic": {
@@ -210,16 +211,16 @@
           ]
         }
       }
-},
-"Port Dunwyd": {
+  },
+  "Port Dunwyd": {
     "Geography and Natural Defenses": {
-      "Description": "Port Dunwyd is divided by elevation and bordered by water on multiple sides. The river flows southward before merging with the ocean, forming a crucial trade artery. The western cliffs provide a natural barrier, while the southern coastline hosts the city's main harbor and industrial sectors.",
+      "Description": "Port Dunwyd is divided by elevation and bordered by water on multiple sides. The Dynfren River flows southward before merging with the ocean, forming a crucial trade artery. The western cliffs provide a natural barrier, while the southern coastline hosts the city's main harbor and industrial sectors.",
       "Details": [
         "Despite its prime location for trade, the land surrounding Port Dunwyd is rocky and arid, with scarce vegetation.",
         "The city relies heavily on imported goods, and its wealth is built on maritime commerce rather than agriculture."
       ]
     },
-    "The Districts of Port Dunwyd": {
+    "Districts": {
       "Description": "Port Dunwyd is structured around seven key districts, shaped by trade, social hierarchy, and geography.",
       "Districts": {
         "The Grand Harbor (Ocean Vessels and Merchants)": {
@@ -239,7 +240,7 @@
         "The Craftsman’s District (Industry & Shipbuilding)": {
           "Details": [
             "Masons, blacksmiths, shipwrights, and artisans fuel the city’s economy.",
-            "Shipyards along the river construct and repair merchant vessels and warships.",
+            "Shipyards along The Dyfren River construct and repair merchant vessels and warships.",
             "Watermills harness the river’s current, providing power for production."
           ]
         },
@@ -264,11 +265,128 @@
             "The barracks house the city’s standing army, elite guards, and naval officers."
           ]
         },
-        "The Minor Northern Docks (Trade Hub for River Commerce)": {
-          "Details": [
-            "Positioned just north of where the river meets the ocean, this facility is a critical transit point for raw materials and agricultural goods.",
-            "River barges offload materials from upstream and take back manufactured goods.",
-            "This area is constantly bustling with laborers, cranes, and cargo shipments."
+        "The Dyfren Bargeworks": {
+          "description": "Positioned just north of where the river meets the ocean, this facility is a critical transit point for raw materials and agricultural goods.",
+          "details": [
+              "River barges offload materials from upstream and take back manufactured goods.",
+              "This area is constantly bustling with laborers, cranes, and cargo shipments."
+          ],
+          "locations": [
+              {
+                  "name": "Ye Ol' Fiddle: The Barge Worker’s Refuge",
+                  "description": "Tucked away in a small merchant square just outside the Barge Load/Offload Area, Ye Ol' Fiddle is a modest, unassuming tavern that serves as a retreat for the support workers of the barge industry.",
+                  "atmosphereAndLayout": {
+                      "exterior": [
+                          "A small, weather-worn building, made of aged wood and river stone, its timber beams darkened by years of smoke and rain.",
+                          "A modest sign depicting a fiddle and a tankard hangs above the entrance.",
+                          "A covered porch with a few rickety chairs provides a place for regulars to sit and watch the docks.",
+                          "A stable attached to the tavern provides space for mounts and pack animals, making it a convenient stop for travelers and traders."
+                      ],
+                      "interior": [
+                          "Cramped but cozy, with rough wooden tables and benches, all scuffed and carved with years of initials and crude messages.",
+                          "A low-beamed ceiling, from which hangs nets, old lanterns, and fishing floats brought in by workers over the years.",
+                          "The bar counter is polished smooth by decades of use, though the owner keeps a wooden cudgel nearby for troublemakers.",
+                          "A small, raised platform in the corner where the resident musician plays the fiddle every night until close."
+                      ]
+                  },
+                  "dailyRhythm": {
+                      "morning": [
+                          "Silent & Slow: Only early risers and traders pass through.",
+                          "Patrons eat alone, keep to themselves, and do not engage in gossip.",
+                          "No rumors are available during this time."
+                      ],
+                      "midday": [
+                          "Moderate Activity: Dockworkers on break, a few merchants stopping in for food.",
+                          "Minimal chatter, mostly related to work and logistics."
+                      ],
+                      "afternoon": [
+                          "Picking Up: Dockworkers finishing shifts, more movement.",
+                          "Conversations begin to open up, rumors may start emerging."
+                      ],
+                      "evening": [
+                          "Peak Period: Full crowd—dockworkers, sailors, and regulars.",
+                          "Best time for overhearing rumors and gathering information."
+                      ],
+                      "lateNight": [
+                          "Winding Down: A few drunk stragglers, much quieter.",
+                          "Some private conversations still possible, but most information has been shared."
+                      ]
+                  },
+                  "servicesAndOfferings": {
+                      "foodAndDrink": [
+                          { "item": "Bitter Ale", "price": "4 copper per mug, 1 silver per pitcher", "description": "Cheap but effective." },
+                          { "item": "Dunwyd River Rum", "price": "6 copper per shot", "description": "Locally brewed, strong, and burns all the way down." },
+                          { "item": "Salted Fish Stew", "price": "1 silver per bowl", "description": "A worker’s staple, rich and filling." },
+                          { "item": "Fried Bread & Smoked Herring", "price": "5 copper per plate", "description": "Simple but hearty, served with a side of mustard." }
+                      ],
+                      "lodging": [
+                          { "type": "Common Room", "price": "5 copper per night", "description": "A straw-filled pallet by the hearth, first come, first serve." },
+                          { "type": "Small Room", "price": "5 silver per night", "description": "A tiny, windowless space with a stiff cot, available to regulars or those Corbin tolerates." },
+                          { "type": "Long-Term Adventurer’s Quarters", "price": "10 gold per month for up to 6 people", "description": "A large, shared room with six beds, a long wooden table, and a small lockable chest for each resident." }
+                      ],
+                      "stables": {
+                          "price": "1 silver per night per animal",
+                          "description": "Lodging for mounts and pack animals. Includes basic feeding and grooming, but the stablehands are overworked and not particularly attentive."
+                      }
+                  },
+                  "importanceInTheCity": {
+                      "hubForRumors": [
+                          "Ye Ol' Fiddle is not where you learn about Port Dunwyd—it is where you hear of upriver dealings, village disputes, and distant farmland struggles.",
+                          "Foreign traders, barge captains, and dockhands occasionally drop news of political shifts, merchant feuds, or bandit activity far from the city."
+                      ],
+                      "isolationFromPolitics": [
+                          "The tavern is not frequented by nobles, city guards, or political figures.",
+                          "Those looking for information on Port Dunwyd’s factions, governance, or noble dealings must explore the city proper."
+                      ],
+                      "introductionToCharacters": [
+                          "Recurring patrons do not immediately stand out—adventurers will have to spend time here to learn who they are.",
+                          "While many customers are forgettable, a few steady regulars may prove useful if trust is built over time."
+                      ]
+                  }
+              },
+              {
+              "Riverine Offices": {
+                "Overview": {
+                  "Description": "The Riverine Offices serve as a regional command center for the Riverines, the elite naval and security force responsible for maintaining order along the Dynfren River trade routes and the Port Dunwyd harbor. While not the central command for all Riverines, these offices coordinate patrols, gather intelligence, and oversee operations in this specific area.",
+                  "Purpose": "To ensure safe commerce along the river, investigate raider activities, and uphold the security interests of Port Dunwyd."
+                },
+                "Locations": {
+                  "Dynfren Outpost": {
+                    "Description": "A smaller but well-equipped outpost upriver, tasked with monitoring merchant traffic and responding to distress calls.",
+                    "Key Features": [
+                      "Wooden palisade and watchtowers overlooking the river.",
+                      "Barracks for stationed Riverine squads.",
+                      "Supply depot for outfitting long-range patrols.",
+                      "Mess hall frequented by Riverine personnel and trusted traders."
+                    ],
+                    "Commanding Officer": "Captain Elira Vos, a disciplined and pragmatic leader known for her efficiency and strict code of conduct."
+                  }
+                },
+                "Personnel and Structure": {
+                  "High Command": "Admiral Callaghan and his senior officers oversee strategy, resource allocation, and political dealings. He is remote to any of the actual riverine operations, primarily located out of the military headquarters.",
+                  "Regional Command": "Captain Elira Vos, the highest-ranking officer actively overseeing Riverine operations in the region. She enforces discipline, organizes patrols, and directs counter-raider actions. Known for her preference for aggressive engagement against threats, she often clashes with High Command's political maneuvering.",
+                  "Field Officers": "Captains and lieutenants in charge of Riverine patrols, managing intelligence, and leading defensive actions.",
+                  "Riverine Patrol Units": "Consist of well-trained soldiers, boat captains, and scouts tasked with protecting merchant convoys and intercepting threats."
+                },
+                "Operations": {
+                  "Merchant Protection": "Ensuring safe passage for trade vessels along the Dynfren River.",
+                  "Counter-Raider Efforts": "Tracking and eliminating Barren Jackal raiding parties.",
+                  "Border Security": "Patrolling the river’s edge to prevent smuggling and illegal crossings.",
+                  "Espionage and Intelligence": "Maintaining informant networks within merchant guilds and potential enemy factions."
+                },
+                "Secrets and Controversies": {
+                  "Hidden Alliances": "Evidence suggests that some Riverine officials may be colluding with Barren Jackals, staging raids to justify their funding and influence.",
+                  "Power Struggles": "Tensions between Admiral Callaghan and Captain Vos regarding the handling of raider threats, with Vos pushing for more aggressive action while Callaghan maneuvers politically.",
+                  "Class Divide": "The lower-ranking Riverines risk their lives while high-ranking officers enjoy wealth and political leverage."
+                },
+                "Adventure Hooks": {
+                  "Investigate Corruption": "Discover who within the Riverines is aiding the Barren Jackals and why.",
+                  "Escort a Merchant Convoy": "Protect a high-value shipment from potential ambush along the river.",
+                  "Sabotage a Corrupt Officer": "Expose or take down a Riverine official working with criminal elements.",
+                  "Join a Patrol": "Embed with a Riverine unit to experience their operations firsthand and uncover hidden agendas."
+                }
+              }
+            }
           ]
         }
       }
@@ -276,7 +394,7 @@
     "Infrastructure & Law Enforcement": {
       "Details": [
         "The Grand Causeway: The city’s main road, cutting through its heart and linking all districts.",
-        "Limited Bridges & Ferries: The river divides the city, with ferries as the primary mode of cross-city transport.",
+        "Limited Bridges & Ferries: The Dyfren River divides the city, with ferries as the primary mode of cross-city transport.",
         "Walls & Fortifications: Northern and eastern walls protect against land-based threats. The cliffs and ocean provide natural defenses, requiring little fortification.",
         "Police Stations: Scattered throughout the city, acting as local law enforcement hubs connected to the Barracks & Fortress. Maintain order in high-crime areas, particularly the Sailor’s Quarter and Market Row."
       ]
@@ -308,6 +426,552 @@
         ]
       }
     },
+    "Politics": {
+      "General Council": {
+          "Description": "The General Council is the primary governing body of Port Dunwyd, composed of five equally powerful factions, each representing a different pillar of society. While each faction governs its own internal affairs, the Council dictates city-wide policies, resolves disputes, and oversees strategic decision-making.",
+          "Structure & Leadership": {
+              "Council Composition": {
+                  "Description": "The General Council consists of five representatives, one from each faction:",
+                  "Factions": [
+                      "The Sentinel Authority (Military & Law Enforcement)",
+                      "The Dunwyd Trade Consortium (Merchants & Commerce)",
+                      "The Obsidian Veil (Arcanum & Knowledge Control)",
+                      "The Gilded Dominion (Aristocracy & Wealth)",
+                      "The Dunwyd Artisan Assembly (Craftsmen & Industry)"
+                  ]
+              },
+              "Rotating Chairmanship": {
+                  "Details": [
+                      "The Chairman of the Council rotates every two years, ensuring no single faction permanently dominates.",
+                      "Rotation Order: Merchants → Craftsmen → Aristocrats → Military → Arcanum",
+                      "The current Chairman is the representative from the Dunwyd Trade Consortium, one year into their tenure.",
+                      "The Chairman holds limited extra power, primarily acting as the tie-breaking vote and agenda-setter."
+                  ]
+              },
+              "Decision-Making & Voting": {
+                  "Details": [
+                      "Majority Rule (3/5 Votes Required) – Most policy decisions require a simple majority to pass.",
+                      "Unanimous Votes (5/5 Required) – Issues affecting the fundamental structure of Port Dunwyd, such as war declarations or major economic shifts, require all factions to agree.",
+                      "Ties Broken by Chairman – In cases of deadlock, the Chairman casts the deciding vote."
+                  ]
+              }
+          },
+          "Council Responsibilities & Jurisdictions": {
+              "Legislation & Policy": [
+                  "Drafting and enforcing city-wide laws.",
+                  "Regulating trade agreements, taxes, and tariffs.",
+                  "Managing city security, infrastructure, and education."
+              ],
+              "Conflict Resolution & Diplomacy": [
+                  "Mediating disputes between factions.",
+                  "Overseeing foreign relations and trade agreements."
+              ],
+              "Resource Allocation & Infrastructure": [
+                  "Budgeting for public works, including roads, harbors, and city defenses.",
+                  "Funding military expansion, arcane research, and artisan guilds."
+              ],
+              "Security & Intelligence Oversight": [
+                  "Directing the Sentinel Authority’s law enforcement efforts.",
+                  "Managing counterintelligence against internal and external threats."
+              ]
+          },
+          "Internal Conflicts & Political Tensions": {
+              "Details": {
+                  "Merchant-Craftsmen Rivalry": "Merchants push for cheaper goods & lower wages, while craftsmen demand fair prices & labor protections.",
+                  "Aristocracy vs. Merchants": "The aristocrats seek to preserve their wealth & influence, but merchants aim to disrupt traditional power structures.",
+                  "Military & Arcanum Distrust": "The military demands magical support, but the Arcanum hoards its knowledge & restricts magical access.",
+                  "Hidden Agendas": [
+                      "The Arcanum manipulates knowledge & suppresses religion.",
+                      "The Black Market (linked to merchants & aristocrats) operates in the shadows.",
+                      "The Sentinel Authority has corruption within its intelligence branch."
+                  ]
+              },
+              "Adventurer Dynamics": "Adventurers may align themselves to any one of the factions and climb the ranks within, however each faction is jealous. If a faction realizes an adventurer is loyal to another, then there will be trouble."
+          }
+      },
+      "Merchants - The Trade Consortium": {
+        "Description": "Since trade is the backbone of Port Dunwyd, the merchants hold an essential role within the city's economy, balancing between economic growth and self-serving wealth accumulation. While no faction holds more power than the others, the merchants currently have a slight advantage due to the leadership rotation within the council.",
+        "Internal Hierarchy": {
+            "The High Trade Lord": {
+                "Description": "The de facto leader of the merchants, but not the council representative.",
+                "Responsibilities": [
+                    "Oversees trade regulations, taxation, and major economic policies.",
+                    "Often a shrewd negotiator with ties to multiple industries."
+                ],
+                "Current Leader": "Katarina van Aalmere (Female)"
+            },
+            "The Trade Council": {
+                "Description": "A group of 7 influential merchant lords, each representing a major sector and tied to an ethnic faction within the city:",
+                "Members": [
+                    {
+                        "Sector": "Shipping & Exports",
+                        "Councilmember": "Isolde van der Meer (Female)",
+                        "Origin": "From the mercantile houses of Vriesland"
+                    },
+                    {
+                        "Sector": "Imports & Foreign Relations",
+                        "Councilmember": "Diego Navarro (Male)",
+                        "Origin": "From the seafaring culture of the Lakanic"
+                    },
+                    {
+                        "Sector": "High-End Commerce",
+                        "Councilmember": "Astrid Haavik (Female)",
+                        "Details": "Representing the Nordfjell traders. Has platinum blond hair."
+                    },
+                    {
+                        "Sector": "Common & Local Markets",
+                        "Councilmember": "Brigid O'Donoghue (Female)",
+                        "Details": "Leader of the Greenmarch mercantile network."
+                    },
+                    {
+                        "Sector": "Banking & Investments",
+                        "Councilmember": "Oba Adeyemi (Male)",
+                        "Details": "Banker from The House of Adeyemi, a powerful Ekunasi banking dynasty."
+                    },
+                    {
+                        "Sector": "Black Market Liaison (Unofficial)",
+                        "Councilmember": "Gareth Maddoc (Male)",
+                        "Details": "Shadow broker of the Gloamhollow Syndicate."
+                    },
+                    {
+                        "Sector": "The High Trade Lord",
+                        "Details": "Acts as the final authority and tie-breaker in disputes."
+                    }
+                ]
+            },
+            "Trade Sectors & Organizations": {
+                "Independent Entities": [
+                    "The Dockmasters' Consortium – Regulates port fees, ship passage, and warehouse space.",
+                    "The River Traders’ League – Ensures smooth bargemen trade and negotiates upriver tariffs.",
+                    "The Goldscale Exchange – A powerful financial institution providing loans, currency exchange, and money-lending.",
+                    "The Salt & Spice Cartel – A collection of importers and exporters dealing in rare goods."
+                ]
+            },
+            "Independent Merchants & Smugglers": {
+                "Details": [
+                    "Not formally part of the faction but deeply tied to its politics.",
+                    "Smugglers and privateers operate in the shadows but often influence trade policies.",
+                    "A secret network of informants and bribed officials ensures certain merchants thrive while others fail."
+                ]
+            }
+        },
+        "Current Political Influence & Conflicts": {
+            "Details": [
+                "Current Council Chairman is from this faction, meaning trade policies favor the merchants right now.",
+                "Tension with Craftsmen – Merchants push for lower wages and cheaper goods, while craftsmen want higher prices for their work.",
+                "Bribery & Corruption – The Goldscale Exchange and Black Market players have a growing influence over policy.",
+                "Foreign Merchant Interests – Rival traders from distant lands seek to undercut local businesses, creating economic disputes.",
+                "Internal Rivalry – Not all merchants are aligned; some compete fiercely, leading to corporate sabotage, blackmail, or underhanded deals."
+            ]
+        }
+      },
+      "Aristocracy - The Gilded Dominion": {
+        "Description": "The Gilded Dominion represents the entrenched noble class of Port Dunwyd. They wield immense wealth and influence but remain largely detached from the workings of the city, preferring to govern from their lavish mansions within the aristocratic district. Though they do not hold direct military or commercial power, their ownership of vast estates, monopolization of land, and control over the city's economic infrastructure make them one of the most influential factions in the council.",
+        "Internal Structure & Leadership": {
+            "1. The High Sovereign": {
+                "Description": "The figurehead of the noble class, elected from among the noble families. While largely ceremonial, the High Sovereign acts as a final arbitrator for noble disputes and sets broad policies affecting the aristocracy.",
+                "Current High Sovereign": "Edward Aurelian"
+            },
+            "2. The Noble Houses": {
+                "Description": "The true power of the Gilded Dominion, made up of three major noble families, each controlling different aspects of the city's wealth and governance.",
+                "Houses": [
+                    {
+                        "Name": "House of Aurelian",
+                        "Role": "Holds dominion over land ownership, taxation, and rental properties, ensuring no commoner truly owns anything."
+                    },
+                    {
+                        "Name": "House of Valthorne",
+                        "Role": "Oversees the judicial system and legal framework, often bending laws in their favor."
+                    },
+                    {
+                        "Name": "House of Blackbourne",
+                        "Role": "Formerly a military family, they now act as the aristocratic enforcers, maintaining private guards and exerting influence over the Sentinel Authority."
+                    }
+                ]
+            },
+            "3. The Noble Court": {
+                "Description": "A gathering of lesser nobles who act as advisors and executors of aristocratic policies.",
+                "Responsibilities": [
+                    "Ensures merchant contracts, land disputes, and legal decrees favor the noble class.",
+                    "Occasionally votes on matters of aristocratic succession and estate inheritance."
+                ]
+            }
+        },
+        "Role of the Aristocracy in Port Dunwyd": [
+            "Wealth Concentration: The aristocracy controls most of the city's land, banking, and legal frameworks.",
+            "Detachment from Governance: While they hold a seat on the council, they prefer to manipulate from behind the scenes.",
+            "Influence Over Other Factions: The nobility exerts power through bribery, patronage, and debt manipulation.",
+            "Luxury & Excess: Living in a walled-off district, they host lavish galas, political scheming, and covert dealings."
+        ],
+        "Current Political Influence & Conflicts": {
+            "Details": [
+                "Tension with Merchants: Merchants seek economic autonomy, but nobles leverage taxation and property laws to keep them subservient.",
+                "Control Over the Sentinel Authority: Many high-ranking officers in the military have noble ties, ensuring protection of aristocratic interests.",
+                "Corruption in the Courts: The judicial system is heavily biased in favor of noble interests, leading to frequent disputes with craftsmen and merchants.",
+                "Suspicions About the Arcanum: While nobles see magic as a tool, they do not trust the secrecy of the Arcanum."
+            ]
+        }
+      },
+      "Military Police - The Sentinel Authority": {
+        "Description": "The Sentinel Authority serves as both the standing military and law enforcement of Port Dunwyd. They are responsible for defending the city, enforcing laws, and maintaining order. While some view them as a necessary force, others see them as harsh enforcers, easily swayed by political influence.",
+        "Internal Structure & Leadership": {
+            "The Lord Commander": {
+                "Description": "Supreme leader of the Sentinel Authority.",
+                "Responsibilities": [
+                    "The strategic head of all military and law enforcement actions.",
+                    "Balances council politics, security concerns, and factional rivalries."
+                ],
+                "Current Lord Commander": "Isolde van Dijk (Female)"
+            },
+            "The Triumvirate of Order": {
+                "Description": "Three high-ranking officers overseeing different branches of the Sentinel Authority:",
+                "Members": [
+                    {
+                        "Position": "Captain of the City Watch",
+                        "Name": "Fiona Ó Braonáin (Female)",
+                        "Responsibilities": "Commands law enforcement, patrols, and peacekeeping forces."
+                    },
+                    {
+                        "Position": "High Marshal of the Iron Pact",
+                        "Name": "Magnus Haavik (Male)",
+                        "Responsibilities": "Leader of the Iron Pact, overseeing the army, navy, and expeditionary units to ensure regional control over outlying villages and resource suppliers."
+                    },
+                    {
+                        "Position": "Master of Internal Security",
+                        "Name": "Nia Okafor (Female)",
+                        "Responsibilities": "Oversees espionage, counterintelligence, and faction monitoring. Reports directly to the Lord Commander. She is complicit in corruption, taking a cut from merchants and aristocrats who have Black Cloaks on their payroll."
+                    }
+                ]
+            },
+            "Ranks & Units": {
+                "Description": "The organizational breakdown of the Sentinel Authority:",
+                "Units": [
+                    {
+                        "Name": "The City Watch",
+                        "Role": "The primary law enforcement force of Port Dunwyd, responsible for keeping the peace and maintaining order.",
+                        "Subunits": [
+                            "Uniformed Police – Officers who patrol the streets, enforce laws, and respond to crimes within the city.",
+                            "Riverine Coastguard – A maritime enforcement unit protecting the river from smuggling, piracy, and banditry."
+                        ]
+                    },
+                    {
+                        "Name": "The Iron Pact",
+                        "Role": "The external military force of Port Dunwyd, tasked with maintaining control over outlying villages, securing vital trade routes, and ensuring the city-state’s dominance in the region.",
+                        "Subunits": [
+                            "The Iron Legion – The professional army responsible for securing villages, deterring uprisings, and defending the city-state’s interests.",
+                            "The Dunwyd Armada – The naval force ensuring the security of trade routes and coastal defenses."
+                        ]
+                    },
+                    {
+                        "Name": "The Black Cloaks",
+                        "Role": "A secretive internal intelligence unit answering directly to the Master of Internal Security. The unit consists of specialized subunits:",
+                        "Subunits": [
+                            "The Intelligence Corps – Highly educated officers specializing in espionage, counterintelligence, and information warfare. They work in traditional intelligence roles, gathering and analyzing data to maintain the security of Port Dunwyd.",
+                            "The Sleeper Cell Network – Covert agents embedded throughout the different factions of the Sentinel Authority as well as external entities. They operate in deep cover, influencing events from within and maintaining long-term surveillance."
+                        ],
+                        "Notes": "Limited Oversight: The Black Cloaks are able to monitor all factions except the Arcanum, whose secrecy and magical barriers prevent effective infiltration."
+                    }
+                ]
+            }
+        },
+        "Role of the Sentinel Authority in Port Dunwyd": [
+            "Law Enforcement & Order: Ensuring crime, riots, and political unrest are controlled.",
+            "Defense of the City & Outer Territories: Guarding key points, securing trade routes, and deterring piracy.",
+            "Maintaining Regional Control: Enforcing the city's rule over outlying villages and upriver suppliers, ensuring continued loyalty.",
+            "Intelligence & Espionage: Monitoring internal factions, preventing insurrections, and controlling information.",
+            "Tension with Other Factions: Merchants complain about protection fees, the Arcanum distrusts their surveillance, and the Craftsmen see them as tools of the elite."
+        ],
+        "Current Political Influence & Conflicts": {
+            "Details": [
+                "Their leadership turn is coming soon, making them wary of growing instability.",
+                "Tensions with the Arcanum: They distrust magic but also demand magical aid when convenient.",
+                "Corruption Allegations: Some commanders work closely with merchants and aristocrats, enforcing laws selectively.",
+                "Crime & Smuggling: The Black Market has found ways around their patrols—how?"
+            ]
+        }
+      },
+      "Arcanum - The Obsidian Veil": {
+        "Description": "Unlike the craftsmen and merchants, the Arcanum is not an economic driver but a repository of rare knowledge, lost history, and magical research. While magic is rare in this world, the Arcanum has ensured that all significant magical power is concentrated within its ranks—through dark and secretive means. The Arcanum also controls all scholastic pursuits within Port Dunwyd, using its influence to oppress religious expression and advocate for atheism. While they allow small, scattered chapels, they covertly undermine any attempt at organized religion, limiting the gods' influence in the region.",
+        "Internal Structure & Leadership": {
+            "The Archon of the Veil": {
+                "Description": "The enigmatic leader of the Arcanum.",
+                "Details": [
+                    "A demon in disguise, orchestrating the faction's affairs from the shadows.",
+                    "The ultimate authority, deciding who may study magic and who must perish."
+                ],
+                "Current Archon": "Silas Whitmore (Male)"
+            },
+            "The Two Advisors": {
+                "Description": "The only ones who report directly to the Archon, each with distinct yet complementary motivations. They are aligned in purpose and non-combative politically, ensuring the Arcanum’s control remains absolute.",
+                "Advisors": [
+                    {
+                        "Name": "Eleanor Fairfax (Female)",
+                        "Title": "The Advisor of Preservation",
+                        "Responsibilities": "Oversees the study and safeguarding of ancient magical knowledge while ensuring strict secrecy."
+                    },
+                    {
+                        "Name": "Nathaniel Bishop (Male)",
+                        "Title": "The Advisor of Harvesting",
+                        "Responsibilities": "Manages the acquisition and extraction of magical energy from those who do not survive initiation."
+                    }
+                ]
+            },
+            "The Arcanum’s Inner Circle": {
+                "Description": "All other members report directly to one of the two advisors.",
+                "Details": [
+                    "Enforcers, researchers, and indoctrinators operate under strict hierarchical control.",
+                    "The initiation process includes intensive brainwashing, ensuring absolute loyalty to the Archon.",
+                    "There is no misalignment among its members; all are devoted to their leader and the cause.",
+                    "Only one known member harbors doubts, a possible ally for outsiders seeking to uncover the Arcanum’s mysteries."
+                ]
+            }
+        },
+        "The Dark Secret of the Arcanum": [
+            "Kidnapping of the Gifted: Any child displaying magical ability is secretly taken by the Arcanum, but this goes largely unnoticed by the general public.",
+            "A Ruthless Selection Process: Captives are either recruited or killed to extract their latent magical energy.",
+            "Magical Monopoly: All magic in the region is either controlled by the Arcanum or reduced to weak, diluted forms.",
+            "Religious Oppression: The Arcanum covertly undermines religious institutions, limiting divine influence in Port Dunwyd.",
+            "Rumors Among the Superstitious: Some suspect something sinister, but the truth remains hidden under layers of secrecy.",
+            "Public Perception: The Arcanum is viewed as an upstanding institution of magic, following the strictest scientific methods."
+        ],
+        "Current Political Influence & Conflicts": {
+            "Details": [
+                "Their turn in council leadership is last, meaning their patience for the other factions is wearing thin.",
+                "Conflicts with the Military: The Arcanum resents the military’s demands for magic and sees them as reckless.",
+                "The Black Market Dilemma: Magical artifacts have been surfacing where they shouldn’t—a growing internal concern.",
+                "One Doubter Within: A single Arcanum member secretly questions their leader, potentially becoming an ally for those seeking to infiltrate the faction."
+            ]
+        }
+      },
+      "Craftsmen Guilds - The Artisan Assembly": {
+        "Description": "The craftsmen of Port Dunwyd are the backbone of its industries, responsible for the production of essential goods, ship components, and high-quality wares. Unlike the merchants, who control trade and commerce, the craftsmen focus on creation, quality, and fair labor practices. They are fiercely protective of their work and often push back against merchant influence. With no inherent raw resources in Port Dunwyd, the craftsmen serve as the primary economic drivers, transforming imported materials into highly sought-after products. Their mastery of craftsmanship sustains the city's economy, making them indispensable despite their ongoing struggles against the merchants' economic control.",
+        "Internal Hierarchy": {
+            "The Grandmaster Artisan": {
+                "Description": "The head of the Assembly and its most respected craftsman.",
+                "Responsibilities": [
+                    "Represents the collective interests of all artisans.",
+                    "Oversees trade contracts, quality control, and apprenticeships.",
+                    "Not the council representative but the leader within the guild structure."
+                ],
+                "Current Grandmaster Artisan": "Murdoch MacIlleathain (Male)"
+            },
+            "The Artisan Council": {
+                "Description": "A 5-member governing body made up of master artisans from different trades, all of Gaelic descent, preserving their ancestral methods and craftsmanship.",
+                "Members": [
+                    {
+                        "Trade": "Blacksmithing & Metalworking",
+                        "Councilmember": "Dona MacEachan (Female)"
+                    },
+                    {
+                        "Trade": "Woodworking & Carpentry",
+                        "Councilmember": "Finnan MacBeatha (Male)"
+                    },
+                    {
+                        "Trade": "Textiles & Leatherworking",
+                        "Councilmember": "Kara MacDhùghaill (Female)"
+                    },
+                    {
+                        "Trade": "Stonemasonry & Architecture",
+                        "Councilmember": "Ewan MacRuairidh (Male)"
+                    },
+                    {
+                        "Trade": "Runecrafting & Inscription",
+                        "Councilmember": "Tara MacGilleEathain (Female)"
+                    }
+                ]
+            },
+            "Guild Workshops & Districts": {
+                "Description": "Each craft has its own designated workshop district, with apprentices training under masters.",
+                "Facilities": [
+                    "The Assembly Hall – A grand meeting place where disputes are settled and policies are made.",
+                    "Trade Quotas & Contracts – Set by the Artisan Council to ensure fair pricing and prevent exploitation by merchants."
+                ]
+            }
+        },
+        "Current Political Influence & Conflicts": {
+            "Details": [
+                "Upcoming Chairmanship: The Craftsmen will soon take over the council, leading to likely disputes with merchants over pricing and contracts.",
+                "Tension with Merchants: Craftsmen demand higher pay and refuse to let merchants dictate their prices.",
+                "Competition with Foreign Goods: Imported wares threaten their local dominance.",
+                "Apprentice Shortages: With growing demand, fewer young workers are entering the trade, leading to skilled labor shortages."
+            ]
+        }
+      }
+    },
+    "Locations": [
+      {
+        "Ye Ol' Fiddle": {
+          "Overview": {
+            "Description": "Tucked away in a small merchant square just outside the Barge Load/Offload Area, Ye Ol' Fiddle is a modest, unassuming tavern that serves as a retreat for the support workers of the barge industry. Unlike the bustling harborside taverns catering to sailors, merchants, and city elites, this low-key establishment is where dockhands, haulers, and warehouse workers gather after a long day's labor.",
+            "Role in Port Dunwyd": "The tavern is largely isolated from city politics, and while its clientele is mostly un-notable, it serves as a prime location for gathering rumors about trade routes, upriver settlements, and distant farmsteads. Those seeking knowledge of Port Dunwyd’s inner workings will have to venture deeper into the city—Ye Ol' Fiddle is not a place where city elites or politicians drink. Often abbreviated YOF by the locals."
+          },
+          "Atmosphere and Layout": {
+            "Exterior": [
+              "A small, weather-worn building, made of aged wood and river stone, its timber beams darkened by years of smoke and rain.",
+              "A modest sign depicting a fiddle and a tankard hangs above the entrance.",
+              "A covered porch with a few rickety chairs provides a place for regulars to sit and watch the docks.",
+              "A stable attached to the tavern provides space for mounts and pack animals, making it a convenient stop for travelers and traders."
+            ],
+            "Interior": [
+              "Cramped but cozy, with rough wooden tables and benches, all scuffed and carved with years of initials and crude messages.",
+              "A low-beamed ceiling, from which hangs nets, old lanterns, and fishing floats brought in by workers over the years.",
+              "The bar counter is polished smooth by decades of use, though the owner keeps a wooden cudgel nearby for troublemakers.",
+              "A small, raised platform in the corner where the resident musician plays the fiddle every night until close."
+            ]
+          },
+          "People": {
+            "Owner": {
+              "Name": "Corbin Duskwood",
+              "Description": "Human, Late 50s, Gruff & Disdainful",
+              "Details": [
+                "A curmudgeonly old barkeep with perpetual scowl lines and a gravelly voice.",
+                "Dislikes most patrons, grumbling about 'loudmouth drunks and fools', but mysteriously takes a liking to any player character.",
+                "Runs the tavern with begrudging efficiency, ensuring drinks are poured, debts are paid, and fights don’t last too long."
+              ]
+            },
+            "Resident Fiddle Player": {
+              "Name": "Elias 'Strings' Marrow",
+              "Description": "Half-Elf, Middle-Aged, Mellow & Insightful",
+              "Details": [
+                "A thin, silver-haired musician who plays the fiddle every night from dinner until close.",
+                "Speaks softly but always seems to know the latest rumors, gathering information from drunken dockhands and loose-lipped traders.",
+                "Occasionally, traveling musicians join him, adding a rare bit of variety to the tavern’s entertainment."
+              ]
+            },
+            "Recurring Patrons": [
+              "A handful of steady regulars, mostly warehouse workers and barge laborers, appear over time, offering small insights into local events and personalities.",
+              "They are not immediately important, and adventurers will have to earn their trust over time if they wish to learn anything useful.",
+              "While helpful with rumors from upriver, they rarely discuss city politics or noble dealings."
+            ]
+          },
+          "Services and Offerings": {
+            "Food and Drink": [
+              { "Item": "Bitter Ale", "Price": "4 copper per mug, 1 silver per pitcher", "Description": "Cheap but effective." },
+              { "Item": "Dunwyd River Rum", "Price": "6 copper per shot", "Description": "Locally brewed, strong, and burns all the way down." },
+              { "Item": "Salted Fish Stew", "Price": "1 silver per bowl", "Description": "A worker’s staple, rich and filling." },
+              { "Item": "Fried Bread & Smoked Herring", "Price": "5 copper per plate", "Description": "Simple but hearty, served with a side of mustard." }
+            ],
+            "Lodging": {
+              "Common Room": {
+                "Price": "5 copper per night",
+                "Description": "A straw-filled pallet by the hearth, first come, first serve."
+              },
+              "Small Room": {
+                "Price": "5 silver per night",
+                "Description": "A tiny, windowless space with a stiff cot, available to regulars or those Corbin tolerates."
+              },
+              "Long-Term Adventurer’s Quarters": {
+                "Price": "10 gold per month for up to 6 people",
+                "Description": [
+                  "A large, shared room with six beds, a long wooden table, and a small lockable chest for each resident.",
+                  "Includes one meal per day (Traveler’s Stew or Fried Bread & Herring).",
+                  "Guests may store personal belongings, though Corbin will not be responsible for stolen goods.",
+                  "Exclusive to adventurers or groups that Corbin tolerates."
+                ]
+              }
+            },
+            "Stables": {
+              "Price": "1 silver per night per animal",
+              "Description": "Includes basic feeding and grooming, but the stablehands are overworked and not particularly attentive."
+            }
+          },
+          "Importance in the City": {
+            "Hub for Rumors from Abroad": [
+              "Ye Ol' Fiddle is not where you learn about Port Dunwyd—it is where you hear of upriver dealings, village disputes, and distant farmland struggles.",
+              "Foreign traders, barge captains, and dockhands occasionally drop news of political shifts, merchant feuds, or bandit activity far from the city.",
+              "This is a crucial location for anyone investigating happenings beyond Port Dunwyd."
+            ],
+            "Place of Isolation from City Politics": [
+              "The tavern is not frequented by nobles, city guards, or political figures.",
+              "Those looking for information on Port Dunwyd’s factions, governance, or noble dealings must explore the city proper.",
+              "Rumors from the city don't reach the locals in the tavern. The locals mainly focus on news from up-river."
+            ],
+            "Slow Introduction to Local Characters": [
+              "The recurring patrons do not immediately stand out—adventurers will have to spend time here to learn who they are.",
+              "While many customers are forgettable, a few steady regulars may prove useful if trust is built over time."
+            ]
+          }
+        }
+      }      
+    ],
     "Conclusion": "Despite its rugged exterior, Port Dunwyd is a flourishing trade city, where merchants, scholars, and warriors mingle under the sea breeze. It is a city where wealth, power, and ambition clash—and only the strong thrive."
+  },
+  "The Barrens": {
+    "Geography and Climate": {
+      "Description": "The Barrens stretch northward from Port Dunwyd, a desolate and windswept expanse where survival is a constant struggle.",
+      "Details": [
+        "Once fertile, now a harsh wasteland due to overgrazing, deforestation, and arcane mishaps.",
+        "Dry riverbeds crisscross the land, remnants of long-gone waterways that once fed the region.",
+        "Unpredictable weather, including sudden sandstorms and frigid nights, makes the land treacherous."
+      ]
+    },
+    "Inhabitants and Threats": {
+      "Barren Jackals": "A well-organized bandit faction that preys on merchants and travelers along the Dynfren River trade routes.",
+      "Beasts of the Waste": "Monstrous creatures lurk in the depths of the barrens, including dire wolves, massive carrion birds, and burrowing ambushers.",
+      "Riverine Scouting Parties": "Small squads of Riverines patrol the outskirts, attempting to suppress raids but failing to eliminate the threat completely."
+    },
+    "Locations": {
+      "The Broken Spires": "Jagged rock formations, rumored to be the remnants of a ruined fortress, provide shelter for wanderers and criminals alike.",
+      "The Bleached Caravan Grounds": "A graveyard of sun-bleached wagons and abandoned goods, a haunting testament to failed expeditions.",
+      "The Black Maw Chasm": "A massive fissure in the earth, where eerie howls emerge during the night, keeping even the bravest at bay.",
+      "The Oasis of Kel’dras": "The last reliable water source, guarded zealously by a druidic enclave determined to keep outsiders away.",
+      "Barren Jackals Hideout": {
+        "Overview": {
+          "Description": "A fortified encampment hidden deep within the Barrens, serving as the operational center of the Barren Jackals. The hideout typically has a full raid out on patrol or conducting attacks, leaving the defenses lightly manned during these times. Every time the adventurers are near or in the hideout, a full raid of Barren Jackals is absent from the hideout, making it an opportune moment for infiltration or sabotage.",
+          "Role in the Barrens": "A critical hub for stolen goods, mercenary recruitment, and staging grounds for raids."
+        },
+        "Atmosphere and Layout": {
+          "Exterior": [
+            "A natural rock outcropping, hollowed out over generations to form an intricate stronghold.",
+            "Cloaked in a perpetual haze of dust and smoke from campfires and makeshift forges.",
+            "Scouts and lookouts positioned at key vantage points to watch for intruders."
+          ],
+          "Interior": [
+            "A maze of tunnels and chambers, each repurposed for storage, living quarters, or strategic planning.",
+            "Caged prisoners—merchants, travelers, and rival gang members—held as ransom or laborers.",
+            "A central war chamber adorned with crude banners, maps, and stolen artifacts from past raids.",
+            "Scattered evidence of collusion with the highest ranks of the Riverines, including coded messages, strategic reports, and personal correspondences."
+          ]
+        },
+        "Inhabitants": {
+          "Leadership & Command": {
+            "Kaelthorn": {"Role": "Warlord", "Race": "Orc", "Level": 5, "Class": "Fighter/Barbarian"},
+            "Garrik the Hound": {"Role": "Second-in-Command", "Race": "Half-Orc", "Level": 4, "Class": "Druid/Fighter"},
+            "Elite Advisors": "Possibly one or two elite warriors or trusted advisors."
+          },
+          "Combatants": {
+            "Barren Jackal Raiders": "50-60 Fighters, Barbarians, and Druids wielding axes, clubs, and primitive spells.",
+            "Barren Jackal Scouts": "15-20 agile Goblin Rogues specializing in stealth, tracking, and ranged attacks.",
+            "Barren Jackal Elite Guards": "10-15 heavily armored Orc Fighters defending key leaders and structures.",
+            "Barren Jackal Shamans": "5-10 Orc Druids providing spiritual guidance, healing, and elemental magic.",
+            "New Recruits": "10-20 untrained individuals learning raiding tactics."
+          },
+          "Typical Raid Composition": {
+            "Raiders": "25-30 Fighters and Barbarians forming the main assault force.",
+            "Scouts": "5-10 Goblin Rogues for reconnaissance and ambushes.",
+            "Elite Guards": "3-5 heavily armored Orcs to ensure the safety of the warband leaders.",
+            "Shamans": "2-3 Druids providing magical support and healing."
+          },
+          "Non-Combatants": {
+            "Crafters & Blacksmiths": "5-10 weapon and armor repair specialists.",
+            "Traders & Smugglers": "5-8 individuals bartering stolen goods and supplies.",
+            "Captives & Slaves": "15-20 prisoners, hostages, or individuals forced to work."
+          },
+          "Total Estimated Population": "150-160 individuals, with ~100-120 combatants and ~30-40 non-combatants."
+        }
+      }
+    },
+    "Factions and Conflicts": {
+      "Outlaw Gangs": "The Barren Jackals dominate, but smaller factions attempt to carve out their own influence.",
+      "The Riverines": "While officially opposed to the Jackals, hidden alliances and political manipulations keep the raiders in play.",
+      "The Druidic Enclave of Kel’dras": "Seeks to eradicate both the Jackals and the Riverines to restore the natural balance of the land."
+    },
+    "Adventure Hooks": {
+      "The River Raid Investigation": "A string of recent raids raises suspicions about the Jackals’ growing influence—who is truly benefiting from these attacks?",
+      "Garrik’s Offer": "With Kaelthorn’s rule becoming unstable, his second-in-command is willing to trade vital intelligence for a chance at power.",
+      "The Hidden Ledger": "A captured informant speaks of a secret ledger containing proof of the Riverines’ corruption—hidden deep within the Barren Jackals’ stronghold.",
+      "The Scourge of the Barrens": "A final assault on the Jackals could either eliminate them entirely or create a new power vacuum within the region."
+    },
+    "Conclusion": "The Barrens remain a volatile frontier, where politics, warfare, and survival intertwine, shaping the destiny of Port Dunwyd and beyond."
   }
 }

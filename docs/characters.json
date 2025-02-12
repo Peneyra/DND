@@ -1,95 +1,115 @@
 {
     "characters": [
-        {"id_char" : 1,
-            "player"     : "Sean", 
-            "name"       : "Todd",
-            "classtype"  : "rogue",
-            "level"      : 1,
-            "race"       : "human",
-            "background" : "criminal",
-            "alignment"  : "neutral",
-            "backstory"  : "none",
-            "xp"         : 0,
+        {"id_char": 1,
+            "player": "Seanster",
+            "name": "Liam",
+            "classtype": "bard",
+            "level": 1,
+            "race": "human",
+            "background": "soldier",
+            "alignment": "neutral",
+            "backstory": "none",
+            "xp": 0,
             "stats": {
-                "str"    : 13,
-                "dex"    : 16,
-                "con"    : 11,
-                "int"    : 15,
-                "wis"    : 9,
-                "cha"    : 14
+                "str": 13,
+                "dex": 15,
+                "con": 9,
+                "int": 11,
+                "wis": 14,
+                "cha": 16
             },
             "appearance": {
-                "age"    : 25,
-                "height" : 5.5,
-                "height_unit" : "feet",
-                "weight" : 180,
-                "eyes"   : "brown",
-                "skin"   : "tan",
-                "hair"   : "brown",
-                "phys_desc" : "plain"
+                "age": 25,
+                "height": 5.5,
+                "height_unit": "feet",
+                "weight": 180,
+                "eyes": "brown",
+                "skin": "tan",
+                "hair": "brown",
+                "phys_desc": "plain"
             },
-            "inventory" : {
-                "bag_1"    : ["gaming set", "thieves tools", "crowbar"],
+            "inventory": {
+                "bag_1": [
+                    "gaming set",
+                    "thieves tools",
+                    "crowbar"
+                ],
                 "money": {
-                    "pp" : 0,
-                    "ep" : 0,
-                    "gp" : 15,
-                    "sp" : 0,
-                    "cp" : 0
+                    "pp": 0,
+                    "ep": 0,
+                    "gp": 15,
+                    "sp": 0,
+                    "cp": 0
                 },
-                "equipment": ["Common Clothes"],
-                "treasure" : []
+                "equipment": [
+                    "Common Clothes"
+                ],
+                "treasure": []
             },
-            "abilities" : {
-                "cantrips" : [],
-                "spells"   : [],
-                "feats"    : []
+            "abilities": {
+                "cantrips": [
+                    "dancing lights",
+                    "vicious mockery"
+                ],
+                "spells": [
+                    "charm person",
+                    "detect magic",
+                    "healing word",
+                    "thunderwave"
+                ],
+                "feats": []
             }
         },
-        {"id_char" : 2,
-            "player"     : "Anthony",
-            "name"       : "Brandon",
-            "classtype"  : "rogue",
-            "level"      : 1,
-            "race"       : "human",
-            "background" : "criminal",
-            "alignment"  : "neutral",
-            "backstory"  : "none",
-            "xp"         : 0,
+        {"id_char": 2,
+            "player": "Anthony",
+            "name": "Brandon",
+            "classtype": "rogue",
+            "level": 1,
+            "race": "human",
+            "background": "criminal",
+            "alignment": "neutral",
+            "backstory": "none",
+            "xp": 0,
             "stats": {
-                "str"    : 13,
-                "dex"    : 16,
-                "con"    : 11,
-                "int"    : 15,
-                "wis"    : 9,
-                "cha"    : 14
+                "str": 13,
+                "dex": 16,
+                "con": 11,
+                "int": 15,
+                "wis": 9,
+                "cha": 14
             },
             "appearance": {
-                "age"    : 25,
-                "height" : 5.5,
-                "height_unit" : "feet",
-                "weight" : 180,
-                "eyes"   : "brown",
-                "skin"   : "tan",
-                "hair"   : "brown",
-                "phys_desc" : "plain"
+                "age": 25,
+                "height": 5.5,
+                "height_unit": "feet",
+                "weight": 180,
+                "eyes": "brown",
+                "skin": "tan",
+                "hair": "brown",
+                "phys_desc": "plain"
             },
-            "inventory" : {
-                "bag_1"    : ["gaming set", "thieves tools", "crowbar"],
+            "inventory": {
+                "bag_1": [
+                    "gaming set",
+                    "thieves tools",
+                    "crowbar"
+                ],
                 "money": {
-                    "pp" : 0,
-                    "ep" : 0,
-                    "gp" : 15,
-                    "sp" : 0,
-                    "cp" : 0
+                    "pp": 0,
+                    "ep": 0,
+                    "gp": 15,
+                    "sp": 0,
+                    "cp": 0
                 },
-                "equipment": ["Common Clothes"],
-                "treasure" : []
+                "equipment": [
+                    "Common Clothes"
+                ],
+                "treasure": []
             },
-            "abilities" : {
-                "cantrips" : [],
-                "spells"   : [],
-                "feats"    : []
+            "abilities": {
+                "cantrips": [],
+                "spells": [],
+                "feats": []
             }
         }
     ]

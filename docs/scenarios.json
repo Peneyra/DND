@@ -1,56 +1,1052 @@
-"scenarios" : [
-    {
-        "generalInstructions" : [
-            "Scenarios are divided into tasks which are structured into three distinct phases: an 'initialCondition', 'events', and 'completionInstructions'.",
-            "Proceed through the tasks sequentially, verifying the 'initialConditions' are met, then incorporating the 'events' and then excuting the 'completionInstructions'.",
-            "Begin the 'Scenario' only after all aspects of the 'initialCondition' have been fully met.",
-            "'completionInstructions' have 'requiredConditions' and 'results'.",
-            "Once the 'requiredConditions' of the 'completionInstructions' are met, follow the instructions of the 'results'."
-        ]
-    },
-    {
-        "idScene" : 0,
-        "title": "The Beginning",
-        "startingLocation": "Ye Ol' Fiddle Tavern",
-        "tasks" : [
-            {
-                "taskId" : 0,
-                "initialConditions" : "Null",
-                "events" : [
-                    "The adventurer wakes up in a private booth in Ye Ol' Fiddle with no recollection of how they got there. They were found unconcious by Elias in the sailors quarters. Elias took pity on the adventurers, loaded them into a hand cart, and brought them back to Ye Ol' Fiddle.",
-                    "Elias briefly makes sure the adventurer is feeling better, then ends the conversation to go play music as he is paid to do.",
-                    "The adventurer is every hungry and finds it hard to focus on anything until he eats.",
-                    "The adventurer's best source of food is asking Corbin for a meal and then eating the meal."
-                ],
-                "completionInstructions" : {
-                    "requiredConditions" : "The adventurer has eaten something.",
-                    "results" : [
-                        "The adventurer can now focus on his surroundings",
-                        {
-                            "Two conversations are within earshot" : [
-                                {
-                                    "group" : "By the door",
-                                    "discussion" : "A warehouse was bought by outsiders. They fired all local workers but continue operations in secret."
-                                },
-                                {
-                                    "group" : "By the stage",
-                                    "discussion" : "A warehouse was bought by outsiders. They fired all local workers but continue operations in secret."
-                                }
-                            ]
-                        }
-                    ]
+{
+    "scenarios": [
+        {"generalInstructions": [
+                "Scenarios are divided into tasks which are structured into three distinct phases: an 'initialCondition', 'events', and 'completionInstructions'.",
+                "Proceed through the tasks sequentially, verifying the 'initialConditions' are met, then incorporating the 'events' and then executing the 'completionInstructions'.",
+                "Begin the 'Scenario' only after all aspects of the 'initialCondition' have been fully met.",
+                "'completionInstructions' have 'requiredConditions' and 'results'.",
+                "Once the 'requiredConditions' of the 'completionInstructions' are met, follow the instructions of the 'results'.",
+                "If the event requires initiation of a idScene which does not exist, prompt the player to provide that information."
+            ]
+        },
+        {"id_scene": 0,
+            "title": "The Beginning",
+            "startingLocation": "Ye Ol' Fiddle Tavern",
+            "NPCs": [
+                {"id_NPC": 1,
+                    "name": "Corbin Duskwood",
+                    "classtype": "Commoner",
+                    "level": 1,
+                    "race": "human",
+                    "background": "Tavern Owner",
+                    "alignment": "neutral",
+                    "backstory": "A gruff, no-nonsense barkeep who has run Ye Ol' Fiddle for decades. While he seems irritable, he has a soft spot for regular patrons and those in need.",
+                    "xp": 0,
+                    "stats": {
+                        "str": 12,
+                        "dex": 10,
+                        "con": 14,
+                        "int": 11,
+                        "wis": 13,
+                        "cha": 9
+                    },
+                    "appearance": {
+                        "age": 58,
+                        "height": 5.9,
+                        "height_unit": "feet",
+                        "weight": 190,
+                        "eyes": "gray",
+                        "skin": "tanned",
+                        "hair": "graying brown",
+                        "phys_desc": "Stocky and broad-shouldered, always seen cleaning a mug with a rag."
+                    },
+                    "inventory": {
+                        "bag_1": [
+                            "Key to the tavern",
+                            "Ledger of unpaid tabs"
+                        ],
+                        "money": {
+                            "pp": 0,
+                            "ep": 0,
+                            "gp": 5,
+                            "sp": 15,
+                            "cp": 50
+                        },
+                        "equipment": [
+                            "Sturdy apron",
+                            "Wooden cudgel behind the counter"
+                        ],
+                        "treasure": []
+                    },
+                    "abilities": {
+                        "cantrips": [],
+                        "spells": [],
+                        "feats": [
+                            "Intimidating Presence"
+                        ]
+                    }
+                },
+                {"id_NPC": 2,
+                    "name": "Elias 'Strings' Marrow",
+                    "classtype": "Bard",
+                    "level": 2,
+                    "race": "half-elf",
+                    "background": "Wandering Musician",
+                    "alignment": "chaotic good",
+                    "backstory": "A talented yet secretive fiddle player who has an ear for gossip. While he enjoys entertaining, he is also known to be involved in small-time smuggling and information brokering.",
+                    "xp": 0,
+                    "stats": {
+                        "str": 10,
+                        "dex": 14,
+                        "con": 12,
+                        "int": 13,
+                        "wis": 11,
+                        "cha": 16
+                    },
+                    "appearance": {
+                        "age": 35,
+                        "height": 5.10,
+                        "height_unit": "feet",
+                        "weight": 170,
+                        "eyes": "green",
+                        "skin": "light",
+                        "hair": "silver",
+                        "phys_desc": "Lean with an easy smirk, always carrying his fiddle."
+                    },
+                    "inventory": {
+                        "bag_1": [
+                            "Well-worn fiddle",
+                            "Set of dice",
+                            "Small concealed dagger"
+                        ],
+                        "money": {
+                            "pp": 0,
+                            "ep": 0,
+                            "gp": 10,
+                            "sp": 25,
+                            "cp": 30
+                        },
+                        "equipment": [
+                            "Traveler’s cloak",
+                            "Simple leather armor"
+                        ],
+                        "treasure": []
+                    },
+                    "abilities": {
+                        "cantrips": [
+                            "Vicious Mockery",
+                            "Minor Illusion"
+                        ],
+                        "spells": [
+                            "Charm Person",
+                            "Detect Magic"
+                        ],
+                        "feats": [
+                            "Silver Tongue"
+                        ]
+                    },
+                    "dailyRoutine": {
+                        "morning": [
+                            "Leaves Ye Ol’ Fiddle early to roam the Sailor’s Quarter and Merchant District.",
+                            "Takes on various odd jobs, some legitimate (errands, delivery work, message running) and some dubious (information brokering, gambling, low-level scams).",
+                            "Avoids guards and knows where not to be seen.",
+                            "If players look for Elias in the morning, they may overhear something shady or catch him mid-job."
+                        ],
+                        "afternoon": [
+                            "Wrapping up his side jobs, collecting payments, or avoiding heat if things go wrong.",
+                            "If a scenario disrupts his day, he may be missing from the tavern later.",
+                            "Otherwise, he heads back to Ye Ol’ Fiddle in the early afternoon, eating a meal at the bar—this is the best time for players to talk to him casually before he’s distracted by his music."
+                        ],
+                        "evening": [
+                            "Plays his fiddle set for the tavern patrons.",
+                            "Socializes heavily afterward, drinking, talking, and gathering information.",
+                            "Best time to engage in deeper conversations—but only if players wait until his set is done."
+                        ],
+                        "lateNight": [
+                            "If the tavern is still busy, he lingers.",
+                            "If it’s clearing out, he retires for the night—but may still meet with 'business contacts' for after-hours dealings.",
+                            "Never leaves town overnight unless a scenario forces it."
+                        ]
+                    }
+                }
+            ],
+            "tasks": [
+                {
+                    "taskId": 1,
+                    "initialConditions": null,
+                    "events": [
+                        "The adventurer wakes up in a private booth in Ye Ol' Fiddle with no recollection of how they got there. They were found unconscious by Elias in the sailors quarters. Elias took pity on the adventurers, loaded them into a hand cart, and brought them back to Ye Ol' Fiddle.",
+                        "Elias briefly makes sure the adventurer is feeling better, then ends the conversation to go play music as he is paid to do.",
+                        "The adventurer is very hungry and finds it hard to focus on anything until he eats. They are unable to pay attention to their surroundings or any conversations around them.",
+                        "The adventurer's best source of food is asking Corbin for a meal and then eating the meal."
+                    ],
+                    "completionInstructions": {
+                        "requiredConditions": "The adventurer has eaten something.",
+                        "results": [
+                            "The adventurer can now focus on his surroundings",
+                            {
+                                "twoConversationsWithinEarshot": [
+                                    {
+                                        "group": "By the door",
+                                        "discussion": "A warehouse was bought by outsiders. They fired all local workers but continue operations in secret."
+                                    },
+                                    {
+                                        "group": "By the stage",
+                                        "discussion": "A barge was raided upriver. The riverines arrived just in time to rescue the barge.  What a bunch of heroes"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "taskId": 2,
+                    "initialConditions": "The adventurer focuses on the conversation the group by the door is having",
+                    "events": "Initiate scenario with id_scene 1."
+                },
+                {
+                    "taskId": 3,
+                    "initialConditions": "The adventurer focuses on the conversation the group by the stage is having",
+                    "events": "Initiate scenario with id_scene 2."
+                }
+            ]
+        },
+        {"id_scene": 1,
+            "title": "Port Dunwyd - Barge Docks",
+            "startingLocation": "Port Dunwyd - Barge Docks",
+            "difficulty": "Suitable for Level 1 Adventurers",
+            "sceneSetter": {
+                "backgroundSituation": "Councilor Astrid Haavik, the Nordfjell traders' representative on the High-End Commerce seat of the trade council, has covertly acquired a warehouse near the barge docks. Acting without the knowledge or approval of the Trade Consortium, she aims to bypass the Arcanum's strict regulations by smuggling fraudulent magical vanity items into the city. To avoid suspicion, Astrid plans to keep the warehouse inactive for a month before slowly integrating the items into the market. She dismissed local workers, replacing them with a controlled labor force, and coerced a minor police official to provide unmarked security personnel. Despite these measures, suspicions have risen due to the presence of unfamiliar guards and laborers. Shipments continue to arrive and be stored regularly, keeping the warehouse bustling with activity while remaining closed to outsiders. Should the operation be discovered, the Trade Consortium risks severe penalties, including confiscation of goods, financial sanctions, and loss of influence. The dismissed dockworkers and locals remain wary of the activity, with their frustration growing as the warehouse operates in secrecy."
+            },
+            "NPCs": [
+                {
+                    "id_NPC": 1,
+                    "player": "None",
+                    "name": "Captain Darius Locke",
+                    "classtype": "Fighter",
+                    "level": 3,
+                    "race": "human",
+                    "background": "Corrupt Police Official and Security Chief",
+                    "alignment": "neutral evil",
+                    "backstory": "Captain Darius Locke is a mid-ranking officer within the city’s law enforcement, secretly overseeing Astrid Haavik’s warehouse security. Coerced by Astrid, Locke now views his involvement as an opportunity for wealth and power.",
+                    "xp": 0,
+                    "stats": {
+                        "str": 15,
+                        "dex": 12,
+                        "con": 14,
+                        "int": 10,
+                        "wis": 11,
+                        "cha": 13
+                    },
+                    "appearance": {
+                        "age": 38,
+                        "height": 5.11,
+                        "height_unit": "feet",
+                        "weight": 185,
+                        "eyes": "hazel",
+                        "skin": "fair",
+                        "hair": "dark brown",
+                        "phys_desc": "A sturdy and imposing figure with a sharp gaze and a calculating demeanor."
+                    },
+                    "inventory": {
+                        "bag_1": ["Signal whistle", "Pouch of bribe money", "Coded security orders from Astrid"],
+                        "money": {
+                            "pp": 0,
+                            "ep": 5,
+                            "gp": 20,
+                            "sp": 10,
+                            "cp": 0
+                        },
+                        "equipment": ["Studded leather armor", "Short sword", "Dagger"],
+                        "treasure": []
+                    },
+                    "abilities": {
+                        "cantrips": [],
+                        "spells": [],
+                        "feats": ["Second Wind", "Action Surge"]
+                    }
+                },
+                {
+                    "id_NPC": 2,
+                    "player": "None",
+                    "name": "Einar Voss",
+                    "classtype": "Rogue",
+                    "level": 3,
+                    "race": "human",
+                    "background": "Merchant Administrator and Warehouse Overseer",
+                    "alignment": "lawful neutral",
+                    "backstory": "Einar Voss is a stern but competent administrator who ensures shipments move on time and without issue. He is absolutely loyal to Astrid Haavik, believing she will soon be the next High Trade Lord.",
+                    "xp": 0,
+                    "stats": {
+                        "str": 10,
+                        "dex": 16,
+                        "con": 12,
+                        "int": 14,
+                        "wis": 11,
+                        "cha": 13
+                    },
+                    "appearance": {
+                        "age": 45,
+                        "height": 5.9,
+                        "height_unit": "feet",
+                        "weight": 160,
+                        "eyes": "gray",
+                        "skin": "pale",
+                        "hair": "black",
+                        "phys_desc": "A wiry man with sharp features and an air of precision and authority."
+                    },
+                    "inventory": {
+                        "bag_1": ["Key ring to warehouse locks", "Coded shipping ledger", "Concealed poison vial"],
+                        "money": {
+                            "pp": 0,
+                            "ep": 0,
+                            "gp": 15,
+                            "sp": 5,
+                            "cp": 0
+                        },
+                        "equipment": ["Fine merchant's clothing", "Dagger"],
+                        "treasure": []
+                    },
+                    "abilities": {
+                        "cantrips": [],
+                        "spells": [],
+                        "feats": ["Sneak Attack", "Cunning Action"]
+                    }
+                },
+                {
+                    "id_NPC": 3,
+                    "player": "None",
+                    "name": "Astrid Haavik",
+                    "classtype": "Bard",
+                    "level": 5,
+                    "race": "human",
+                    "background": "Ambitious Merchant and Smuggling Mastermind",
+                    "alignment": "neutral evil",
+                    "backstory": "Astrid Haavik is the representative of the Nordfjell traders who holds the High-End Commerce seat on the trade council. She has orchestrated a smuggling operation to introduce fraudulent vanity magical items into the high-end market while avoiding Arcanum oversight.",
+                    "xp": 0,
+                    "stats": {
+                        "str": 10,
+                        "dex": 14,
+                        "con": 12,
+                        "int": 16,
+                        "wis": 13,
+                        "cha": 18
+                    },
+                    "appearance": {
+                        "age": 35,
+                        "height": 5.7,
+                        "height_unit": "feet",
+                        "weight": 140,
+                        "eyes": "blue",
+                        "skin": "light",
+                        "hair": "platinum blonde",
+                        "phys_desc": "An elegant and confident woman with piercing eyes and a commanding presence."
+                    },
+                    "inventory": {
+                        "bag_1": ["Signet ring of the Nordfjell traders", "Personal ledger of trade dealings", "Concealed message scroll with coded instructions for Einar"],
+                        "money": {
+                            "pp": 10,
+                            "ep": 5,
+                            "gp": 50,
+                            "sp": 20,
+                            "cp": 0
+                        },
+                        "equipment": ["Ornate dagger", "High-end merchant attire"],
+                        "treasure": []
+                    },
+                    "abilities": {
+                        "cantrips": ["Vicious Mockery", "Minor Illusion"],
+                        "spells": ["Charm Person", "Detect Thoughts", "Suggestion"],
+                        "feats": ["Inspiring Leader"]
+                    }
+                }
+            ],
+            "security": {
+                "guards": 16,
+                "description": "The guards are professional but not elite, trained to follow orders without questioning them. They wear unmarked leather armor and carry one melee weapon each. Their behavior is disciplined, with a focus on deterring intrusions and maintaining a low profile to avoid attracting attention.",
+                "genericNPC": {
+                    "name": "Warehouse Guard",
+                    "classtype": "Fighter",
+                    "level": 2,
+                    "race": "human",
+                    "background": "Hired Security",
+                    "alignment": "neutral",
+                    "stats": {
+                        "str": 14,
+                        "dex": 12,
+                        "con": 13,
+                        "int": 10,
+                        "wis": 11,
+                        "cha": 9
+                    },
+                    "equipment": {
+                        "armor": "Leather armor",
+                        "weapons": ["Club", "Short sword", "Spear", "Mace"],
+                        "otherGear": ["Signal whistle"]
+                    },
+                    "appearance": {
+                        "age": 25,
+                        "height": 5.8,
+                        "height_unit": "feet",
+                        "weight": 170,
+                        "eyes": "brown",
+                        "skin": "tan",
+                        "hair": "black",
+                        "phys_desc": "A lean but sturdy figure with a no-nonsense demeanor."
+                    },
+                    "specialInstructions": "For variation, each guard should have only one weapon selected from their weapon list. Adjust stats slightly (e.g., increase Dexterity by 1 or reduce Strength by 1) and change hair or eye color to differentiate guards."
                 }
             },
-            {
-                "taskId" : 1,
-                "initialConditions" : "The adventurer focuses on the conversation the group by the door is having",
-                "events" : "Initiate scenario with idScene 1."
+            "laborers": {
+                "count": 8,
+                "description": "The laborers are a group of subdued individuals, possibly coerced into working at the warehouse. They are dressed in simple, rugged clothes and carry an air of exhaustion and resignation. They avoid eye contact and speak only when necessary.",
+                "genericNPC": {
+                    "name": "Warehouse Laborer",
+                    "classtype": "Commoner",
+                    "level": 1,
+                    "race": "human",
+                    "background": "Indentured Worker",
+                    "alignment": "neutral",
+                    "stats": {
+                        "str": 11,
+                        "dex": 10,
+                        "con": 12,
+                        "int": 10,
+                        "wis": 9,
+                        "cha": 8
+                    },
+                    "equipment": {
+                        "armor": "None",
+                        "tools": ["Cargo hooks", "Rope"]
+                    },
+                    "appearance": {
+                        "age": 30,
+                        "height": 5.6,
+                        "height_unit": "feet",
+                        "weight": 150,
+                        "eyes": "gray",
+                        "skin": "pale",
+                        "hair": "brown",
+                        "phys_desc": "A gaunt figure with calloused hands and tired eyes."
+                    },
+                    "specialInstructions": "For variation, adjust physical traits (e.g., height, weight, hair color) and add small distinguishing features, such as scars or limps, to make each laborer feel unique."
+                },
+                "tasks": [
+                    {
+                        "taskId": 0,
+                        "initialConditions": "The adventurer shows interest in the conversation at Ye Ol' Fiddle.",
+                        "events": [
+                            "The adventurer overhears a conversation between dockworkers discussing the recent dismissal of local workers.",
+                            "One dockworker mentions that the warehouse has been unusually busy despite the lack of local employees.",
+                            "Another dockworker hints that the new guards at the warehouse are not from the town and act suspiciously."
+                        ],
+                        "completionInstructions": {
+                            "requiredConditions": "The adventurer decides to follow up on the information provided by the dockworkers.",
+                            "results": "The adventurer gains the location of the warehouse, becomes aware of the suspicious activity surrounding it, and the warehouse becomes an available location for the adventurer to access."
+                        }
+                    },
+                    {
+                        "taskId": 1,
+                        "initialConditions": "The adventurers arrive at the barge docks.",
+                        "events": [
+                            "The adventurers see the bustling docks with workers moving goods and guards patrolling the area.",
+                            "A tall, elegant woman with platinum blonde hair is seen out front of the warehouse having a stern conversation with a tall, wiry man wearing fine merchant's clothing. As the adventurers approach, the conversation concludes, and the woman leaves the area briskly. She no longer visits the warehouse or the barge docks after this.",
+                            "The adventurers notice a shipment being received at the warehouse. The laborers are unloading crates, and this process lasts two hours, marking the beginning of the shipment cycle.",
+                            "Future shipments will continue to arrive every 12 hours, but unloading and storing crates will only last two hours each time."
+                        ],
+                        "completionInstructions": {
+                            "requiredConditions": "The adventurers gain access to the warehouse.",
+                            "results": "The adventurers are now able to investigate the warehouse directly and observe its operations firsthand."
+                        }
+                    },
+                    {
+                        "taskId": 2,
+                        "initialConditions": "The adventurers gain access to the warehouse.",
+                        "events": [
+                            "The adventurers step inside the warehouse and notice rows of crates stacked neatly along the walls.",
+                            "They observe laborers working under strict supervision, quickly finishing their tasks before retreating to a common area.",
+                            "Hidden behind a concealed panel in the inner warehouse, the adventurers might discover the Gilded Reliquary—a locked container holding a Staff of Charming and coded shipping documents that could be used as evidence against those in charge of the operation.",
+                            "The adventurers will not be notified of the Gilded Reliquary unless they thoroughly search the inner warehouse."
+                        ],
+                        "completionInstructions": {
+                            "requiredConditions": "The adventurers locate and investigate the Gilded Reliquary, or they complete a thorough investigation of the warehouse.",
+                            "results": "The adventurers uncover key evidence about the smuggling operation and gain valuable items that could turn the tide of their mission."
+                        }
+                    }
+                ]
             }
-            {
-                "taskId" : 2,
-                "initialConditions" : "The adventurer focuses on the conversation the group by the stage is having",
-                "events" : "Initiate scenario with idScene 2."
-            }
-        ]
-    }    
-]
+        },
+        {"id_scene": 2,
+            "title": "The River Raid Aftermath",
+            "startingLocation": "Port Dunwyd - Riverside Encampment",
+            "difficulty": "Suitable for Level 1-2 Adventurers",
+            "sceneSetter": {
+                "backgroundSituation": [
+                    "For over a year, the Dynfren River has been plagued by periodic raids occurring every 1-2 weeks.",
+                    "The Riverines, tasked with defending trade along the river, have consistently repelled these attacks, reinforcing their image as heroes.",
+                    "The latest raid was routine, identical to previous raids, with the Riverines once again claiming an effortless victory.",
+                    "The adventurers now have an opportunity to uncover the truth behind the attacks and the forces truly pulling the strings. If they probe into the matter, they will be directed to the local Riverine office, where further inquiries can be made."
+                ]
+            },
+            "NPCs": [
+                {"id_NPC": 1,
+                    "name": "Captain Elira Vos",
+                    "classtype": "Paladin",
+                    "level": 3,
+                    "race": "human",
+                    "background": "Commander of the Riverines",
+                    "alignment": "lawful good",
+                    "backstory": "A seasoned soldier who has spent years patrolling the Dynfren River. She values discipline and order above all else and is determined to keep trade routes safe. However, she suspects there is more to these attacks than mere banditry.",
+                    "xp": 0,
+                    "stats": {
+                        "str": 16,
+                        "dex": 12,
+                        "con": 14,
+                        "int": 11,
+                        "wis": 13,
+                        "cha": 10
+                    },
+                    "appearance": {
+                        "age": 38,
+                        "height": 5.9,
+                        "height_unit": "feet",
+                        "weight": 175,
+                        "eyes": "blue",
+                        "skin": "fair",
+                        "hair": "blonde",
+                        "phys_desc": "A tall, commanding presence with a sharp gaze and a posture of unwavering authority."
+                    },
+                    "inventory": {
+                        "bag_1": [
+                            "Commander's insignia",
+                            "Detailed river patrol logs",
+                            "Well-maintained longsword"
+                        ],
+                        "money": {
+                            "pp": 5,
+                            "ep": 10,
+                            "gp": 50,
+                            "sp": 20,
+                            "cp": 100
+                        },
+                        "equipment": [
+                            "Plate armor",
+                            "Longsword",
+                            "Dagger"
+                        ],
+                        "abilities": {
+                        "feats": [
+                            "Divine Smite",
+                            "Lay on Hands",
+                            "Aura of Protection"
+                        ],
+                        "spells": [
+                            "Shield of Faith",
+                            "Cure Wounds",
+                            "Detect Evil and Good"
+                        ]
+                    }
+                    }
+                },
+                {"id_NPC": 2,
+                    "name": "Ronan 'Red' Kessler",
+                    "classtype": "Rogue",
+                    "level": 2,
+                    "race": "half-elf",
+                    "background": "Survivor and former deckhand",
+                    "alignment": "chaotic good",
+                    "backstory": [
+                        "One of the few survivors of a past raid, Ronan is shaken but determined to uncover who is behind the attacks.",
+                        "With a history of smuggling, he knows the ins and outs of illicit dealings along the river.",
+                        "His keen eye for deception allows him to identify those who operate in the shadows of Port Dunwyd.",
+                        "While wary of authority, he seeks allies who can help him unravel the mystery surrounding the raids."
+                    ],
+                    "xp": 0,
+                    "stats": {
+                        "str": 11,
+                        "dex": 16,
+                        "con": 12,
+                        "int": 14,
+                        "wis": 10,
+                        "cha": 13
+                    },
+                    "appearance": {
+                        "age": 29,
+                        "height": 5.7,
+                        "height_unit": "feet",
+                        "weight": 160,
+                        "eyes": "green",
+                        "skin": "light",
+                        "hair": "red",
+                        "phys_desc": "A wiry and agile man with sharp features and an ever-watchful demeanor. He wears practical, weather-worn clothing suited for life on the river."
+                    },
+                    "inventory": {
+                        "bag_1": [
+                            "Lockpicks",
+                            "Weathered map of trade routes",
+                            "Small concealed dagger",
+                            "Flask of cheap rum"
+                        ],
+                        "money": {
+                            "pp": 0,
+                            "ep": 2,
+                            "gp": 25,
+                            "sp": 15,
+                            "cp": 50
+                        },
+                        "equipment": [
+                            "Leather armor",
+                            "Short sword",
+                            "Dagger"
+                        ],
+                        "abilities": {
+                            "feats": [
+                                "Evasion",
+                                "Sneak Attack",
+                                "Cunning Action"
+                            ],
+                            "skills": [
+                                "Deception",
+                                "Stealth",
+                                "Insight"
+                            ]
+                        }
+                    }
+                },
+                {"id_NPC": 3,
+                    "name": "Kaelthorn",
+                    "classtype": "Barbarian",
+                    "level": 5,
+                    "race": "orc",
+                    "background": "Ruthless Leader of the Barren Jackals",
+                    "alignment": "chaotic evil",
+                    "backstory": [
+                        "Kaelthorn is the brutal and unforgiving leader of the Barren Jackals, ruling through fear and strength.",
+                        "He believes in taking what is needed by force, as the barrenlands offer no sustainable resources.",
+                        "He has cultivated a relationship with high-ranking Riverine officials, ensuring that some of his raids are 'defeated' at strategic times to reinforce the necessity of the Riverines.",
+                        "His forces strike swiftly, looting and pillaging settlements before disappearing into the desolate terrain."
+                    ],
+                    "xp": 0,
+                    "stats": {
+                        "str": 18,
+                        "dex": 12,
+                        "con": 16,
+                        "int": 8,
+                        "wis": 10,
+                        "cha": 12
+                    },
+                    "appearance": {
+                        "age": 42,
+                        "height": 6.3,
+                        "height_unit": "feet",
+                        "weight": 230,
+                        "eyes": "piercing gray",
+                        "skin": "weathered",
+                        "hair": "black with streaks of silver",
+                        "phys_desc": "A towering, battle-scarred figure with a commanding presence and an aura of menace."
+                    },
+                    "inventory": {
+                        "bag_1": [
+                            "Warlord’s sigil ring",
+                            "Crude map of targeted settlements",
+                            "Blood-stained battle axe"
+                        ],
+                        "money": {
+                            "pp": 0,
+                            "ep": 0,
+                            "gp": 15,
+                            "sp": 30,
+                            "cp": 200
+                        },
+                        "equipment": [
+                            "Heavy plate armor",
+                            "Great axe",
+                            "Throwing knives"
+                        ],
+                        "abilities": {
+                            "feats": [
+                                "Rage",
+                                "Reckless Attack",
+                                "Relentless Endurance"
+                            ],
+                            "skills": [
+                                "Athletics",
+                                "Intimidation",
+                                "Survival"
+                            ]
+                        }
+                    }
+                },
+                {"id_NPC": 4,
+                    "name": "Garrik the Hound",
+                    "classtype": "Druid",
+                    "level": 4,
+                    "race": "half-orc",
+                    "background": "Second-in-Command of the Barren Jackals",
+                    "alignment": "neutral evil",
+                    "backstory": [
+                        "Garrik has long served as the enforcer and strategist for the Barren Jackals, maintaining order among the raiders.",
+                        "Unlike Kaelthorn, he believes in discipline and careful planning rather than brute force.",
+                        "He has grown weary of the warlord’s reckless leadership and sees an opportunity in Kaelthorn’s downfall.",
+                        "Garrik understands that survival depends on adaptation, and he is willing to negotiate if it means securing a future for himself and those who remain loyal to him."
+                    ],
+                    "xp": 0,
+                    "stats": {
+                        "str": 12,
+                        "dex": 14,
+                        "con": 13,
+                        "int": 12,
+                        "wis": 16,
+                        "cha": 11
+                    },
+                    "appearance": {
+                        "age": 36,
+                        "height": 6.1,
+                        "height_unit": "feet",
+                        "weight": 210,
+                        "eyes": "dark brown",
+                        "skin": "ashen gray",
+                        "hair": "black, tied back in a warrior’s knot",
+                        "phys_desc": "A broad-shouldered, scarred warrior with calculating eyes and a permanent scowl."
+                    },
+                    "inventory": {
+                        "bag_1": [
+                            "Druidic focus carved from an ancient tree",
+                            "Hand-bound journal of herbal remedies",
+                            "Satchel of dried herbs and medicinal roots"
+                        ],
+                        "money": {
+                            "pp": 0,
+                            "ep": 0,
+                            "gp": 8,
+                            "sp": 20,
+                            "cp": 50
+                        },
+                        "equipment": [
+                            "Hide armor",
+                            "Wooden staff",
+                            "Dagger"
+                        ]
+                    },
+                    "abilities": {
+                        "feats": [
+                            "Wild Shape",
+                            "Spellcasting",
+                            "Natural Recovery"
+                        ],
+                        "skills": [
+                            "Nature",
+                            "Medicine",
+                            "Animal Handling"
+                        ],
+                        "spells": [
+                            "Entangle",
+                            "Goodberry",
+                            "Thunderwave",
+                            "Cure Wounds",
+                            "Speak with Animals"
+                        ]
+                    }
+                },
+                {"id_NPC": 5,
+                    "name": "Admiral Fintan Callaghan",
+                    "classtype": "Paladin",
+                    "level": 7,
+                    "race": "human",
+                    "background": "High-ranking Officer in the Riverines",
+                    "alignment": "lawful evil",
+                    "backstory": [
+                        "Callaghan is a cunning and politically adept officer who has climbed the ranks through manipulation and tactical prowess.",
+                        "He has secret dealings with the Barren Jackals, allowing controlled raids to bolster the necessity of the Riverines' presence.",
+                        "Despite his corruption, he is a skilled leader who commands respect and fear in equal measure.",
+                        "If confronted, he will use every resource at his disposal to eliminate those who threaten his position."
+                    ],
+                    "xp": 0,
+                    "stats": {
+                        "str": 18,
+                        "dex": 10,
+                        "con": 16,
+                        "int": 12,
+                        "wis": 14,
+                        "cha": 18
+                    },
+                    "appearance": {
+                        "age": 52,
+                        "height": 6.0,
+                        "height_unit": "feet",
+                        "weight": 200,
+                        "eyes": "piercing blue",
+                        "skin": "pale",
+                        "hair": "graying black, neatly groomed",
+                        "phys_desc": "An imposing officer with a polished uniform, cold calculating eyes, and a demeanor of unwavering authority."
+                    },
+                    "inventory": {
+                        "bag_1": [
+                            "Official Riverine insignia",
+                            "Confidential strategic documents",
+                            "A concealed dagger with an ornate handle"
+                        ],
+                        "money": {
+                            "pp": 20,
+                            "ep": 15,
+                            "gp": 100,
+                            "sp": 50,
+                            "cp": 200
+                        },
+                        "equipment": [
+                            "Full plate armor",
+                            "Rapier",
+                            "Crossbow"
+                        ],
+                        "abilities": {
+                        "feats": [
+                                "Divine Smite",
+                                "Aura of Protection",
+                                "Oath of Conquest"
+                            ],
+                        "skills": [
+                                "Persuasion",
+                                "Intimidation",
+                                "Tactics"
+                            ],
+                        "spells": [
+                                "Compelled Duel",
+                                "Shield of Faith",
+                                "Zone of Truth",
+                                "Wrathful Smite"
+                            ]
+                    }
+                    }
+                }
+            ],
+            "genericNPCs": [
+                {
+                    "name": "Riverine Guard",
+                    "classtype": "Fighter",
+                    "level": 2,
+                    "race": "human",
+                    "background": "Military Patrol",
+                    "alignment": "lawful neutral",
+                    "stats": {
+                        "str": 14,
+                        "dex": 12,
+                        "con": 13,
+                        "int": 10,
+                        "wis": 11,
+                        "cha": 9
+                    },
+                    "equipment": {
+                        "armor": "Chain shirt",
+                        "weapons": ["Spear", "Short sword", "Crossbow"],
+                        "otherGear": ["Signal horn", "Riverine patrol badge"]
+                    },
+                    "appearance": {
+                        "age": 27,
+                        "height": 5.9,
+                        "height_unit": "feet",
+                        "weight": 175,
+                        "eyes": "blue",
+                        "skin": "tan",
+                        "hair": "black",
+                        "phys_desc": "A well-disciplined soldier with a rigid posture and sharp gaze."
+                    },
+                    "specialInstructions": "Each guard should have only one primary weapon from their weapon list. Adjust stats slightly (e.g., +1 Dex or -1 Str) and modify eye/hair color for variety."
+                },
+                {
+                    "name": "Barren Jackal Raider",
+                    "classtype": ["Fighter", "Barbarian", "Druid"],
+                    "level": 2,
+                    "race": "half-orc",
+                    "background": "Raider",
+                    "alignment": "chaotic evil",
+                    "stats": {
+                        "str": 15,
+                        "dex": 13, 
+                        "con": 14,
+                        "int": [8,10],
+                        "wis": [10,12],
+                        "cha": [9,10]
+                    },
+                    "equipment": {
+                        "armor": "Hide armor",
+                        "weapons": ["Handaxe", "Greatclub", "Dagger", "Quarterstaff", "Scimitar"],
+                        "otherGear": ["Small pouch of stolen goods", "Herbal pouch", "Bone charms"]
+                    },
+                    "appearance": {
+                        "age": 32,
+                        "height": 6.1,
+                        "height_unit": "feet",
+                        "weight": 210,
+                        "eyes": "yellow",
+                        "skin": "grayish-green",
+                        "hair": "dark brown",
+                        "phys_desc": "A burly figure covered in crude tattoos, wielding weapons with reckless aggression."
+                    },
+                    "specialInstructions": "For variation, modify scars, choose a random class, weapon choices, stat choices, or tribal markings to distinguish different raiders."
+                },
+                {
+                    "name": "Barren Jackal Scout",
+                    "classtype": "Rogue",
+                    "level": 2,
+                    "race": "goblin",
+                    "background": "Scout",
+                    "alignment": "chaotic evil",
+                    "stats": {
+                        "str": 10,
+                        "dex": 16,
+                        "con": 12,
+                        "int": 11,
+                        "wis": 12,
+                        "cha": 8
+                    },
+                    "equipment": {
+                        "armor": "Leather armor",
+                        "weapons": ["Shortbow", "Dagger"],
+                        "otherGear": ["Spyglass", "Poisoned arrows"]
+                    },
+                    "appearance": {
+                        "age": 24,
+                        "height": 4.3,
+                        "height_unit": "feet",
+                        "weight": 90,
+                        "eyes": "green",
+                        "skin": "sallow",
+                        "hair": "none",
+                        "phys_desc": "A wiry and quick-footed goblin with keen eyes and a mischievous grin."
+                    },
+                    "specialInstructions": "For variety, modify scouting tools and eye colors. Some may have scars or missing fingers from past encounters."
+                },
+                {
+                    "name": "Barren Jackal Elite Guard",
+                    "classtype": "Fighter",
+                    "level": 4,
+                    "race": "orc",
+                    "background": "Personal Guard",
+                    "alignment": "chaotic evil",
+                    "stats": {
+                        "str": 17,
+                        "dex": 12,
+                        "con": 15,
+                        "int": 9,
+                        "wis": 11,
+                        "cha": 10
+                    },
+                    "equipment": {
+                        "armor": "Half plate armor",
+                        "weapons": ["Greatsword", "Battleaxe"],
+                        "otherGear": ["Tribal insignia", "Engraved gauntlets"]
+                    },
+                    "appearance": {
+                        "age": 38,
+                        "height": 6.4,
+                        "height_unit": "feet",
+                        "weight": 250,
+                        "eyes": "red",
+                        "skin": "dark gray",
+                        "hair": "black, tied into braids",
+                        "phys_desc": "A towering and heavily armored warrior with battle scars and a fearsome glare."
+                    },
+                    "specialInstructions": "For variation, adjust weapon choices, armor engravings, or add unique battle scars to differentiate elite guards."
+                }
+            ],
+            "tasks": [
+                {
+                    "taskId": 0,
+                    "initialConditions": "The adventurer is present at Ye Ol' Fiddle, the local tavern frequented by dockworkers and traders.",
+                    "events": [
+                        "The adventurer overhears conversations about a recent river raid.",
+                        "They pick up rumors that the Riverines handled the aftermath and are currently managing the situation at their local office.",
+                        "Dockworkers discuss how the attacks have been happening frequently but are always repelled successfully by the Riverines."
+                    ],
+                    "completionInstructions": {
+                        "requiredConditions": "The adventurer decides to look further into the matter.",
+                        "results": [
+                            "The adventurer is directed to the local Riverine office, where they can seek more information.",
+                            "The local Riverine office becomes available as a location to visit."
+                        ]
+                    }
+                },
+                {
+                    "taskId": 1,
+                    "initialConditions": "The adventurer arrives at the Riverine office.",
+                    "events": [
+                        "The adventurer witnesses the disciplined coordination of the militia as reports are compiled and patrols reassigned.",
+                        "Captain Elira Vos is overseeing security measures, ensuring peak efficiency from her unit.",
+                        "The office exudes professionalism, with every soldier performing their duties with precision.",
+                        "Captain Vos acknowledges the adventurer and provides insight into the patterns of recent attacks.",
+                        "She reveals that the raiders, known as the Barren Jackals, appear to be unusually well-organized.",
+                        "Through discussions with Riverine officers, the adventurer begins to piece together the identity of the Barren Jackals and their northern origins.",
+                        "With Captain Vos’s blessing or through their own initiative, they set out toward the northern barrens to track the raiders."
+                    ],
+                    "completionInstructions": {
+                        "requiredConditions": "The adventurer gathers enough information to understand the structure and operations of the Barren Jackals.",
+                        "results": "The adventurer gains critical knowledge of the raiders and their possible connections, paving the way for deeper investigation."
+                    }
+                },
+                {
+                    "taskId": 2,
+                    "initialConditions": "The adventurer decides to investigate further into the location of the Barren Jackals' hideout.",
+                    "events": [
+                        "The adventurer speaks with traders, hunters, and those familiar with the northern barrens, piecing together scattered reports of past attacks.",
+                        "While searching the barrens, the adventurer discovers physical clues—abandoned campsites, discarded weapons, and tracks—that provide insight into the Barren Jackals' movements.",
+                        "Through gathered intelligence, they determine the likely location of the Barren Jackals' hidden encampment.",
+                        "Navigating the harsh terrain, the adventurer follows faint traces of the raiders' movements, avoiding scouts stationed along the outskirts of the warlord’s territory."
+                    ],
+                    "completionInstructions": {
+                        "requiredConditions": "The adventurer successfully locates the Barren Jackals' hideout.",
+                        "results": "The adventurer now stands at the entrance of the Barren Jackals' stronghold, ready to decide how to proceed with the confrontation."
+                    }
+                },
+                {
+                    "taskId": 3,
+                    "initialConditions": "The adventurer successfully tracks the Barren Jackals to their stronghold.",
+                    "events": [
+                        "The adventurer observes the encampment, hidden within the rocky terrain and partially abandoned with many raiders out on a raid.",
+                        "Scattered campfires and distant shouting signal the presence of those who remain behind.",
+                        "The adventurer decides on an approach: stealth, diplomacy, or a direct assault.",
+                        "Carefully navigating the stronghold, they uncover evidence of the Jackals' operations, including prisoners, stolen cargo, and secret correspondence hinting at Riverine involvement.",
+                        "The adventurer learns of Kaelthorn, the warlord of the Barren Jackals, who they should engage.",
+                        "The adventurer collect information of Kaelthorn's whereabouts. He is in his audience chambers and the adventurers make their way to his audience chambers to engage him."
+                    ],
+                    "completionInstructions": {
+                        "requiredConditions": "The adventurers find Kaelthorn.",
+                        "results": "When Kaelthorn detects the adventurers, he engages the adventurers in discussion."
+                    },
+                {
+                    "taskId": 4,
+                    "initialConditions": "The adventurer confronts Kaelthorn, the warlord of the Barren Jackals.",
+                    "events": [
+                        "Kaelthorn initially entertains a conversation but remains hostile and condescending.",
+                        "The adventurer has three options: negotiate, attack head-on, or goad Kaelthorn into a one-on-one duel.",
+                        "If the adventurer chooses negotiation, Kaelthorn ultimately deems them a threat and initiates combat.",
+                        "If the adventurer attacks head-on, Kaelthorn and his personal guards retaliate fiercely.",
+                        "If the adventurer successfully goads Kaelthorn into a duel, he accepts, forcing a battle without the support of his guards.",
+                        "If more than one adventurer attacks Kaelthorn during the duel, his guards attack.",
+                        "During the battle, Kaelthorn uses brute force and intimidation to dominate his foes, making use of his surroundings where possible."
+                    ],
+                    "completionInstructions": {
+                        "requiredConditions": "The adventurer defeats Kaelthorn or forces him to surrender.",
+                        "results": "With Kaelthorn defeated, Garrik the Hound becomes an availab NPC and approaches the adventurers."
+                    }
+                },
+                {
+                    "taskId": 5,
+                    "initialConditions": "Kaelthorn has been defeated, and the adventurers remain in the Barren Jackals' stronghold.",
+                    "events": [
+                        "Garrik the Hound, Kaelthorn’s second-in-command, enters the chambers after Kaelthorn’s defeat.",
+                        "Unlike Kaelthorn, Garrik is willing to negotiate and sees an opportunity to reshape the Barren Jackals.",
+                        "He proposes a deal—offering evidence of the Riverines' complicity in exchange for his own leadership and survival.",
+                        "The adventurers must decide how to handle Garrik’s proposal: accept the evidence and let him lead, eliminate him, or force him into exile."
+                    ],
+                    "completionInstructions": {
+                        "requiredConditions": "The adventurers either negotiate with Garrik, or kill him.",
+                        "results": [
+                            "The barren Jackals are no longer aggressive towards the adventurers.",
+                            "If the advenurers were able to connect Admiral Callaghan to the operations of the Barren Jackals, then Admiral Callaghan becomes an avaialable NPC at the military headquarters."
+                        ]
+                    }
+                },
+                {
+                    "taskId": 6,
+                    "initialConditions": "The adventurers have gathered evidence against Admiral Callaghan and are ready to confront him at the military headquarters.",
+                    "events": [
+                        "The adventurers arrive at the military headquarters, where Callaghan is engaged in strategic meetings.",
+                        "They must decide how to approach: request an official audience, ambush him privately, or leak the evidence to influential figures in Port Dunwyd.",
+                        "Callaghan initially denies any wrongdoing but quickly shifts to intimidation and manipulation.",
+                        "If pressed with strong evidence, Callaghan attempts to bribe or threaten the adventurers to drop their pursuit.",
+                        "If the adventurers refuse to back down, Callaghan calls upon his personal guards to remove them by force.",
+                        "A direct battle ensues if the adventurers choose confrontation, with Callaghan using his tactical prowess and divine abilities as a Paladin to defend himself."
+                    ],
+                    "completionInstructions": {
+                        "requiredConditions": "The adventurers determine Callaghan’s fate, whether through public exposure, forced exile, or combat.",
+                        "results": [
+                            "The power structure within the Riverines shifts, depending on Callaghan’s fate.",
+                            "If Callaghan is removed, Captain Elira Vos may reluctantly rise to take his place, bringing new leadership to the Riverines.",
+                            "If Callaghan survives and remains in power, he will actively work against the adventurers in the future."
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
