@@ -1,0 +1,7 @@
+current_location: Ye Ol' Fiddle
+locations:
+  Port Dunwyd:
+    description: A bustling trade city along the coast, known for its political tension
+      and magical secrecy.
+  Ye Ol' Fiddle:
+    description: A modest, cozy tavern popular among barge workers and travelers.

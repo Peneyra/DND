@@ -1,0 +1,999 @@
+races:
+  dwarf (hill):
+    description:
+      hill dwarves: >
+        "As a hill dwarf, you have keen senses, deep intuition, 
+        and remarkable resilience."
+      short and stout: >
+        "Bold and hardy, dwarves are known as skilled warriors, 
+        miners, and workers of stone and metal. Though they stand 
+        well under 5 feet tall, dwarves are so broad and compact 
+        that they can weigh as much as a human standing nearly two 
+        feet taller. Their courage and endurance are also easily a 
+        match for any of the larger folk. \n  Dwarven skin ranges 
+        from deep brown to a paler hue tinged with red, but the 
+        most common shades are light brown or deep tan, like 
+        certain tones of earth. Their hair, worn long but in 
+        simple styles, is usually black, gray, or brown, though 
+        paler dwarves often have red hair. Male dwarves value 
+        their beards highly and groom them carefully."
+      long memory, long grudges: >
+        "Dwarves can live to be more than 400 years old, so the 
+        oldest living dwarves often remember a very different 
+        world. This longevity grants them a 
+        perspective on the world that shorter lived races such as 
+        humans and halflings lack. \n  Dwarves are solid and 
+        enduring like the mountains they love, weathering the 
+        passage of centuries with stoic endurance and little 
+        change. They respect the traditions of their clans, 
+        tracing their ancestry back to the founding of their most 
+        ancient strongholds in the youth of the world, and don't 
+        abandon those traditions lightly. Part of those traditions 
+        is devotion to the gods of the dwarvers, who uphold the 
+        dwarven ideals of industrious labor, skill in battle, and 
+        devotion to the forge.  \n  Individual dwarves are 
+        determined and loyal, true to their word and decisive in 
+        action, sometimes to the point of stubbornness. Many 
+        dwarves have a strong sense of justice, and they are slow 
+        to forget wrongs they have suffered. A wrong done to one 
+        dwarf is a wrong done to the dwarf's entire clan, so what 
+        begins as one dwarf's hunt for vengeance can become a 
+        full-blown clan feud."
+      clans and kingdoms: ""
+      gods, gold, and clan: ""
+    stats:
+      cha: 0
+      con: 2
+      dex: 0
+      int: 0
+      str: 0
+      wis: 1
+    proficiencies:
+      weapons:
+      - battleaxe
+      - handaxe
+      - light hammer
+      - warhammer
+      tools:
+      - ["smith's tools","brewer's supplies","mason's tools"]
+      languages:
+        common: 
+        - speak
+        - read
+        - write
+        dwarvish: 
+        - speak
+        - read
+        - write
+    traits:
+      age: >
+        "Dwarves mature at the same rate as humans, but they're 
+        considered young until they reach the age of 50. On average, 
+        they live about 350 years."
+      alignment: >
+        "Most dwarves are lawful, believing firmly in the benefits 
+        of a well-ordered society. They tend toward good as well, 
+        with a strong sense of fair play and as belief that everyone 
+        deserves to share in the benefits of a just order."
+      size: >
+        "Dwarves stand between 4 and 5 feet tall and average about 
+        150 pounds. Your size is Medium."
+      speed: >
+        "Your base walking speed is 25 feet. Your speed is not 
+        reduced by wearing heavy armor."
+      darkvision: >
+        "You can see in dim light within 60 feet of you as if it 
+        were bright light, and in darkness as if it were dim light. 
+        You can't discern color in darkness, only shades of gray."
+      dwarven resilience: >
+        "You have advantage on saving throws against poison, and you 
+        have resistance against poison damage."
+      dwarven toughness: >
+        "Your hit point maximum increases by 1, and it increases by 
+        1 every time you gain a level."
+      stonecutting: >
+        "Whenever you make an intelligence (History) check related 
+        to the origin of stonework, you are considered proficient in 
+        the History skill and add double your proficiency bonus to 
+        the check, instead of your normal proficiency bonus."
+
+  dwarf (mountain):
+    description:
+      mountain dwarf: >
+        "As a mountain dwarf, you are strong and hardy, accustomed 
+        to a difficult life in rugged terrain. You're probably on 
+        the tall side (for a dwarf), and tend toward lighter 
+        coloration."
+      short and stout: >
+        "Bold and hardy, dwarves are known as skilled warriors, 
+        miners, and workers of stone and metal. Though they stand 
+        well under 5 feet tall, dwarves are so broad and compact 
+        that they can weigh as much as a human standing nearly two 
+        feet taller. Their courage and endurance are also easily a 
+        match for any of the larger folk. \n  Dwarven skin ranges 
+        from deep brown to a paler hue tinged with red, but the 
+        most common shades are light brown or deep tan, like 
+        certain tones of earth. Their hair, worn long but in 
+        simple styles, is usually black, gray, or brown, though 
+        paler dwarves often have red hair. Male dwarves value 
+        their beards highly and groom them carefully."
+      long memory, long grudges: >
+        "Dwarves can live to be more than 400 years old, so the 
+        oldest living dwarves often remember a very different 
+        world. This longevity grants them a 
+        perspective on the world that shorter lived races such as 
+        humans and halflings lack. \n  Dwarves are solid and 
+        enduring like the mountains they love, weathering the 
+        passage of centuries with stoic endurance and little 
+        change. They respect the traditions of their clans, 
+        tracing their ancestry back to the founding of their most 
+        ancient strongholds in the youth of the world, and don't 
+        abandon those traditions lightly. Part of those traditions 
+        is devotion to the gods of the dwarvers, who uphold the 
+        dwarven ideals of industrious labor, skill in battle, and 
+        devotion to the forge.  \n  Individual dwarves are 
+        determined and loyal, true to their word and decisive in 
+        action, sometimes to the point of stubbornness. Many 
+        dwarves have a strong sense of justice, and they are slow 
+        to forget wrongs they have suffered. A wrong done to one 
+        dwarf is a wrong done to the dwarf's entire clan, so what 
+        begins as one dwarf's hunt for vengeance can become a 
+        full-blown clan feud."
+      clans and kingdoms: ""
+      gods, gold, and clan: ""
+    stats:
+      cha: 0
+      con: 2
+      dex: 0
+      int: 0
+      str: 2
+      wis: 0
+    proficiencies:
+      weapons:
+      - battleaxe
+      - handaxe
+      - light hammer
+      - warhammer
+      armors:
+      - light armor
+      - medium armor
+      tools:
+      - ["smith's tools","brewer's supplies","mason's tools"]
+      languages:
+        common: 
+        - speak
+        - read
+        - write
+        dwarvish: 
+        - speak
+        - read
+        - write
+    traits:
+      age: >
+        "Dwarves mature at the same rate as humans, but they're 
+        considered young until they reach the age of 50. On average, 
+        they live about 350 years."
+      alignment: >
+        "Most dwarves are lawful, believing firmly in the benefits 
+        of a well-ordered society. They tend toward good as well, 
+        with a strong sense of fair play and as belief that everyone 
+        deserves to share in the benefits of a just order."
+      size: >
+        "Dwarves stand between 4 and 5 feet tall and average about 
+        150 pounds. Your size is Medium."
+      speed: >
+        "Your base walking speed is 25 feet. Your speed is not 
+        reduced by wearing heavy armor."
+      darkvision: >
+        "You can see in dim light within 60 feet of you as if it 
+        were bright light, and in darkness as if it were dim light. 
+        You can't discern color in darkness, only shades of gray."
+      dwarven resilience: >
+        "You have advantage on saving throws against poison, and you 
+        have resistance against poison damage."
+      stonecutting: >
+        "Whenever you make an intelligence (History) check related 
+        to the origin of stonework, you are considered proficient in 
+        the History skill and add double your proficiency bonus to 
+        the check, instead of your normal proficiency bonus."
+
+  elf (high):
+    description:
+      high elf: >
+        "As a high elf, you have a keen mind and mastery of at 
+        least the basics of magic"
+      slender and graceful: ""
+      a timeless perspective: ""
+      hidden woodland realms: ""
+      exploration and adventure: ""
+    stats:
+      cha: 0
+      con: 0
+      dex: 2
+      int: 1
+      str: 0
+      wis: 0
+    proficiencies:
+      weapons:
+      - longsword
+      - shortsword
+      - shortbow
+      - longbow
+      spells:
+      - any cantrip (int)
+      skills:
+      - Perception
+      languages:
+        common: 
+        - speak
+        - read
+        - write
+        elvish: 
+        - speak
+        - read
+        - write
+        chioce of one language: 
+        - speak
+        - read
+        - write
+    traits:
+      age: >
+        "Although elves reach physical maturity at about the same 
+        age as humans, the elven understanding of adulthood goes 
+        beyond physical growth to encomapss worldly experience. An 
+        elf typically claims adulthood and an adult name around the 
+        age of 100 and can live to be 750 years old."
+      alignment: >
+        "Elves love freedom, variety, and self-expression, so they 
+        lean strongly twoard the gentler aspects of chaos. They 
+        value and protect others' freedom as well as their own, 
+        and they are more often good than not. THe drow are an 
+        exception; their exile into the Underdark has made them 
+        vicious and dangerous. Drow are more often evil than not."
+      size: >
+        "Elves range from under 5 to over 6 feet tall and have 
+        slender builds. Your size is Medium."
+      speed: >
+        "Your base walking speed is 30 feet."
+      darkvision: >
+        "You can see in dim light within 60 feet of you as if it 
+        were bright light, and in darkness as if it were dim light. 
+        You can't discern color in darkness, only shades of gray."
+      fey ancestry: >
+        "You have advantage on saving throws against being charmed, 
+        and magic can't put you to sleep."
+      trance: >
+        "Elves don't need to sleep. Instead, they meditate deeply, 
+        remaining semiconscious, for 4 hours a day. While 
+        meditating, you can dream after a fashion; such dreams are 
+        actually mental exercises that have become reflexive through 
+        years of practice. After resting in this way, you gain the 
+        same benefit that a human does from 8 hours of sleep."
+
+  elf (wood):
+    description:
+      wood elf: >
+        "As a wood elf, you have keen senses and intuition, and your 
+        fleet feet carry you quickly and stealthily through your 
+        native forests. Wood elves' skin tends to be copperish in 
+        hue, sometimes with traces of green. THeir hair tends toward 
+        browns and blacks, but it is occasionally blond or copper-
+        colored. THeir eyes are green, brown, or hazel."
+      slender and graceful: ""
+      a timeless perspective: ""
+      hidden woodland realms: ""
+      exploration and adventure: ""
+    stats:
+      cha: 0
+      con: 0
+      dex: 2
+      int: 0
+      str: 0
+      wis: 1
+    proficiencies:
+      weapons:
+      - longsword
+      - shortsword
+      - longbow
+      - shortbow
+      skills:
+      - Perception
+      languages:
+        common: 
+        - speak
+        - read
+        - write
+        elvish: 
+        - speak
+        - read
+        - write
+    traits:
+      age: >
+        "Although elves reach physical maturity at about the same 
+        age as humans, the elven understanding of adulthood goes 
+        beyond physical growth to encomapss worldly experience. An 
+        elf typically claims adulthood and an adult name around the 
+        age of 100 and can live to be 750 years old."
+      alignment: >
+        "Elves love freedom, variety, and self-expression, so they 
+        lean strongly twoard the gentler aspects of chaos. They 
+        value and protect others' freedom as well as their own, 
+        and they are more often good than not. THe drow are an 
+        exception; their exile into the Underdark has made them 
+        vicious and dangerous. Drow are more often evil than not."
+      size: >
+        "Elves range from under 5 to over 6 feet tall and have 
+        slender builds. Your size is Medium."
+      speed: >
+        "Your base walking speed is 35 feet."
+      darkvision: >
+        "You can see in dim light within 60 feet of you as if it 
+        were bright light, and in darkness as if it were dim light. 
+        You can't discern color in darkness, only shades of gray."
+      mask of the wild: >
+        "YOu can attempt to hide even when you are only lightly 
+        obscured by foliage, heavy rain, falling snow, mist, and 
+        other natural phenomena."
+      fey ancestry: >
+        "You have advantage on saving throws against being charmed, 
+        and magic can't put you to sleep."
+      trance: >
+        "Elves don't need to sleep. Instead, they meditate deeply, 
+        remaining semiconscious, for 4 hours a day. While 
+        meditating, you can dream after a fashion; such dreams are 
+        actually mental exercises that have become reflexive through 
+        years of practice. After resting in this way, you gain the 
+        same benefit that a human does from 8 hours of sleep."
+
+  elf (dark):
+    description:
+      Drow: >
+        "Descended from an earlier subrace of elves, the drow were 
+        banished from the surface world for following the goddess 
+        Lolth down the path of evil. Now they have built their own 
+        civilization in the depths of the Underdark, patterned after 
+        the Way of Loth. Also called dark elves, the drow have skin 
+        that resembles charcoal or obsidian, as well as stark white 
+        or pale yellow hair. They commonly have very pale eyes (so 
+        pale as to be mistaken for white) in shades of lilac, 
+        silver, pink, red, and blue. THey tend to be smaller and 
+        thinner than most elves."
+      slender and graceful: ""
+      a timeless perspective: ""
+      hidden woodland realms: ""
+      exploration and adventure: ""
+    stats:
+      cha: 1
+      con: 0
+      dex: 2
+      int: 0
+      str: 0
+      wis: 0
+    proficiencies:
+      spells:
+      - dancing lights (chr)
+      - faerie fire (>= level 3) (once per long rest) (chr)
+      - darkness (>= level 5) (once per long rest) (chr)
+      skills:
+      - Perception
+      languages:
+        common: 
+        - speak
+        - read
+        - write
+        elvish: 
+        - speak
+        - read
+        - write
+    traits:
+      age: >
+        "Although elves reach physical maturity at about the same 
+        age as humans, the elven understanding of adulthood goes 
+        beyond physical growth to encomapss worldly experience. An 
+        elf typically claims adulthood and an adult name around the 
+        age of 100 and can live to be 750 years old."
+      alignment: >
+        "Elves love freedom, variety, and self-expression, so they 
+        lean strongly twoard the gentler aspects of chaos. They 
+        value and protect others' freedom as well as their own, 
+        and they are more often good than not. THe drow are an 
+        exception; their exile into the Underdark has made them 
+        vicious and dangerous. Drow are more often evil than not."
+      size: >
+        "Elves range from under 5 to over 6 feet tall and have 
+        slender builds. Your size is Medium."
+      speed: >
+        "Your base walking speed is 30 feet."
+      darkvision: >
+        "You can see in dim light within 120 feet of you as if it 
+        were bright light, and in darkness as if it were dim light. 
+        You can't discern color in darkness, only shades of gray."
+      sunlight sensitivity: >
+        "You have disadvantage on attack rolls and on Wisdom 
+        (Perception) checks that rely on sight when you, the target 
+        of your attack, or whatever you are trying to perceive is 
+        in direct sunlight."
+      fey ancestry: >
+        "You have advantage on saving throws against being charmed, 
+        and magic can't put you to sleep."
+      trance: >
+        "Elves don't need to sleep. Instead, they meditate deeply, 
+        remaining semiconscious, for 4 hours a day. While 
+        meditating, you can dream after a fashion; such dreams are 
+        actually mental exercises that have become reflexive through 
+        years of practice. After resting in this way, you gain the 
+        same benefit that a human does from 8 hours of sleep."
+  
+  halfling (lightfoot):
+    description:
+      lightfoot halfling: >
+        "As a lightfoot halfling, you can easily hid from notice, 
+        even using other people as cover. You're inclined to be 
+        affable and get along well with others. \n
+        Lightfoots are more prone to wanderlust than other 
+        halflings, and often dwell alongside other races or take up 
+        a nomadic life."
+      small and practical: ""
+      kind and curious: ""
+      blend into the crowd: ""
+      pastoral pleasantries: ""
+      exploring opportunities: ""
+    stats:
+      cha: 1
+      con: 0
+      dex: 2
+      int: 0
+      str: 0
+      wis: 0
+    proficiencies:
+      language:
+        common: 
+        - speak
+        - read
+        - write
+        halfling: 
+        - speak
+        - read
+        - write
+    traits:
+      age: >
+        "A halfling reaches adulthood at the age of 20 and generally 
+        lives into the middle of his or her second century."
+      alignment: >
+        "Most halflings are lawful good. As a rule, they are good-
+        hearted and kind, hate to see others in pain, and have no 
+        tolerance for oppression. THey are also very orderly and 
+        traditional, leaning heavily on the support of their 
+        community and the comfort of their old ways."
+      size: >
+        "Halflings average about 3 feet tall and weigh about 40 
+        pounds. Your size is Small."
+      speed: >
+        "Your base walking speed is 25 feet."
+      lucky: >
+        "When you roll a 1 on the d20 for an attack roll, ability 
+        check, or saving throw, you can reroll the die and must 
+        use the new roll."
+      brave: >
+        "You have advantage on saving throws against being 
+        frightened."
+      halfling nimbleness: >
+        "You can move through the space of any creature that is of a 
+        size larger than yours."
+      naturally stealthy: >
+        "You can attempt to hide even when you are obscured only by 
+        a creature that is at least one size larger than you."
+
+  halfling (stout):
+    description:
+      stout halfling: >
+        "As a stout halfling, you're hardier than average and have 
+        some resistance to poison. Some say that stouts have dwarven 
+        blood."
+      small and practical: ""
+      kind and curious: ""
+      blend into the crowd: ""
+      pastoral pleasantries: ""
+      exploring opportunities: ""
+    stats:
+      cha: 0
+      con: 1
+      dex: 2
+      int: 0
+      str: 0
+      wis: 0
+    proficiencies:
+      language:
+        common: 
+        - speak
+        - read
+        - write
+        halfling: 
+        - speak
+        - read
+        - write
+    traits:
+      age: >
+        "A halfling reaches adulthood at the age of 20 and generally 
+        lives into the middle of his or her second century."
+      alignment: >
+        "Most halflings are lawful good. As a rule, they are good-
+        hearted and kind, hate to see others in pain, and have no 
+        tolerance for oppression. THey are also very orderly and 
+        traditional, leaning heavily on the support of their 
+        community and the comfort of their old ways."
+      size: >
+        "Halflings average about 3 feet tall and weigh about 40 
+        pounds. Your size is Small."
+      speed: >
+        "Your base walking speed is 25 feet."
+      lucky: >
+        "When you roll a 1 on the d20 for an attack roll, ability 
+        check, or saving throw, you can reroll the die and must 
+        use the new roll."
+      brave: >
+        "You have advantage on saving throws against being 
+        frightened."
+      halfling nimbleness: >
+        "You can move through the space of any creature that is of a 
+        size larger than yours."
+      stout resilience: >
+        "You ahve advantage on saving throws against poison, and you 
+        have resistance against poison damage."
+
+  human:
+    description:
+      a broad spectrum: ""
+      variety in all things: ""
+      lasting institutions: ""
+      exemplars of ambition: ""
+    stats:
+      cha: 1
+      con: 1
+      dex: 1
+      int: 1
+      str: 1
+      wis: 1
+    proficiencies:
+      language:
+        common: 
+        - speak
+        - read
+        - write
+        any: 
+        - speak
+        - read
+        - write
+    traits:
+      age: >
+        "Humans reach adulthood in their late teens and live less 
+        than a century."
+      alignment: >
+        "Humans tend toward no particular alignment. The best and 
+        worst are found among them."
+      size: >
+        "Humans vary widely in height and build, from barely 5 feet 
+        to well over 6 feet tall. Regardless of your position in 
+        that range, your size is Medium."
+      speed: >
+        "Your base walking speed is 30 feet."
+
+  dragonborn:
+    description:
+      proud dragon kin: ""
+      self-sufficient clans: ""
+    stats:
+      cha: 1
+      con: 0
+      dex: 0
+      int: 0
+      str: 2
+      wis: 0
+    proficiencies:
+      skills:
+        - black dragon breath: 
+          damage type: acid
+          save: dex
+          range: 5x30 line
+          cooldown: short rest
+        - blue dragon breath: 
+          damage type: lightning
+          save: dex
+          range: 5x30 line
+          cooldown: short rest
+        - brass dragon breath: 
+          damage type: fire
+          save: dex
+          range: 5x30 line
+          cooldown: short rest
+        - bronze dragon breath: 
+          damage type: lightning
+          save: dex
+          range: 5x30 line
+          cooldown: short rest
+        - copper dragon breath: 
+          damage type: acid
+          save: dex
+          range: 5x30 line
+          cooldown: short rest
+        - gold dragon breath: 
+          damage type: fire
+          save: dex
+          range: 15 cone
+          cooldown: short rest
+        - green dragon breath: 
+          damage type: poison
+          save: con
+          range: 15 cone
+          cooldown: short rest
+        - red dragon breath: 
+          damage type: fire
+          save: dex
+          range: 15 cone
+          cooldown: short rest
+        - silver dragon breath: 
+          damage type: cold
+          save: con
+          range: 15 cone
+          cooldown: short rest
+        - white dragon breath: 
+          damage type: cold
+          save: con
+          range: 15 cone
+          cooldown: short rest
+      language:
+        common: 
+        - speak
+        - read
+        - write
+        draconic: 
+        - speak
+        - read
+        - write
+    traits:
+      age: >
+        "Young dragonborn grow quickly. They walk hours after 
+        hatching, attain the size and development of a 10-year-old 
+        human child by the age of 3, and reach adulthood by 15. They 
+        live to be around 80."
+      alignment: >
+        "Dragonboarn tend to extremes, making a concious choice for 
+        one side or the other in the cosmic war between good and 
+        evil (represented by Bahamut and Tiamat, respectively). Most 
+        dragonborn are good, but those who side with Tiamat can be 
+        terrible villains."
+      size: >
+        "Dragonborn are taller and heavier than humans, standing 
+        well over 6 feet tall and averaging almost 250 pounds. Your 
+        size is Medium."
+      speed: >
+        "Your base walking speed is 30 feet."
+      draconic ancestry: >
+        "You have draconic ancestry. Choose one type of dragon from 
+        the Draconic Ancestry table. Your breath weapon and damage 
+        resistance are determined by the dragon type, as shown in 
+        the table."
+      breath weapon: >
+        "You can use your action to exhale destructive energy. Your 
+        draconic ancestry determines the size, shape, and damage 
+        type of the exhalation. \n
+        When you use your breath weapon, each creature in the area 
+        of the exhalation must make a saving throw, the type of 
+        which is determined by your draconic ancestry. The DC for 
+        this saving throw equals 8 + your constitution modifier + 
+        your proficiency bonus. A creature takes 2d6 damage on a 
+        failed save, and half as much damage on a successful one. 
+        The damage increases to 3d6 at 6th level, 4d6 at 11th level, 
+        and 5d6 at 16th level.
+      damage resistance: >
+        "You ahve resistance to the damage type associated with your 
+        draconic ancestry."
+
+  gnome (forest):
+    description:
+      forest gnome: >
+        "As a forest gnome, you have natural knack for illusion and 
+        inherent quickness and stealth. Forest gnomes are rare and 
+        secretive. They gather in hidden communities in sylvan 
+        forests, using illusions and trickery to conceal themselves 
+        from threats or to mask their escape shoudl they be 
+        detected. Forest gnomes tend to be friendly with other good-
+        spirited woodland folk, and they regard elves and good fey 
+        as their most important allies. These gnomes also befriend 
+        small forest animals and rely on them for information about 
+        threats that might prowl their lands."
+      vibrant expression: ""
+      delighted dedication: ""
+      bright burrows: ""
+      seeing the world: ""
+    stats:
+      cha: 0
+      con: 0
+      dex: 1
+      int: 2
+      str: 0
+      wis: 0
+    proficiencies:
+      spells:
+      - minor illusion:
+        cooldown: cantrip
+        ability: Int
+      language:
+        common: 
+        - speak
+        - read
+        - write
+        gnomish: 
+        - speak
+        - read
+        - write
+    traits:
+      age: >
+        "Gnomes mature at the same rate humans do, and most are 
+        expected to settle down into an adult life by around age 40. 
+        They can live 350 to almost 500 years."
+      alignment: >
+        "Gnomes are most often good. Those who tend toward law are 
+        sages, engineers, researchers, scholars, investigators, or 
+        inventors. Those who tend toward chaos are minstrels, 
+        tricksters, wanderers, or fanciful jewelers. Gnomes are 
+        good-hearted, and even the tricksters among them are more 
+        playful than vicious."
+      size: >
+        "Gnomes are between 3 and 4 feet tall and average 40 
+        pounds. Your size is small."
+      speed: >
+        "Your base walking speed is 25 feet."
+      darkvision: >
+        "You can see in dim light within 60 feet of you as if it 
+        were bright light, and in darkness as if it were dim light. 
+        You can't discern color in darkness, only shades of gray."
+      gnome cunning: >
+        "You have advantage on all Intelligence, Wisdom, and 
+        Charisma saving throws against magic."
+      speak with small beasts: >
+        "Through sounds and small gestures, you can communicate 
+        simple ideas with Small or smaller beasts. Forest gnomes 
+        love animals and often keep squirrels, badgers, rabbits, 
+        moles, woodpeckers, and other creatures as beloved pets."
+
+  gnome (rock):
+    description:
+      rock gnome: >
+        "As a rock gnome, you have a natural inventiveness and 
+        hardiness beyond that of other gnomes. Most gnomes are 
+        rock gnomes."
+      vibrant expression: ""
+      delighted dedication: ""
+      bright burrows: ""
+      seeing the world: ""
+    stats:
+      cha: 0
+      con: 1
+      dex: 0
+      int: 2
+      str: 0
+      wis: 0
+    proficiencies:
+      tools:
+      - artisan's tools
+      language:
+        common: 
+        - speak
+        - read
+        - write
+        gnomish: 
+        - speak
+        - read
+        - write
+    traits:
+      age: >
+        "Gnomes mature at the same rate humans do, and most are 
+        expected to settle down into an adult life by around age 40. 
+        They can live 350 to almost 500 years."
+      alignment: >
+        "Gnomes are most often good. Those who tend toward law are 
+        sages, engineers, researchers, scholars, investigators, or 
+        inventors. Those who tend toward chaos are minstrels, 
+        tricksters, wanderers, or fanciful jewelers. Gnomes are 
+        good-hearted, and even the tricksters among them are more 
+        playful than vicious."
+      size: >
+        "Gnomes are between 3 and 4 feet tall and average 40 
+        pounds. Your size is small."
+      speed: >
+        "Your base walking speed is 25 feet."
+      darkvision: >
+        "You can see in dim light within 60 feet of you as if it 
+        were bright light, and in darkness as if it were dim light. 
+        You can't discern color in darkness, only shades of gray."
+      gnome cunning: >
+        "You have advantage on all Intelligence, Wisdom, and 
+        Charisma saving throws against magic."
+      artificer's lore: >
+        "Whenever you make an Intelligence (History) check related 
+        to magic items, alchemical objects, or technological 
+        devices, you can add twice your proficiency bonus, instead 
+        of any proficiency bonus you normally apply."
+      Tinker: >
+        "You have proficiency with artisan's tools. Using those 
+        tools, you can spend 1 hour and 10 gp worth of materials to 
+        construct a Tiny clockwork device (AC 5, 1hp). The device 
+        ceases to function after 24 hours (unless you spend 1 hour 
+        repairing it to keep the device functioning), or when you 
+        use your action to dismantle it; at that time, you can 
+        reclaim the materials used to create it. You can have up to 
+        three such devices active at a time. \n  
+        When you create a device choose one of the following 
+        options: \n  
+        Clockwork Toy. This toy is a clockwork animal, monster, or 
+        person, such as a frog, mouse, bird, dragon, or soldier. 
+        When placed on the ground, the toy moves 5 feet across 
+        the ground on each of your turns in a random direction. It 
+        makes noises as appropriate to the creature it represents. 
+        \n  
+        Fire Starter. THe device produces a miniature flame, which 
+        you can use to light a candle, torch, or campfire. Using the 
+        device requires your action. \n  
+        Music Box. WHen opened, this music box plays a single song 
+        at a moderate volume. The box stops playing when it reaches 
+        the song's end or when it is closed."
+
+  half-elf:
+    description:
+      of two worlds: ""
+      diplomats or wanderers: ""
+    stats:
+      cha: 2
+      con: 0
+      dex: 0
+      int: 0
+      str: 0
+      wis: 0
+    proficiencies:
+      language:
+        common: 
+        - speak
+        - read
+        - write
+        elvish: 
+        - speak
+        - read
+        - write
+        any: 
+        - speak
+        - read
+        - write
+    traits:
+      age: >
+        "Half-elves mature at the same rate humans do and reach 
+        adulthood around the age of 20. They live much longer than 
+        humans, however, often exceeding 180 years."
+      alignment: >
+        "Half-elves share the chaotic bent of their elven heritage. 
+        They value both personal freedom and creative expression, 
+        demonstrating neither love of leaders nor desire for 
+        followers. They chafe at rules, resent others' demands, and 
+        sometimes prove unreliable, or at least unpredictable."
+      size: >
+        "Half-elves are about the same size as humans, ranging from 
+        5 to 6 feet tall. Your size is Medium."
+      speed: >
+        "Your base walking speed is 30 feet."
+      darkvision: >
+        "You can see in dim light within 60 feet of you as if it 
+        were bright light, and in darkness as if it were dim light. 
+        You can't discern color in darkness, only shades of gray."
+      fey ancestry: >
+        "You have advantage on saving throws against being charmed, 
+        and magic can't put you to sleep."
+      skill versatility: >
+        "You gain proficiency in two skills of your choice."
+
+  half-orc:
+    description:
+      scarred adn strong: ""
+      the mark of gruumsh: ""
+      tribes and slums: ""
+    stats:
+      cha: 0
+      con: 1
+      dex: 0
+      int: 0
+      str: 2
+      wis: 0
+    proficiencies:
+      language:
+        common: 
+        - speak
+        - read
+        - write
+        orc: 
+        - speak
+        - read
+        - write
+    traits:
+      age: >
+        "Half-orcs mature a little faster than humans, reaching 
+        adulthood around age 14. They age noticeably faster and 
+        rarely live longer than 75 years."
+      alignment: >
+        "Half-orcs inherit a tendency toward chaos from their orc 
+        parents and are not strongly inclined toward good. Half-orcs 
+        raised among orcs and willing to live out their lives among 
+        them are usually evil."
+      size: >
+        "Half-orcs are somewhat larger and bulkier than humans, and 
+        they range from 5 to well over 6 feet tall. Your size is 
+        Medium."
+      speed: >
+        "Your base walking speed is 30 feet."
+      darkvision: >
+        "You can see in dim light within 60 feet of you as if it 
+        were bright light, and in darkness as if it were dim light. 
+        You can't discern color in darkness, only shades of gray."
+      relentless endurance: >
+        "When you are reduced to 0 hit points but not killed 
+        outright, you can drop to 1 hit point instead. You can't 
+        use this feature again until you finish a long rest."
+      savage attacks: >
+        "When you score a critical hit with a melee weapon attack, 
+        you can roll one of the weapon's damage dice one additional 
+        time and add it to the extra damage of the critical hit."
+
+
+  tiefling:
+    description:
+      infernal bloodline: ""
+      self-reliant and suspicious: ""
+    stats:
+      cha: 2
+      con: 0
+      dex: 0
+      int: 1
+      str: 0
+      wis: 0
+    proficiencies:
+      spells:
+        - thaumaturgy:
+          cooldown: cantrip
+          ability: cha
+        - hellish rebuke:
+          gained at level: 3
+          cooldown: long rest
+          spell level: 2
+          ability: cha
+        - darkness:
+          cooldown: long rest
+          ability: cha
+      language:
+        common: 
+        - speak
+        - read
+        - write
+        infernal: 
+        - speak
+        - read
+        - write
+    traits:
+      age: >
+        "Tieflings mature at the same rate as humans but live a few 
+        years longer."
+      alignment: >
+        "Tieflings might not have an innate tendency toward evil, 
+         but many of them end up there. Evil or not, an independent 
+         nature inclines many tieflings toward a chaotic alignment."
+      size: >
+        "Tieflings are about the same size and build as humans. Your 
+        size is Medium."
+      speed: >
+        "Your base walking speed is 30 feet."
+      darkvision: >
+        "You can see in dim light within 60 feet of you as if it 
+        were bright light, and in darkness as if it were dim light. 
+        You can't discern color in darkness, only shades of gray."
+      hellish resistance: >
+        "You have resistance to fire damage."
+
+classes:
+  barbarian:

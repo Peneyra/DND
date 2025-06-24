@@ -1,0 +1,56 @@
+characters:
+- name: Liam
+  alignment: neutral
+  background: soldier
+  classtype: bard
+  equipment:
+    head: none
+    armor: Common Clothes
+    feet: none
+    back: none
+    hand-left: none
+    hand-hand: none
+    neck: none
+    ring: none
+  inventory:
+  - Gaming Set
+  - Crowbar
+  - Thieves Tools
+  level: 1
+  race: human
+  spells:
+  - charm person
+  - healing word
+  stats:
+    cha: 16
+    con: 9
+    dex: 15
+    int: 11
+    str: 13
+    wis: 14
+- name: Brandon
+  alignment: neutral
+  background: criminal
+  classtype: rogue
+  equipment:
+    head: none
+    armor: Common Clothes
+    feet: none
+    back: none
+    hand-left: none
+    hand-hand: none
+    neck: none
+    ring: none
+  inventory:
+  - Crowbar
+  - Thieves Tools
+  level: 1
+  race: human
+  spells: []
+  stats:
+    cha: 14
+    con: 11
+    dex: 16
+    int: 15
+    str: 13
+    wis: 9
