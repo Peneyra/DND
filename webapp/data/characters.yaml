@@ -3,7 +3,7 @@ characters:
     name: liam
     alignment: neutral
     background: soldier
-    classtype: bard
+    class: bard
     equipment:
       head: none
       armor: common clothes
@@ -33,7 +33,7 @@ characters:
     name: brandon
     alignment: neutral
     background: criminal
-    classtype: rogue
+    class: rogue
     equipment:
       head: none
       armor: common clothes

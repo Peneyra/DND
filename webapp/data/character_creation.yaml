@@ -1,5 +1,6 @@
 races:
   dwarf (hill):
+    name: "dwarf (hill)"
     description:
       hill dwarves: >
         "As a hill dwarf, you have keen senses, deep intuition, 
@@ -98,6 +99,7 @@ races:
         the check, instead of your normal proficiency bonus."
 
   dwarf (mountain):
+    name: "dwarf (mountain)"
     description:
       mountain dwarf: >
         "As a mountain dwarf, you are strong and hardy, accustomed 
@@ -198,6 +200,7 @@ races:
         the check, instead of your normal proficiency bonus."
 
   elf (high):
+    name: "elf (high)"
     description:
       high elf: >
         "As a high elf, you have a keen mind and mastery of at 
@@ -271,6 +274,7 @@ races:
         same benefit that a human does from 8 hours of sleep."
 
   elf (wood):
+    name: "elf (wood)"
     description:
       wood elf: >
         "As a wood elf, you have keen senses and intuition, and your 
@@ -346,6 +350,7 @@ races:
         same benefit that a human does from 8 hours of sleep."
 
   elf (dark):
+    name: "elf (dark)"
     description:
       Drow: >
         "Descended from an earlier subrace of elves, the drow were 
@@ -425,6 +430,7 @@ races:
         same benefit that a human does from 8 hours of sleep."
   
   halfling (lightfoot):
+    name: "halfling (lightfoot)"
     description:
       lightfoot halfling: >
         "As a lightfoot halfling, you can easily hid from notice, 
@@ -485,6 +491,7 @@ races:
         a creature that is at least one size larger than you."
 
   halfling (stout):
+    name: "halfling (stout)"
     description:
       stout halfling: >
         "As a stout halfling, you're hardier than average and have 
@@ -542,6 +549,7 @@ races:
         have resistance against poison damage."
 
   human:
+    name: "human"
     description:
       a broad spectrum: ""
       variety in all things: ""
@@ -579,6 +587,7 @@ races:
         "Your base walking speed is 30 feet."
 
   dragonborn:
+    name: "dragonborn"
     description:
       proud dragon kin: ""
       self-sufficient clans: ""
@@ -690,6 +699,7 @@ races:
         draconic ancestry."
 
   gnome (forest):
+    name: "gnome (forest)"
     description:
       forest gnome: >
         "As a forest gnome, you have natural knack for illusion and 
@@ -758,6 +768,7 @@ races:
         moles, woodpeckers, and other creatures as beloved pets."
 
   gnome (rock):
+    name: "gnome (rock)"
     description:
       rock gnome: >
         "As a rock gnome, you have a natural inventiveness and 
@@ -840,6 +851,7 @@ races:
         the song's end or when it is closed."
 
   half-elf:
+    name: "half-elf"
     description:
       of two worlds: ""
       diplomats or wanderers: ""
@@ -891,6 +903,7 @@ races:
         "You gain proficiency in two skills of your choice."
 
   half-orc:
+    name: "half-orc"
     description:
       scarred adn strong: ""
       the mark of gruumsh: ""
@@ -941,8 +954,8 @@ races:
         you can roll one of the weapon's damage dice one additional 
         time and add it to the extra damage of the critical hit."
 
-
   tiefling:
+    name: "tiefling"
     description:
       infernal bloodline: ""
       self-reliant and suspicious: ""
@@ -997,3 +1010,4 @@ races:
 
 classes:
   barbarian:
+    name: "barbarian"

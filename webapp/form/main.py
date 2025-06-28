@@ -1,11 +1,12 @@
 import streamlit as st
 from streamlit_autorefresh import st_autorefresh
-import yaml
-import os
 
 def form_main(DATA_DIR):
     st.title("🧙 Player Dashboard")
-    st_autorefresh(interval=2000,key="refresh")
+    st_autorefresh(interval=3000,key="refresh")
+
+    if st.session_state.character == {}:
+        st.session_state.character = next(iter(st.session_state.characters.values()))
 
     if st.session_state.initiative["visible"]:
         st.subheader("⚔️ Initiative Tracker")
@@ -16,12 +17,13 @@ def form_main(DATA_DIR):
 
     # Select a character
     with col1:
-        selected_name = st.selectbox(
+        char_name = st.selectbox(
             "Choose your character",
             sorted(list(st.session_state.characters.keys())),
             index=sorted(list(st.session_state.characters.keys())).index(st.session_state.character["name"]),
             key="character_select"
         )
+        st.session_state.character = st.session_state.characters[char_name]
 
     # Create a character
     with col2:
@@ -37,9 +39,11 @@ def form_main(DATA_DIR):
             st.session_state.display_form = "DM"
             st.experimental_rerun()
 
-    st.subheader(f"🎭 {st.session_state.character['name'].title()} the \
-                 {st.session_state.character["race"].title()} \
-                 {st.session_state.character['classtype'].title()}")
+    st.subheader(f"""
+                🎭 {st.session_state.character['name'].title()} the
+                {st.session_state.character["race"].title()}
+                {st.session_state.character["class"].title()}
+                """)
     
     # Level
     st.write("Level: ", st.session_state.character["level"])
