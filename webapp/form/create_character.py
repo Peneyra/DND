@@ -5,20 +5,12 @@ import yaml
 def form_create_character(DATA_DIR):
     #initialize some variables into the session state
     st.title("➕ Create or Edit a Character")
-    if not "race" in st.session_state: st.session_state.race = {}
-    if not "clas" in st.session_state: st.session_state.clas = {}
-    if not "bkrd" in st.session_state: st.session_state.bkrd = {}
-    if not "race_index" in st.session_state: st.session_state.race_index = 0
-    if not "clas_index" in st.session_state: st.session_state.clas_index = 0
-    if not "back_index" in st.session_state: st.session_state.back_index = 0
-    stats = ["cha", "con", "dex", "int", "str", "wis"]
-
+    abilities = ["cha", "con", "dex", "int", "str", "wis"]
 
     #################################################################
     # N a m e
     st.subheader("Character Name")
     st.session_state.name = st.text_input("Character Name",label_visibility="collapsed")
-
     rcb_col = st.columns([1,1,1])
 
     #################################################################
@@ -44,7 +36,6 @@ def form_create_character(DATA_DIR):
         st.session_state.clas_index = sorted(st.session_state.classes.keys()).\
                 index(st.session_state.character.get("class",clas_default))
 
-
         st.selectbox(
             "Class", 
             sorted(st.session_state.classes.keys()),
@@ -57,10 +48,7 @@ def form_create_character(DATA_DIR):
     with rcb_col[2]:
         st.subheader("Background")
         back_default = ""
-        st.session_state.back_index
-        #st.session_state.back_index = sorted(st.session_state.backgrounds.keys()).\
-        #        index(st.session_state.character.get("background",back_default))
-
+        st.session_state.back_index = None
 
         st.selectbox(
             "Class", 
@@ -69,55 +57,69 @@ def form_create_character(DATA_DIR):
             key = "back_name",
             label_visibility="collapsed",
             index = st.session_state.back_index)
-        
+
     #################################################################
-    # S t a t s
-    st.session_state.val_race = st.session_state.races.get(st.session_state.race_name,{}).get("stats",{})
-    st.session_state.val_clas = st.session_state.clas.get("stats",{})
+    # A b i l i t i e s
+    st.session_state.val_race = st.session_state.races.get(st.session_state.race_name,{}).get("abilities",{})
+    st.session_state.val_clas = st.session_state.classes.get(st.session_state.clas_name,{}).get("abilities",{})
 
     if st.session_state.race_name == "half-elf":
         st.session_state.val_play_max = 74
     else:
         st.session_state.val_play_max = 72
-    print("Max allowable")
-    print(st.session_state.val_play_max)
 
-    st.subheader("Stats")
-    stat_col = st.columns([1,1,1,1,1])
-    stat_col[0].markdown("")
-    stat_col[1].markdown("**Race**")
-    stat_col[2].markdown("**Class**")
-    stat_col[3].markdown("**Player** (max " + str(st.session_state.val_play_max) + ")")
-    stat_col[4].markdown("**Total**")
+    primary_abilities = st.session_state.classes[st.session_state.clas_name]['primary ability']
+    saving_abilities = st.session_state.classes[st.session_state.clas_name]['saving throw proficiencies']
 
-    for stat in stats:
-        stat_col = st.columns([1,1,1,1,1])
-        stat_col[0].markdown(f"**{stat.upper()}**")
-        stat_col[1].markdown(f"**{st.session_state.val_race.get(stat,0)}**")
-        stat_col[2].markdown(f"**{st.session_state.val_clas.get(stat,0)}**")
+    st.subheader(f"Abilities ({' '.join(primary_abilities).upper()} | {' '.join(saving_abilities).upper()})",
+                 help="(primary | saving)")
 
-        with stat_col[3]:
+    abi_col = st.columns([1,1,1,1,1])
+    abi_col[0].markdown("")
+    abi_col[1].markdown("**Player** (max " + str(st.session_state.val_play_max) + ")")
+    abi_col[2].markdown("**Race**")
+    abi_col[3].markdown("**Class**")
+    abi_col[4].markdown("**Total**")
+
+    for abi in abilities:
+        abi_col = st.columns([1,1,1,1,1])
+        abi_col[0].markdown(f"**{abi.upper()}**")
+        with abi_col[1]:
             st.number_input(
-                stat + " player value", 
+                abi + " player value", 
                 min_value=8, 
                 max_value=18,
                 value=8,
-                key=stat,
+                key=abi,
                 label_visibility="collapsed")
-        stat_col[4].markdown(f"**{st.session_state.val_race.get(stat,0) + st.session_state.val_clas.get(stat,0) + st.session_state[stat]}**")
-
+        abi_col[2].markdown(f"**{st.session_state.val_race.get(abi,0)}**")
+        abi_col[3].markdown(f"**{st.session_state.val_clas.get(abi,0)}**")
+        abi_col[4].markdown(f"**{st.session_state.val_race.get(abi,0) + st.session_state.val_clas.get(abi,0) + st.session_state[abi]}**")
     total = 0
-    for stat in stats:
-        if stat in st.session_state: total += st.session_state[stat]
+    for abi in abilities:
+        if abi in st.session_state: total += st.session_state[abi]
+    abi_col[1].markdown(f"**{total} of {st.session_state.val_play_max}**")
+
     if total > st.session_state.val_play_max:
         st.markdown(f"**W A R N I N G!!!**")
-        st.markdown(f"**You've used {total} of {st.session_state.val_play_max} points.**")
         st.markdown(f"Turn back! You've exceded your max allowable points!")
         st.markdown(f"**W A R N I N G!!!**")
-    else:
-        st.markdown(f"**You've used {total} of {st.session_state.val_play_max} points.**")
 
-    # Pre-fill with existing values or defaults
+    #################################################################
+    # B a s i c   S k i l l s
+    ski_col = st.columns([1,1,1])
+    st.subheader("Skills")
+    
+
+    #################################################################
+    # S p e l l s   a n d   a b i l i t i e s
+
+
+    #################################################################
+    # I n v e n t o r y / E q u i p m e n t
+
+    #################################################################
+    # D e s c r i p t i o n
     alignment = st.text_input(
         "Alignment", 
         value=st.session_state.character.get("alignment") if \
@@ -151,7 +153,7 @@ def form_create_character(DATA_DIR):
             "background": st.session_state.back_name,
             "alignment": alignment,
             "level": 1,
-            "stats": stats,
+            "abilities": abilities,
             "equipment": equipment,
             "inventory": inventory,
             "spells": spells

@@ -6,7 +6,7 @@ import time
 from form.create_character import form_create_character
 from form.main import form_main
 from form.dm import form_dm
-6
+
 def load_yaml(path):
     with open(path, 'r') as f:
         return yaml.safe_load(f)

@@ -52,10 +52,10 @@ def form_main(DATA_DIR):
     # Alignment
     st.write("Alignment: ", st.session_state.character["alignment"])
     # Stats
-    with st.expander("Stats: "):
+    with st.expander("Abilities: "):
         st.text("\n".join(f"- {k.upper()}: {v}" for \
                 k, v in \
-                sorted(st.session_state.character["stats"].items())))
+                sorted(st.session_state.character["abilities"].items())))
     # Spells
     with st.expander("Spells: "):
         st.text("\n".join(f"- {v.title()}" for v in \
