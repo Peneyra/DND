@@ -1,0 +1,40 @@
+Character
+-> Name
+-> Class
+-> Race
+-> Background
+-> Description
+-> Abilities (CHA, CON, DEX, INT, STR, WIS)
+-> Primary Ability
+-> Saving Throw Ability
+-> Hit Points
+-> Action Charges
+-> Reactions
+-> Effects
+-> Proficiencies
+    -> Weapons
+    -> Armor
+    -> Skills
+    -> Spells (list of all spells available)
+    -> Languages
+    -> Proficiency Bonus
+-> Attacks
+    -> Hit Die
+    -> Attack Charges
+-> Spells
+    -> Spellbook
+    -> Spell List (Equipped Spells)
+    -> Spell Charges
+-> Traits
+    -> Persistent
+    -> Activated
+        -> Trait Charges
+-> Equipment
+    -> Main Hand
+    -> Off Hand
+    -> Ranged
+    -> Armor
+    -> Rings
+    -> Neck
+    -> Misc
+    -> Inventory

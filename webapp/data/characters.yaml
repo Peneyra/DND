@@ -56,3 +56,28 @@ characters:
       int: 15
       str: 13
       wis: 9
+  new:
+    name:
+    race:
+    class:
+    background:
+    proficiencies:
+      armor: none
+      weapons: none
+      spells: none
+      languages: none
+      tools: none
+      weapons: none
+      skills: none
+    equipment:
+      main hand: none
+      off hand: none
+      ranged: none
+      armor: none
+      inventory: none
+    traits: none
+    size: none
+    speed: none
+    age: none
+    alignment: none
+

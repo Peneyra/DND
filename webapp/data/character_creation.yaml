@@ -8,6 +8,9 @@ classes:
       - shields
       - medium armor
       - light armor
+      skills:
+      - [Animal Handling, Athletics, Intimidation, Nature, Perception, Survival]
+      - [Animal Handling, Athletics, Intimidation, Nature, Perception, Survival]
     description: A fierce warrior of primitive background who can enter a battle rage
     name: barbarian
     primary ability:
@@ -15,75 +18,24 @@ classes:
     saving throw proficiencies:
     - str
     - con
-    skills:
-    - [Animal Handling, Athletics, Intimidation, Nature, Perception, Survival]
-    - [Animal Handling, Athletics, Intimidation, Nature, Perception, Survival]
     levels:
       1:
         proficiency bonus: 2
         hit dice:
           d12: 1
         hit points:
-        - 12
-        - con: 1
-        attacks: 1
-        class skills:
-        - Rage Count: 2
-        - Rage Damage: 2
-        - Unarmored Defense
+          any: 12
+          con: 1
         equipment:
           main hand: greataxe
           inventory:
           - handaxe
           - handaxe
-          - javelin
-          - javelin
-          - javelin
-          - javelin
+          - javelin: 4
           - explorers pack
-      2:
-        proficiency bonus: 2
-        hit dice:
-          d12: 1
-        hit points:
-        - 7
-        - con: 1
-        class skills:
-        - Rage Damage: 2
-        - Reckless Attack
-        - Danger Sense
-      3:
-        proficiency bonus: 2
-        subclass: 1
-        class skills:
-        - Rage Count: 1
-        - Rage Damage: 2
-        hit dice:
-          d12: 1
-        hit points:
-          - 7
-          - con: 1
-      4:
-        proficiency bonus: 2
-        abilities: 1
-        class skills:
-        - Rage Damage: 2
-        hit dice:
-          d12: 1
-        hit points:
-          - 7
-          - con: 1
-      5:
-        proficiency bonus: 3
-        attacks: 1
-        movement: fast
-        class skills:
-        - Rage Damage: 2
-        hit dice:
-          d12: 1
-        hit points:
-          - 7
-          - con: 1
+        traits:
+          Rage: 'In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action. While raging, you gain the following benefits if you aren''t wearing heavy armor: you have advantage on Strength checks and Strength saving throws; when you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian (see the Rage Damage column of the Barbarian table); you have resistance to bludgeoning, piercing, and slashing damage. If you are able to cast spells, you can''t cast them or concentrate on them while raging. Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven''t attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action. You can rage twice per long rest at 1st level. This increases at higher levels.'
+          Unarmored Defense: 'While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.'
   bard:
     proficiencies:
       weapons:
@@ -94,6 +46,10 @@ classes:
       - rapiers
       armor:
       - light armor
+      skills:
+      - [Acrobatics, Animal Handling, Arcana, Athletics, Deception, History, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Religion, Sleight of Hand, Stealth, Survival]
+      - [Acrobatics, Animal Handling, Arcana, Athletics, Deception, History, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Religion, Sleight of Hand, Stealth, Survival]
+      - [Acrobatics, Animal Handling, Arcana, Athletics, Deception, History, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Religion, Sleight of Hand, Stealth, Survival]
       spells:
         0:
         - Blade Ward
@@ -231,24 +187,18 @@ classes:
     saving throw proficiencies:
     - dex
     - cha
-    skills:
-    - [Acrobatics, Animal Handling, Arcana, Athletics, Deception, History, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Religion, Slight of Hand, Stealth, Survival]
-    - [Acrobatics, Animal Handling, Arcana, Athletics, Deception, History, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Religion, Slight of Hand, Stealth, Survival]
-    - [Acrobatics, Animal Handling, Arcana, Athletics, Deception, History, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Religion, Slight of Hand, Stealth, Survival]
     levels:
       1:
         proficiency bonus: 2
-        class skills:
-        - Bardic Inspiration:
-          d6: 1
         spell 1: 2
-        spell list: 4
+        spell list: 
+          any: 4
         cantrip list: 2
         hit dice:
           d8: 1
         hit points:
-        - 8
-        - con: 1
+          any: 8
+          con: 1
         equipment:
           main hand: [rapier, longsword]
           off hand: dagger
@@ -256,6 +206,22 @@ classes:
           inventory:
           - [diplomats pack, entertainers pack]
           - lute
+        traits: 
+          bardic inspiration: 'You can inspire others through stirring words or music. To do
+            so, you use a bonus action on your turn to choose one creature other
+            than yourself within 60 feet of you who can hear you. That creature
+            gains one Bardic Inspiration die, a d6. Once within the next 10
+            minutes, the creature can roll the die and add the number rolled to
+            one ability check, attack roll, or saving throw it makes. The
+            creature can wait until after it rolls the d20 before deciding to use
+            the Bardic Inspiration die, but must decide before the GM says
+            whether the roll succeeds or fails. Once the Bardic Inspiration die
+            is rolled, it is lost. A creature can have only one Bardic
+            Inspiration die at a time. You can use this feature a number of times
+            equal to your Charisma modifier (a minimum of once). You regain any
+            expended uses when you finish a long rest. Your Bardic Inspiration
+            die changes as you level: 1st level: d6, 5th level: d8, 10th level:
+            d10, 15th level: d12.'
   cleric:
     proficiencies:
       weapons:
@@ -264,6 +230,9 @@ classes:
       - medium armor
       - light armor
       - shields
+      skills:
+      - [History, Insight, Medicine, Persuasion, Religion]
+      - [History, Insight, Medicine, Persuasion, Religion]
       spells:
         0:
         - Guidance
@@ -382,31 +351,25 @@ classes:
         - True Resurrection
     description: A priestly champion who wields divine magic in service of a higher
       power
-    hit die: d8
     name: cleric
     primary ability:
     - wis
     saving throw proficiencies:
     - wis
     - cha
-    skills:
-    - [History, Insight, Medicine, Persuasion, Religion]
-    - [History, Insight, Medicine, Persuasion, Religion]
     levels:
       1:
         proficiency bonus: 2
-        class skills:
-        - Devine Domain
         spell 1: 2
         spell list:
-        - 1
-        - wis: 1
+          any: 1
+          wis: 1
         cantrip list: 3
         hit dice:
           d8: 1
         hit points:
-        - 8
-        - con: 1
+          any: 8
+          con: 1
         equipment:
           main hand: [mace, warhammer]
           armor: [scale mail, leather armor, chain mail]
@@ -414,8 +377,10 @@ classes:
           ranged: [light crossbow]
           inventory:
           - [priests pack, explorers pack]
-          - 20 x bolts
+          - bolts: 20
           - holy symbol
+        traits:
+          Divine Domain: 'Choose one domain related to your deity: Knowledge, Life, Light, Nature, Tempest, Trickery, or War. Each domain is detailed at the end of the class description, and each one provides examples of gods associated with it. Your choice grants you domain spells and other features when you choose it at 1st level. It also grants you additional ways to use Channel Divinity and other benefits at higher levels, depending on the domain.'
   druid:
     proficiencies:
       armor:
@@ -433,6 +398,9 @@ classes:
       - spears
       - daggers
       - javelins
+      skills:
+      - [Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, Survival]
+      - [Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, Survival]
       spells:
         0:
         - Druidcraft
@@ -554,13 +522,34 @@ classes:
         - True Resurrection
     description: A priest of the Old Faith, wielding the powers of nature - moonlight
       and plant growth, fire and lightning - and adopting animal forms
-    hit die: d8
     name: druid
     primary ability:
     - wis
     saving throw proficiencies:
     - int
     - wis
+    levels:
+      1:
+        proficiency bonus: 2
+        spell 1: 2
+        spell list:
+          any: 1
+          wis: 1
+        cantrip list: 2
+        hit dice:
+          d8: 1
+        hit points:
+          any: 8
+          con: 1
+        equipment:
+          main hand: [scimitar]
+          off hand: [wooden shield]
+          armor: [leather armor]
+          inventory:
+          - explorers pack
+          - druidic focus
+        traits:
+          Druidic: 'You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know Druidic automatically spot such a message. Others spot the message''s presence with a successful DC 15 Wisdom (Perception) check but can''t decipher it without magic.'
   fighter:
     proficiencies:
       weapons:
@@ -571,9 +560,11 @@ classes:
       - medium aromr
       - heavy armor
       - shields
+      skills:
+      - [Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, Survival]
+      - [Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, Survival]
     description: A master of martial combat, skilled with a variety of weapons and
       armor
-    hit die: d10
     name: fighter
     primary ability:
     - str
@@ -581,14 +572,41 @@ classes:
     saving throw proficiencies:
     - str
     - con
+    levels:
+      1:
+        proficiency bonus: 2
+        hit dice:
+          d10: 1
+        hit points:
+          any: 10
+          con: 1
+        equipment:
+          main hand: [short sword]
+          armor: [chain mail, leather armor]
+          off hand: [short sword, shield]
+          ranged: [light crossbow, longbow]
+          inventory:
+          - [bolts: 20, arrows: 20]
+          - handaxe
+          - handaxe
+          - [dungeoneers pack, explorers pack]
+        fighting style: [archery, defense, dueling, great weapon fighting, protection, two-weapon fighting]
+        traits:
+          second wind: 'You have a limited well of stamina that you can draw on
+            to protect yourself from harm. on your turn, you can use a bonus
+            action to regain hit points equal to 1d10 + your fighter level. Once
+            you use this feature, you must finish a short or long rest before you
+            can use it again.'
   monk:
     proficiencies:
       weapons:
       - simple weapons
       - shortswords
+      skills:
+      - [Acrobatics, Athletics, History, Insight, Religion, Stealth]
+      - [Acrobatics, Athletics, History, Insight, Religion, Stealth]
     description: A master of martial arts, harnessing the power of the body in pursuit
       of physical and spiritual perfection
-    hit die: d8
     name: monk
     primary ability:
     - dex
@@ -596,6 +614,40 @@ classes:
     saving throw proficiencies:
     - str
     - dex
+    levels:
+      1:
+        proficiency bonus: 2
+        martial arts:
+          d4: 1
+        hit dice:
+          d8: 1
+        hit points:
+          any: 8
+          con: 1
+        equipment:
+          main hand: [short sword]
+          inventory:
+          - [dungeoneers pack, explorers pack]
+          - 10 darts
+        traits:
+          unarmored defense: 'While you are wearing no armor and not wielding a
+            shield, your AC equals 10 + your Dexterity modifier + your Wisdom
+            modifier.'
+          martial arts: 'Your practice of martial arts gives you mastery of
+            combat styles that use unarmed strikes and monk weapons, which
+            are shortswords and any simple melee weapons that don''t have
+            the two-handed or heavy property. While unarmed or wielding
+            only monk weapons and you aren''t wearing armor or shield then
+            (1) You can use Dexterity instead of Strength for the attack and
+            damage rolls of your unarmed strikes and monk weapons. (2) You can
+            roll a d4 in place of the normal damage of your unarmed strike or
+            monk weapon. This die changes as you gain monk levels, as shown in
+            the Martial Arts column of the Monk Table. (3) When you use the
+            Attafck action with an unarmed strike or a monk weapon on your
+            turn, you can make one unarmed strike as a bonus action. For
+            example, if you take the Attack action and attack with a quarter-
+            staff, you can also make an unarmed strike as a bonus action,
+            assuming you haven''t already taken a bonus action this turn.'
   paladin:
     proficiencies:
       weapons:
@@ -603,9 +655,12 @@ classes:
       - martial weapons
       armor:
       - light armor
-      - medium aromr
+      - medium armor
       - heavy armor
       - shields
+      skills:
+      - [Athletics, Insight, Intimidation, Medicine, Persuasion, Religion]
+      - [Athletics, Insight, Intimidation, Medicine, Persuasion, Religion]
       spells:
         1:
         - Bless
@@ -657,7 +712,6 @@ classes:
         - Geas
         - Raise Dead
     description: A holy warrior bound to a sacred oath
-    hit die: d10
     name: paladin
     primary ability:
     - str
@@ -665,6 +719,45 @@ classes:
     saving throw proficiencies:
     - wis
     - cha
+    levels:
+      1:
+        proficiency bonus: 2
+        hit dice:
+          d10: 1
+        hit points:
+          any: 10
+          con: 1
+        equipment:
+          main hand: [short sword]
+          off hand: [short sword, shield]
+          armor: [chain mail]
+          inventory:
+          - javalin: 5
+          - [priests pack, explorers pack]
+        traits:
+          divine sense: 'The presence of strong evil registers on your senses
+            like a noxious odor, and powerful good rings like heavenly music in
+            your ears. As an action, you can open your awareness to detect such
+            forces. Until the end of your next turn, you know the location of
+            any celestial, fiend, or undead within 60 feet of you that is not
+            behind total cover. You know the type (celestial, fiend, or undead)
+            of any being whose presence you sense, but not its identity (the
+            vampire Count Strahd von Zarovich, for instance). Within the same
+            radius, you also detect the presence of any place or object that has
+            been consecrated or desecrated, as with the hallow spell. You can
+            use this feature a number of times equal to 1 + your Charisma
+            modifier. When you finish a long rest you regain all expended uses.'
+          lay on hands: 'Your blessed touch can heal wounds. You have a pool
+            of healing power that replenishes when you take a long rest. With
+            that pool, you can restore a total number of hit points equal to
+            your paladin level x 5. As an action, you can touch a creature to
+            restore any number of hit points remaining in the pool.
+            Alternatively, you can expend 5 hit points from your pool of
+            healing to cure the target of one disease or neutralize one poison
+            affecting it. You can cure multiple diseases and neutralize
+            multiple poisons with a single use of Lay on Hands, expending hit
+            points separately for each one. This feature has no effect on
+            undead and constructs.'
   ranger:
     proficiencies:
       weapons:
@@ -674,6 +767,10 @@ classes:
       - light armor
       - medium armor
       - shields
+      skills:
+      - [Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, Survival]
+      - [Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, Survival]
+      - [Animal Handling, Athletics, Insight, Investigation, Nature, Perception, Stealth, Survival]
       spells:
         1:
         - Alarm
@@ -727,7 +824,6 @@ classes:
         - Tree Stride
     description: A warrior who uses martial prowess and nature magic to combat threats
       on the edges of civilization
-    hit die: d10
     name: ranger
     primary ability:
     - dex
@@ -735,6 +831,26 @@ classes:
     saving throw proficiencies:
     - str
     - dex
+    levels:
+      1:
+        proficiency bonus: 2
+        hit dice:
+          d10: 1
+        hit points:
+          any: 10
+          con: 1
+        equipment:
+          main hand: [shortsword]
+          off hand: [shortsword]
+          armor: [scale mail, leather armor]
+          ranged: [longbow]
+          inventory:
+          - quiver
+          - arrows: 20
+          - [dungeoneers pack, explorers pack]
+        traits:
+          Favored Enemy: 'Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy. Choose a type of favored enemy: aberrations, beasts, celestials, constructs, dragons, elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead. Alternatively, you can select two races of humanoid (such as gnolls and orcs) as favored enemies. You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them. When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all. You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures.'
+          Natural Explorer: 'You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. Choose one type of favored terrain: arctic, coast, desert, forest, grassland, mountain, swamp, or the Underdark. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in. While traveling for an hour or more in your favored terrain, you gain the following benefits: difficult terrain doesn’t slow your group’s travel; your group can’t become lost except by magical means; even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger; if you are traveling alone, you can move stealthily at a normal pace; when you forage, you find twice as much food as you normally would; while tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area. You choose additional favored terrain types at 6th and 10th level.'
   rogue:
     proficiencies:
       weapons:
@@ -745,15 +861,41 @@ classes:
       - rapiers
       armor:
       - light armor
+      skills:
+      - [Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, Stealth]
+      - [Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, Stealth]
+      - [Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, Stealth]
+      - [Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, Stealth]
     description: A scoundrel who uses stealth and trickery to overcome obstacles and
       enemies
-    hit die: d8
     name: rogue
     primary ability:
     - dex
     saving throw proficiencies:
     - dex
     - int
+    levels:
+      1:
+        proficiency bonus: 2
+        hit dice:
+          d8: 1
+        hit points:
+          any: 8
+          con: 1
+        equipment:
+          main hand: [rapier, shortsword]
+          armor: [leather]
+          inventory:
+          - [burglars pack, dungeoneers pack, explorers pack]
+          - [shortbow, shortsword]
+          - arrows: 20
+          - dagger
+          - dagger
+          - theives tools
+        traits:
+          Expertise: 'At 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves'' tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies. At 6th level, you can choose two more of your proficiencies to gain this benefit.'
+          Sneak Attack: 'Beginning at 1st level, you know how to strike subtly and exploit a foe''s distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon. You don''t need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn''t incapacitated, and you don''t have disadvantage on the attack roll. The amount of extra damage increases as you gain levels in this class.'
+          ThievesCant: 'During your rogue training you learned thieves'' cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves'' cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly. You also understand a set of secret signs and symbols used to convey short, simple messages such as whether an area is dangerous or the territory of a thieves'' guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run.'
   sorcerer:
     proficiencies:
       weapons:
@@ -762,6 +904,9 @@ classes:
       - daggers
       - darts
       - quarterstaffs
+      skills:
+      - [Arcana, Deception, Insight, Intimidation, Persuasion, Religion]
+      - [Arcana, Deception, Insight, Intimidation, Persuasion, Religion]
       spells:
         0:
         - Acid Splash
@@ -903,19 +1048,42 @@ classes:
         - Time Stop
         - Wish
     description: A spellcaster who draws on inherent magic from a gift or bloodline
-    hit die: d6
     name: sorcerer
     primary ability:
     - cha
     saving throw proficiencies:
     - con
     - cha
+    levels:
+      1:
+        proficiency bonus: 2
+        hit dice:
+          d6: 1
+        hit points:
+          any: 6
+          con: 1
+        spell 1: 2
+        spell list: 
+          any: 2
+        cantrip list: 4
+        equipment:
+          main hand: dagger
+          off hand: dagger
+          ranged: light crossbow
+          inventory:
+          - [component pouch, arcane focus]
+          - [dungeoneers pack, explorers pack]
+        traits:
+          Sorcerous Origin: 'Choose a sorcerous origin, which describes the source of your innate magical power: Draconic Bloodline or Wild Magic, both detailed at the end of the class description. Your choice grants you features when you choose it at 1st level and again at 6th, 14th, and 18th level.'
   warlock:
     proficiencies:
       weapons:
       - simple weapons
       armor:
       - light armor
+      skills:
+      - [Arcana, Deception, History, Intimidation, investigation, Nature, Religion]
+      - [Arcana, Deception, History, Intimidation, investigation, Nature, Religion]
       spells:
         0:
         - Blade Ward
@@ -1003,13 +1171,36 @@ classes:
         - True Polymorph
     description: A wielder of magic that is derived from a bargain with an extraplanar
       entity
-    hit die: d8
     name: warlock
     primary ability:
     - cha
     saving throw proficiencies:
     - wis
     - cha
+    level:
+      1:
+        proficiency bonus: 2
+        hit dice:
+          d8: 1
+        hit points:
+          any: 8
+          con: 1
+        spell 1: 1
+        spell list: 
+          any: 2
+        cantrip list: 2
+        equipment:
+          ranged: [light crossbow]
+          main hand: [shortsword]
+          armor: [leather]
+          inventory:
+          - [component pouch, arcane focus]
+          - [scolars pack, dungeoneers pack]
+          - dagger
+          - dagger
+        traits:
+          Otherworldly Patron: 'You have struck a bargain with an otherworldly being of your choice: the Archfey, the Fiend, or the Great Old One. Your choice grants you features at 1st level and again at 6th, 10th, and 14th level.'
+          PactMagic: 'Your arcane research and the magic bestowed on you by your patron have given you facility with spells. Charisma is your spellcasting ability for your warlock spells, since your magic comes from your pact with your patron. You use your Charisma whenever a spell refers to your spellcasting ability.'
   wizard:
     proficiencies:
       weapons:
@@ -1018,6 +1209,9 @@ classes:
       - daggers
       - darts
       - quarterstaffs
+      skills:
+      - [Arcana, History Insight, Investigation, Medicine, Religion]
+      - [Arcana, History Insight, Investigation, Medicine, Religion]
       spells:
         0:
         - Acid Splash
@@ -1246,13 +1440,30 @@ classes:
         - Wish
     description: A scholarly magic-user capable of manipulating the structures of
       reality
-    hit die: d6
     name: wizard
     primary ability:
     - int
     saving throw proficiencies:
     - int
     - wis
+    levels:
+      1:
+        proficiency bonus: 2
+        spell 1: 2
+        spell list: 
+          any: 6
+        cantrip list: 3
+        hit dice:
+          d6: 1
+        hit points:
+          any: 6
+          con: 1
+        equipment:
+          main hand: [quarterstaff, dagger]
+          inventory:
+          - [component pouch, arcane focus]
+          - [scolars pack, explorers pack]
+          - spellbook
 races:
   dragonborn:
     abilities:
@@ -1328,43 +1539,29 @@ races:
           save: con
           cooldown: short rest
     traits:
-      age: '"Young dragonborn grow quickly. They walk hours after  hatching, attain
-        the size and development of a 10-year-old  human child by the age of 3, and
-        reach adulthood by 15. They  live to be around 80."
-
-        '
-      alignment: '"Dragonboarn tend to extremes, making a concious choice for  one
-        side or the other in the cosmic war between good and  evil (represented by
-        Bahamut and Tiamat, respectively). Most  dragonborn are good, but those who
-        side with Tiamat can be  terrible villains."
-
-        '
-      breath weapon: '"You can use your action to exhale destructive energy. Your  draconic
+      breath weapon: 'You can use your action to exhale destructive energy. Your  draconic
         ancestry determines the size, shape, and damage  type of the exhalation. \n
         When you use your breath weapon, each creature in the area  of the exhalation
         must make a saving throw, the type of  which is determined by your draconic
         ancestry. The DC for  this saving throw equals 8 + your constitution modifier
         +  your proficiency bonus. A creature takes 2d6 damage on a  failed save,
         and half as much damage on a successful one.  The damage increases to 3d6
-        at 6th level, 4d6 at 11th level,  and 5d6 at 16th level.
-
-        '
-      damage resistance: '"You ahve resistance to the damage type associated with
-        your  draconic ancestry."
-
-        '
-      draconic ancestry: '"You have draconic ancestry. Choose one type of dragon from  the
+        at 6th level, 4d6 at 11th level,  and 5d6 at 16th level.'
+      damage resistance: 'You have resistance to the damage type associated with
+        your  draconic ancestry.'
+      draconic ancestry: 'You have draconic ancestry. Choose one type of dragon from  the
         Draconic Ancestry table. Your breath weapon and damage  resistance are determined
-        by the dragon type, as shown in  the table."
-
-        '
-      size: '"Dragonborn are taller and heavier than humans, standing  well over 6
-        feet tall and averaging almost 250 pounds. Your  size is Medium."
-
-        '
-      speed: '"Your base walking speed is 30 feet."
-
-        '
+        by the dragon type, as shown in  the table.'
+    size: 'Dragonborn are taller and heavier than humans, standing  well over 6
+      feet tall and averaging almost 250 pounds. Your  size is Medium.'
+    speed: 'Your base walking speed is 30 feet.'
+    age: 'Young dragonborn grow quickly. They walk hours after  hatching, attain
+      the size and development of a 10-year-old  human child by the age of 3, and
+      reach adulthood by 15. They  live to be around 80.'
+    alignment: 'Dragonboarn tend to extremes, making a concious choice for  one
+      side or the other in the cosmic war between good and  evil (represented by
+      Bahamut and Tiamat, respectively). Most  dragonborn are good, but those who
+      side with Tiamat can be  terrible villains.'
   dwarf (hill):
     abilities:
       cha: 0
@@ -1376,11 +1573,9 @@ races:
     description:
       clans and kingdoms: ''
       gods, gold, and clan: ''
-      hill dwarves: '"As a hill dwarf, you have keen senses, deep intuition,  and
-        remarkable resilience."
-
-        '
-      long memory, long grudges: '"Dwarves can live to be more than 400 years old,
+      hill dwarves: 'As a hill dwarf, you have keen senses, deep intuition,  and
+        remarkable resilience.'
+      long memory, long grudges: 'Dwarves can live to be more than 400 years old,
         so the  oldest living dwarves often remember a very different  world. This
         longevity grants them a  perspective on the world that shorter lived races
         such as  humans and halflings lack. \n  Dwarves are solid and  enduring like
@@ -1394,10 +1589,8 @@ races:
         sometimes to the point of stubbornness. Many  dwarves have a strong sense
         of justice, and they are slow  to forget wrongs they have suffered. A wrong
         done to one  dwarf is a wrong done to the dwarf''s entire clan, so what  begins
-        as one dwarf''s hunt for vengeance can become a  full-blown clan feud."
-
-        '
-      short and stout: '"Bold and hardy, dwarves are known as skilled warriors,  miners,
+        as one dwarf''s hunt for vengeance can become a  full-blown clan feud.'
+      short and stout: 'Bold and hardy, dwarves are known as skilled warriors,  miners,
         and workers of stone and metal. Though they stand  well under 5 feet tall,
         dwarves are so broad and compact  that they can weigh as much as a human standing
         nearly two  feet taller. Their courage and endurance are also easily a  match
@@ -1405,10 +1598,8 @@ races:
         paler hue tinged with red, but the  most common shades are light brown or
         deep tan, like  certain tones of earth. Their hair, worn long but in  simple
         styles, is usually black, gray, or brown, though  paler dwarves often have
-        red hair. Male dwarves value  their beards highly and groom them carefully."
-
-        '
-    name: dwarf (hill)
+        red hair. Male dwarves value  their beards highly and groom them carefully.'
+    name: hill dwarf
     proficiencies:
       languages:
         common:
@@ -1429,43 +1620,27 @@ races:
       - light hammer
       - warhammer
     traits:
-      age: '"Dwarves mature at the same rate as humans, but they''re  considered young
-        until they reach the age of 50. On average,  they live about 350 years."
-
-        '
-      alignment: '"Most dwarves are lawful, believing firmly in the benefits  of a
-        well-ordered society. They tend toward good as well,  with a strong sense
-        of fair play and as belief that everyone  deserves to share in the benefits
-        of a just order."
-
-        '
-      darkvision: '"You can see in dim light within 60 feet of you as if it  were
+      darkvision: 'You can see in dim light within 60 feet of you as if it  were
         bright light, and in darkness as if it were dim light.  You can''t discern
-        color in darkness, only shades of gray."
-
-        '
-      dwarven resilience: '"You have advantage on saving throws against poison, and
-        you  have resistance against poison damage."
-
-        '
-      dwarven toughness: '"Your hit point maximum increases by 1, and it increases
-        by  1 every time you gain a level."
-
-        '
-      size: '"Dwarves stand between 4 and 5 feet tall and average about  150 pounds.
-        Your size is Medium."
-
-        '
-      speed: '"Your base walking speed is 25 feet. Your speed is not  reduced by wearing
-        heavy armor."
-
-        '
-      stonecutting: '"Whenever you make an intelligence (History) check related  to
+        color in darkness, only shades of gray.'
+      dwarven resilience: 'You have advantage on saving throws against poison, and
+        you  have resistance against poison damage.'
+      dwarven toughness: 'Your hit point maximum increases by 1, and it increases
+        by  1 every time you gain a level.'
+      stonecutting: 'Whenever you make an intelligence (History) check related  to
         the origin of stonework, you are considered proficient in  the History skill
         and add double your proficiency bonus to  the check, instead of your normal
-        proficiency bonus."
-
-        '
+        proficiency bonus.'
+    size: 'Dwarves stand between 4 and 5 feet tall and average about  150 pounds.
+      Your size is Medium.'
+    speed: 'Your base walking speed is 25 feet. Your speed is not  reduced by wearing
+      heavy armor.'
+    age: 'Dwarves mature at the same rate as humans, but they''re  considered young
+      until they reach the age of 50. On average,  they live about 350 years.'
+    alignment: 'Most dwarves are lawful, believing firmly in the benefits  of a
+      well-ordered society. They tend toward good as well,  with a strong sense
+      of fair play and as belief that everyone  deserves to share in the benefits
+      of a just order.'
   dwarf (mountain):
     abilities:
       cha: 0
@@ -1477,7 +1652,7 @@ races:
     description:
       clans and kingdoms: ''
       gods, gold, and clan: ''
-      long memory, long grudges: '"Dwarves can live to be more than 400 years old,
+      long memory, long grudges: 'Dwarves can live to be more than 400 years old,
         so the  oldest living dwarves often remember a very different  world. This
         longevity grants them a  perspective on the world that shorter lived races
         such as  humans and halflings lack. \n  Dwarves are solid and  enduring like
@@ -1491,15 +1666,11 @@ races:
         sometimes to the point of stubbornness. Many  dwarves have a strong sense
         of justice, and they are slow  to forget wrongs they have suffered. A wrong
         done to one  dwarf is a wrong done to the dwarf''s entire clan, so what  begins
-        as one dwarf''s hunt for vengeance can become a  full-blown clan feud."
-
-        '
-      mountain dwarf: '"As a mountain dwarf, you are strong and hardy, accustomed  to
+        as one dwarf''s hunt for vengeance can become a  full-blown clan feud.'
+      mountain dwarf: 'As a mountain dwarf, you are strong and hardy, accustomed  to
         a difficult life in rugged terrain. You''re probably on  the tall side (for
-        a dwarf), and tend toward lighter  coloration."
-
-        '
-      short and stout: '"Bold and hardy, dwarves are known as skilled warriors,  miners,
+        a dwarf), and tend toward lighter  coloration.'
+      short and stout: 'Bold and hardy, dwarves are known as skilled warriors,  miners,
         and workers of stone and metal. Though they stand  well under 5 feet tall,
         dwarves are so broad and compact  that they can weigh as much as a human standing
         nearly two  feet taller. Their courage and endurance are also easily a  match
@@ -1507,10 +1678,8 @@ races:
         paler hue tinged with red, but the  most common shades are light brown or
         deep tan, like  certain tones of earth. Their hair, worn long but in  simple
         styles, is usually black, gray, or brown, though  paler dwarves often have
-        red hair. Male dwarves value  their beards highly and groom them carefully."
-
-        '
-    name: dwarf (mountain)
+        red hair. Male dwarves value  their beards highly and groom them carefully.'
+    name: mountain dwarf
     proficiencies:
       armors:
       - light armor
@@ -1534,35 +1703,25 @@ races:
       - light hammer
       - warhammer
     traits:
-      age: 'Dwarves mature at the same rate as humans, but they''re  considered young
-        until they reach the age of 50. On average,  they live about 350 years.'
-      alignment: 'Most dwarves are lawful, believing firmly in the benefits  of a
-        well-ordered society. They tend toward good as well,  with a strong sense
-        of fair play and as belief that everyone  deserves to share in the benefits
-        of a just order.'
-      darkvision: '"You can see in dim light within 60 feet of you as if it  were
+      darkvision: 'You can see in dim light within 60 feet of you as if it  were
         bright light, and in darkness as if it were dim light.  You can''t discern
-        color in darkness, only shades of gray."
-
-        '
-      dwarven resilience: '"You have advantage on saving throws against poison, and
-        you  have resistance against poison damage."
-
-        '
-      size: '"Dwarves stand between 4 and 5 feet tall and average about  150 pounds.
-        Your size is Medium."
-
-        '
-      speed: '"Your base walking speed is 25 feet. Your speed is not  reduced by wearing
-        heavy armor."
-
-        '
-      stonecutting: '"Whenever you make an intelligence (History) check related  to
+        color in darkness, only shades of gray.'
+      dwarven resilience: 'You have advantage on saving throws against poison, and
+        you  have resistance against poison damage.'
+      stonecutting: 'Whenever you make an intelligence (History) check related  to
         the origin of stonework, you are considered proficient in  the History skill
         and add double your proficiency bonus to  the check, instead of your normal
-        proficiency bonus."
-
-        '
+        proficiency bonus.'
+    size: 'Dwarves stand between 4 and 5 feet tall and average about  150 pounds.
+      Your size is Medium.'
+    speed: 'Your base walking speed is 25 feet. Your speed is not  reduced by wearing
+      heavy armor.'
+    age: 'Dwarves mature at the same rate as humans, but they''re  considered young
+      until they reach the age of 50. On average,  they live about 350 years.'
+    alignment: 'Most dwarves are lawful, believing firmly in the benefits  of a
+      well-ordered society. They tend toward good as well,  with a strong sense
+      of fair play and as belief that everyone  deserves to share in the benefits
+      of a just order.'
   elf (dark):
     abilities:
       cha: 1
@@ -1572,21 +1731,19 @@ races:
       str: 0
       wis: 0
     description:
-      Drow: '"Descended from an earlier subrace of elves, the drow were  banished
+      Drow: Descended from an earlier subrace of elves, the drow were  banished
         from the surface world for following the goddess  Lolth down the path of evil.
         Now they have built their own  civilization in the depths of the Underdark,
         patterned after  the Way of Loth. Also called dark elves, the drow have skin  that
         resembles charcoal or obsidian, as well as stark white  or pale yellow hair.
         They commonly have very pale eyes (so  pale as to be mistaken for white) in
-        shades of lilac,  silver, pink, red, and blue. THey tend to be smaller and  thinner
-        than most elves."
-
-        '
+        shades of lilac,  silver, pink, red, and blue. They tend to be smaller and  thinner
+        than most elves.
       a timeless perspective: ''
       exploration and adventure: ''
       hidden woodland realms: ''
       slender and graceful: ''
-    name: elf (dark)
+    name: drow
     proficiencies:
       languages:
         common:
@@ -1598,53 +1755,37 @@ races:
         - read
         - write
       skills:
-      - Perception
+      - [Perception]
       spells:
       - dancing lights (chr)
       - faerie fire (>= level 3) (once per long rest) (chr)
       - darkness (>= level 5) (once per long rest) (chr)
     traits:
-      age: '"Although elves reach physical maturity at about the same  age as humans,
-        the elven understanding of adulthood goes  beyond physical growth to encomapss
-        worldly experience. An  elf typically claims adulthood and an adult name around
-        the  age of 100 and can live to be 750 years old."
-
-        '
-      alignment: '"Elves love freedom, variety, and self-expression, so they  lean
-        strongly twoard the gentler aspects of chaos. They  value and protect others''
-        freedom as well as their own,  and they are more often good than not. THe
-        drow are an  exception; their exile into the Underdark has made them  vicious
-        and dangerous. Drow are more often evil than not."
-
-        '
-      darkvision: '"You can see in dim light within 120 feet of you as if it  were
+      darkvision: 'You can see in dim light within 120 feet of you as if it  were
         bright light, and in darkness as if it were dim light.  You can''t discern
-        color in darkness, only shades of gray."
-
-        '
-      fey ancestry: '"You have advantage on saving throws against being charmed,  and
-        magic can''t put you to sleep."
-
-        '
-      size: '"Elves range from under 5 to over 6 feet tall and have  slender builds.
-        Your size is Medium."
-
-        '
-      speed: '"Your base walking speed is 30 feet."
-
-        '
-      sunlight sensitivity: '"You have disadvantage on attack rolls and on Wisdom  (Perception)
+        color in darkness, only shades of gray.'
+      fey ancestry: 'You have advantage on saving throws against being charmed,  and
+        magic can''t put you to sleep.'
+      sunlight sensitivity: 'You have disadvantage on attack rolls and on Wisdom  (Perception)
         checks that rely on sight when you, the target  of your attack, or whatever
-        you are trying to perceive is  in direct sunlight."
-
-        '
-      trance: '"Elves don''t need to sleep. Instead, they meditate deeply,  remaining
+        you are trying to perceive is  in direct sunlight.'
+      trance: 'Elves don''t need to sleep. Instead, they meditate deeply,  remaining
         semiconscious, for 4 hours a day. While  meditating, you can dream after a
         fashion; such dreams are  actually mental exercises that have become reflexive
         through  years of practice. After resting in this way, you gain the  same
-        benefit that a human does from 8 hours of sleep."
-
-        '
+        benefit that a human does from 8 hours of sleep.'
+    size: 'Elves range from under 5 to over 6 feet tall and have  slender builds.
+      Your size is Medium.'
+    speed: 'Your base walking speed is 30 feet.'
+    age: 'Although elves reach physical maturity at about the same  age as humans,
+      the elven understanding of adulthood goes  beyond physical growth to encompass
+      worldly experience. An  elf typically claims adulthood and an adult name around
+      the  age of 100 and can live to be 750 years old.'
+    alignment: 'Elves love freedom, variety, and self-expression, so they  lean
+      strongly toward the gentler aspects of chaos. They  value and protect others''
+      freedom as well as their own,  and they are more often good than not. The
+      drow are an  exception; their exile into the Underdark has made them  vicious
+      and dangerous. Drow are more often evil than not.'
   elf (high):
     abilities:
       cha: 0
@@ -1657,12 +1798,10 @@ races:
       a timeless perspective: ''
       exploration and adventure: ''
       hidden woodland realms: ''
-      high elf: '"As a high elf, you have a keen mind and mastery of at  least the
-        basics of magic"
-
-        '
+      high elf: As a high elf, you have a keen mind and mastery of at  least the
+        basics of magic
       slender and graceful: ''
-    name: elf (high)
+    name: high elf
     proficiencies:
       languages:
         chioce of one language:
@@ -1678,51 +1817,36 @@ races:
         - read
         - write
       skills:
-      - Perception
-      spells:
-      - any cantrip (int)
+      - [Perception]
+      cantrip list: 1
       weapons:
       - longsword
       - shortsword
       - shortbow
       - longbow
     traits:
-      age: '"Although elves reach physical maturity at about the same  age as humans,
-        the elven understanding of adulthood goes  beyond physical growth to encomapss
-        worldly experience. An  elf typically claims adulthood and an adult name around
-        the  age of 100 and can live to be 750 years old."
-
-        '
-      alignment: '"Elves love freedom, variety, and self-expression, so they  lean
-        strongly twoard the gentler aspects of chaos. They  value and protect others''
-        freedom as well as their own,  and they are more often good than not. THe
-        drow are an  exception; their exile into the Underdark has made them  vicious
-        and dangerous. Drow are more often evil than not."
-
-        '
-      darkvision: '"You can see in dim light within 60 feet of you as if it  were
+      darkvision: 'You can see in dim light within 60 feet of you as if it  were
         bright light, and in darkness as if it were dim light.  You can''t discern
-        color in darkness, only shades of gray."
-
-        '
-      fey ancestry: '"You have advantage on saving throws against being charmed,  and
-        magic can''t put you to sleep."
-
-        '
-      size: '"Elves range from under 5 to over 6 feet tall and have  slender builds.
-        Your size is Medium."
-
-        '
-      speed: '"Your base walking speed is 30 feet."
-
-        '
-      trance: '"Elves don''t need to sleep. Instead, they meditate deeply,  remaining
+        color in darkness, only shades of gray.'
+      fey ancestry: 'You have advantage on saving throws against being charmed,  and
+        magic can''t put you to sleep.'
+      trance: 'Elves don''t need to sleep. Instead, they meditate deeply,  remaining
         semiconscious, for 4 hours a day. While  meditating, you can dream after a
         fashion; such dreams are  actually mental exercises that have become reflexive
         through  years of practice. After resting in this way, you gain the  same
-        benefit that a human does from 8 hours of sleep."
-
-        '
+        benefit that a human does from 8 hours of sleep.'
+    size: 'Elves range from under 5 to over 6 feet tall and have  slender builds.
+      Your size is Medium.'
+    speed: 'Your base walking speed is 30 feet.'
+    age: 'Although elves reach physical maturity at about the same  age as humans,
+      the elven understanding of adulthood goes  beyond physical growth to encompass
+      worldly experience. An  elf typically claims adulthood and an adult name around
+      the  age of 100 and can live to be 750 years old.'
+    alignment: 'Elves love freedom, variety, and self-expression, so they  lean
+      strongly toward the gentler aspects of chaos. They  value and protect others''
+      freedom as well as their own,  and they are more often good than not. The
+      drow are an  exception; their exile into the Underdark has made them  vicious
+      and dangerous. Drow are more often evil than not.'
   elf (wood):
     abilities:
       cha: 0
@@ -1736,14 +1860,12 @@ races:
       exploration and adventure: ''
       hidden woodland realms: ''
       slender and graceful: ''
-      wood elf: '"As a wood elf, you have keen senses and intuition, and your  fleet
+      wood elf: 'As a wood elf, you have keen senses and intuition, and your  fleet
         feet carry you quickly and stealthily through your  native forests. Wood elves''
-        skin tends to be copperish in  hue, sometimes with traces of green. THeir
+        skin tends to be copperish in  hue, sometimes with traces of green. Their
         hair tends toward  browns and blacks, but it is occasionally blond or copper-
-        colored. THeir eyes are green, brown, or hazel."
-
-        '
-    name: elf (wood)
+        colored. Their eyes are green, brown, or hazel.'
+    name: wood elf
     proficiencies:
       languages:
         common:
@@ -1755,53 +1877,37 @@ races:
         - read
         - write
       skills:
-      - Perception
+      - [Perception]
       weapons:
       - longsword
       - shortsword
       - longbow
       - shortbow
     traits:
-      age: '"Although elves reach physical maturity at about the same  age as humans,
-        the elven understanding of adulthood goes  beyond physical growth to encomapss
-        worldly experience. An  elf typically claims adulthood and an adult name around
-        the  age of 100 and can live to be 750 years old."
-
-        '
-      alignment: '"Elves love freedom, variety, and self-expression, so they  lean
-        strongly twoard the gentler aspects of chaos. They  value and protect others''
-        freedom as well as their own,  and they are more often good than not. THe
-        drow are an  exception; their exile into the Underdark has made them  vicious
-        and dangerous. Drow are more often evil than not."
-
-        '
-      darkvision: '"You can see in dim light within 60 feet of you as if it  were
+      darkvision: 'You can see in dim light within 60 feet of you as if it  were
         bright light, and in darkness as if it were dim light.  You can''t discern
-        color in darkness, only shades of gray."
-
-        '
-      fey ancestry: '"You have advantage on saving throws against being charmed,  and
-        magic can''t put you to sleep."
-
-        '
-      mask of the wild: '"YOu can attempt to hide even when you are only lightly  obscured
-        by foliage, heavy rain, falling snow, mist, and  other natural phenomena."
-
-        '
-      size: '"Elves range from under 5 to over 6 feet tall and have  slender builds.
-        Your size is Medium."
-
-        '
-      speed: '"Your base walking speed is 35 feet."
-
-        '
-      trance: '"Elves don''t need to sleep. Instead, they meditate deeply,  remaining
+        color in darkness, only shades of gray.'
+      fey ancestry: 'You have advantage on saving throws against being charmed,  and
+        magic can''t put you to sleep.'
+      mask of the wild: 'You can attempt to hide even when you are only lightly  obscured
+        by foliage, heavy rain, falling snow, mist, and  other natural phenomena.'
+      trance: 'Elves don''t need to sleep. Instead, they meditate deeply,  remaining
         semiconscious, for 4 hours a day. While  meditating, you can dream after a
         fashion; such dreams are  actually mental exercises that have become reflexive
         through  years of practice. After resting in this way, you gain the  same
-        benefit that a human does from 8 hours of sleep."
-
-        '
+        benefit that a human does from 8 hours of sleep.'
+    size: 'Elves range from under 5 to over 6 feet tall and have  slender builds.
+      Your size is Medium.'
+    speed: 'Your base walking speed is 35 feet.'
+    age: 'Although elves reach physical maturity at about the same  age as humans,
+      the elven understanding of adulthood goes  beyond physical growth to encompass
+      worldly experience. An  elf typically claims adulthood and an adult name around
+      the  age of 100 and can live to be 750 years old.'
+    alignment: 'Elves love freedom, variety, and self-expression, so they  lean
+      strongly toward the gentler aspects of chaos. They  value and protect others''
+      freedom as well as their own,  and they are more often good than not. The
+      drow are an  exception; their exile into the Underdark has made them  vicious
+      and dangerous. Drow are more often evil than not.'
   gnome (forest):
     abilities:
       cha: 0
@@ -1813,19 +1919,17 @@ races:
     description:
       bright burrows: ''
       delighted dedication: ''
-      forest gnome: '"As a forest gnome, you have natural knack for illusion and  inherent
+      forest gnome: 'As a forest gnome, you have natural knack for illusion and  inherent
         quickness and stealth. Forest gnomes are rare and  secretive. They gather
         in hidden communities in sylvan  forests, using illusions and trickery to
-        conceal themselves  from threats or to mask their escape shoudl they be  detected.
+        conceal themselves  from threats or to mask their escape should they be detected.
         Forest gnomes tend to be friendly with other good- spirited woodland folk,
         and they regard elves and good fey  as their most important allies. These
         gnomes also befriend  small forest animals and rely on them for information
-        about  threats that might prowl their lands."
-
-        '
+        about threats that might prowl their lands.'
       seeing the world: ''
       vibrant expression: ''
-    name: gnome (forest)
+    name: forest gnome
     proficiencies:
       language:
         common:
@@ -1836,45 +1940,29 @@ races:
         - speak
         - read
         - write
-      spells:
-      - ability: Int
-        cooldown: cantrip
-        minor illusion: null
+      race skills:
+      - minor illusion
     traits:
-      age: '"Gnomes mature at the same rate humans do, and most are  expected to settle
-        down into an adult life by around age 40.  They can live 350 to almost 500
-        years."
-
-        '
-      alignment: '"Gnomes are most often good. Those who tend toward law are  sages,
+      darkvision: 'You can see in dim light within 60 feet of you as if it  were
+        bright light, and in darkness as if it were dim light.  You can''t discern
+        color in darkness, only shades of gray.'
+      gnome cunning: 'You have advantage on all Intelligence, Wisdom, and  Charisma
+        saving throws against magic.'
+      speak with small beasts: 'Through sounds and small gestures, you can communicate  simple
+        ideas with Small or smaller beasts. Forest gnomes  love animals and often
+        keep squirrels, badgers, rabbits,  moles, woodpeckers, and other creatures
+        as beloved pets.'
+    speed: 'Your base walking speed is 25 feet.'
+    size: 'Gnomes are between 3 and 4 feet tall and average 40  pounds. Your size
+      is small.'
+    age: 'Gnomes mature at the same rate humans do, and most are  expected to settle
+      down into an adult life by around age 40.  They can live 350 to almost 500
+      years.'
+    alignment: 'Gnomes are most often good. Those who tend toward law are  sages,
         engineers, researchers, scholars, investigators, or  inventors. Those who
         tend toward chaos are minstrels,  tricksters, wanderers, or fanciful jewelers.
         Gnomes are  good-hearted, and even the tricksters among them are more  playful
-        than vicious."
-
-        '
-      darkvision: '"You can see in dim light within 60 feet of you as if it  were
-        bright light, and in darkness as if it were dim light.  You can''t discern
-        color in darkness, only shades of gray."
-
-        '
-      gnome cunning: '"You have advantage on all Intelligence, Wisdom, and  Charisma
-        saving throws against magic."
-
-        '
-      size: '"Gnomes are between 3 and 4 feet tall and average 40  pounds. Your size
-        is small."
-
-        '
-      speak with small beasts: '"Through sounds and small gestures, you can communicate  simple
-        ideas with Small or smaller beasts. Forest gnomes  love animals and often
-        keep squirrels, badgers, rabbits,  moles, woodpeckers, and other creatures
-        as beloved pets."
-
-        '
-      speed: '"Your base walking speed is 25 feet."
-
-        '
+        than vicious.'
   gnome (rock):
     abilities:
       cha: 0
@@ -1886,13 +1974,11 @@ races:
     description:
       bright burrows: ''
       delighted dedication: ''
-      rock gnome: '"As a rock gnome, you have a natural inventiveness and  hardiness
-        beyond that of other gnomes. Most gnomes are  rock gnomes."
-
-        '
+      rock gnome: 'As a rock gnome, you have a natural inventiveness and  hardiness
+        beyond that of other gnomes. Most gnomes are  rock gnomes.'
       seeing the world: ''
       vibrant expression: ''
-    name: gnome (rock)
+    name: rock gnome
     proficiencies:
       language:
         common:
@@ -1906,7 +1992,7 @@ races:
       tools:
       - artisan's tools
     traits:
-      Tinker: '"You have proficiency with artisan''s tools. Using those  tools, you
+      Tinker: 'You have proficiency with artisan''s tools. Using those  tools, you
         can spend 1 hour and 10 gp worth of materials to  construct a Tiny clockwork
         device (AC 5, 1hp). The device  ceases to function after 24 hours (unless
         you spend 1 hour  repairing it to keep the device functioning), or when you  use
@@ -1916,46 +2002,30 @@ races:
         Toy. This toy is a clockwork animal, monster, or  person, such as a frog,
         mouse, bird, dragon, or soldier.  When placed on the ground, the toy moves
         5 feet across  the ground on each of your turns in a random direction. It  makes
-        noises as appropriate to the creature it represents.  \n   Fire Starter. THe
+        noises as appropriate to the creature it represents.  \n   Fire Starter. The
         device produces a miniature flame, which  you can use to light a candle, torch,
         or campfire. Using the  device requires your action. \n   Music Box. WHen
         opened, this music box plays a single song  at a moderate volume. The box
-        stops playing when it reaches  the song''s end or when it is closed."
-
-        '
-      age: '"Gnomes mature at the same rate humans do, and most are  expected to settle
-        down into an adult life by around age 40.  They can live 350 to almost 500
-        years."
-
-        '
-      alignment: '"Gnomes are most often good. Those who tend toward law are  sages,
-        engineers, researchers, scholars, investigators, or  inventors. Those who
-        tend toward chaos are minstrels,  tricksters, wanderers, or fanciful jewelers.
-        Gnomes are  good-hearted, and even the tricksters among them are more  playful
-        than vicious."
-
-        '
-      artificer's lore: '"Whenever you make an Intelligence (History) check related  to
+        stops playing when it reaches  the song''s end or when it is closed.'
+      artificer's lore: 'Whenever you make an Intelligence (History) check related  to
         magic items, alchemical objects, or technological  devices, you can add twice
-        your proficiency bonus, instead  of any proficiency bonus you normally apply."
-
-        '
-      darkvision: '"You can see in dim light within 60 feet of you as if it  were
+        your proficiency bonus, instead  of any proficiency bonus you normally apply.'
+      darkvision: 'You can see in dim light within 60 feet of you as if it  were
         bright light, and in darkness as if it were dim light.  You can''t discern
-        color in darkness, only shades of gray."
-
-        '
-      gnome cunning: '"You have advantage on all Intelligence, Wisdom, and  Charisma
-        saving throws against magic."
-
-        '
-      size: '"Gnomes are between 3 and 4 feet tall and average 40  pounds. Your size
-        is small."
-
-        '
-      speed: '"Your base walking speed is 25 feet."
-
-        '
+        color in darkness, only shades of gray.'
+      gnome cunning: 'You have advantage on all Intelligence, Wisdom, and  Charisma
+        saving throws against magic.'
+    size: 'Gnomes are between 3 and 4 feet tall and average 40  pounds. Your size
+      is small.'
+    speed: 'Your base walking speed is 25 feet.'
+    age: 'Gnomes mature at the same rate humans do, and most are  expected to settle
+      down into an adult life by around age 40.  They can live 350 to almost 500
+      years.'
+    alignment: 'Gnomes are most often good. Those who tend toward law are  sages,
+      engineers, researchers, scholars, investigators, or  inventors. Those who
+      tend toward chaos are minstrels,  tricksters, wanderers, or fanciful jewelers.
+      Gnomes are  good-hearted, and even the tricksters among them are more  playful
+      than vicious.'
   half-elf:
     abilities:
       cha: 2
@@ -1982,37 +2052,25 @@ races:
         - speak
         - read
         - write
+      skills:
+      - [Acrobatics, Animal Handling, Arcana, Athletics, Deception, History, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Religion, Slight of Hand, Stealth, Survival]
+      - [Acrobatics, Animal Handling, Arcana, Athletics, Deception, History, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Religion, Slight of Hand, Stealth, Survival]
     traits:
-      age: '"Half-elves mature at the same rate humans do and reach  adulthood around
-        the age of 20. They live much longer than  humans, however, often exceeding
-        180 years."
-
-        '
-      alignment: '"Half-elves share the chaotic bent of their elven heritage.  They
-        value both personal freedom and creative expression,  demonstrating neither
-        love of leaders nor desire for  followers. They chafe at rules, resent others''
-        demands, and  sometimes prove unreliable, or at least unpredictable."
-
-        '
-      darkvision: '"You can see in dim light within 60 feet of you as if it  were
+      darkvision: 'You can see in dim light within 60 feet of you as if it  were
         bright light, and in darkness as if it were dim light.  You can''t discern
-        color in darkness, only shades of gray."
-
-        '
-      fey ancestry: '"You have advantage on saving throws against being charmed,  and
-        magic can''t put you to sleep."
-
-        '
-      size: '"Half-elves are about the same size as humans, ranging from  5 to 6 feet
-        tall. Your size is Medium."
-
-        '
-      skill versatility: '"You gain proficiency in two skills of your choice."
-
-        '
-      speed: '"Your base walking speed is 30 feet."
-
-        '
+        color in darkness, only shades of gray.'
+      fey ancestry: 'You have advantage on saving throws against being charmed, and
+        magic can''t put you to sleep.'
+    size: 'Half-elves are about the same size as humans, ranging from  5 to 6 feet
+      tall. Your size is Medium.'
+    speed: 'Your base walking speed is 30 feet.'
+    age: 'Half-elves mature at the same rate humans do and reach  adulthood around
+      the age of 20. They live much longer than  humans, however, often exceeding
+      180 years.'
+    alignment: 'Half-elves share the chaotic bent of their elven heritage.  They
+      value both personal freedom and creative expression,  demonstrating neither
+      love of leaders nor desire for  followers. They chafe at rules, resent others''
+      demands, and  sometimes prove unreliable, or at least unpredictable.'
   half-orc:
     abilities:
       cha: 0
@@ -2022,7 +2080,7 @@ races:
       str: 2
       wis: 0
     description:
-      scarred adn strong: ''
+      scarred and strong: ''
       the mark of gruumsh: ''
       tribes and slums: ''
     name: half-orc
@@ -2037,37 +2095,23 @@ races:
         - read
         - write
     traits:
-      age: '"Half-orcs mature a little faster than humans, reaching  adulthood around
-        age 14. They age noticeably faster and  rarely live longer than 75 years."
-
-        '
-      alignment: '"Half-orcs inherit a tendency toward chaos from their orc  parents
-        and are not strongly inclined toward good. Half-orcs  raised among orcs and
-        willing to live out their lives among  them are usually evil."
-
-        '
-      darkvision: '"You can see in dim light within 60 feet of you as if it  were
+      darkvision: 'You can see in dim light within 60 feet of you as if it  were
         bright light, and in darkness as if it were dim light.  You can''t discern
-        color in darkness, only shades of gray."
-
-        '
-      relentless endurance: '"When you are reduced to 0 hit points but not killed  outright,
+        color in darkness, only shades of gray.'
+      relentless endurance: 'When you are reduced to 0 hit points but not killed  outright,
         you can drop to 1 hit point instead. You can''t  use this feature again until
-        you finish a long rest."
-
-        '
-      savage attacks: '"When you score a critical hit with a melee weapon attack,  you
+        you finish a long rest.'
+      savage attacks: 'When you score a critical hit with a melee weapon attack,  you
         can roll one of the weapon''s damage dice one additional  time and add it
-        to the extra damage of the critical hit."
-
-        '
-      size: '"Half-orcs are somewhat larger and bulkier than humans, and  they range
-        from 5 to well over 6 feet tall. Your size is  Medium."
-
-        '
-      speed: '"Your base walking speed is 30 feet."
-
-        '
+        to the extra damage of the critical hit.'
+    size: 'Half-orcs are somewhat larger and bulkier than humans, and  they range
+      from 5 to well over 6 feet tall. Your size is  Medium.'
+    speed: 'Your base walking speed is 30 feet.'
+    age: 'Half-orcs mature a little faster than humans, reaching  adulthood around
+      age 14. They age noticeably faster and  rarely live longer than 75 years.'
+    alignment: 'Half-orcs inherit a tendency toward chaos from their orc  parents
+      and are not strongly inclined toward good. Half-orcs  raised among orcs and
+      willing to live out their lives among  them are usually evil.'
   halfling (lightfoot):
     abilities:
       cha: 1
@@ -2080,15 +2124,13 @@ races:
       blend into the crowd: ''
       exploring opportunities: ''
       kind and curious: ''
-      lightfoot halfling: '"As a lightfoot halfling, you can easily hid from notice,  even
+      lightfoot halfling: 'As a lightfoot halfling, you can easily hid from notice,  even
         using other people as cover. You''re inclined to be  affable and get along
         well with others. \n Lightfoots are more prone to wanderlust than other  halflings,
-        and often dwell alongside other races or take up  a nomadic life."
-
-        '
+        and often dwell alongside other races or take up  a nomadic life.'
       pastoral pleasantries: ''
       small and practical: ''
-    name: halfling (lightfoot)
+    name: lightfoot halfling
     proficiencies:
       language:
         common:
@@ -2100,38 +2142,22 @@ races:
         - read
         - write
     traits:
-      age: '"A halfling reaches adulthood at the age of 20 and generally  lives into
-        the middle of his or her second century."
-
-        '
-      alignment: '"Most halflings are lawful good. As a rule, they are good- hearted
-        and kind, hate to see others in pain, and have no  tolerance for oppression.
-        THey are also very orderly and  traditional, leaning heavily on the support
-        of their  community and the comfort of their old ways."
-
-        '
-      brave: '"You have advantage on saving throws against being  frightened."
-
-        '
-      halfling nimbleness: '"You can move through the space of any creature that is
-        of a  size larger than yours."
-
-        '
-      lucky: '"When you roll a 1 on the d20 for an attack roll, ability  check, or
-        saving throw, you can reroll the die and must  use the new roll."
-
-        '
-      naturally stealthy: '"You can attempt to hide even when you are obscured only
-        by  a creature that is at least one size larger than you."
-
-        '
-      size: '"Halflings average about 3 feet tall and weigh about 40  pounds. Your
-        size is Small."
-
-        '
-      speed: '"Your base walking speed is 25 feet."
-
-        '
+      brave: 'You have advantage on saving throws against being  frightened.'
+      halfling nimbleness: 'You can move through the space of any creature that is
+        of a  size larger than yours.'
+      lucky: 'When you roll a 1 on the d20 for an attack roll, ability  check, or
+        saving throw, you can reroll the die and must  use the new roll.'
+      naturally stealthy: 'You can attempt to hide even when you are obscured only
+        by  a creature that is at least one size larger than you.'
+    size: 'Halflings average about 3 feet tall and weigh about 40  pounds. Your
+      size is Small.'
+    speed: 'Your base walking speed is 25 feet.'
+    age: 'A halfling reaches adulthood at the age of 20 and generally  lives into
+      the middle of his or her second century.'
+    alignment: 'Most halflings are lawful good. As a rule, they are good- hearted
+      and kind, hate to see others in pain, and have no  tolerance for oppression.
+      They are also very orderly and  traditional, leaning heavily on the support
+      of their  community and the comfort of their old ways.'
   halfling (stout):
     abilities:
       cha: 0
@@ -2146,11 +2172,9 @@ races:
       kind and curious: ''
       pastoral pleasantries: ''
       small and practical: ''
-      stout halfling: '"As a stout halfling, you''re hardier than average and have  some
-        resistance to poison. Some say that stouts have dwarven  blood."
-
-        '
-    name: halfling (stout)
+      stout halfling: 'As a stout halfling, you''re hardier than average and have  some
+        resistance to poison. Some say that stouts have dwarven  blood.'
+    name: stout halfling
     proficiencies:
       language:
         common:
@@ -2162,38 +2186,22 @@ races:
         - read
         - write
     traits:
-      age: '"A halfling reaches adulthood at the age of 20 and generally  lives into
-        the middle of his or her second century."
-
-        '
-      alignment: '"Most halflings are lawful good. As a rule, they are good- hearted
-        and kind, hate to see others in pain, and have no  tolerance for oppression.
-        THey are also very orderly and  traditional, leaning heavily on the support
-        of their  community and the comfort of their old ways."
-
-        '
-      brave: '"You have advantage on saving throws against being  frightened."
-
-        '
-      halfling nimbleness: '"You can move through the space of any creature that is
-        of a  size larger than yours."
-
-        '
-      lucky: '"When you roll a 1 on the d20 for an attack roll, ability  check, or
-        saving throw, you can reroll the die and must  use the new roll."
-
-        '
-      size: '"Halflings average about 3 feet tall and weigh about 40  pounds. Your
-        size is Small."
-
-        '
-      speed: '"Your base walking speed is 25 feet."
-
-        '
-      stout resilience: '"You ahve advantage on saving throws against poison, and
-        you  have resistance against poison damage."
-
-        '
+      brave: 'You have advantage on saving throws against being  frightened.'
+      halfling nimbleness: 'You can move through the space of any creature that is
+        of a  size larger than yours.'
+      lucky: 'When you roll a 1 on the d20 for an attack roll, ability  check, or
+        saving throw, you can reroll the die and must  use the new roll.'
+      stout resilience: 'You have advantage on saving throws against poison, and
+        you  have resistance against poison damage.'
+    age: 'A halfling reaches adulthood at the age of 20 and generally  lives into
+      the middle of his or her second century.'
+    alignment: 'Most halflings are lawful good. As a rule, they are good- hearted
+      and kind, hate to see others in pain, and have no  tolerance for oppression.
+      They are also very orderly and  traditional, leaning heavily on the support
+      of their  community and the comfort of their old ways.'
+    size: 'Halflings average about 3 feet tall and weigh about 40  pounds. Your
+      size is Small.'
+    speed: 'Your base walking speed is 25 feet.'
   human:
     abilities:
       cha: 1
@@ -2218,22 +2226,13 @@ races:
         - speak
         - read
         - write
-    traits:
-      age: '"Humans reach adulthood in their late teens and live less  than a century."
-
-        '
-      alignment: '"Humans tend toward no particular alignment. The best and  worst
-        are found among them."
-
-        '
-      size: '"Humans vary widely in height and build, from barely 5 feet  to well
-        over 6 feet tall. Regardless of your position in  that range, your size is
-        Medium."
-
-        '
-      speed: '"Your base walking speed is 30 feet."
-
-        '
+    age: 'Humans reach adulthood in their late teens and live less  than a century.'
+    alignment: 'Humans tend toward no particular alignment. The best and  worst
+      are found among them.'
+    size: 'Humans vary widely in height and build, from barely 5 feet  to well
+      over 6 feet tall. Regardless of your position in  that range, your size is
+      Medium.'
+    speed: 'Your base walking speed is 30 feet.'
   tiefling:
     abilities:
       cha: 2
@@ -2256,37 +2255,19 @@ races:
         - speak
         - read
         - write
-      spells:
-      - ability: cha
-        cooldown: cantrip
-        thaumaturgy: null
-      - ability: cha
-        cooldown: long rest
-        gained at level: 3
-        hellish rebuke: null
-        spell level: 2
-      - ability: cha
-        cooldown: long rest
-        darkness: null
+      race skills:
+      - thaumaturgy
+      - hellish rebuke
+      - darkness
     traits:
-      age: '"Tieflings mature at the same rate as humans but live a few  years longer."
-
-        '
-      alignment: "\"Tieflings might not have an innate tendency toward evil, \n but\
-        \ many of them end up there. Evil or not, an independent \n nature inclines\
-        \ many tieflings toward a chaotic alignment.\"\n"
-      darkvision: '"You can see in dim light within 60 feet of you as if it  were
+      darkvision: 'You can see in dim light within 60 feet of you as if it  were
         bright light, and in darkness as if it were dim light.  You can''t discern
-        color in darkness, only shades of gray."
-
-        '
-      hellish resistance: '"You have resistance to fire damage."
-
-        '
-      size: '"Tieflings are about the same size and build as humans. Your  size is
-        Medium."
-
-        '
-      speed: '"Your base walking speed is 30 feet."
-
-        '
+        color in darkness, only shades of gray.'
+      hellish resistance: 'You have resistance to fire damage.'
+    size: 'Tieflings are about the same size and build as humans. Your  size is
+      Medium.'
+    speed: 'Your base walking speed is 30 feet.'
+    age: 'Tieflings mature at the same rate as humans but live a few  years longer.'
+    alignment: "Tieflings might not have an innate tendency toward evil, but
+      many of them end up there. Evil or not, an independent nature inclines
+      many tieflings toward a chaotic alignment."

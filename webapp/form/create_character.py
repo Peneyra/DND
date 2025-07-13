@@ -1,16 +1,23 @@
 import streamlit as st
 import yaml
-
+from collections import Counter
 
 def form_create_character(DATA_DIR):
+    print("------------------------------------------------------------")
+    print("------------------------------------------------------------")
+    form_error = False
+
+    sess = st.session_state
+
     #initialize some variables into the session state
-    st.title("➕ Create or Edit a Character")
+    st.title("➕ Create Character")
     abilities = ["cha", "con", "dex", "int", "str", "wis"]
 
+    st.header("Basics", divider=True)
     #################################################################
     # N a m e
     st.subheader("Character Name")
-    st.session_state.name = st.text_input("Character Name",label_visibility="collapsed")
+    sess.name = st.text_input("Character Name",label_visibility="collapsed")
     rcb_col = st.columns([1,1,1])
 
     #################################################################
@@ -18,68 +25,68 @@ def form_create_character(DATA_DIR):
     with rcb_col[0]:
         st.subheader("Race")
         race_default = "human"
-        st.session_state.race_index = sorted(st.session_state.races.keys()).\
-                index(st.session_state.character.get("race",race_default))
+        sess.race_index = sorted(sess.races.keys()).\
+                index(sess.character.get("race",race_default))
 
         st.selectbox(
             "Race", 
-            sorted(st.session_state.races.keys()),
+            sorted(sess.races.keys()),
             key = "race_name",
             label_visibility="collapsed",
-            index = st.session_state.race_index)
+            index = sess.race_index)
 
     #################################################################
     # C l a s s
     with rcb_col[1]:
         st.subheader("Class")
-        clas_default = "barbarian"
-        st.session_state.clas_index = sorted(st.session_state.classes.keys()).\
-                index(st.session_state.character.get("class",clas_default))
+        clas_default = "fighter"
+        sess.clas_index = sorted(sess.classes.keys()).\
+                index(sess.character.get("class",clas_default))
 
         st.selectbox(
             "Class", 
-            sorted(st.session_state.classes.keys()),
+            sorted(sess.classes.keys()),
             key = "clas_name",
             label_visibility="collapsed",
-            index = st.session_state.clas_index)
+            index = sess.clas_index)
 
     #################################################################
     # B a c k g r o u n d
     with rcb_col[2]:
         st.subheader("Background")
         back_default = ""
-        st.session_state.back_index = None
+        sess.back_index = None
 
         st.selectbox(
             "Class", 
-            #sorted(st.session_state.backgrounds.keys()),
+            #sorted(sess.backgrounds.keys()),
             [],
             key = "back_name",
             label_visibility="collapsed",
-            index = st.session_state.back_index)
+            index = sess.back_index)
 
+    st.header("Stats", divider=True)
     #################################################################
     # A b i l i t i e s
-    st.session_state.val_race = st.session_state.races.get(st.session_state.race_name,{}).get("abilities",{})
-    st.session_state.val_clas = st.session_state.classes.get(st.session_state.clas_name,{}).get("abilities",{})
+    sess.val_race = sess.races.get(sess.race_name,{}).get("abilities",{})
+    sess.val_clas = sess.classes.get(sess.clas_name,{}).get("abilities",{})
 
-    if st.session_state.race_name == "half-elf":
-        st.session_state.val_play_max = 74
-    else:
-        st.session_state.val_play_max = 72
+    # 
+    if sess.race_name == "half-elf": sess.val_play_max = 74
+    else: sess.val_play_max = 72
 
-    primary_abilities = st.session_state.classes[st.session_state.clas_name]['primary ability']
-    saving_abilities = st.session_state.classes[st.session_state.clas_name]['saving throw proficiencies']
+    primary_abilities = sess.classes[sess.clas_name]['primary ability']
+    saving_abilities = sess.classes[sess.clas_name]['saving throw proficiencies']
 
     st.subheader(f"Abilities ({' '.join(primary_abilities).upper()} | {' '.join(saving_abilities).upper()})",
                  help="(primary | saving)")
 
     abi_col = st.columns([1,1,1,1,1])
     abi_col[0].markdown("")
-    abi_col[1].markdown("**Player** (max " + str(st.session_state.val_play_max) + ")")
+    abi_col[1].markdown("**Player**")
     abi_col[2].markdown("**Race**")
     abi_col[3].markdown("**Class**")
-    abi_col[4].markdown("**Total**")
+    abi_col[4].markdown("**Total (Modifier)**")
 
     for abi in abilities:
         abi_col = st.columns([1,1,1,1,1])
@@ -92,65 +99,199 @@ def form_create_character(DATA_DIR):
                 value=8,
                 key=abi,
                 label_visibility="collapsed")
-        abi_col[2].markdown(f"**{st.session_state.val_race.get(abi,0)}**")
-        abi_col[3].markdown(f"**{st.session_state.val_clas.get(abi,0)}**")
-        abi_col[4].markdown(f"**{st.session_state.val_race.get(abi,0) + st.session_state.val_clas.get(abi,0) + st.session_state[abi]}**")
+        abi_col[2].markdown(f"**{sess.val_race.get(abi,0)}**")
+        abi_col[3].markdown(f"**{sess.val_clas.get(abi,0)}**")
+        sess[abi + "_total"] = sess.val_race.get(abi,0) + sess.val_clas.get(abi,0) + sess[abi]
+        sess[abi + "_modifier"] = (sess[abi + "_total"] - 10) // 2
+        abi_col[4].markdown(f"**{sess[abi + '_total']} ({sess[abi + '_modifier']})**")
     total = 0
-    for abi in abilities:
-        if abi in st.session_state: total += st.session_state[abi]
-    abi_col[1].markdown(f"**{total} of {st.session_state.val_play_max}**")
+    for abi in abilities: 
+        if abi in sess: total += sess[abi]
+    abi_col[1].markdown(f"**{total} of {sess.val_play_max}**")
 
-    if total > st.session_state.val_play_max:
+    if total > sess.val_play_max:
+        form_error = True
         st.markdown(f"**W A R N I N G!!!**")
         st.markdown(f"Turn back! You've exceded your max allowable points!")
         st.markdown(f"**W A R N I N G!!!**")
+    else:
+        form_error = False
 
+    #################################################################
+    # H i t   P o i n t s   /   D a m a g e
+    hpd_col = st.columns([1,1])
+    hit_points = 0
+    hp_list = sess.classes[sess.clas_name]['levels'][1]['hit points']
+    for abi, val in hp_list.items():
+        if abi == 'any': hit_points += val
+        else: hit_points += val * (sess[abi + "_modifier"]) 
+    hpd_col[0].subheader(f"**Hit Points: {hit_points}**")
+
+    damage_die = []
+    damage_list = sess.classes[sess.clas_name]['levels'][1]['hit dice']
+    for die, val in damage_list.items():
+        damage_die.append(str(val) + die)
+    hpd_col[1].subheader(f"**Attack Damage: {','.join(damage_die)}**")
+
+    st.header("Skills and Spells", divider=True)
     #################################################################
     # B a s i c   S k i l l s
-    ski_col = st.columns([1,1,1])
     st.subheader("Skills")
-    
+    if 'skills' in sess.races[sess.race_name]['proficiencies']:
+        race_skills = sess.races[sess.race_name]['proficiencies']['skills']
+        st.markdown(f"**{sess.races[sess.race_name]['name']} skills:**".title())
+        skr_col = st.columns([1,1,1])
+        k = 0
+        for rs in race_skills:
+            with skr_col[k]:
+                st.selectbox(
+                    "Race Skills",
+                    sorted(rs),
+                    key = "race_skills_" + str(k),
+                    label_visibility = "collapsed",
+                    index = k)
+            k += 1
+    if 'skills' in sess.classes[sess.clas_name]['proficiencies']:
+        clas_skills = sess.classes[sess.clas_name]['proficiencies']['skills']
+        st.markdown(f"**{sess.clas_name} skills:**".title())
+        skc_col = st.columns([1,1,1,1])
+        k = 0
+        for cs in clas_skills:
+            with skc_col[k]:
+                st.selectbox(
+                    "Class Skills",
+                    sorted(cs),
+                    key = "clas_skills_" + str(k),
+                    label_visibility = "collapsed",
+                    index = k)
+            k += 1
+
+    selected_skills = []
+    if "race_skills_0" in sess: selected_skills.append(sess.race_skills_0)
+    if "race_skills_1" in sess: selected_skills.append(sess.race_skills_1)
+    if "race_skills_2" in sess: selected_skills.append(sess.race_skills_2)
+    if "clas_skills_0" in sess: selected_skills.append(sess.clas_skills_0)
+    if "clas_skills_1" in sess: selected_skills.append(sess.clas_skills_1)
+    if "clas_skills_2" in sess: selected_skills.append(sess.clas_skills_2)
+    if "clas_skills_3" in sess: selected_skills.append(sess.clas_skills_3)
+    counts = Counter(selected_skills)
+    skills_duplicate = [sd for sd, count in counts.items() if count > 1]
+
+    if len(skills_duplicate) > 0:
+        form_error = True
+        st.markdown(f"**W A R N I N G!!!**")
+        st.markdown(f"Turn back! You have duplicate skills chosen! {skills_duplicate}")
+        st.markdown(f"**W A R N I N G!!!**")
+    else:
+        form_error = False
 
     #################################################################
-    # S p e l l s   a n d   a b i l i t i e s
+    # C a n t r i p s   a n d   S p e l l s
+    if "cantrip list" in sess.classes[sess.clas_name]['levels'][1]:
+        num_cantrip = sess.classes[sess.clas_name]['levels'][1]['cantrip list']
+        cantrip_book = sess.classes[sess.clas_name]['proficiencies']['spells'][0]
+        st.subheader("Cantrips")
+        st.markdown(f"**{sess.clas_name} cantrips:**".title())
+        cal_col = st.columns([1,1,1,1])
+        for k in range(num_cantrip):
+            with cal_col[k]:
+                st.selectbox(
+                    "Cantrip",
+                    sorted(cantrip_book),
+                    key = "cantrip_" + str(k),
+                    label_visibility = "collapsed",
+                    index = k)
+                
+    selected_cantrips = []
+    if "cantrip_0" in sess: selected_cantrips.append(sess.cantrip_0)
+    if "cantrip_1" in sess: selected_cantrips.append(sess.cantrip_1)
+    if "cantrip_2" in sess: selected_cantrips.append(sess.cantrip_2)
+    if "cantrip_3" in sess: selected_cantrips.append(sess.cantrip_3)
+    counts = Counter(selected_cantrips)
+    cantrips_duplicate = [sd for sd, count in counts.items() if count > 1]
 
+    if len(cantrips_duplicate) > 0:
+        form_error = True
+        st.markdown(f"**W A R N I N G!!!**")
+        st.markdown(f"Turn back! You have duplicate cantrips chosen! {cantrips_duplicate}")
+        st.markdown(f"**W A R N I N G!!!**")
+    else:
+        form_error = False
+
+    if "spell list" in sess.classes[sess.clas_name]['levels'][1]:
+        spell_list = sess.classes[sess.clas_name]['levels'][1]['spell list']
+        num_spell = 0
+        for abi, val in spell_list.items():
+            if abi == 'any': num_spell += val
+            else: num_spell += val * (sess[abi + "_modifier"]) 
+        spell_book = sess.classes[sess.clas_name]['proficiencies']['spells'][1]
+        st.subheader("Spells")
+        st.markdown(f"**{sess.clas_name} level 1 spells:**".title())
+        sp1_col = st.columns([1,1,1])
+        for k in range(min(3,num_spell)):
+            with sp1_col[k]:
+                st.selectbox(
+                    "Spells",
+                    sorted(spell_book),
+                    key = "spell_" + str(k),
+                    label_visibility = "collapsed",
+                    index = k)
+        if num_spell > 3:
+            sp2_col = st.columns([1,1,1])
+            for k in range(3,num_spell):
+                with sp2_col[k-3]:
+                    st.selectbox(
+                        "Spells",
+                        sorted(spell_book),
+                        key = "spell_" + str(k),
+                        label_visibility = "collapsed",
+                        index = k)
+      
+    selected_spells = []
+    if "spell_0" in sess: selected_spells.append(sess.spell_0)
+    if "spell_1" in sess: selected_spells.append(sess.spell_1)
+    if "spell_2" in sess: selected_spells.append(sess.spell_2)
+    if "spell_3" in sess: selected_spells.append(sess.spell_3)
+    if "spell_2" in sess: selected_spells.append(sess.spell_4)
+    if "spell_3" in sess: selected_spells.append(sess.spell_5)
+    counts = Counter(selected_spells)
+    spells_duplicate = [sd for sd, count in counts.items() if count > 1]
+
+    if len(spells_duplicate) > 0:
+        form_error = True
+        st.markdown(f"**W A R N I N G!!!**")
+        st.markdown(f"Turn back! You have duplicate cantrips chosen! {spells_duplicate}")
+        st.markdown(f"**W A R N I N G!!!**")
+    else:
+        form_error = False
+
+
+    st.header("Traits", divider=True)
+    #################################################################
+    # T r a i t s
+    if 'traits' in sess.races[sess.race_name]:
+        st.subheader(f"**{sess.races[sess.race_name]['name'].title()} Traits**")
+        for trait, description in sess.races[sess.race_name]['traits'].items():
+            st.markdown(f"**{trait.title()}**")
+            st.markdown(f"{description}")
+    if 'traits' in sess.classes[sess.clas_name]['levels'][1]:
+        st.subheader(f"**{sess.clas_name.title()} Traits**")
+        for trait, description in sess.classes[sess.clas_name]['levels'][1]['traits'].items():
+            st.markdown(f"**{trait.title()}**")
+            st.markdown(f"{description}")
 
     #################################################################
     # I n v e n t o r y / E q u i p m e n t
 
     #################################################################
     # D e s c r i p t i o n
-    alignment = st.text_input(
-        "Alignment", 
-        value=st.session_state.character.get("alignment") if \
-            st.session_state.character else "")
-
-    # Equipment
-    st.subheader("🧤 Equipment Slots")
-    equipment = {}
-    slots = ["head", "armor", "feet", "back", "hand-left", "hand-hand", "neck", "ring"]
-    for slot in slots:
-        equipment[slot] = st.text_input(slot.capitalize(), 
-                                        value=st.session_state.character.get("equipment", {}).get(slot, "none") if st.session_state.character else "none")
-
-    # Inventory
-    st.subheader("🎒 Inventory Items")
-    inventory_input = st.text_area("List items separated by commas",
-                                value=", ".join(st.session_state.character.get("inventory", [])) if st.session_state.character else "")
-    inventory = [item.strip() for item in inventory_input.split(",") if item.strip()]
-
-    # Spells
-    st.subheader("🪄 Spells")
-    spells_input = st.text_area("List spells separated by commas",
-                                value=", ".join(st.session_state.character.get("spells", [])) if st.session_state.character else "")
-    spells = [spell.strip() for spell in spells_input.split(",") if spell.strip()]
 
     if st.button("💾 Save Character"):
-        st.session_state.character = {
-            "name": st.session_state.name,
-            "classtype": st.session_state.clas_name,
-            "race": st.session_state.race_name,
-            "background": st.session_state.back_name,
+        sess.character = {
+            "name": sess.name,
+            "classtype": sess.clas_name,
+            "race": sess.race_name,
+            "background": sess.back_name,
             "alignment": alignment,
             "level": 1,
             "abilities": abilities,
@@ -159,18 +300,18 @@ def form_create_character(DATA_DIR):
             "spells": spells
         }
 
-        existing = next((c for c in st.session_state.characters["characters"] if c["name"].lower() == st.session_state.name.lower()), None)
+        existing = next((c for c in sess.characters["characters"] if c["name"].lower() == sess.name.lower()), None)
 
         if existing:
             # Replace the existing character
-            st.session_state.characters["characters"] = [st.session_state.character if c["name"].lower() == st.session_state.name.lower() else c for c in st.session_state.characters["characters"]]
-            st.success(f"✅ Character '{st.session_state.name}' updated.")
+            sess.characters["characters"] = [sess.character if c["name"].lower() == sess.name.lower() else c for c in sess.characters["characters"]]
+            st.success(f"✅ Character '{sess.name}' updated.")
         else:
-            st.session_state.characters["characters"].append(st.session_state.character)
-            st.success(f"✅ New character '{st.session_state.name}' created.")
+            sess.characters["characters"].append(sess.character)
+            st.success(f"✅ New character '{sess.name}' created.")
 
         with open(DATA_DIR + "characters.yaml", "w", encoding="utf-8") as f:
-            yaml.dump(st.session_state.characters, f, allow_unicode=True)
+            yaml.dump(sess.characters, f, allow_unicode=True)
         
-        st.session_state.display_form = "main"
+        sess.display_form = "main"
         st.experimental_rerun()
