@@ -1474,19 +1474,14 @@ races:
       str: 2
       wis: 0
     description:
-      proud dragon kin: ''
-      self-sufficient clans: ''
+      dragonborn: 'Born of dragons, as their name proclaims, the dragonborn walk proudly through a world that greets them with fearful incomprehension. Shaped by draconic gods or the dragons themselves, dragonborn originally hatched from dragon eggs as a unique race, combining the best attributes of dragons and humanoids. Some dragonborn are faithful servants to true dragons, others form the ranks of soldiers in great wars, and still others find themselves adrift, with no clear calling in life.'
+      proud dragon kin: 'Dragonborn look very much like dragons standing erect in humanoid form, though they lack wings or a tail. The first dragonborn had scales of vibrant hues matching the colors of their dragon kin, but generations of interbreeding have created a more uniform appearance. Their small, fine scales are usually brass or bronze.'
+      self-sufficient clans: 'To any dragonborn, the clan is more important than life itself. Dragonborn owe their devotion and respect to their clan above all else, even the gods.'
     name: dragonborn
     proficiencies:
-      language:
-        common:
-        - speak
-        - read
-        - write
-        draconic:
-        - speak
-        - read
-        - write
+      languages:
+      - common
+      - draconic
       race skills:
       - black dragon breath: 
           cooldown: short rest
@@ -1571,45 +1566,17 @@ races:
       str: 0
       wis: 1
     description:
-      clans and kingdoms: ''
-      gods, gold, and clan: ''
-      hill dwarves: 'As a hill dwarf, you have keen senses, deep intuition,  and
-        remarkable resilience.'
-      long memory, long grudges: 'Dwarves can live to be more than 400 years old,
-        so the  oldest living dwarves often remember a very different  world. This
-        longevity grants them a  perspective on the world that shorter lived races
-        such as  humans and halflings lack. \n  Dwarves are solid and  enduring like
-        the mountains they love, weathering the  passage of centuries with stoic endurance
-        and little  change. They respect the traditions of their clans,  tracing their
-        ancestry back to the founding of their most  ancient strongholds in the youth
-        of the world, and don''t  abandon those traditions lightly. Part of those
-        traditions  is devotion to the gods of the dwarvers, who uphold the  dwarven
-        ideals of industrious labor, skill in battle, and  devotion to the forge.  \n  Individual
-        dwarves are  determined and loyal, true to their word and decisive in  action,
-        sometimes to the point of stubbornness. Many  dwarves have a strong sense
-        of justice, and they are slow  to forget wrongs they have suffered. A wrong
-        done to one  dwarf is a wrong done to the dwarf''s entire clan, so what  begins
-        as one dwarf''s hunt for vengeance can become a  full-blown clan feud.'
-      short and stout: 'Bold and hardy, dwarves are known as skilled warriors,  miners,
-        and workers of stone and metal. Though they stand  well under 5 feet tall,
-        dwarves are so broad and compact  that they can weigh as much as a human standing
-        nearly two  feet taller. Their courage and endurance are also easily a  match
-        for any of the larger folk. \n  Dwarven skin ranges  from deep brown to a
-        paler hue tinged with red, but the  most common shades are light brown or
-        deep tan, like  certain tones of earth. Their hair, worn long but in  simple
-        styles, is usually black, gray, or brown, though  paler dwarves often have
-        red hair. Male dwarves value  their beards highly and groom them carefully.'
+      dwarf: 'Kingdoms rich in ancient grandeur, halls carved into the roots of mountains, the echoing of picks and hammers in deep mines and blazing forges, a commitment to clan and tradition, and a burning hatred of goblins and orcs—these common threads unite all dwarves.'
+      hill dwarf: 'As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience. The gold dwarves of Faerûn in their mighty southern kingdoms are hill dwarves, as are the exiled Neidar and the debased Klar.'
+      short and stout: 'Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal. Though they stand well under 5 feet tall, dwarves are so broad and compact that they can weigh as much as a human standing nearly two feet taller. Their courage and endurance are also easily a match for any of the larger folk. Dwarves pride themselves on their clans and their traditions, tracing their ancestry back hundreds or even thousands of years. This deep sense of heritage and respect for their ancestors shapes every aspect of a dwarf’s life. Their names are taken from the histories of those clans, and they are expected to uphold the legacy of their people. The typical dwarf is lawful, believing firmly in the benefits of a well-ordered society. They tend to value honor and loyalty above all else and distrust those who do not conduct themselves with discipline. Some dwarves do live outside the norms of dwarven society, particularly adventurers, but even they carry the weight of tradition with them carefully.'
+      long memory long grudges: 'Dwarves can live to be more than 400 years old, so the oldest living dwarves often remember a very different world. For example, some of the oldest dwarves living in Citadel Felbarr (in the world of the Forgotten Realms) can recall the day, more than three centuries ago, when orcs conquered the fortress and drove them into exile. This longevity grants them a perspective on the world that shorter-lived races such as humans and halflings lack. Dwarves are solid and enduring like the mountains they love, weathering the passage of centuries with stoic resolve and little change. They respect the traditions of their clans, tracing their ancestry back to the founding of their most ancient strongholds in the youth of the world, and don''t abandon those traditions lightly. Part of those traditions is devotion to the gods of the dwarves, who uphold the dwarven ideals of industrious labor, skill in battle, and devotion to the forge. Individual dwarves are determined and loyal, true to their word and decisive in action, sometimes to the point of stubbornness. Many dwarves have a strong sense of justice, and they are slow to forget wrongs done to them. A wrong done to one dwarf is a wrong done to the dwarf''s entire clan, so what begins as one dwarf''s grudge may become a full-blown clan feud.'
+      clans and kingdoms: 'Dwarven kingdoms stretch deep beneath the mountains where the dwarves mine gems and precious metals and forge items of wonder. They love the beauty and artistry of precious metals and fine jewelry, and in some dwarves this love festers into avarice. Whatever wealth they can''t find in their mountains, they gain through trade. They dislike boats, so enterprising humans and halflings frequently handle trade in dwarven goods along water routes. Trustworthy members of other races are welcome in dwarf settlements, though some areas are off limits even to them. The chief unit of dwarven society is the clan, and dwarves highly value social standing. Even dwarves who live far from their own kingdoms cherish their clan identities and affiliations, recognize related dwarves, and invoke their ancestors'' names in oaths and curses. To be clanless is the worst fate that can befall a dwarf. Dwarves in other lands are typically artisans, especially weaponsmiths, armorers, and jewelers. Some become mercenaries or bodyguards, highly sought after for their courage and loyalty.'
+      gods gold and clans: 'Dwarves who take up the adventuring life might be motivated by a desire for treasure—for its own sake, for a specific purpose, or even out of an altruistic desire to help others. Other dwarves are driven by the command or inspiration of a deity, a direct calling or simply a desire to bring glory to one of the dwarf gods. Clan and ancestry are also important motivators. A dwarf might seek to restore a clan''s lost honor, avenge an ancient wrong the clan suffered, or earn a new place within the clan after having been exiled. A dwarf adventurer might also be determined to bring glory and honor to his or her people, or to discover new wonders that add to the dwarves'' ancestral achievements. Some dwarves live far from their ancient strongholds, never having seen one for themselves. Adventuring can help a dwarf learn more about the world as it is and the place of the dwarves within it, or even find the path back to a forgotten homeland lost to orcs or goblins centuries ago.'
     name: hill dwarf
     proficiencies:
       languages:
-        common:
-        - speak
-        - read
-        - write
-        dwarvish:
-        - speak
-        - read
-        - write
+      - common
+      - dwarvish
       tools:
       - smith's tools
       - brewer's supplies
@@ -1650,49 +1617,20 @@ races:
       str: 2
       wis: 0
     description:
-      clans and kingdoms: ''
-      gods, gold, and clan: ''
-      long memory, long grudges: 'Dwarves can live to be more than 400 years old,
-        so the  oldest living dwarves often remember a very different  world. This
-        longevity grants them a  perspective on the world that shorter lived races
-        such as  humans and halflings lack. \n  Dwarves are solid and  enduring like
-        the mountains they love, weathering the  passage of centuries with stoic endurance
-        and little  change. They respect the traditions of their clans,  tracing their
-        ancestry back to the founding of their most  ancient strongholds in the youth
-        of the world, and don''t  abandon those traditions lightly. Part of those
-        traditions  is devotion to the gods of the dwarvers, who uphold the  dwarven
-        ideals of industrious labor, skill in battle, and  devotion to the forge.  \n  Individual
-        dwarves are  determined and loyal, true to their word and decisive in  action,
-        sometimes to the point of stubbornness. Many  dwarves have a strong sense
-        of justice, and they are slow  to forget wrongs they have suffered. A wrong
-        done to one  dwarf is a wrong done to the dwarf''s entire clan, so what  begins
-        as one dwarf''s hunt for vengeance can become a  full-blown clan feud.'
-      mountain dwarf: 'As a mountain dwarf, you are strong and hardy, accustomed  to
-        a difficult life in rugged terrain. You''re probably on  the tall side (for
-        a dwarf), and tend toward lighter  coloration.'
-      short and stout: 'Bold and hardy, dwarves are known as skilled warriors,  miners,
-        and workers of stone and metal. Though they stand  well under 5 feet tall,
-        dwarves are so broad and compact  that they can weigh as much as a human standing
-        nearly two  feet taller. Their courage and endurance are also easily a  match
-        for any of the larger folk. \n  Dwarven skin ranges  from deep brown to a
-        paler hue tinged with red, but the  most common shades are light brown or
-        deep tan, like  certain tones of earth. Their hair, worn long but in  simple
-        styles, is usually black, gray, or brown, though  paler dwarves often have
-        red hair. Male dwarves value  their beards highly and groom them carefully.'
+      dwarf: 'Kingdoms rich in ancient grandeur, halls carved into the roots of mountains, the echoing of picks and hammers in deep mines and blazing forges, a commitment to clan and tradition, and a burning hatred of goblins and orcs—these common threads unite all dwarves.'
+      mountain dwarf: 'As a mountain dwarf, you''re strong and hardy, accustomed to a difficult life in rugged terrain. You''re probably on the tall side (for a dwarf), and tend toward lighter coloration. The shield dwarves of northern Faerûn, as well as the ruling Hylar clan and the noble Daewar clan, are mountain dwarves.'
+      short and stout: 'Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal. Though they stand well under 5 feet tall, dwarves are so broad and compact that they can weigh as much as a human standing nearly two feet taller. Their courage and endurance are also easily a match for any of the larger folk. Dwarves pride themselves on their clans and their traditions, tracing their ancestry back hundreds or even thousands of years. This deep sense of heritage and respect for their ancestors shapes every aspect of a dwarf’s life. Their names are taken from the histories of those clans, and they are expected to uphold the legacy of their people. The typical dwarf is lawful, believing firmly in the benefits of a well-ordered society. They tend to value honor and loyalty above all else and distrust those who do not conduct themselves with discipline. Some dwarves do live outside the norms of dwarven society, particularly adventurers, but even they carry the weight of tradition with them carefully.'
+      long memory long grudges: 'Dwarves can live to be more than 400 years old, so the oldest living dwarves often remember a very different world. For example, some of the oldest dwarves living in Citadel Felbarr (in the world of the Forgotten Realms) can recall the day, more than three centuries ago, when orcs conquered the fortress and drove them into exile. This longevity grants them a perspective on the world that shorter-lived races such as humans and halflings lack. Dwarves are solid and enduring like the mountains they love, weathering the passage of centuries with stoic resolve and little change. They respect the traditions of their clans, tracing their ancestry back to the founding of their most ancient strongholds in the youth of the world, and don''t abandon those traditions lightly. Part of those traditions is devotion to the gods of the dwarves, who uphold the dwarven ideals of industrious labor, skill in battle, and devotion to the forge. Individual dwarves are determined and loyal, true to their word and decisive in action, sometimes to the point of stubbornness. Many dwarves have a strong sense of justice, and they are slow to forget wrongs done to them. A wrong done to one dwarf is a wrong done to the dwarf''s entire clan, so what begins as one dwarf''s grudge may become a full-blown clan feud.'
+      clans and kingdoms: 'Dwarven kingdoms stretch deep beneath the mountains where the dwarves mine gems and precious metals and forge items of wonder. They love the beauty and artistry of precious metals and fine jewelry, and in some dwarves this love festers into avarice. Whatever wealth they can''t find in their mountains, they gain through trade. They dislike boats, so enterprising humans and halflings frequently handle trade in dwarven goods along water routes. Trustworthy members of other races are welcome in dwarf settlements, though some areas are off limits even to them. The chief unit of dwarven society is the clan, and dwarves highly value social standing. Even dwarves who live far from their own kingdoms cherish their clan identities and affiliations, recognize related dwarves, and invoke their ancestors'' names in oaths and curses. To be clanless is the worst fate that can befall a dwarf. Dwarves in other lands are typically artisans, especially weaponsmiths, armorers, and jewelers. Some become mercenaries or bodyguards, highly sought after for their courage and loyalty.'
+      gods gold and clans: 'Dwarves who take up the adventuring life might be motivated by a desire for treasure—for its own sake, for a specific purpose, or even out of an altruistic desire to help others. Other dwarves are driven by the command or inspiration of a deity, a direct calling or simply a desire to bring glory to one of the dwarf gods. Clan and ancestry are also important motivators. A dwarf might seek to restore a clan''s lost honor, avenge an ancient wrong the clan suffered, or earn a new place within the clan after having been exiled. A dwarf adventurer might also be determined to bring glory and honor to his or her people, or to discover new wonders that add to the dwarves'' ancestral achievements. Some dwarves live far from their ancient strongholds, never having seen one for themselves. Adventuring can help a dwarf learn more about the world as it is and the place of the dwarves within it, or even find the path back to a forgotten homeland lost to orcs or goblins centuries ago.'
     name: mountain dwarf
     proficiencies:
-      armors:
+      armor:
       - light armor
       - medium armor
       languages:
-        common:
-        - speak
-        - read
-        - write
-        dwarvish:
-        - speak
-        - read
-        - write
+      - common
+      - dwarvish
       tools:
       - smith's tools
       - brewer's supplies
@@ -1731,29 +1669,17 @@ races:
       str: 0
       wis: 0
     description:
-      Drow: Descended from an earlier subrace of elves, the drow were  banished
-        from the surface world for following the goddess  Lolth down the path of evil.
-        Now they have built their own  civilization in the depths of the Underdark,
-        patterned after  the Way of Loth. Also called dark elves, the drow have skin  that
-        resembles charcoal or obsidian, as well as stark white  or pale yellow hair.
-        They commonly have very pale eyes (so  pale as to be mistaken for white) in
-        shades of lilac,  silver, pink, red, and blue. They tend to be smaller and  thinner
-        than most elves.
-      a timeless perspective: ''
-      exploration and adventure: ''
-      hidden woodland realms: ''
-      slender and graceful: ''
+      elf: 'Elves are a magical people of otherworldly grace, living in the world but not entirely part of it. They live in places of ethereal beauty, in the midst of ancient forests or in silvery spires glittering with faerie light, where soft music drifts through the air and gentle fragrances waft on the breeze. Elves love nature and magic, art and artistry, music and poetry, and the good things of the world.'
+      dark elf (drow): 'Descended from an earlier subrace of dark-skinned elves, the drow were banished from the surface world for following the goddess Lolth down the path to evil and corruption. Now they have built their own civilization in the depths of the Underdark, patterned after the Way of Lolth. Also called dark elves, the drow have black skin that resembles polished obsidian and stark white or pale yellow hair. They commonly have very pale eyes (so pale as to be mistaken for white) in shades of lilac, silver, pink, red, and blue. They tend to be smaller and thinner than most elves. Drow adventurers are rare, and the race does not exist in all worlds. Check with your Dungeon Master to see if you can play one.'
+      slender and graceful: 'With their unearthly grace and fine features, elves appear hauntingly beautiful to humans and members of many other races. They are slightly shorter than humans on average, ranging from well under 5 feet tall to just over 6 feet. They are more slender than humans, weighing only 100 to 145 pounds. Males and females are about the same height, and males are only marginally heavier than females. Elves'' coloration encompasses the normal human range and also includes skin in shades of copper, bronze, and almost bluish-white, hair of green or blue, and eyes like pools of liquid gold or silver. Elves have no facial or body hair. They favor elegant clothing in bright colors, and they enjoy simple yet lovely jewelry.'
+      a timeless perspective: 'Elves can live well over 700 years, giving them a broad perspective on events that might trouble the shorter-lived races more deeply. They are more often amused than excited, and more likely to be curious than greedy. They tend to remain aloof and unfazed by petty happenstance. When pursuing a goal, however, whether adventuring on a mission or learning a new skill or art, elves can be focused and relentless. They are slow to make friends and enemies, and even slower to forget them. They reply to petty insults with disdain and to serious insults with vengeance. Like the branches of a young tree, elves are flexible in the face of danger. They trust in diplomacy and compromise to resolve differences before they escalate to violence. They have been known to retreat from intrusions into their woodland homes, confident that they can simply wait the invaders out. But when the need arises, elves reveal a stern martial side, demonstrating skill with sword, bow, and strategy.'
+      hidden woodland realms: 'Most elves dwell in small forest villages hidden among the trees. Elves hunt game, gather food, and grow vegetables, and their skill and magic allow them to support themselves without the need for clearing and plowing land. They are talented artisans, crafting finely worked clothes and art objects. Their contact with outsiders is usually limited, though a few elves make a good living by trading crafted items for metals (which they have no interest in mining). Elves encountered outside their own lands are commonly traveling minstrels, artists, or sages. Human nobles compete for the services of elf instructors to teach swordplay or magic to their children.'
+      exploration and adventure: 'Elves take up adventuring out of wanderlust. Since they are so long-lived, they can enjoy centuries of exploration and discovery. They dislike the pace of human society, which is regimented from day to day but constantly changing over decades, so they find careers that let them travel freely and set their own pace. Elves also enjoy exercising their martial prowess or gaining greater magical power, and adventuring allows them to do so. Some might join with rebels fighting against oppression, and others might become champions of moral causes.'
     name: drow
     proficiencies:
       languages:
-        common:
-        - speak
-        - read
-        - write
-        elvish:
-        - speak
-        - read
-        - write
+      - common
+      - elvish
       skills:
       - [Perception]
       spells:
@@ -1795,27 +1721,18 @@ races:
       str: 0
       wis: 0
     description:
-      a timeless perspective: ''
-      exploration and adventure: ''
-      hidden woodland realms: ''
-      high elf: As a high elf, you have a keen mind and mastery of at  least the
-        basics of magic
-      slender and graceful: ''
+      elf: 'Elves are a magical people of otherworldly grace, living in the world but not entirely part of it. They live in places of ethereal beauty, in the midst of ancient forests or in silvery spires glittering with faerie light, where soft music drifts through the air and gentle fragrances waft on the breeze. Elves love nature and magic, art and artistry, music and poetry, and the good things of the world.'
+      high elf: 'As a high elf, you have a keen mind and a mastery of at least the basics of magic. In many of the worlds of D&D, there are two kinds of high elves. One type (which includes the gray elves and valley elves of Greyhawk, the Silvanesti of Dragonlance, and the sun elves of the Forgotten Realms) is haughty and reclusive, believing themselves to be superior to non-elves and even other elves. The other type (including the high elves of Greyhawk, the Qualinesti of Dragonlance, and the moon elves of the Forgotten Realms) are more common and more friendly, and often encountered among humans and other races. Sun elves have bronze skin and hair of copper, black, or golden blond. Their eyes are golden, silver, or black. Moon elves are much paler, with alabaster skin sometimes tinged with blue. Their hair is white, black, or blue, and their eyes are blue or green, with gold.'
+      slender and graceful: 'With their unearthly grace and fine features, elves appear hauntingly beautiful to humans and members of many other races. They are slightly shorter than humans on average, ranging from well under 5 feet tall to just over 6 feet. They are more slender than humans, weighing only 100 to 145 pounds. Males and females are about the same height, and males are only marginally heavier than females. Elves'' coloration encompasses the normal human range and also includes skin in shades of copper, bronze, and almost bluish-white, hair of green or blue, and eyes like pools of liquid gold or silver. Elves have no facial or body hair. They favor elegant clothing in bright colors, and they enjoy simple yet lovely jewelry.'
+      a timeless perspective: 'Elves can live well over 700 years, giving them a broad perspective on events that might trouble the shorter-lived races more deeply. They are more often amused than excited, and more likely to be curious than greedy. They tend to remain aloof and unfazed by petty happenstance. When pursuing a goal, however, whether adventuring on a mission or learning a new skill or art, elves can be focused and relentless. They are slow to make friends and enemies, and even slower to forget them. They reply to petty insults with disdain and to serious insults with vengeance. Like the branches of a young tree, elves are flexible in the face of danger. They trust in diplomacy and compromise to resolve differences before they escalate to violence. They have been known to retreat from intrusions into their woodland homes, confident that they can simply wait the invaders out. But when the need arises, elves reveal a stern martial side, demonstrating skill with sword, bow, and strategy.'
+      hidden woodland realms: 'Most elves dwell in small forest villages hidden among the trees. Elves hunt game, gather food, and grow vegetables, and their skill and magic allow them to support themselves without the need for clearing and plowing land. They are talented artisans, crafting finely worked clothes and art objects. Their contact with outsiders is usually limited, though a few elves make a good living by trading crafted items for metals (which they have no interest in mining). Elves encountered outside their own lands are commonly traveling minstrels, artists, or sages. Human nobles compete for the services of elf instructors to teach swordplay or magic to their children.'
+      exploration and adventure: 'Elves take up adventuring out of wanderlust. Since they are so long-lived, they can enjoy centuries of exploration and discovery. They dislike the pace of human society, which is regimented from day to day but constantly changing over decades, so they find careers that let them travel freely and set their own pace. Elves also enjoy exercising their martial prowess or gaining greater magical power, and adventuring allows them to do so. Some might join with rebels fighting against oppression, and others might become champions of moral causes.'
     name: high elf
     proficiencies:
       languages:
-        chioce of one language:
-        - speak
-        - read
-        - write
-        common:
-        - speak
-        - read
-        - write
-        elvish:
-        - speak
-        - read
-        - write
+      - any
+      - common
+      - elvish
       skills:
       - [Perception]
       cantrip list: 1
@@ -1856,26 +1773,17 @@ races:
       str: 0
       wis: 1
     description:
-      a timeless perspective: ''
-      exploration and adventure: ''
-      hidden woodland realms: ''
-      slender and graceful: ''
-      wood elf: 'As a wood elf, you have keen senses and intuition, and your  fleet
-        feet carry you quickly and stealthily through your  native forests. Wood elves''
-        skin tends to be copperish in  hue, sometimes with traces of green. Their
-        hair tends toward  browns and blacks, but it is occasionally blond or copper-
-        colored. Their eyes are green, brown, or hazel.'
+      elf: 'Elves are a magical people of otherworldly grace, living in the world but not entirely part of it. They live in places of ethereal beauty, in the midst of ancient forests or in silvery spires glittering with faerie light, where soft music drifts through the air and gentle fragrances waft on the breeze. Elves love nature and magic, art and artistry, music and poetry, and the good things of the world.'
+      wood elf: 'As a wood elf, you have keen senses and intuition, and your fleet feet carry you quickly and stealthily through your native forests. This category includes the wild elves (grugach) of Greyhawk and the Kagonesti of Dragonlance, as well as the wood elves of the Forgotten Realms. Wood elves are more often than not the reclusive and distrusting of non-elves. Wood elves have skin tending toward copperish in hue, sometimes with traces of green. Their hair tends to be brown, black, or blond, and their eyes are green, brown or hazel.'
+      slender and graceful: 'With their unearthly grace and fine features, elves appear hauntingly beautiful to humans and members of many other races. They are slightly shorter than humans on average, ranging from well under 5 feet tall to just over 6 feet. They are more slender than humans, weighing only 100 to 145 pounds. Males and females are about the same height, and males are only marginally heavier than females. Elves'' coloration encompasses the normal human range and also includes skin in shades of copper, bronze, and almost bluish-white, hair of green or blue, and eyes like pools of liquid gold or silver. Elves have no facial or body hair. They favor elegant clothing in bright colors, and they enjoy simple yet lovely jewelry.'
+      a timeless perspective: 'Elves can live well over 700 years, giving them a broad perspective on events that might trouble the shorter-lived races more deeply. They are more often amused than excited, and more likely to be curious than greedy. They tend to remain aloof and unfazed by petty happenstance. When pursuing a goal, however, whether adventuring on a mission or learning a new skill or art, elves can be focused and relentless. They are slow to make friends and enemies, and even slower to forget them. They reply to petty insults with disdain and to serious insults with vengeance. Like the branches of a young tree, elves are flexible in the face of danger. They trust in diplomacy and compromise to resolve differences before they escalate to violence. They have been known to retreat from intrusions into their woodland homes, confident that they can simply wait the invaders out. But when the need arises, elves reveal a stern martial side, demonstrating skill with sword, bow, and strategy.'
+      hidden woodland realms: 'Most elves dwell in small forest villages hidden among the trees. Elves hunt game, gather food, and grow vegetables, and their skill and magic allow them to support themselves without the need for clearing and plowing land. They are talented artisans, crafting finely worked clothes and art objects. Their contact with outsiders is usually limited, though a few elves make a good living by trading crafted items for metals (which they have no interest in mining). Elves encountered outside their own lands are commonly traveling minstrels, artists, or sages. Human nobles compete for the services of elf instructors to teach swordplay or magic to their children.'
+      exploration and adventure: 'Elves take up adventuring out of wanderlust. Since they are so long-lived, they can enjoy centuries of exploration and discovery. They dislike the pace of human society, which is regimented from day to day but constantly changing over decades, so they find careers that let them travel freely and set their own pace. Elves also enjoy exercising their martial prowess or gaining greater magical power, and adventuring allows them to do so. Some might join with rebels fighting against oppression, and others might become champions of moral causes.'
     name: wood elf
     proficiencies:
       languages:
-        common:
-        - speak
-        - read
-        - write
-        elvish:
-        - speak
-        - read
-        - write
+      - common
+      - elvish
       skills:
       - [Perception]
       weapons:
@@ -1917,29 +1825,16 @@ races:
       str: 0
       wis: 0
     description:
-      bright burrows: ''
-      delighted dedication: ''
-      forest gnome: 'As a forest gnome, you have natural knack for illusion and  inherent
-        quickness and stealth. Forest gnomes are rare and  secretive. They gather
-        in hidden communities in sylvan  forests, using illusions and trickery to
-        conceal themselves  from threats or to mask their escape should they be detected.
-        Forest gnomes tend to be friendly with other good- spirited woodland folk,
-        and they regard elves and good fey  as their most important allies. These
-        gnomes also befriend  small forest animals and rely on them for information
-        about threats that might prowl their lands.'
-      seeing the world: ''
-      vibrant expression: ''
+      gnome: 'A constant hum of busy activity pervades the warrens and neighborhoods where gnomes form their close-knit communities. Louder sounds punctuate the hum: a crunch of grinding gears here, a minor explosion there, a yelp of surprise or triumph, and especially bursts of laughter. Gnomes take delight in life, enjoying every moment of invention, exploration, investigation, creation, and play.'
+      vibrant expression: 'A gnome''s energy and enthusiasm for living shines through every inch of his or her tiny body. A gnome''s skin ranges from dark tan to woody brown, their hair tends toward fair hues, and their eyes can be any shade of blue or green. Gnomes'' hair has a tendency to stick out in every direction, as if expressing the gnome''s insatiable interest in everything around. A gnome''s clothing, though usually made in modest earth tones, is accented with bright reds, oranges, and yellows. Gnomes favor complex patterns in their fabrics, and their jewelry is carefully crafted and often incorporates bright gems or gleaming jewels.'
+      delighted dedication: 'As far as gnomes are concerned, being alive is a wonderful thing, and they squeeze every ounce of enjoyment out of their three to five centuries of life. Humans might wonder about getting bored over the course of such a long life, and elves take plenty of time to savor the beauties of the world in their long years, but gnomes seem to worry that even with all that time, they can''t get in enough of the things they want to do and see. Gnomes speak as if they can''t get the thoughts out of their heads fast enough. Even as they offer ideas and opinions on a range of subjects, they manage to listen carefully to others, adding the appropriate exclamations of surprise and appreciation along the way.'
+      bright burrows: 'Gnomes make their homes in hilly, wooded lands. They live underground but get more fresh air than dwarves do, enjoying the natural, living world on the surface whenever they can. Their homes are well hidden by both clever construction and simple illusions. Welcome visitors are quickly ushered into the bright, warm burrows. Those who are not welcome are unlikely to find the burrows in the first place. Gnomes who settle in human lands are commonly gemcutters, engineers, sages, or tinkers. Some human families retain gnome tutors, ensuring that their pupils enjoy a mix of serious learning and delighted enjoyment. A gnome might tutor several generations of a single human family over the course of his or her long life.'
+      forest gnome: 'As a forest gnome, you have a natural knack for illusion and inherent quickness and stealth. In the worlds of D&D, forest gnomes are rare and secretive. They gather in hidden communities in sylvan forests, using illusions and trickery to conceal themselves from threats or to mask their escape should they be detected. Forest gnomes tend to be friendly with other good-spirited woodland folk, and they regard elves and good fey as their most important allies. These gnomes also befriend small forest animals and rely on them for information about threats that might prowl their lands.'
     name: forest gnome
     proficiencies:
-      language:
-        common:
-        - speak
-        - read
-        - write
-        gnomish:
-        - speak
-        - read
-        - write
+      languages:
+      - common
+      - gnomish
       race skills:
       - minor illusion
     traits:
@@ -1972,23 +1867,16 @@ races:
       str: 0
       wis: 0
     description:
-      bright burrows: ''
-      delighted dedication: ''
-      rock gnome: 'As a rock gnome, you have a natural inventiveness and  hardiness
-        beyond that of other gnomes. Most gnomes are  rock gnomes.'
-      seeing the world: ''
-      vibrant expression: ''
+      gnome: 'A constant hum of busy activity pervades the warrens and neighborhoods where gnomes form their close-knit communities. Louder sounds punctuate the hum: a crunch of grinding gears here, a minor explosion there, a yelp of surprise or triumph, and especially bursts of laughter. Gnomes take delight in life, enjoying every moment of invention, exploration, investigation, creation, and play.'
+      vibrant expression: 'A gnome''s energy and enthusiasm for living shines through every inch of his or her tiny body. A gnome''s skin ranges from dark tan to woody brown, their hair tends toward fair hues, and their eyes can be any shade of blue or green. Gnomes'' hair has a tendency to stick out in every direction, as if expressing the gnome''s insatiable interest in everything around. A gnome''s clothing, though usually made in modest earth tones, is accented with bright reds, oranges, and yellows. Gnomes favor complex patterns in their fabrics, and their jewelry is carefully crafted and often incorporates bright gems or gleaming jewels.'
+      delighted dedication: 'As far as gnomes are concerned, being alive is a wonderful thing, and they squeeze every ounce of enjoyment out of their three to five centuries of life. Humans might wonder about getting bored over the course of such a long life, and elves take plenty of time to savor the beauties of the world in their long years, but gnomes seem to worry that even with all that time, they can''t get in enough of the things they want to do and see. Gnomes speak as if they can''t get the thoughts out of their heads fast enough. Even as they offer ideas and opinions on a range of subjects, they manage to listen carefully to others, adding the appropriate exclamations of surprise and appreciation along the way.'
+      bright burrows: 'Gnomes make their homes in hilly, wooded lands. They live underground but get more fresh air than dwarves do, enjoying the natural, living world on the surface whenever they can. Their homes are well hidden by both clever construction and simple illusions. Welcome visitors are quickly ushered into the bright, warm burrows. Those who are not welcome are unlikely to find the burrows in the first place. Gnomes who settle in human lands are commonly gemcutters, engineers, sages, or tinkers. Some human families retain gnome tutors, ensuring that their pupils enjoy a mix of serious learning and delighted enjoyment. A gnome might tutor several generations of a single human family over the course of his or her long life.'
+      rock gnome: 'As a rock gnome, you have a natural inventiveness and hardiness beyond that of other gnomes. Most gnomes in the worlds of D&D are rock gnomes, including the tinker gnomes of the Dragonlance setting.'
     name: rock gnome
     proficiencies:
-      language:
-        common:
-        - speak
-        - read
-        - write
-        gnomish:
-        - speak
-        - read
-        - write
+      languages:
+      - common
+      - gnomish
       tools:
       - artisan's tools
     traits:
@@ -1998,7 +1886,7 @@ races:
         you spend 1 hour  repairing it to keep the device functioning), or when you  use
         your action to dismantle it; at that time, you can  reclaim the materials
         used to create it. You can have up to  three such devices active at a time.
-        \n   When you create a device choose one of the following  options: \n   Clockwork
+        \n   When you create a device choose one of the following  options: Clockwork
         Toy. This toy is a clockwork animal, monster, or  person, such as a frog,
         mouse, bird, dragon, or soldier.  When placed on the ground, the toy moves
         5 feet across  the ground on each of your turns in a random direction. It  makes
@@ -2035,23 +1923,15 @@ races:
       str: 0
       wis: 0
     description:
-      diplomats or wanderers: ''
-      of two worlds: ''
+      half-elf: 'Walking in two worlds but truly belonging to neither, half-elves combine what some say are the best qualities of their elf and human parents: human curiosity, inventiveness, and ambition tempered by elven refinement, love of nature, and artistic tastes. Some half-elves live among humans, set apart by their emotional and physical differences, watching friends and loved ones age while time barely touches them. Others live with the elves, growing restless as they reach adulthood in the timeless elven realms, while their peers continue to live as children. Many half-elves, unable to fit into either society, choose lives of solitary wandering or join with other misfits and outcasts in the adventuring life.'
+      of two worlds: 'To humans, half-elves look like elves, and to elves, they look human. In height, they''re on par with both parents, though they''re neither as slender as elves nor as broad as humans. They range from under 5 feet to about 6 feet tall, and from 100 to 180 pounds, with men only slightly taller and heavier than women. Half-elf men do have facial hair, and sometimes grow beards to mask their elven ancestry. Half-elven coloration and features lie somewhere between their human and elf parents, and thus show a variety even more pronounced than that found among either race. They tend to have the eyes of their elven parents.'
+      diplomats or wanderers: 'Half-elves have no lands of their own, though they are welcome in human cities and somewhat less welcome in elven forests. In large cities in regions where elves and humans interact often, half-elves are sometimes numerous enough to form small communities of their own. They enjoy the company of other half-elves, the only people who truly understand what it is to live between these two worlds. In most parts of the world, though, half-elves are uncommon enough that one might live for years without meeting another. Some half-elves prefer to avoid company altogether, wandering the wilds as trappers, foresters, hunters, or adventurers and visiting civilization only rarely. Like elves, they are driven by the wanderlust that comes of their longevity. Others, in contrast, throw themselves into the thick of society, putting their charisma and social skills to great use in diplomatic roles or as swindlers.'
     name: half-elf
     proficiencies:
-      language:
-        any:
-        - speak
-        - read
-        - write
-        common:
-        - speak
-        - read
-        - write
-        elvish:
-        - speak
-        - read
-        - write
+      languages:
+      - any
+      - common
+      - elvish
       skills:
       - [Acrobatics, Animal Handling, Arcana, Athletics, Deception, History, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Religion, Slight of Hand, Stealth, Survival]
       - [Acrobatics, Animal Handling, Arcana, Athletics, Deception, History, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Religion, Slight of Hand, Stealth, Survival]
@@ -2080,20 +1960,15 @@ races:
       str: 2
       wis: 0
     description:
-      scarred and strong: ''
-      the mark of gruumsh: ''
-      tribes and slums: ''
+      half-orc: 'Whether united under the leadership of a mighty warlock or having fought to a standstill after years of conflict, orc and human tribes sometimes form alliances, joining forces into a larger horde to the terror of civilized lands nearby. When these alliances are sealed by marriages, half-orcs are born. Some half-orcs rise to become proud chieftains of orc tribes, their human blood giving them an edge over their full-blooded orc rivals. Some venture into the world to prove their worth among humans and other more civilized races. Many of these become adventurers, achieving greatness for their mighty deeds and notoriety for their barbaric customs and savage fury.'
+      scarred and strong: 'Half-orcs'' grayish pigmentation, sloping foreheads, jutting jaws, prominent teeth, and towering builds make their orcish heritage plain for all to see. Half-orcs stand between 5 and 7 feet tall and usually weigh between 180 and 250 pounds. Orcs regard battle scars as tokens of pride and ornamental scars as things of beauty. Other scars, though, mark an orc or half-orc as a former slave or a disgraced exile. Any half-orc who has lived among or near orcs is familiar with the nuances of orcish scars and what they signify. Some half-orcs decorate themselves with scars to proclaim their past achievements, and to demonstrate that they are not afraid of pain in the pursuit of glory. Others see these scars as marks of shame and do everything they can to hide them. When translating their passion and fury into combat, half-orcs can perform brutal feats of strength, but not all wear their past in scars—some carry it in shame.'
+      the mark of gruumsh: 'The one-eyed god Gruumsh created the orcs, and even those orcs who turn away from his worship can’t fully escape his influence. The same is true of half-orcs. They are often caught between the human world and the orc world, not fully accepted in either. Many half-orcs hear the whispers of Gruumsh in their dreams, calling them to unleash the rage that simmers within. Those who resist the call can prove to be among the most steadfast and noble of heroes. But few half-orcs can completely deny their nature, and when the rage takes over, they can become a terrible force of destruction. Half-orcs are often feared or misunderstood, even in civilized land.'
+      tribes and slums: 'Half-orcs most often live among orcs. Of the other races, humans are most likely to accept half-orcs, and half-orcs almost always live in human lands when not living among orcs. Whether proving themselves among orcs or seeking acceptance among humans, half-orcs are always outsiders. Sometimes, being forced to live on the margins leads to lives of violence. But some half-orcs leave their upbringing behind, striving to make a place for themselves in civilized society. You might find a half-orc among a group of adventurers, facing down a terrible foe, or struggling to survive in a city slum. The half-orc’s human ancestry can lead to ambition, determination, and greatness.'
     name: half-orc
     proficiencies:
-      language:
-        common:
-        - speak
-        - read
-        - write
-        orc:
-        - speak
-        - read
-        - write
+      languages:
+      - common
+      - orc
     traits:
       darkvision: 'You can see in dim light within 60 feet of you as if it  were
         bright light, and in darkness as if it were dim light.  You can''t discern
@@ -2121,26 +1996,18 @@ races:
       str: 0
       wis: 0
     description:
-      blend into the crowd: ''
-      exploring opportunities: ''
-      kind and curious: ''
-      lightfoot halfling: 'As a lightfoot halfling, you can easily hid from notice,  even
-        using other people as cover. You''re inclined to be  affable and get along
-        well with others. \n Lightfoots are more prone to wanderlust than other  halflings,
-        and often dwell alongside other races or take up  a nomadic life.'
-      pastoral pleasantries: ''
-      small and practical: ''
+      halfling: 'The comforts of home are the goals of most halflings'' lives: a place to settle in peace and quiet, far from marauding monsters and clashing armies; a blazing fire and a generous meal; fine drink and fine conversation. Though some halflings live out their days in remote agricultural communities, others form nomadic bands that travel constantly, lured by the open road and the wide horizon to discover the wonders of new lands and peoples. But even these wanderers love peace, food, hearth, and home, though home might be a wagon jostling along a dirt road or a raft floating downriver.'
+      small and practical: 'The diminutive halflings survive in a world full of larger creatures by avoiding notice or, barring that, avoiding offense. Standing about 3 feet tall, they appear relatively harmless and so have managed to survive for centuries in the shadow of empires and on the edges of wars and political strife. They are inclined to be stout, weighing between 40 and 45 pounds. Halflings'' skin ranges from tan to pale with a ruddy cast, and their hair is usually brown or sandy brown and wavy. They have brown or hazel eyes. Halfling men often sport long sideburns; beards are rare among them and mustaches even more so. They like to wear simple, comfortable, and practical clothes, favoring bright colors. Halfling practicality extends beyond their clothing. They''re concerned with basic needs and simple pleasures and have little use for ostentation. Even the wealthiest of halflings keep their treasures locked in a cellar rather than on display. They have a knack for finding the most straightforward solution to a problem, and have little patience for dithering.'
+      kind and curious: 'Halflings are an affable and cheerful people. They cherish the bonds of family and friendship as well as the comforts of hearth and home, harboring few dreams of gold or glory. Even adventurers among them usually venture into the world for reasons of community, friendship, wanderlust, or curiosity. They love discovering new things, even simple things, such as an exotic food or an unfamiliar style of clothing. Halflings are easily moved to pity and hate to see any living thing suffer. They are generous, happily sharing what they have even in lean times.'
+      blend into the crowd: 'Halflings are adept at fitting into a community of humans, dwarves, or elves, making themselves valuable and welcome. The combination of their inherent stealth and unassuming nature helps halflings to avoid unwanted attention. Halflings work readily with others, and they are loyal to their friends, whether halfling or otherwise. They can display remarkable ferocity when their friends, families, or communities are threatened.'
+      pastoral pleasantries: 'Most halflings live in small, peaceful communities with large farms and well-kept groves. They rarely build kingdoms of their own or even hold much land beyond their quiet shires. They typically don''t recognize any sort of halfling nobility or royalty, instead looking to family elders to guide them. Families preserve their traditions through storytelling, with younger halflings learning about their heritage and the world at large through tales and legends. Halflings don''t much care about histories, genealogies, or old traditions. They love stories and legends, though, especially when they''re told by someone else. Halflings are more concerned with what works than with what''s traditional. A place that is safe and comfortable is all the homeland they need. They have no love of conquest or domination, and they rarely settle in lands that are already occupied, preferring to avoid the notice of larger folk. Some halflings live among other races, blending in and leaving no permanent home.'
+      exploring opportunities: 'Halflings usually set out on the adventuring life for the same reasons as they leave home: to defend their communities, support their friends, or explore a wide and wonder-filled world. For them, adventuring is less a career than an opportunity or sometimes a necessity.'
+      lightfoot halfling: 'As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You''re inclined to be affable and get along well with others. In the Forgotten Realms, lightfoot halflings have spread the farthest and thus are the most common variety. They''re more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life. In the world of Greyhawk, lightfoot halflings are called hairfeet or tallfellows.'
     name: lightfoot halfling
     proficiencies:
-      language:
-        common:
-        - speak
-        - read
-        - write
-        halfling:
-        - speak
-        - read
-        - write
+      languages:
+      - common
+      - halfling
     traits:
       brave: 'You have advantage on saving throws against being  frightened.'
       halfling nimbleness: 'You can move through the space of any creature that is
@@ -2167,24 +2034,18 @@ races:
       str: 0
       wis: 0
     description:
-      blend into the crowd: ''
-      exploring opportunities: ''
-      kind and curious: ''
-      pastoral pleasantries: ''
-      small and practical: ''
-      stout halfling: 'As a stout halfling, you''re hardier than average and have  some
-        resistance to poison. Some say that stouts have dwarven  blood.'
+      halfling: 'The comforts of home are the goals of most halflings'' lives: a place to settle in peace and quiet, far from marauding monsters and clashing armies; a blazing fire and a generous meal; fine drink and fine conversation. Though some halflings live out their days in remote agricultural communities, others form nomadic bands that travel constantly, lured by the open road and the wide horizon to discover the wonders of new lands and peoples. But even these wanderers love peace, food, hearth, and home, though home might be a wagon jostling along a dirt road or a raft floating downriver.'
+      small and practical: 'The diminutive halflings survive in a world full of larger creatures by avoiding notice or, barring that, avoiding offense. Standing about 3 feet tall, they appear relatively harmless and so have managed to survive for centuries in the shadow of empires and on the edges of wars and political strife. They are inclined to be stout, weighing between 40 and 45 pounds. Halflings'' skin ranges from tan to pale with a ruddy cast, and their hair is usually brown or sandy brown and wavy. They have brown or hazel eyes. Halfling men often sport long sideburns; beards are rare among them and mustaches even more so. They like to wear simple, comfortable, and practical clothes, favoring bright colors. Halfling practicality extends beyond their clothing. They''re concerned with basic needs and simple pleasures and have little use for ostentation. Even the wealthiest of halflings keep their treasures locked in a cellar rather than on display. They have a knack for finding the most straightforward solution to a problem, and have little patience for dithering.'
+      kind and curious: 'Halflings are an affable and cheerful people. They cherish the bonds of family and friendship as well as the comforts of hearth and home, harboring few dreams of gold or glory. Even adventurers among them usually venture into the world for reasons of community, friendship, wanderlust, or curiosity. They love discovering new things, even simple things, such as an exotic food or an unfamiliar style of clothing. Halflings are easily moved to pity and hate to see any living thing suffer. They are generous, happily sharing what they have even in lean times.'
+      blend into the crowd: 'Halflings are adept at fitting into a community of humans, dwarves, or elves, making themselves valuable and welcome. The combination of their inherent stealth and unassuming nature helps halflings to avoid unwanted attention. Halflings work readily with others, and they are loyal to their friends, whether halfling or otherwise. They can display remarkable ferocity when their friends, families, or communities are threatened.'
+      pastoral pleasantries: 'Most halflings live in small, peaceful communities with large farms and well-kept groves. They rarely build kingdoms of their own or even hold much land beyond their quiet shires. They typically don''t recognize any sort of halfling nobility or royalty, instead looking to family elders to guide them. Families preserve their traditions through storytelling, with younger halflings learning about their heritage and the world at large through tales and legends. Halflings don''t much care about histories, genealogies, or old traditions. They love stories and legends, though, especially when they''re told by someone else. Halflings are more concerned with what works than with what''s traditional. A place that is safe and comfortable is all the homeland they need. They have no love of conquest or domination, and they rarely settle in lands that are already occupied, preferring to avoid the notice of larger folk. Some halflings live among other races, blending in and leaving no permanent home.'
+      exploring opportunities: 'Halflings usually set out on the adventuring life for the same reasons as they leave home: to defend their communities, support their friends, or explore a wide and wonder-filled world. For them, adventuring is less a career than an opportunity or sometimes a necessity.'
+      stout halfling: 'As a stout halfling, you''re hardier than average and have some resistance to poison. Some say that stouts have dwarven blood. In the Forgotten Realms, these halflings are called stronghearts, and they''re most common in the south.'
     name: stout halfling
     proficiencies:
-      language:
-        common:
-        - speak
-        - read
-        - write
-        halfling:
-        - speak
-        - read
-        - write
+      languages:
+      - common
+      - halfling
     traits:
       brave: 'You have advantage on saving throws against being  frightened.'
       halfling nimbleness: 'You can move through the space of any creature that is
@@ -2211,21 +2072,16 @@ races:
       str: 1
       wis: 1
     description:
-      a broad spectrum: ''
-      exemplars of ambition: ''
-      lasting institutions: ''
-      variety in all things: ''
+      human: 'In the reckoning of most worlds, humans are the youngest of the common races, late to arrive on the world scene and short-lived in comparison to dwarves, elves, and dragons. Perhaps it is because of their shorter lives that they strive to achieve as much as they can in the years they are given. Or maybe they feel they have something to prove to the elder races, and that''s why they build their mighty empires on the foundation of conquest and trade. Whatever drives them, humans are the innovators, the achievers, and the pioneers of the worlds.'
+      a broad spectrum: 'With their penchant for migration and conquest, humans are more physically diverse than other common races. There is no typical human. An individual can stand from 5 feet to well over 6 feet tall and weigh anywhere from 125 to 250 pounds. Human skin shades range from nearly black to very pale, and hair colors from black to blond (curly, kinky, or straight); males might sport facial hair that is sparse or thick. A lot of humans have a dash of nonhuman blood, revealing hints of elf, orc, or other lineages. Humans reach adulthood in their late teens and rarely live even a single century.'
+      variety in all things: 'Humans are the most adaptable and ambitious people among the common races. They have widely varying tastes, morals, and customs in the many different lands where they have settled. When they settle, though, they stay: they build cities to last for the ages, and great kingdoms that can persist for long centuries. An individual human might have a relatively short life span, but a human nation or culture preserves traditions with astonishing tenacity. They live fully in the present—making them well suited to the adventuring life—but also plan for the future, striving to leave a lasting mark. Individually and as a group, humans are adaptable opportunists, and they stay alert to changing political and social dynamics.'
+      lasting intuitions: 'Where a single elf or dwarf might take decades to hone a skill, humans need only a few years. A human can achieve greatness in a single lifetime, and even the mightiest human adventurers are rarely more than a generation removed from humble beginnings. Humans are practical, versatile, and resourceful. They excel at learning new things, adapting to new environments, and finding paths to success—even in nonhuman lands.'
+      exemplars of ambition: 'Humans who seek adventure are the most daring and ambitious members of a daring and ambitious race. They explore the frontiers of the world, make new discoveries, defend their homes, and establish new settlements. To some degree, they all share a thirst for greatness and a desire to prove themselves worthy of the legacy they''ve inherited and the power they wield. More than other people, humans champion causes rather than territories or groups.'
     name: human
     proficiencies:
-      language:
-        any:
-        - speak
-        - read
-        - write
-        common:
-        - speak
-        - read
-        - write
+      languages:
+      - any
+      - common
     age: 'Humans reach adulthood in their late teens and live less  than a century.'
     alignment: 'Humans tend toward no particular alignment. The best and  worst
       are found among them.'
@@ -2242,19 +2098,14 @@ races:
       str: 0
       wis: 0
     description:
-      infernal bloodline: ''
-      self-reliant and suspicious: ''
+      tiefling: 'To be greeted with stares and whispers, to suffer violence and insult on the street, to see mistrust and fear in every eye: this is the lot of the tiefling. And to twist the knife, tieflings know that this is because a pact struck generations ago infused the essence of Asmodeus—overlord of the Nine Hells—into their bloodline. Their appearance and their nature are not their fault but the result of an ancient sin, for which they and their children and their children''s children will always be held accountable.'
+      infernal bloodline: 'Tieflings are derived from human bloodlines, and in the broadest possible sense, they still look human. However, their infernal heritage has left a clear imprint on their appearance. Tieflings have large horns that take any of a variety of shapes: some have curling horns like a ram, others have straight and tall horns like a gazelle''s, and some spiral upward like an antelope''s. They have thick tails, four to five feet long, which lash or coil around their legs when they get upset or nervous. Their canine teeth are sharply pointed, and their eyes are solid colors—black, red, white, silver, or gold. Their skin tones cover the full range of human coloration, but also include various shades of red. Their hair, cascading down from behind their horns, is usually dark, from black or brown to dark red, blue, or purple.'
+      self-reliant and suspicious: 'Tieflings subsist in small minorities found mostly in human cities or towns, often in the roughest quarters of those places, where they grow up to be swindlers, thieves, or crime lords. Sometimes they live among other minority populations in enclaves where they are treated with more respect. Lacking a homeland, tieflings know that they have to make their own way in the world and that they have to be strong to survive. They are not quick to trust anyone who claims to be a friend, but when a tiefling''s companions demonstrate that they trust them, the tiefling learns to extend the same trust to them. And once a tiefling gives someone loyalty, the tiefling is a firm friend or ally for life.'
     name: tiefling
     proficiencies:
-      language:
-        common:
-        - speak
-        - read
-        - write
-        infernal:
-        - speak
-        - read
-        - write
+      languages:
+      - common
+      - infernal
       race skills:
       - thaumaturgy
       - hellish rebuke
@@ -2264,6 +2115,11 @@ races:
         bright light, and in darkness as if it were dim light.  You can''t discern
         color in darkness, only shades of gray.'
       hellish resistance: 'You have resistance to fire damage.'
+      infernal legacy: "You know the thaumaturgy cantrip. Once you reach 3rd level,
+        you can cast the hellish rebuke spell as a 2nd-level spell once with this
+        trait and regain the ability to do so when you finish a long rest. Once
+        you reach 5th level, you can also cast the darkness spell once per long
+        rest. Charisma is your spellcasting ability for these spells."
     size: 'Tieflings are about the same size and build as humans. Your  size is
       Medium.'
     speed: 'Your base walking speed is 30 feet.'
@@ -2271,3 +2127,43 @@ races:
     alignment: "Tieflings might not have an innate tendency toward evil, but
       many of them end up there. Evil or not, an independent nature inclines
       many tieflings toward a chaotic alignment."
+backgrounds:
+  acolyte:
+    proficiencies:
+      None
+  charlatan:
+    proficiencies:
+      None
+  criminal:
+    proficiencies:
+      None
+  entertainer:
+    proficiencies:
+      None
+  folk hero:
+    proficiencies:
+      None
+  guild artisan:
+    proficiencies:
+      None
+  hermit:
+    proficiencies:
+      None
+  noble:
+    proficiencies:
+      None
+  outlander:
+    proficiencies:
+      None
+  sage:
+    proficiencies:
+      None
+  sailor:
+    proficiencies:
+      None
+  soldier:
+    proficiencies:
+      None
+  urchin:
+    proficiencies:
+      None
