@@ -31,16 +31,16 @@ if not "npcs" in st.session_state or os.path.getmtime(DATA_DIR + 'npcs.yaml') > 
     st.session_state.npcs = load_yaml(DATA_DIR + 'npcs.yaml')
 # initialize/update initiative
 if not "initiative" in st.session_state or os.path.getmtime(DATA_DIR + 'initiative.yaml') > st.session_state.utime:
-    st.session_state.initiative = load_yaml(DATA_DIR + 'initiative.yaml')["initiative"]
+    st.session_state.initiative = load_yaml(DATA_DIR + 'initiative.yaml')
 # initialize/update races
 if not "races" in st.session_state or os.path.getmtime(DATA_DIR + 'character_creation.yaml') > st.session_state.utime:
-    st.session_state.races = load_yaml(DATA_DIR + 'character_creation.yaml')["races"]
+    st.session_state.races = load_yaml(DATA_DIR + 'phb_races.yaml')
 # initialize/update classses
 if not "classes" in st.session_state or os.path.getmtime(DATA_DIR + 'character_creation.yaml') > st.session_state.utime:
-    st.session_state.classes = load_yaml(DATA_DIR + 'character_creation.yaml')["classes"]
+    st.session_state.classes = load_yaml(DATA_DIR + 'phb_classes.yaml')
 # initialize/update backgrounds
 if not "backgrounds" in st.session_state or os.path.getmtime(DATA_DIR + 'character_creation.yaml') > st.session_state.utime:
-    st.session_state.backgrounds = load_yaml(DATA_DIR + 'character_creation.yaml')["backgrounds"]
+    st.session_state.backgrounds = load_yaml(DATA_DIR + 'phb_backgrounds.yaml')
 st.session_state.utime = time.time()
 
 if "display_form" not in st.session_state:

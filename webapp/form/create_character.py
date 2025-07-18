@@ -92,16 +92,16 @@ def form_create_character(DATA_DIR):
         st.subheader(f"Abilities ({' '.join(sess.clas['primary ability']).upper()} | {' '.join(sess.clas['saving throw proficiencies']).upper()})",
                     help="(primary | saving)")
 
-        abi_col = st.columns([1,1,1,1])
-        abi_col[0].markdown("")
-        abi_col[1].markdown("**Player**")
-        abi_col[2].markdown("**Race**")
-        abi_col[3].markdown("**Total (Modifier)**")
+        abi_col = st.columns([2,1,1,1,1,1,2])
+        abi_col[1].markdown("")
+        abi_col[2].markdown("Player")
+        abi_col[3].markdown("Race")
+        abi_col[4].markdown("Total")
+        abi_col[5].markdown("**Modifier**")
 
         for abi in abilities:
-            abi_col = st.columns([1,1,1,1])
-            abi_col[0].markdown(f"**{abi.upper()}**")
-            with abi_col[1]:
+            abi_col[1].markdown(f"**{abi.upper()}**")
+            with abi_col[2]:
                 st.number_input(
                     abi + " player value", 
                     min_value=8, 
@@ -109,14 +109,15 @@ def form_create_character(DATA_DIR):
                     value=8,
                     key=abi,
                     label_visibility="collapsed")
-            abi_col[2].markdown(f"**{sess.val_race.get(abi,0)}**")
+            abi_col[3].markdown(f"{sess.val_race.get(abi,0)}")
             sess[abi + "_total"] = sess.val_race.get(abi,0) + sess[abi]
             sess[abi + "_modifier"] = (sess[abi + "_total"] - 10) // 2
-            abi_col[3].markdown(f"**{sess[abi + '_total']}  ({sess[abi + '_modifier']})**")
+            abi_col[4].markdown(f"{sess[abi + '_total']}  ({sess[abi + '_modifier']})")
+            abi_col[5].markdown(f"**{sess[abi + '_modifier']}**")
         total = 0
         for abi in abilities: 
             if abi in sess: total += sess[abi]
-        abi_col[1].markdown(f"**{total} of {sess.val_play_max}**")
+        abi_col[2].markdown(f"**{total} of {sess.val_play_max}**")
 
         if total > sess.val_play_max:
             form_error = True
@@ -344,6 +345,7 @@ def form_create_character(DATA_DIR):
     with ccr_tab[5]:
         #################################################################
         # D e s c r i p t i o n
+        st.header("Basics",divider = 'rainbow')
         gen_col = st.columns([1,2,1])
         with gen_col[0]: st.subheader("Gender")
         with gen_col[1]:
@@ -436,6 +438,19 @@ def form_create_character(DATA_DIR):
         else:
             form_error = True
         if 'alignment' in sess: st.markdown(f"{sess.alignment}")
+
+        sup_race = ['dwarf','elf','gnome','halfling']
+        st.header(f"{sess.race['name'].title()}",divider = 'rainbow')
+        for sr in sup_race:
+            if sr in sess.race['name'] and sess.race['name'] not in sr:
+                st.subheader(f"{sr}")
+                st.markdown(f"{sess.races[sess.race['name']]['description'][sr]}")
+        st.subheader(f"{sess.race['name']}")
+        st.markdown(f"{sess.race['description'][sess.race['name']]}")
+        for title, description in sess.race['description'].items():
+            if title != sess.race['name'] and title not in sup_race:
+                st.subheader(f"{title.title()}")
+                st.markdown(f"{sess.race['description'][title].title()}")
 
     if st.button("💾 Save Character"):
         sess.character = {
