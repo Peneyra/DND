@@ -75,8 +75,8 @@ def form_create_character(DATA_DIR):
     sess.back = sess.backgrounds[sess.back_name]
 
     ccr_tab = st.tabs([
-        "Player Stats",
-        "Skills and Spells",
+        "Stats",
+        "Skills & Spells",
         "Traits",
         "Proficiencies",
         "Equipment",
@@ -146,10 +146,10 @@ def form_create_character(DATA_DIR):
     with ccr_tab[1]:
         #################################################################
         # B a s i c   S k i l l s
-        st.subheader("Skills")
+        st.header("Skills",divider = 'rainbow')
         if 'skills' in sess.race['proficiencies']:
             race_skills = sess.race['proficiencies']['skills']
-            st.markdown(f"**{sess.race['name']} skills:**".title())
+            st.subheader(f"**{sess.race['name']} skills:**".title())
             skr_col = st.columns([1,1,1,1])
             k = 0
             for rs in race_skills:
@@ -163,7 +163,7 @@ def form_create_character(DATA_DIR):
                 k += 1
         if 'skills' in sess.clas['proficiencies']:
             clas_skills = sess.clas['proficiencies']['skills']
-            st.markdown(f"**{sess.clas['name']} skills:**".title())
+            st.subheader(f"**{sess.clas['name']} skills:**".title())
             skc_col = st.columns([1,1,1,1])
             k = 0
             for cs in clas_skills:
@@ -201,8 +201,8 @@ def form_create_character(DATA_DIR):
         if "cantrip list" in sess.clas['levels'][1]:
             num_cantrip = sess.clas['levels'][1]['cantrip list']
             cantrip_book = sess.clas['proficiencies']['spells'][0]
-            st.subheader("Cantrips")
-            st.markdown(f"**{sess.clas['name']} cantrips:**".title())
+            st.header("Cantrips",divider = 'rainbow')
+            st.subheader(f"**{sess.clas['name']} cantrips:**".title())
             cal_col = st.columns([1,1,1,1])
             for k in range(num_cantrip):
                 with cal_col[k]:
@@ -238,10 +238,10 @@ def form_create_character(DATA_DIR):
                 else: num_spell += val * (sess[abi + "_modifier"])
             num_spell = max(num_spell, 1)
             spell_book = sess.clas['proficiencies']['spells'][1]
-            st.subheader("Spells")
-            st.markdown(f"**{sess.clas_name} level 1 spells:**".title())
-            sp1_col = st.columns([1,1,1])
-            for k in range(min(3,num_spell)):
+            st.header("Spells",divider = 'rainbow')
+            st.subheader(f"**{sess.clas_name} level 1 spells:**".title())
+            sp1_col = st.columns([1,1,1,1])
+            for k in range(min(4,num_spell)):
                 with sp1_col[k]:
                     st.selectbox(
                         "Spells",
@@ -249,10 +249,10 @@ def form_create_character(DATA_DIR):
                         key = "spell_" + str(k),
                         label_visibility = "collapsed",
                         index = k)
-            if num_spell > 3:
-                sp2_col = st.columns([1,1,1])
-                for k in range(3,num_spell):
-                    with sp2_col[k-3]:
+            if num_spell > 4:
+                sp2_col = st.columns([1,1,1,1])
+                for k in range(4,num_spell):
+                    with sp2_col[k-4]:
                         st.selectbox(
                             "Spells",
                             sorted(spell_book),
@@ -281,20 +281,24 @@ def form_create_character(DATA_DIR):
         #################################################################
         # T r a i t s
         if 'traits' in sess.race:
-            st.subheader(f"**{sess.race['name'].title()} Traits**")
+            st.header(f"**{sess.race['name'].title()} Traits**",divider = 'rainbow')
             for trait, description in sess.race['traits'].items():
-                st.markdown(f"**{trait.title()}**")
+                st.subheader(f"{trait.title()}")
                 st.markdown(f"{description}")
         if 'traits' in sess.clas['levels'][1]:
-            st.subheader(f"**{sess.clas['name'].title()} Traits**")
+            st.header(f"**{sess.clas['name'].title()} Traits**",divider = 'rainbow')
             for trait, description in sess.clas['levels'][1]['traits'].items():
-                st.markdown(f"**{trait.title()}**")
+                st.subheader(f"{trait.title()}")
+                st.markdown(f"{description}")
+        if 'traits' in sess.back:
+            st.header(f"**{sess.back['name'].title()} Traits**",divider = 'rainbow')
+            for trait, description in sess.back['traits'].items():
+                st.subheader(f"{trait.title()}")
                 st.markdown(f"{description}")
 
     with ccr_tab[3]:
         #################################################################
         # P r o f i c i e n c i e s
-        pro_col = st.columns([1,5])
         pro_types = ['weapons','armor','tools','languages']
         for p in pro_types:
             pro_list = []
@@ -304,8 +308,9 @@ def form_create_character(DATA_DIR):
             pro_list = sorted(list(set(pro_list)))
             if p == 'languages': language_known = pro_list
             if len(pro_list) == 0: pro_list = ['None']
-            with pro_col[0]: st.markdown(p.title())
-            with pro_col[1]: st.markdown(", ".join(pro_list).title())
+            st.header(p.title(),divider='rainbow')
+            for pl in pro_list:
+                st.markdown(f"- {pl.title()}")
         if 'any' in language_known:
             language_list = [
                 "common",
@@ -343,115 +348,159 @@ def form_create_character(DATA_DIR):
         # I n v e n t o r y / E q u i p m e n t
 
     with ccr_tab[5]:
-        #################################################################
-        # D e s c r i p t i o n
-        st.header("Basics",divider = 'rainbow')
-        gen_col = st.columns([1,2,1])
-        with gen_col[0]: st.subheader("Gender")
-        with gen_col[1]:
-            st.text_input(
-                "Gender",
-                key='gender',
-                label_visibility="collapsed"
-                )
-        st.markdown(sess.race['size'])
-        siz_col = st.columns([1,2,1])
-        with siz_col[0]: st.subheader("Height")
-        with siz_col[1]:
-            hei_col = st.columns([1,1,1,1])
-            with hei_col[0]:
-                st.text_input(
-                    "Height Feet",
-                    key='height_feet',
-                    label_visibility="collapsed"
-                    )
-            with hei_col[1]: st.markdown(f"**ft**")
-            with hei_col[2]:
-                st.text_input(
-                    "Height Inches",
-                    key='height_inches',
-                    label_visibility="collapsed"
-                    )
-            with hei_col[3]:
-                st.markdown(f"**in**")
-        with siz_col[0]: st.subheader("Weight")
-        with siz_col[1]:
-            wei_col = st.columns([1,1,1,1])
-            with wei_col[0]:
-                st.text_input(
-                    "Weight",
-                    key='weight',
-                    label_visibility="collapsed"
-                    )
-            with wei_col[1]: st.markdown(f"**lbs**")
-        st.markdown(sess.race['age'])
-        age_col = st.columns([2,1,1,4])
-        with age_col[0]: st.subheader("Age")
-        with age_col[1]:
-            st.text_input(
-                "Age",
-                key='age',
-                label_visibility="collapsed"
-                )
-        with age_col[2]: st.markdown(f"**years**")
-        st.markdown(sess.race['alignment'])
-        ali_col = st.columns([1,3])
-        with ali_col[0]: st.subheader("Alignment")
-        with ali_col[1]:
-            onm_col = st.columns([1,1,1,1])
-            with onm_col[0]:
-                st.selectbox(
-                    "Order",
-                    ['Lawful','Neutral','Chaotic'],
-                    key = 'alignment_order',
-                    label_visibility = 'collapsed',
-                    index = None
-                )
-            with onm_col[1]: st.markdown(f"**Order**")
-            with onm_col[2]:
-                st.selectbox(
-                    "Morality",
-                    ['Good','Neutral','Evil'],
-                    key = 'alignment_morality',
-                    label_visibility = 'collapsed',
-                    index = None
-                )
-            with onm_col[3]: st.markdown(f"**Morality**")
-        if sess.alignment_order == 'Lawful' and sess.alignment_morality == 'Good':
-            sess.alignment = "**Lawful good** (LG) creatures can be counted on to do the right thing as expected by society. Gold dragons, paladins, and most dwarves are lawful good."
-        elif sess.alignment_order == 'Neutral' and sess.alignment_morality == 'Good':
-            sess.alignment = "**Neutral good** (NG) creatures do the best they can to help others according to their needs. Many celestials, healers, and kind-hearted folk are neutral good."
-        elif sess.alignment_order == 'Chaotic' and sess.alignment_morality == 'Good':
-            sess.alignment = "**Chaotic good** (CG) creatures act as their conscience directs, with little regard for rules. Many elves, rebels, and freedom fighters are chaotic good."
-        elif sess.alignment_order == 'Lawful' and sess.alignment_morality == 'Neutral':
-            sess.alignment = "**Lawful neutral** (LN) creatures act in accordance with law, tradition, or personal codes. Judges, bureaucrats, and disciplined monks often follow this alignment."
-        elif sess.alignment_order == 'Neutral' and sess.alignment_morality == 'Neutral':
-            sess.alignment = "**Neutral** (N) creatures prefer to maintain balance and avoid taking sides. Druids, some animals, and those indifferent to conflict are often neutral."
-        elif sess.alignment_order == 'Chaotic' and sess.alignment_morality == 'Neutral':
-            sess.alignment = "**Chaotic neutral** (CN) creatures follow their whims and desires, unbound by laws or expectations. Rogues, eccentrics, and free spirits may be chaotic neutral."
-        elif sess.alignment_order == 'Lawful' and sess.alignment_morality == 'Evil':
-            sess.alignment = "**Lawful evil** (LE) creatures methodically take what they want within the limits of a code or tradition. Devils and tyrants often fall into this alignment."
-        elif sess.alignment_order == 'Neutral' and sess.alignment_morality == 'Evil':
-            sess.alignment = "**Neutral evil** (NE) creatures do whatever they can get away with, without compassion or qualms. Assassins, schemers, and self-serving villains fit here."
-        elif sess.alignment_order == 'Chaotic' and sess.alignment_morality == 'Evil':
-            sess.alignment = "**Chaotic evil** (CE) creatures act with arbitrary violence and cruelty, driven by selfishness or madness. Demons, savage warlords, and monstrous villains are chaotic evil."
-        else:
-            form_error = True
-        if 'alignment' in sess: st.markdown(f"{sess.alignment}")
+        des_tab = st.tabs([
+            "Player",
+            "Race",
+            "Class",
+            "Background"
+        ])
 
-        sup_race = ['dwarf','elf','gnome','halfling']
-        st.header(f"{sess.race['name'].title()}",divider = 'rainbow')
-        for sr in sup_race:
-            if sr in sess.race['name'] and sess.race['name'] not in sr:
-                st.subheader(f"{sr}")
-                st.markdown(f"{sess.races[sess.race['name']]['description'][sr]}")
-        st.subheader(f"{sess.race['name']}")
-        st.markdown(f"{sess.race['description'][sess.race['name']]}")
-        for title, description in sess.race['description'].items():
-            if title != sess.race['name'] and title not in sup_race:
-                st.subheader(f"{title.title()}")
-                st.markdown(f"{sess.race['description'][title].title()}")
+        with des_tab[0]:
+            #################################################################
+            # D e s c r i p t i o n
+            st.header("Basics",divider = 'rainbow')
+            gen_col = st.columns([1,2,1])
+            with gen_col[0]: st.subheader("Gender")
+            with gen_col[1]:
+                st.text_input(
+                    "Gender",
+                    key='gender',
+                    label_visibility="collapsed"
+                    )
+            st.markdown(sess.race['size'])
+            siz_col = st.columns([1,2,1])
+            with siz_col[0]: st.subheader("Height")
+            with siz_col[1]:
+                hei_col = st.columns([1,1,1,1])
+                with hei_col[0]:
+                    st.text_input(
+                        "Height Feet",
+                        key='height_feet',
+                        label_visibility="collapsed"
+                        )
+                with hei_col[1]: st.markdown(f"**ft**")
+                with hei_col[2]:
+                    st.text_input(
+                        "Height Inches",
+                        key='height_inches',
+                        label_visibility="collapsed"
+                        )
+                with hei_col[3]:
+                    st.markdown(f"**in**")
+            with siz_col[0]: st.subheader("Weight")
+            with siz_col[1]:
+                wei_col = st.columns([1,1,1,1])
+                with wei_col[0]:
+                    st.text_input(
+                        "Weight",
+                        key='weight',
+                        label_visibility="collapsed"
+                        )
+                with wei_col[1]: st.markdown(f"**lbs**")
+            st.markdown(sess.race['age'])
+            age_col = st.columns([2,1,1,4])
+            with age_col[0]: st.subheader("Age")
+            with age_col[1]:
+                st.text_input(
+                    "Age",
+                    key='age',
+                    label_visibility="collapsed"
+                    )
+            with age_col[2]: st.markdown(f"**years**")
+            #################################################################
+            # A l i g n m e n t
+            st.markdown(sess.race['alignment'])
+            ali_col = st.columns([1,3])
+            with ali_col[0]: st.subheader("Alignment")
+            with ali_col[1]:
+                onm_col = st.columns([1,1,1,1])
+                with onm_col[0]:
+                    st.selectbox(
+                        "Order",
+                        ['Lawful','Neutral','Chaotic'],
+                        key = 'alignment_order',
+                        label_visibility = 'collapsed',
+                        index = None
+                    )
+                with onm_col[1]: st.markdown(f"**Order**")
+                with onm_col[2]:
+                    st.selectbox(
+                        "Morality",
+                        ['Good','Neutral','Evil'],
+                        key = 'alignment_morality',
+                        label_visibility = 'collapsed',
+                        index = None
+                    )
+                with onm_col[3]: st.markdown(f"**Morality**")
+            if sess.alignment_order == 'Lawful' and sess.alignment_morality == 'Good':
+                sess.alignment = "**Lawful good** (LG) creatures can be counted on to do the right thing as expected by society. Gold dragons, paladins, and most dwarves are lawful good."
+            elif sess.alignment_order == 'Neutral' and sess.alignment_morality == 'Good':
+                sess.alignment = "**Neutral good** (NG) creatures do the best they can to help others according to their needs. Many celestials, healers, and kind-hearted folk are neutral good."
+            elif sess.alignment_order == 'Chaotic' and sess.alignment_morality == 'Good':
+                sess.alignment = "**Chaotic good** (CG) creatures act as their conscience directs, with little regard for rules. Many elves, rebels, and freedom fighters are chaotic good."
+            elif sess.alignment_order == 'Lawful' and sess.alignment_morality == 'Neutral':
+                sess.alignment = "**Lawful neutral** (LN) creatures act in accordance with law, tradition, or personal codes. Judges, bureaucrats, and disciplined monks often follow this alignment."
+            elif sess.alignment_order == 'Neutral' and sess.alignment_morality == 'Neutral':
+                sess.alignment = "**Neutral** (N) creatures prefer to maintain balance and avoid taking sides. Druids, some animals, and those indifferent to conflict are often neutral."
+            elif sess.alignment_order == 'Chaotic' and sess.alignment_morality == 'Neutral':
+                sess.alignment = "**Chaotic neutral** (CN) creatures follow their whims and desires, unbound by laws or expectations. Rogues, eccentrics, and free spirits may be chaotic neutral."
+            elif sess.alignment_order == 'Lawful' and sess.alignment_morality == 'Evil':
+                sess.alignment = "**Lawful evil** (LE) creatures methodically take what they want within the limits of a code or tradition. Devils and tyrants often fall into this alignment."
+            elif sess.alignment_order == 'Neutral' and sess.alignment_morality == 'Evil':
+                sess.alignment = "**Neutral evil** (NE) creatures do whatever they can get away with, without compassion or qualms. Assassins, schemers, and self-serving villains fit here."
+            elif sess.alignment_order == 'Chaotic' and sess.alignment_morality == 'Evil':
+                sess.alignment = "**Chaotic evil** (CE) creatures act with arbitrary violence and cruelty, driven by selfishness or madness. Demons, savage warlords, and monstrous villains are chaotic evil."
+            else:
+                form_error = True
+            if 'alignment' in sess: st.markdown(f"{sess.alignment}")
+        
+        with des_tab[1]:
+            #################################################################
+            # R a c e   D e s c r i p t i o n
+            sup_race = ['dwarf','elf','gnome','halfling']
+            st.header(f"{sess.race['name'].title()}",divider = 'rainbow')
+            for sr in sup_race:
+                if sr in sess.race['name'] and sess.race['name'] not in sr:
+                    st.markdown(f"{sess.race['description'][sr]}")
+            st.markdown(f"{sess.race['description'][sess.race['name']]}")
+            for title, description in sess.race['description'].items():
+                if title != sess.race['name'] and title not in sup_race:
+                    st.subheader(f"{title.title()}")
+                    st.markdown(f"{sess.race['description'][title]}")
+        
+        with des_tab[2]:
+            #################################################################
+            # C l a s s   D e s c r i p t i o n
+            st.header(f"{sess.clas['name'].title()}",divider = 'rainbow')
+            st.markdown(f"{sess.clas['description'][sess.clas['name']]}")
+            for title, description in sess.clas['description'].items():
+                if title != sess.clas['name']:
+                    st.subheader(f"{title.title()}")
+                    st.markdown(f"{sess.clas['description'][title]}")
+        
+        with des_tab[3]:
+            #################################################################
+            # B a c k g r o u n d   D e s c r i p t i o n
+            st.header(f"{sess.back['name'].title()}",divider = 'rainbow')
+            if 'variation' in sess.back.keys():
+                bde_col = st.columns([1,2])
+                with bde_col[0]:
+                    var_name = list(sess.back['variation'].keys())[0]
+                    st.subheader(var_name.title())
+                with bde_col[1]:
+                    st.selectbox(
+                        "Background Variation",
+                        sess.back['variation'][var_name],
+                        key = "back_variation",
+                        label_visibility = "collapsed"
+                    )
+            st.markdown(f"{sess.back['description'][sess.back['name']]}")
+            for title, description in sess.back['description'].items():
+                if title != sess.back['name']:
+                    st.subheader(f"{title.title()}")
+                    st.markdown(f"{sess.back['description'][title]}")
 
+    st.header("",divider = "rainbow")
     if st.button("💾 Save Character"):
         sess.character = {
             "name": sess.name,

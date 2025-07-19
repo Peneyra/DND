@@ -7,7 +7,7 @@ def form_main(DATA_DIR):
 
     if st.session_state.character == {}:
         st.session_state.character = next(iter(st.session_state.characters.values()))
-
+    print(st.session_state.initiative)
     if st.session_state.initiative["visible"]:
         st.subheader("⚔️ Initiative Tracker")
         st.write(" || ".join(f"{v}" for \

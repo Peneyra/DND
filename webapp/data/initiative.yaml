@@ -1,5 +1,4 @@
-initiative:
-  visible: False
-  order: 
-    - 1
-    - 2
+visible: False
+order: 
+- 1
+- 2

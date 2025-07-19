@@ -8,6 +8,8 @@ def load_yaml(path):
 def save_yaml(path,data,data_old):
     with open(path + ".old", 'w') as f: yaml.dump(data_old,f)
     with open(path, 'w') as f: return yaml.dump(data,f)
+    print("Saved new data to " + path)
+    print("Moved old data to " + path + ".old")
 
 def update_1(data,val):
     output = data
@@ -20,25 +22,26 @@ def update_1(data,val):
 
 #mode = "edit yaml"
 #mode = "format spells"
-mode = "check spells"
+#mode = "check spells"
+mode = "rebuild yaml"
 #FILE = "scratch.yaml"
-FILE = "character_creation.yaml"
+FILE = "phb_backgrounds.yaml"
 
 
 DATA_DIR = os.path.dirname(os.path.abspath(__file__)) + "/data/"
 
-print("Here are your files:")
-try:
-    for item in os.listdir(DATA_DIR): print(item)
-except:
-    None
+# print("Here are your files:")
+# try:
+#     for item in os.listdir(DATA_DIR): print(item)
+# except:
+#     None
 
-if mode == "edit yaml" or mode == "check spells":
+if mode in {"edit yaml", "check spells","rebuild yaml"}:
     try:
         data = load_yaml(DATA_DIR + FILE)
         data_old = data.copy()
-    except:
-        print(f"{FILE} not found.")
+    except Exception as e:
+        print(f"{e}.")
 
 elif mode == "format spells":
     try:
@@ -117,3 +120,7 @@ elif mode == "check spells":
                 for s in sorted(list(data['classes'][c]['proficiencies']['spells'][w])):
                     print("  - " + s)
 
+elif mode == "rebuild yaml":
+    for k, v in data.items():
+        data[k]['name'] = k
+    save_yaml(DATA_DIR + FILE,data,data_old)
