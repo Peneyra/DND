@@ -144,138 +144,170 @@ def form_create_character(DATA_DIR):
         hpd_col[1].subheader(f"**Attack Damage: {','.join(damage_die)}**")
 
     with ccr_tab[1]:
-        #################################################################
-        # B a s i c   S k i l l s
-        st.header("Skills",divider = 'rainbow')
-        if 'skills' in sess.race['proficiencies']:
-            race_skills = sess.race['proficiencies']['skills']
-            st.subheader(f"**{sess.race['name']} skills:**".title())
-            skr_col = st.columns([1,1,1,1])
-            k = 0
-            for rs in race_skills:
-                with skr_col[k]:
-                    st.selectbox(
-                        "Race Skills",
-                        sorted(rs),
-                        key = "race_skills_" + str(k),
-                        label_visibility = "collapsed",
-                        index = k)
-                k += 1
-        if 'skills' in sess.clas['proficiencies']:
-            clas_skills = sess.clas['proficiencies']['skills']
-            st.subheader(f"**{sess.clas['name']} skills:**".title())
-            skc_col = st.columns([1,1,1,1])
-            k = 0
-            for cs in clas_skills:
-                with skc_col[k]:
-                    st.selectbox(
-                        "Class Skills",
-                        sorted(cs),
-                        key = "clas_skills_" + str(k),
-                        label_visibility = "collapsed",
-                        index = k)
-                k += 1
+        scs_tab = st.tabs([
+            "Skills",
+            "Cantrips",
+            "Spells"
+        ])
 
-        selected_skills = []
-        for k in range(4):
-            if "race_skills_" + str(k) in sess:
-                selected_skills.append(sess['race_skills_' + str(k)])
-        for k in range(4):
-            if "clas_skills_" + str(k) in sess:
-                selected_skills.append(sess['clas_skills_' + str(k)])
-        skills_duplicate = [
-            sd for sd, 
-            count in Counter(selected_skills).items() if count > 1
-            ]
+        with scs_tab[0]:
+            #################################################################
+            # B a s i c   S k i l l s
+            st.header("Skills",divider = 'rainbow')
+            if 'skills' in sess.race['proficiencies']:
+                race_skills = sess.race['proficiencies']['skills']
+                st.subheader(f"**{sess.race['name']} skills:**".title())
+                skr_col = st.columns([1,1,1,1])
+                k = 0
+                for rs in race_skills:
+                    with skr_col[k]:
+                        st.selectbox(
+                            "Race Skills",
+                            sorted(rs),
+                            key = "race_skills_" + str(k),
+                            label_visibility = "collapsed",
+                            index = k)
+                    k += 1
+            if 'skills' in sess.clas['proficiencies']:
+                clas_skills = sess.clas['proficiencies']['skills']
+                st.subheader(f"**{sess.clas['name']} skills:**".title())
+                skc_col = st.columns([1,1,1,1])
+                k = 0
+                for cs in clas_skills:
+                    with skc_col[k]:
+                        st.selectbox(
+                            "Class Skills",
+                            sorted(cs),
+                            key = "clas_skills_" + str(k),
+                            label_visibility = "collapsed",
+                            index = k)
+                    k += 1
+            if 'skills' in sess.back['proficiencies']:
+                back_skills = sess.back['proficiencies']['skills']
+                st.subheader(f"**{sess.back['name']} skills:**".title())
+                skb_col = st.columns([1,1,1,1])
+                k = 0
+                for bs in back_skills:
+                    with skb_col[k]:
+                        if len(bs) == 1:
+                            st.markdown(f"**{bs[0]}**")
+                            sess['back_skills_' + str(k)] = bs[0]
+                        else:
+                            st.selectbox(
+                                "Background Skills",
+                                sorted(bs),
+                                key = "back_skills_" + str(k),
+                                label_visibility = "collapsed",
+                                index = k)
+                    k += 1
 
-        if len(skills_duplicate) > 0:
-            form_error = True
-            st.markdown(f"**W A R N I N G!!!**")
-            st.markdown(f"Turn back! You have duplicate skills chosen! {skills_duplicate}")
-            st.markdown(f"**W A R N I N G!!!**")
-        else:
-            form_error = False
-
-        #################################################################
-        # C a n t r i p s   a n d   S p e l l s
-        if "cantrip list" in sess.clas['levels'][1]:
-            num_cantrip = sess.clas['levels'][1]['cantrip list']
-            cantrip_book = sess.clas['proficiencies']['spells'][0]
-            st.header("Cantrips",divider = 'rainbow')
-            st.subheader(f"**{sess.clas['name']} cantrips:**".title())
-            cal_col = st.columns([1,1,1,1])
-            for k in range(num_cantrip):
-                with cal_col[k]:
-                    st.selectbox(
-                        "Cantrip",
-                        sorted(cantrip_book),
-                        key = "cantrip_" + str(k),
-                        label_visibility = "collapsed",
-                        index = k)
-                        
-            selected_cantrips = []
-            for k in range(num_cantrip):
-                if "cantrip_" + str(k) in sess:
-                    selected_cantrips.append(sess['cantrip_' + str(k)])
-            cantrips_duplicate = [
+            selected_skills = []
+            for k in range(4):
+                if "race_skills_" + str(k) in sess:
+                    selected_skills.append(sess['race_skills_' + str(k)])
+            for k in range(4):
+                if "clas_skills_" + str(k) in sess:
+                    selected_skills.append(sess['clas_skills_' + str(k)])
+            for k in range(4):
+                if "back_skills_" + str(k) in sess:
+                    selected_skills.append(sess['back_skills_' + str(k)])
+            skills_duplicate = [
                 sd for sd, 
-                count in Counter(selected_cantrips).items() if count > 1
+                count in Counter(selected_skills).items() if count > 1
                 ]
 
-            if len(cantrips_duplicate) > 0:
+            if len(skills_duplicate) > 0:
                 form_error = True
                 st.markdown(f"**W A R N I N G!!!**")
-                st.markdown(f"Turn back! You have duplicate cantrips chosen! {cantrips_duplicate}")
+                st.markdown(f"Turn back! You have duplicate skills chosen! {skills_duplicate}")
                 st.markdown(f"**W A R N I N G!!!**")
             else:
                 form_error = False
 
-        if "spell list" in sess.clas['levels'][1]:
-            spell_list = sess.clas['levels'][1]['spell list']
-            num_spell = 0
-            for abi, val in spell_list.items():
-                if abi == 'any': num_spell += val
-                else: num_spell += val * (sess[abi + "_modifier"])
-            num_spell = max(num_spell, 1)
-            spell_book = sess.clas['proficiencies']['spells'][1]
-            st.header("Spells",divider = 'rainbow')
-            st.subheader(f"**{sess.clas_name} level 1 spells:**".title())
-            sp1_col = st.columns([1,1,1,1])
-            for k in range(min(4,num_spell)):
-                with sp1_col[k]:
-                    st.selectbox(
-                        "Spells",
-                        sorted(spell_book),
-                        key = "spell_" + str(k),
-                        label_visibility = "collapsed",
-                        index = k)
-            if num_spell > 4:
-                sp2_col = st.columns([1,1,1,1])
-                for k in range(4,num_spell):
-                    with sp2_col[k-4]:
+        with scs_tab[1]:
+            #################################################################
+            # C a n t r i p s
+            if "cantrip list" in sess.clas['levels'][1]:
+                num_cantrip = sess.clas['levels'][1]['cantrip list']
+                cantrip_book = sess.clas['proficiencies']['spells'][0]
+                st.header("Cantrips",divider = 'rainbow')
+                st.subheader(f"**{sess.clas['name']} cantrips:**".title())
+                cal_col = st.columns([1,1,1,1])
+                for k in range(num_cantrip):
+                    with cal_col[k]:
+                        st.selectbox(
+                            "Cantrip",
+                            sorted(cantrip_book),
+                            key = "cantrip_" + str(k),
+                            label_visibility = "collapsed",
+                            index = k)
+                            
+                selected_cantrips = []
+                for k in range(num_cantrip):
+                    if "cantrip_" + str(k) in sess:
+                        selected_cantrips.append(sess['cantrip_' + str(k)])
+                cantrips_duplicate = [
+                    sd for sd, 
+                    count in Counter(selected_cantrips).items() if count > 1
+                    ]
+
+                if len(cantrips_duplicate) > 0:
+                    form_error = True
+                    st.markdown(f"**W A R N I N G!!!**")
+                    st.markdown(f"Turn back! You have duplicate cantrips chosen! {cantrips_duplicate}")
+                    st.markdown(f"**W A R N I N G!!!**")
+                else:
+                    form_error = False
+
+        with scs_tab[2]:
+            #################################################################
+            # S p e l l s
+            if "spell list" in sess.clas['levels'][1]:
+                spell_list = sess.clas['levels'][1]['spell list']
+                num_spell = 0
+                for abi, val in spell_list.items():
+                    if abi == 'any': num_spell += val
+                    else: num_spell += val * (sess[abi + "_modifier"])
+                num_spell = max(num_spell, 1)
+                spell_book = sess.clas['proficiencies']['spells'][1]
+                st.header("Spells",divider = 'rainbow')
+                st.subheader(f"**{sess.clas_name} level 1 spells:**".title())
+                sp1_col = st.columns([1,1,1,1])
+                for k in range(min(4,num_spell)):
+                    with sp1_col[k]:
                         st.selectbox(
                             "Spells",
                             sorted(spell_book),
                             key = "spell_" + str(k),
                             label_visibility = "collapsed",
                             index = k)
-        
-            selected_spells = []
-            for k in range(num_spell):
-                if "spell_" + str(k) in sess:
-                    selected_spells.append(sess['spell_' + str(k)])
-            spells_duplicate = [
-                sd for sd, 
-                count in Counter(selected_spells).items() if count > 1
-                ]
+                if num_spell > 4:
+                    sp2_col = st.columns([1,1,1,1])
+                    for k in range(4,num_spell):
+                        with sp2_col[k-4]:
+                            st.selectbox(
+                                "Spells",
+                                sorted(spell_book),
+                                key = "spell_" + str(k),
+                                label_visibility = "collapsed",
+                                index = k)
+            
+                selected_spells = []
+                for k in range(num_spell):
+                    if "spell_" + str(k) in sess:
+                        selected_spells.append(sess['spell_' + str(k)])
+                spells_duplicate = [
+                    sd for sd, 
+                    count in Counter(selected_spells).items() if count > 1
+                    ]
 
-            if len(spells_duplicate) > 0:
-                form_error = True
-                st.markdown(f"**W A R N I N G!!!**")
-                st.markdown(f"Turn back! You have duplicate cantrips chosen! {spells_duplicate}")
-                st.markdown(f"**W A R N I N G!!!**")
-            else:
-                form_error = False
+                if len(spells_duplicate) > 0:
+                    form_error = True
+                    st.markdown(f"**W A R N I N G!!!**")
+                    st.markdown(f"Turn back! You have duplicate cantrips chosen! {spells_duplicate}")
+                    st.markdown(f"**W A R N I N G!!!**")
+                else:
+                    form_error = False
 
     with ccr_tab[2]:
         #################################################################

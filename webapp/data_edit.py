@@ -122,5 +122,12 @@ elif mode == "check spells":
 
 elif mode == "rebuild yaml":
     for k, v in data.items():
-        data[k]['name'] = k
+        if 'skills' in data[k]['proficiencies']:
+            sk = []
+            for skill_list in data[k]['proficiencies']['skills']:
+                skills = []
+                for skill in skill_list:
+                    skills.append(skill.title())
+                sk.append(skills)
+        data[k]['proficiencies']['skills'] = sk
     save_yaml(DATA_DIR + FILE,data,data_old)

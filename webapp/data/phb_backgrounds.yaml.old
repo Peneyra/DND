@@ -66,8 +66,30 @@ charlatan:
   name: charlatan
   proficiencies:
     skills:
-    - deception
-    - sleight of hand
+    - - D
+      - E
+      - C
+      - E
+      - P
+      - T
+      - I
+      - O
+      - N
+    - - S
+      - L
+      - E
+      - I
+      - G
+      - H
+      - T
+      - ' '
+      - O
+      - F
+      - ' '
+      - H
+      - A
+      - N
+      - D
     tools:
     - disguise kit
     - forgery kit
@@ -103,8 +125,8 @@ criminal:
   name: criminal
   proficiencies:
     skills:
-    - - deception
-    - - stealth
+    - - Deception
+    - - Stealth
     tools:
     - gaming set (one type)
     - thieves' tools
@@ -140,8 +162,8 @@ entertainer:
   name: entertainer
   proficiencies:
     skills:
-    - - acrobatics
-    - - performance
+    - - Acrobatics
+    - - Performance
     tools:
     - disguise kit
     - musical instrument (one type)
@@ -181,8 +203,8 @@ folk hero:
   name: folk hero
   proficiencies:
     skills:
-    - - animal handling
-    - - survival
+    - - Animal Handling
+    - - Survival
     tools:
     - artisan's tools (one type)
     - vehicles (land)
@@ -227,8 +249,8 @@ guild artisan:
     languages:
     - any
     skills:
-    - - insight
-    - - persuasion
+    - - Insight
+    - - Persuasion
     tools:
     - artisan's tools (one type)
   traits:
@@ -284,8 +306,8 @@ hermit:
     languages:
     - any
     skills:
-    - - medicine
-    - - religion
+    - - Medicine
+    - - Religion
     tools:
     - herbalism kit
   traits:
@@ -348,8 +370,8 @@ noble:
     languages:
     - any
     skills:
-    - - history
-    - - persuasion
+    - - History
+    - - Persuasion
     tools:
     - gaming set (one type)
   traits:
@@ -380,8 +402,8 @@ outlander:
     languages:
     - any
     skills:
-    - - athletics
-    - - survival
+    - - Athletics
+    - - Survival
     tools:
     - musical instrument (one type)
   traits:
@@ -420,8 +442,8 @@ sage:
     - any
     - any
     skills:
-    - - arcana
-    - - history
+    - - Arcana
+    - - History
   traits:
     researcher: When you attempt to learn or recall a piece of lore, if you do not
       know that information, you often know where and from whom you can obtain it.
@@ -463,8 +485,8 @@ sailor:
   name: sailor
   proficiencies:
     skills:
-    - - athletics
-    - - perception
+    - - Athletics
+    - - Perception
     tools:
     - navigator's tools
     - vehicles (water)
@@ -499,8 +521,8 @@ soldier:
   name: soldier
   proficiencies:
     skills:
-    - - athletics
-    - - intimidation
+    - - Athletics
+    - - Intimidation
     tools:
     - gaming set (one type)
     - vehicles (land)
@@ -544,8 +566,8 @@ urchin:
   name: urchin
   proficiencies:
     skills:
-    - - sleight of hand
-    - - stealth
+    - - Sleight Of Hand
+    - - Stealth
     tools:
     - disguise kit
     - thieves' tools
