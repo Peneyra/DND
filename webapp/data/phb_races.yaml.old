@@ -132,10 +132,10 @@ dwarf (hill):
       highly sought after for their courage and loyalty.
     dwarf: "Kingdoms rich in ancient grandeur, halls carved into the roots of mountains,\
       \ the echoing of picks and hammers in deep mines and blazing forges, a commitment\
-      \ to clan and tradition, and a burning hatred of goblins and orcs\
-      \ these common threads unite all dwarves."
+      \ to clan and tradition, and a burning hatred of goblins and orcs\xE2\u20AC\u201D\
+      these common threads unite all dwarves."
     gods gold and clans: "Dwarves who take up the adventuring life might be motivated\
-      \ by a desire for treasure for its own sake, for a specific purpose,\
+      \ by a desire for treasure\xE2\u20AC\u201Dfor its own sake, for a specific purpose,\
       \ or even out of an altruistic desire to help others. Other dwarves are driven\
       \ by the command or inspiration of a deity, a direct calling or simply a desire\
       \ to bring glory to one of the dwarf gods. Clan and ancestry are also important\
@@ -174,7 +174,7 @@ dwarf (hill):
       \ for any of the larger folk. Dwarves pride themselves on their clans and their\
       \ traditions, tracing their ancestry back hundreds or even thousands of years.\
       \ This deep sense of heritage and respect for their ancestors shapes every aspect\
-      \ of a dwarf's life. Their names are taken from the histories\
+      \ of a dwarf\xE2\u20AC\u2122s life. Their names are taken from the histories\
       \ of those clans, and they are expected to uphold the legacy of their people.\
       \ The typical dwarf is lawful, believing firmly in the benefits of a well-ordered\
       \ society. They tend to value honor and loyalty above all else and distrust\
@@ -191,10 +191,10 @@ dwarf (hill):
     - brewer's supplies
     - mason's tools
     weapons:
-    - battleaxes
-    - handaxes
-    - light hammers
-    - warhammers
+    - battleaxe
+    - handaxe
+    - light hammer
+    - warhammer
   size: Dwarves stand between 4 and 5 feet tall and average about  150 pounds. Your
     size is Medium.
   speed: Your base walking speed is 25 feet. Your speed is not  reduced by wearing
@@ -241,10 +241,10 @@ dwarf (mountain):
       highly sought after for their courage and loyalty.
     dwarf: "Kingdoms rich in ancient grandeur, halls carved into the roots of mountains,\
       \ the echoing of picks and hammers in deep mines and blazing forges, a commitment\
-      \ to clan and tradition, and a burning hatred of goblins and orcs\
-      \these common threads unite all dwarves."
+      \ to clan and tradition, and a burning hatred of goblins and orcs\xE2\u20AC\u201D\
+      these common threads unite all dwarves."
     gods gold and clans: "Dwarves who take up the adventuring life might be motivated\
-      \ by a desire for treasure for its own sake, for a specific purpose,\
+      \ by a desire for treasure\xE2\u20AC\u201Dfor its own sake, for a specific purpose,\
       \ or even out of an altruistic desire to help others. Other dwarves are driven\
       \ by the command or inspiration of a deity, a direct calling or simply a desire\
       \ to bring glory to one of the dwarf gods. Clan and ancestry are also important\
@@ -285,7 +285,7 @@ dwarf (mountain):
       \ for any of the larger folk. Dwarves pride themselves on their clans and their\
       \ traditions, tracing their ancestry back hundreds or even thousands of years.\
       \ This deep sense of heritage and respect for their ancestors shapes every aspect\
-      \ of a dwarf's life. Their names are taken from the histories\
+      \ of a dwarf\xE2\u20AC\u2122s life. Their names are taken from the histories\
       \ of those clans, and they are expected to uphold the legacy of their people.\
       \ The typical dwarf is lawful, believing firmly in the benefits of a well-ordered\
       \ society. They tend to value honor and loyalty above all else and distrust\
@@ -305,10 +305,10 @@ dwarf (mountain):
     - brewer's supplies
     - mason's tools
     weapons:
-    - battleaxes
-    - handaxes
-    - light hammers
-    - warhammers
+    - battleaxe
+    - handaxe
+    - light hammer
+    - warhammer
   size: Dwarves stand between 4 and 5 feet tall and average about  150 pounds. Your
     size is Medium.
   speed: Your base walking speed is 25 feet. Your speed is not  reduced by wearing
@@ -510,10 +510,10 @@ elf (high):
     skills:
     - - Perception
     weapons:
-    - longswords
-    - shortswords
-    - shortbows
-    - longbows
+    - longsword
+    - shortsword
+    - shortbow
+    - longbow
   size: Elves range from under 5 to over 6 feet tall and have  slender builds. Your
     size is Medium.
   speed: Your base walking speed is 30 feet.
@@ -607,10 +607,10 @@ elf (wood):
     skills:
     - - Perception
     weapons:
-    - longswords
-    - shortswords
-    - longbows
-    - shortbows
+    - longsword
+    - shortsword
+    - longbow
+    - shortbow
   size: Elves range from under 5 to over 6 feet tall and have  slender builds. Your
     size is Medium.
   speed: Your base walking speed is 35 feet.
@@ -1177,15 +1177,15 @@ human:
       \ lifetime, and even the mightiest human adventurers are rarely more than a\
       \ generation removed from humble beginnings. Humans are practical, versatile,\
       \ and resourceful. They excel at learning new things, adapting to new environments,\
-      \ and finding paths to success even in nonhuman lands."
+      \ and finding paths to success\xE2\u20AC\u201Deven in nonhuman lands."
     variety in all things: "Humans are the most adaptable and ambitious people among\
       \ the common races. They have widely varying tastes, morals, and customs in\
       \ the many different lands where they have settled. When they settle, though,\
       \ they stay: they build cities to last for the ages, and great kingdoms that\
       \ can persist for long centuries. An individual human might have a relatively\
       \ short life span, but a human nation or culture preserves traditions with astonishing\
-      \ tenacity. They live fully in the present making them well suited\
-      \ to the adventuring life but also plan for the future, striving\
+      \ tenacity. They live fully in the present\xE2\u20AC\u201Dmaking them well suited\
+      \ to the adventuring life\xE2\u20AC\u201Dbut also plan for the future, striving\
       \ to leave a lasting mark. Individually and as a group, humans are adaptable\
       \ opportunists, and they stay alert to changing political and social dynamics."
   name: human
@@ -1216,7 +1216,7 @@ tiefling:
       \ have straight and tall horns like a gazelle's, and some spiral upward like\
       \ an antelope's. They have thick tails, four to five feet long, which lash or\
       \ coil around their legs when they get upset or nervous. Their canine teeth\
-      \ are sharply pointed, and their eyes are solid colors black,\
+      \ are sharply pointed, and their eyes are solid colors\xE2\u20AC\u201Dblack,\
       \ red, white, silver, or gold. Their skin tones cover the full range of human\
       \ coloration, but also include various shades of red. Their hair, cascading\
       \ down from behind their horns, is usually dark, from black or brown to dark\
@@ -1234,8 +1234,8 @@ tiefling:
     tiefling: "To be greeted with stares and whispers, to suffer violence and insult\
       \ on the street, to see mistrust and fear in every eye: this is the lot of the\
       \ tiefling. And to twist the knife, tieflings know that this is because a pact\
-      \ struck generations ago infused the essence of Asmodeus overlord\
-      \ of the Nine Hells into their bloodline. Their appearance and\
+      \ struck generations ago infused the essence of Asmodeus\xE2\u20AC\u201Doverlord\
+      \ of the Nine Hells\xE2\u20AC\u201Dinto their bloodline. Their appearance and\
       \ their nature are not their fault but the result of an ancient sin, for which\
       \ they and their children and their children's children will always be held\
       \ accountable."

@@ -18,36 +18,38 @@ barbarian:
       It grants them superhuman strength, speed, and toughness. Barbarians are comfortable
       in nature and prefer their own tribal customs over the laws and codes of civilization.
       They might rise in defense of their people or hunt down whatever threats arise.
-  equipment:
-  - - greataxe
-    - any martial melee weapon
-  - - handaxe: 2
-    - any simple weapon
-  - explorer's pack
-  - javelin: 4
-  hit dice:
-    d12: 1
-  hit points:
-    any: 12
-    con: 1
-  proficiency bonus: 2
-  traits:
-    Rage: 'In battle, you fight with primal ferocity. On your turn, you can enter
-      a rage as a bonus action. While raging, you gain the following benefits
-      if you aren''t wearing heavy armor: you have advantage on Strength checks
-      and Strength saving throws; when you make a melee weapon attack using Strength,
-      you gain a bonus to the damage roll that increases as you gain levels as
-      a barbarian (see the Rage Damage column of the Barbarian table); you have
-      resistance to bludgeoning, piercing, and slashing damage. If you are able
-      to cast spells, you can''t cast them or concentrate on them while raging.
-      Your rage lasts for 1 minute. It ends early if you are knocked unconscious
-      or if your turn ends and you haven''t attacked a hostile creature since
-      your last turn or taken damage since then. You can also end your rage on
-      your turn as a bonus action. You can rage twice per long rest at 1st level.
-      This increases at higher levels.'
-    Unarmored Defense: While you are not wearing any armor, your Armor Class equals
-      10 + your Dexterity modifier + your Constitution modifier. You can use a
-      shield and still gain this benefit.
+  levels:
+    1:
+      equipment:
+        inventory:
+        - handaxe
+        - handaxe
+        - javelin: 4
+        - explorers pack
+        main hand: greataxe
+      hit dice:
+        d12: 1
+      hit points:
+        any: 12
+        con: 1
+      proficiency bonus: 2
+      traits:
+        Rage: 'In battle, you fight with primal ferocity. On your turn, you can enter
+          a rage as a bonus action. While raging, you gain the following benefits
+          if you aren''t wearing heavy armor: you have advantage on Strength checks
+          and Strength saving throws; when you make a melee weapon attack using Strength,
+          you gain a bonus to the damage roll that increases as you gain levels as
+          a barbarian (see the Rage Damage column of the Barbarian table); you have
+          resistance to bludgeoning, piercing, and slashing damage. If you are able
+          to cast spells, you can''t cast them or concentrate on them while raging.
+          Your rage lasts for 1 minute. It ends early if you are knocked unconscious
+          or if your turn ends and you haven''t attacked a hostile creature since
+          your last turn or taken damage since then. You can also end your rage on
+          your turn as a bonus action. You can rage twice per long rest at 1st level.
+          This increases at higher levels.'
+        Unarmored Defense: While you are not wearing any armor, your Armor Class equals
+          10 + your Dexterity modifier + your Constitution modifier. You can use a
+          shield and still gain this benefit.
   name: barbarian
   primary ability:
   - str
@@ -79,13 +81,13 @@ bard:
   description:
     bard: "Humming as she traces her fingers over an ancient monument in a long-forgotten\
       \ ruin, a half-elf in rugged leathers finds knowledge springing into her mind,\
-      \ conjured forth by the magic of her song knowledge of the people\
+      \ conjured forth by the magic of her song\xE2\u20AC\u201Dknowledge of the people\
       \ who constructed the monument and the mythic saga it depicts. A stern human\
       \ warrior bangs his sword rhythmically against his scale mail, setting the tempo\
       \ for his war chant and exhorting his companions to bravery and heroism. The\
       \ magic of his song fortifies and emboldens them. Laughing as she tunes her\
       \ cittern, a gnome weaves her subtle magic over the assembled nobles, ensuring\
-      \ that her companions' words will be well received. Whether scholar,\
+      \ that her companions\xE2\u20AC\u2122 words will be well received. Whether scholar,\
       \ skald, or scoundrel, a bard weaves magic through words and music to inspire\
       \ allies, demoralize foes, manipulate minds, create illusions, and even heal\
       \ wounds."
@@ -98,8 +100,8 @@ bard:
       \ on the gratitude of audiences, much like any other entertainer. But a depth\
       \ of knowledge, a level of musical skill, and a touch of magic set bards apart\
       \ from their fellows. Only rarely do bards settle in one place for long, and\
-      \ their natural desire to travel to find new tales to tell, new\
-      \ skills to learn, and new discoveries beyond the horizon makes\
+      \ their natural desire to travel\xE2\u20AC\u201Dto find new tales to tell, new\
+      \ skills to learn, and new discoveries beyond the horizon\xE2\u20AC\u201Dmakes\
       \ an adventuring career a natural calling. Every adventure is an opportunity\
       \ to learn, practice a variety of skills, enter long-forgotten tombs, discover\
       \ lost works of magic, decipher old tomes, travel to strange places, or encounter\
@@ -123,40 +125,42 @@ bard:
       of many subjects and a natural aptitude that lets them do almost anything well.
       Bards become masters of the talents they set their minds to perfecting, from
       musical performance to esoteric knowledge.
-  cantrip list: 2
-  equipment:
-  - - rapier
-    - longsword
-    - any simple weapon
-  - - diplomat's pack
-    - entertainer's pack
-  - - lute
-    - any other musical instrument
-  - leather armor
-  - dagger
-  hit dice:
-    d8: 1
-  hit points:
-    any: 8
-    con: 1
-  proficiency bonus: 2
-  spell 1: 2
-  spell list:
-    any: 4
-  traits:
-    bardic inspiration: 'You can inspire others through stirring words or music.
-      To do so, you use a bonus action on your turn to choose one creature other
-      than yourself within 60 feet of you who can hear you. That creature gains
-      one Bardic Inspiration die, a d6. Once within the next 10 minutes, the creature
-      can roll the die and add the number rolled to one ability check, attack
-      roll, or saving throw it makes. The creature can wait until after it rolls
-      the d20 before deciding to use the Bardic Inspiration die, but must decide
-      before the GM says whether the roll succeeds or fails. Once the Bardic Inspiration
-      die is rolled, it is lost. A creature can have only one Bardic Inspiration
-      die at a time. You can use this feature a number of times equal to your
-      Charisma modifier (a minimum of once). You regain any expended uses when
-      you finish a long rest. Your Bardic Inspiration die changes as you level:
-      1st level: d6, 5th level: d8, 10th level: d10, 15th level: d12.'
+  levels:
+    1:
+      cantrip list: 2
+      equipment:
+        armor: leather armor
+        inventory:
+        - - diplomats pack
+          - entertainers pack
+        - lute
+        main hand:
+        - rapier
+        - longsword
+        off hand: dagger
+      hit dice:
+        d8: 1
+      hit points:
+        any: 8
+        con: 1
+      proficiency bonus: 2
+      spell 1: 2
+      spell list:
+        any: 4
+      traits:
+        bardic inspiration: 'You can inspire others through stirring words or music.
+          To do so, you use a bonus action on your turn to choose one creature other
+          than yourself within 60 feet of you who can hear you. That creature gains
+          one Bardic Inspiration die, a d6. Once within the next 10 minutes, the creature
+          can roll the die and add the number rolled to one ability check, attack
+          roll, or saving throw it makes. The creature can wait until after it rolls
+          the d20 before deciding to use the Bardic Inspiration die, but must decide
+          before the GM says whether the roll succeeds or fails. Once the Bardic Inspiration
+          die is rolled, it is lost. A creature can have only one Bardic Inspiration
+          die at a time. You can use this feature a number of times equal to your
+          Charisma modifier (a minimum of once). You regain any expended uses when
+          you finish a long rest. Your Bardic Inspiration die changes as you level:
+          1st level: d6, 5th level: d8, 10th level: d10, 15th level: d12.'
   name: bard
   primary ability:
   - cha
@@ -361,8 +365,8 @@ cleric:
   description:
     cleric: "Arms and eyes upraised toward the sun and a prayer on his lips, an elf\
       \ begins to glow with an inner light that spills out to heal his battle-worn\
-      \ companions. Chanting a song of glory, a dwarf swings his axe \
-      \ in wide swaths to cut through the ranks of orcs arrayed against\
+      \ companions. Chanting a song of glory, a dwarf swings his axe \xE2\u20AC\u02DC\
+      \xE2\u20AC\u02DCin wide swaths to cut through the ranks of orcs arrayed against\
       \ him, shouting praise to the gods with every foe's fall. Calling down a curse\
       \ upon the forces of undeath, a human lifts her holy symbol as light pours from\
       \ it to drive back the zombies crowding in on her companions. Clerics are intermediaries\
@@ -395,37 +399,43 @@ cleric:
       down flames from heaven to consume their enemies. For those evildoers who will
       benefit most from a mace to the head, clerics depend on their combat training
       to let them wade into melee with the power of the gods on their side.
-  cantrip list: 3
-  equipment:
-  - - mace
-    - warhammer
-  - - scale mail
-    - leather armor
-    - chain mail
-  - - light crossbow
-    - simple weapon
-  - bolts: 20
-  - - priest's pack
-    - explorer's pack
-  - shield
-  - holy symbol
-  hit dice:
-    d8: 1
-  hit points:
-    any: 8
-    con: 1
-  proficiency bonus: 2
-  spell 1: 2
-  spell list:
-    any: 1
-    wis: 1
-  traits:
-    Divine Domain: 'Choose one domain related to your deity: Knowledge, Life,
-      Light, Nature, Tempest, Trickery, or War. Each domain is detailed at the
-      end of the class description, and each one provides examples of gods associated
-      with it. Your choice grants you domain spells and other features when you
-      choose it at 1st level. It also grants you additional ways to use Channel
-      Divinity and other benefits at higher levels, depending on the domain.'
+  levels:
+    1:
+      cantrip list: 3
+      equipment:
+        armor:
+        - scale mail
+        - leather armor
+        - chain mail
+        inventory:
+        - - priests pack
+          - explorers pack
+        - bolts: 20
+        - holy symbol
+        main hand:
+        - mace
+        - warhammer
+        off hand:
+        - shield
+        ranged:
+        - light crossbow
+      hit dice:
+        d8: 1
+      hit points:
+        any: 8
+        con: 1
+      proficiency bonus: 2
+      spell 1: 2
+      spell list:
+        any: 1
+        wis: 1
+      traits:
+        Divine Domain: 'Choose one domain related to your deity: Knowledge, Life,
+          Light, Nature, Tempest, Trickery, or War. Each domain is detailed at the
+          end of the class description, and each one provides examples of gods associated
+          with it. Your choice grants you domain spells and other features when you
+          choose it at 1st level. It also grants you additional ways to use Channel
+          Divinity and other benefits at higher levels, depending on the domain.'
   name: cleric
   primary ability:
   - wis
@@ -585,14 +595,14 @@ druid:
       \ rather than devotion to a divine entity, while others serve gods of wild nature,\
       \ animals, or elemental forces. The ancient druidic traditions are sometimes\
       \ called the Old Faith, in contrast to the worship of gods in temples and shrines.\
-      \ Druid spells are oriented toward nature and animals the power\
+      \ Druid spells are oriented toward nature and animals\xE2\u20AC\u201Dthe power\
       \ of tooth and claw, of sun and moon, of fire and storm. Druids also gain the\
       \ ability to take on animal forms, and some druids make a particular study of\
       \ this practice, even to the point where they prefer animal form to their natural\
       \ form."
     preserve the balance: "For druids, nature exists in a precarious balance. The\
-      \ four elements that make up a world air, earth, fire, and water\
-      \ must remain in equilibrium. If one element were to gain power over\
+      \ four elements that make up a world\xE2\u20AC\u201Dair, earth, fire, and water\xE2\
+      \u20AC\u201Dmust remain in equilibrium. If one element were to gain power over\
       \ the others, the world could be destroyed, drawn into one of the elemental\
       \ planes and broken apart into its component elements. Thus, druids oppose cults\
       \ of Elemental Evil and others who promote one element to the exclusion of others.\
@@ -602,35 +612,39 @@ druid:
       \ nature, and they hate that which is unnatural, including aberrations (such\
       \ as beholders and mind flayers) and undead (such as zombies and vampires).\
       \ Druids sometimes lead raids against such creatures, especially when the monsters\
-      \ encroach on the druids' territory. Druids are often found guarding\
+      \ encroach on the druids\xE2\u20AC\u2122 territory. Druids are often found guarding\
       \ sacred sites or watching over regions of unspoiled nature. But when a significant\
-      \ danger arises, threatening nature's balance or the lands they\
+      \ danger arises, threatening nature\xE2\u20AC\u2122s balance or the lands they\
       \ protect, druids take on a more active role in combating the threat, as adventurers."
-  cantrip list: 2
-  equipment:
-  - - wooden shield
-    - any simple weapon
-  - - scimitar
-    - any simple melee weapon
-  - leather armor
-  - explorer's pack
-  - druidic focus
-  hit dice:
-    d8: 1
-  hit points:
-    any: 8
-    con: 1
-  proficiency bonus: 2
-  spell 1: 2
-  spell list:
-    any: 1
-    wis: 1
-  traits:
-    Druidic: You know Druidic, the secret language of druids. You can speak the
-      language and use it to leave hidden messages. You and others who know Druidic
-      automatically spot such a message. Others spot the message's presence with
-      a successful DC 15 Wisdom (Perception) check but can't decipher it without
-      magic.
+  levels:
+    1:
+      cantrip list: 2
+      equipment:
+        armor:
+        - leather armor
+        inventory:
+        - explorers pack
+        - druidic focus
+        main hand:
+        - scimitar
+        off hand:
+        - wooden shield
+      hit dice:
+        d8: 1
+      hit points:
+        any: 8
+        con: 1
+      proficiency bonus: 2
+      spell 1: 2
+      spell list:
+        any: 1
+        wis: 1
+      traits:
+        Druidic: You know Druidic, the secret language of druids. You can speak the
+          language and use it to leave hidden messages. You and others who know Druidic
+          automatically spot such a message. Others spot the message's presence with
+          a successful DC 15 Wisdom (Perception) check but can't decipher it without
+          magic.
   name: druid
   primary ability:
   - wis
@@ -800,13 +814,13 @@ fighter:
       \ a half-elf in scale armor swings two scimitars in a blinding whirl as she\
       \ circles the ogre, looking for a blind spot in its defenses. A gladiator fights\
       \ for sport in an arena, a master with his trident and net, skilled at toppling\
-      \ foes and moving them around for the crowd's delight and his\
+      \ foes and moving them around for the crowd's delight\xE2\u20AC\u201Dand his\
       \ own tactical advantage. His opponent's sword flares with blue light an instant\
       \ before she sends lightning flashing forth to smite him. All of these heroes\
       \ are fighters, perhaps the most diverse class of characters in the worlds of\
       \ DUNGEONS & DRAGONS. Champion knights, conquering overlords, royal enforcers,\
-      \ elite foot soldiers, hardened mercenaries, and bandit kings \
-      \ as fighters, they all share an unparalleled mastery with weapons and armor,\
+      \ elite foot soldiers, hardened mercenaries, and bandit kings\xE2\u20AC\u201D\
+      as fighters, they all share an unparalleled mastery with weapons and armor,\
       \ and a thorough knowledge of the skills of combat. And they are well acquainted\
       \ with death, both meting it out and staring it defiantly in the face."
     trained for danger: "Not every member of the city watch, the village militia,\
@@ -816,8 +830,8 @@ fighter:
       \ Some fighters feel drawn to use their training as adventurers. The dungeon\
       \ delving, monster slaying, and other dangerous work common among adventurers\
       \ is second nature for a fighter, not all that different from the life he or\
-      \ she left behind. There are greater risks, perhaps, but also much greater rewards\
-      \ few fighters in the city watch have the opportunity to discover\
+      \ she left behind. There are greater risks, perhaps, but also much greater rewards\xE2\
+      \u20AC\u201Dfew fighters in the city watch have the opportunity to discover\
       \ a magic flame tongue sword, for example."
     well-rounded specialists: Fighters learn the basics of all combat styles. Every
       fighter can swing an axe, fence with a rapier, wield a longsword or a greatsword,
@@ -828,36 +842,45 @@ fighter:
       on augmenting their martial skills with magic. This combination of broad general
       ability and extensive specialization makes fighters superior combatants on battlefields
       and in dungeons alike.
-  equipment:
-  - - chain mail
-    - leather
-  - - martial weapon and shield
-    - martial weapon: 2
-    - handaxe: 2
-  - - light crossbow
-    - longbow
-  - - dungeoneer's pack
-    - explorer's pack
-  - bolts: 20
-  - arrows: 20
-  fighting style:
-  - archery
-  - defense
-  - dueling
-  - great weapon fighting
-  - protection
-  - two-weapon fighting
-  hit dice:
-    d10: 1
-  hit points:
-    any: 10
-    con: 1
-  proficiency bonus: 2
-  traits:
-    second wind: You have a limited well of stamina that you can draw on to protect
-      yourself from harm. on your turn, you can use a bonus action to regain hit
-      points equal to 1d10 + your fighter level. Once you use this feature, you
-      must finish a short or long rest before you can use it again.
+  levels:
+    1:
+      equipment:
+        armor:
+        - chain mail
+        - leather armor
+        inventory:
+        - - bolts: 20
+          - arrows: 20
+        - handaxe
+        - handaxe
+        - - dungeoneers pack
+          - explorers pack
+        main hand:
+        - short sword
+        off hand:
+        - short sword
+        - shield
+        ranged:
+        - light crossbow
+        - longbow
+      fighting style:
+      - archery
+      - defense
+      - dueling
+      - great weapon fighting
+      - protection
+      - two-weapon fighting
+      hit dice:
+        d10: 1
+      hit points:
+        any: 10
+        con: 1
+      proficiency bonus: 2
+      traits:
+        second wind: You have a limited well of stamina that you can draw on to protect
+          yourself from harm. on your turn, you can use a bonus action to regain hit
+          points equal to 1d10 + your fighter level. Once you use this feature, you
+          must finish a short or long rest before you can use it again.
   name: fighter
   primary ability:
   - str
@@ -909,9 +932,9 @@ monk:
       and speed, this energy infuses all that a monk does.
     the magic of ki: "Monks make careful study of a magical energy that most monastic\
       \ traditions call ki. This energy is an element of the magic that suffuses the\
-      \ multiverse specifically, the element that flows through living\
+      \ multiverse\xE2\u20AC\u201Dspecifically, the element that flows through living\
       \ bodies. Monks harness this power within themselves to create magical effects\
-      \ and exceed their bodies' physical capabilities, and some of\
+      \ and exceed their bodies\xE2\u20AC\u2122 physical capabilities, and some of\
       \ their special attacks can hinder the flow of ki in their opponents. Using\
       \ this energy, monks channel uncanny speed and strength into their unarmed strikes.\
       \ As they gain experience, their martial training and their mastery of ki gives\
@@ -926,46 +949,49 @@ monk:
       \ anything that might impede their spiritual progress. Others are sworn to isolation,\
       \ emerging only to serve as spies or assassins at the command of their leader,\
       \ a noble patron, or some other mortal or divine power. The majority of monks\
-      \ don't shun their neighbors, making frequent visits to nearby\
+      \ don\xE2\u20AC\u2122t shun their neighbors, making frequent visits to nearby\
       \ towns or villages and exchanging their service for food and other goods. As\
       \ versatile warriors, monks often end up protecting their neighbors from monsters\
       \ or tyrants. For a monk, becoming an adventurer means leaving a structured,\
       \ communal lifestyle to become a wanderer. This can be a harsh transition, and\
-      \ monks don't undertake it lightly. Those who leave their cloisters\
+      \ monks don\xE2\u20AC\u2122t undertake it lightly. Those who leave their cloisters\
       \ take their work seriously, approaching their adventures as personal tests\
       \ of their physical and spiritual growth. As a rule, monks care little for material\
       \ wealth and are driven by a desire to accomplish a greater mission than merely\
       \ slaying monsters and plundering their treasure."
-  equipment:
-  - - shortsword
-    - any simple weapon
-  - - dungeoneer's pack
-    - explorer's pack
-  - darts: 10
-  hit dice:
-    d8: 1
-  hit points:
-    any: 8
-    con: 1
-  martial arts:
-    d4: 1
-  proficiency bonus: 2
-  traits:
-    martial arts: Your practice of martial arts gives you mastery of combat styles
-      that use unarmed strikes and monk weapons, which are shortswords and any
-      simple melee weapons that don't have the two-handed or heavy property. While
-      unarmed or wielding only monk weapons and you aren't wearing armor or shield
-      then (1) You can use Dexterity instead of Strength for the attack and damage
-      rolls of your unarmed strikes and monk weapons. (2) You can roll a d4 in
-      place of the normal damage of your unarmed strike or monk weapon. This die
-      changes as you gain monk levels, as shown in the Martial Arts column of
-      the Monk Table. (3) When you use the Attack action with an unarmed strike
-      or a monk weapon on your turn, you can make one unarmed strike as a bonus
-      action. For example, if you take the Attack action and attack with a quarter-
-      staff, you can also make an unarmed strike as a bonus action, assuming you
-      haven't already taken a bonus action this turn.
-    unarmored defense: While you are wearing no armor and not wielding a shield,
-      your AC equals 10 + your Dexterity modifier + your Wisdom modifier.
+  levels:
+    1:
+      equipment:
+        inventory:
+        - - dungeoneers pack
+          - explorers pack
+        - 10 darts
+        main hand:
+        - short sword
+      hit dice:
+        d8: 1
+      hit points:
+        any: 8
+        con: 1
+      martial arts:
+        d4: 1
+      proficiency bonus: 2
+      traits:
+        martial arts: Your practice of martial arts gives you mastery of combat styles
+          that use unarmed strikes and monk weapons, which are shortswords and any
+          simple melee weapons that don't have the two-handed or heavy property. While
+          unarmed or wielding only monk weapons and you aren't wearing armor or shield
+          then (1) You can use Dexterity instead of Strength for the attack and damage
+          rolls of your unarmed strikes and monk weapons. (2) You can roll a d4 in
+          place of the normal damage of your unarmed strike or monk weapon. This die
+          changes as you gain monk levels, as shown in the Martial Arts column of
+          the Monk Table. (3) When you use the Attafck action with an unarmed strike
+          or a monk weapon on your turn, you can make one unarmed strike as a bonus
+          action. For example, if you take the Attack action and attack with a quarter-
+          staff, you can also make an unarmed strike as a bonus action, assuming you
+          haven't already taken a bonus action this turn.
+        unarmored defense: While you are wearing no armor and not wielding a shield,
+          your AC equals 10 + your Dexterity modifier + your Wisdom modifier.
   name: monk
   primary ability:
   - dex
@@ -1008,7 +1034,7 @@ paladin:
     paladin: "Clad in plate armor that gleams in the sunlight despite the dust and\
       \ grime of long travel, a human lays down her sword and shield and places her\
       \ hands on a mortally wounded man. Divine radiance shines from her hands, the\
-      \ man's wounds knit closed, and his eyes open wide with amazement.\
+      \ man\xE2\u20AC\u2122s wounds knit closed, and his eyes open wide with amazement.\
       \ A dwarf crouches behind an outcrop, his black cloak making him nearly invisible\
       \ in the night, and watches an orc war band celebrating its recent victory.\
       \ Silently, he stalks into their midst and whispers an oath, and two orcs are\
@@ -1019,56 +1045,61 @@ paladin:
       \ and their mission, paladins are united by their oaths to stand against the\
       \ forces of evil. Whether sworn before a god's altar and the witness of a priest,\
       \ in a sacred glade before nature spirits and fey beings, or in a moment of\
-      \ desperation and grief with the dead as the only witness, a paladin's\
-      \ oath is a powerful bond. It is a source of power that turns a devout\
+      \ desperation and grief with the dead as the only witness, a paladin\xE2\u20AC\
+      \u2122s oath is a powerful bond. It is a source of power that turns a devout\
       \ warrior into a blessed champion."
     the cause of righteousness: "A paladin swears to uphold justice and righteousness,\
       \ to stand with the good things of the world against the encroaching darkness,\
       \ and to hunt the forces of evil wherever they lurk. Different paladins focus\
       \ on various aspects of the cause of righteousness, but all are bound by the\
       \ oaths that grant them power to do their sacred work. Although many paladins\
-      \ are devoted to gods of good, a paladin's power comes as much\
+      \ are devoted to gods of good, a paladin\xE2\u20AC\u2122s power comes as much\
       \ from a commitment to justice itself as it does from a god. Paladins train\
       \ for years to learn the skills of combat, mastering a variety of weapons and\
       \ armor. Even so, their martial skills are secondary to the magical power they\
       \ wield: power to heal the sick and injured, to smite the wicked and the undead,\
       \ and to protect the innocent and those who join them in the fight for justice."
-  equipment:
-  - - martial weapon and shield
-    - martial weapons: 2
-  - - javelin: 5
-    - any simple melee weapon
-  - - priest's pack
-    - explorer's pack
-  - chain mail
-  - holy symbol
-  hit dice:
-    d10: 1
-  hit points:
-    any: 10
-    con: 1
-  proficiency bonus: 2
-  traits:
-    divine sense: The presence of strong evil registers on your senses like a
-      noxious odor, and powerful good rings like heavenly music in your ears.
-      As an action, you can open your awareness to detect such forces. Until the
-      end of your next turn, you know the location of any celestial, fiend, or
-      undead within 60 feet of you that is not behind total cover. You know the
-      type (celestial, fiend, or undead) of any being whose presence you sense,
-      but not its identity (the vampire Count Strahd von Zarovich, for instance).
-      Within the same radius, you also detect the presence of any place or object
-      that has been consecrated or desecrated, as with the hallow spell. You can
-      use this feature a number of times equal to 1 + your Charisma modifier.
-      When you finish a long rest you regain all expended uses.
-    lay on hands: Your blessed touch can heal wounds. You have a pool of healing
-      power that replenishes when you take a long rest. With that pool, you can
-      restore a total number of hit points equal to your paladin level x 5. As
-      an action, you can touch a creature to restore any number of hit points
-      remaining in the pool. Alternatively, you can expend 5 hit points from your
-      pool of healing to cure the target of one disease or neutralize one poison
-      affecting it. You can cure multiple diseases and neutralize multiple poisons
-      with a single use of Lay on Hands, expending hit points separately for each
-      one. This feature has no effect on undead and constructs.
+  levels:
+    1:
+      equipment:
+        armor:
+        - chain mail
+        inventory:
+        - javalin: 5
+        - - priests pack
+          - explorers pack
+        main hand:
+        - short sword
+        off hand:
+        - short sword
+        - shield
+      hit dice:
+        d10: 1
+      hit points:
+        any: 10
+        con: 1
+      proficiency bonus: 2
+      traits:
+        divine sense: The presence of strong evil registers on your senses like a
+          noxious odor, and powerful good rings like heavenly music in your ears.
+          As an action, you can open your awareness to detect such forces. Until the
+          end of your next turn, you know the location of any celestial, fiend, or
+          undead within 60 feet of you that is not behind total cover. You know the
+          type (celestial, fiend, or undead) of any being whose presence you sense,
+          but not its identity (the vampire Count Strahd von Zarovich, for instance).
+          Within the same radius, you also detect the presence of any place or object
+          that has been consecrated or desecrated, as with the hallow spell. You can
+          use this feature a number of times equal to 1 + your Charisma modifier.
+          When you finish a long rest you regain all expended uses.
+        lay on hands: Your blessed touch can heal wounds. You have a pool of healing
+          power that replenishes when you take a long rest. With that pool, you can
+          restore a total number of hit points equal to your paladin level x 5. As
+          an action, you can touch a creature to restore any number of hit points
+          remaining in the pool. Alternatively, you can expend 5 hit points from your
+          pool of healing to cure the target of one disease or neutralize one poison
+          affecting it. You can cure multiple diseases and neutralize multiple poisons
+          with a single use of Lay on Hands, expending hit points separately for each
+          one. This feature has no effect on undead and constructs.
   name: paladin
   primary ability:
   - str
@@ -1151,7 +1182,7 @@ paladin:
 ranger:
   description:
     deadly hunters: "Warriors of the wilderness, rangers specialize in hunting the\
-      \ monsters that threaten the edges of civilization humanoid raiders,\
+      \ monsters that threaten the edges of civilization\xE2\u20AC\u201Dhumanoid raiders,\
       \ rampaging beasts and monstrosities, terrible giants, and deadly dragons. They\
       \ learn to track their quarry as a predator does, moving stealthily through\
       \ the wilds and hiding themselves in brush and rubble. Rangers focus their combat\
@@ -1159,21 +1190,21 @@ ranger:
       \ favored foes. Thanks to their familiarity with the wilds, rangers acquire\
       \ the ability to cast spells that harness nature's power, much as a druid does.\
       \ Their spells, like their combat abilities, emphasize speed, stealth, and the\
-      \ hunt. A ranger's talents and abilities are honed with deadly\
+      \ hunt. A ranger\xE2\u20AC\u2122s talents and abilities are honed with deadly\
       \ focus on the grim task of protecting the borderlands."
     independent adventurers: "Though a ranger might make a living as a hunter, a guide,\
       \ or a tracker, a ranger's true calling is to defend the outskirts of civilization\
       \ from the ravages of monsters and humanoid hordes that press in from the wild.\
       \ In some places, rangers gather in secretive orders or join forces with druidic\
       \ circles. Many rangers, though, are independent almost to a fault, knowing\
-      \ that, when a dragon or a band of orcs attacks, a ranger might be the first\
-      \ and possibly the last line of defense. This fierce\
+      \ that, when a dragon or a band of orcs attacks, a ranger might be the first\xE2\
+      \u20AC\u201Dand possibly the last\xE2\u20AC\u201Dline of defense. This fierce\
       \ independence makes rangers well suited to adventuring, since they are accustomed\
       \ to life far from the comforts of a dry bed and a hot bath. Faced with city-bred\
       \ adventurers who grouse and whine about the hardships of the wild, rangers\
       \ respond with some mixture of amusement, frustration, and compassion. But they\
       \ quickly learn that other adventurers who can carry their own weight in a fight\
-      \ against civilization's foes are worth any extra burden. Coddled\
+      \ against civilization\xE2\u20AC\u2122s foes are worth any extra burden. Coddled\
       \ city folk might not know how to feed themselves or find fresh water in the\
       \ wild, but they make up for it in other ways."
     ranger: Rough and wild looking, a human stalks alone through the shadows of trees,
@@ -1190,50 +1221,58 @@ ranger:
       past the hedges that shelter the most distant farms from the terrors of the
       wild, amid the dense-packed trees of trackless forests and across wide and empty
       plains, rangers keep their unending watch.
-  equipment:
-  - - scale mail
-    - leather armor
-  - - shortswords: 2
-    - simple melee weapons: 2
-  - - dungeoneer's pack
-    - explorer's pack
-  - longbow
-  - arrows: 20
-  hit dice:
-    d10: 1
-  hit points:
-    any: 10
-    con: 1
-  proficiency bonus: 2
-  traits:
-    Favored Enemy: 'Beginning at 1st level, you have significant experience studying,
-      tracking, hunting, and even talking to a certain type of enemy. Choose a
-      type of favored enemy: aberrations, beasts, celestials, constructs, dragons,
-      elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead.
-      Alternatively, you can select two races of humanoid (such as gnolls and
-      orcs) as favored enemies. You have advantage on Wisdom (Survival) checks
-      to track your favored enemies, as well as on Intelligence checks to recall
-      information about them. When you gain this feature, you also learn one language
-      of your choice that is spoken by your favored enemies, if they speak one
-      at all. You choose one additional favored enemy, as well as an associated
-      language, at 6th and 14th level. As you gain levels, your choices should
-      reflect the types of monsters you have encountered on your adventures.'
-    Natural Explorer: "You are particularly familiar with one type of natural\
-      \ environment and are adept at traveling and surviving in such regions.\
-      \ Choose one type of favored terrain: arctic, coast, desert, forest, grassland,\
-      \ mountain, swamp, or the Underdark. When you make an Intelligence or Wisdom\
-      \ check related to your favored terrain, your proficiency bonus is doubled\
-      \ if you are using a skill that you're proficient in. While\
-      \ traveling for an hour or more in your favored terrain, you gain the following\
-      \ benefits: difficult terrain doesn't slow your group's\
-      \ travel; your group can't become lost except\
-      \ by magical means; even when you are engaged in another activity while\
-      \ traveling (such as foraging, navigating, or tracking), you remain alert\
-      \ to danger; if you are traveling alone, you can move stealthily at a normal\
-      \ pace; when you forage, you find twice as much food as you normally would;\
-      \ while tracking other creatures, you also learn their exact number, their\
-      \ sizes, and how long ago they passed through the area. You choose additional\
-      \ favored terrain types at 6th and 10th level."
+  levels:
+    1:
+      equipment:
+        armor:
+        - scale mail
+        - leather armor
+        inventory:
+        - quiver
+        - arrows: 20
+        - - dungeoneers pack
+          - explorers pack
+        main hand:
+        - shortsword
+        off hand:
+        - shortsword
+        ranged:
+        - longbow
+      hit dice:
+        d10: 1
+      hit points:
+        any: 10
+        con: 1
+      proficiency bonus: 2
+      traits:
+        Favored Enemy: 'Beginning at 1st level, you have significant experience studying,
+          tracking, hunting, and even talking to a certain type of enemy. Choose a
+          type of favored enemy: aberrations, beasts, celestials, constructs, dragons,
+          elementals, fey, fiends, giants, monstrosities, oozes, plants, or undead.
+          Alternatively, you can select two races of humanoid (such as gnolls and
+          orcs) as favored enemies. You have advantage on Wisdom (Survival) checks
+          to track your favored enemies, as well as on Intelligence checks to recall
+          information about them. When you gain this feature, you also learn one language
+          of your choice that is spoken by your favored enemies, if they speak one
+          at all. You choose one additional favored enemy, as well as an associated
+          language, at 6th and 14th level. As you gain levels, your choices should
+          reflect the types of monsters you have encountered on your adventures.'
+        Natural Explorer: "You are particularly familiar with one type of natural\
+          \ environment and are adept at traveling and surviving in such regions.\
+          \ Choose one type of favored terrain: arctic, coast, desert, forest, grassland,\
+          \ mountain, swamp, or the Underdark. When you make an Intelligence or Wisdom\
+          \ check related to your favored terrain, your proficiency bonus is doubled\
+          \ if you are using a skill that you\xE2\u20AC\u2122re proficient in. While\
+          \ traveling for an hour or more in your favored terrain, you gain the following\
+          \ benefits: difficult terrain doesn\xE2\u20AC\u2122t slow your group\xE2\
+          \u20AC\u2122s travel; your group can\xE2\u20AC\u2122t become lost except\
+          \ by magical means; even when you are engaged in another activity while\
+          \ traveling (such as foraging, navigating, or tracking), you remain alert\
+          \ to danger; if you are traveling alone, you can move stealthily at a normal\
+          \ pace; when you forage, you find twice as much food as you normally would;\
+          \ while tracking other creatures, you also learn their exact number, their\
+          \ sizes, and how long ago they passed through the area. You choose additional\
+          \ favored terrain types at 6th and 10th level."
   name: ranger
   primary ability:
   - dex
@@ -1333,8 +1372,8 @@ rogue:
       \ guilds or crime families. Plenty of rogues operate independently, but even\
       \ they sometimes recruit apprentices to help them in their scams and heists.\
       \ A few rogues make an honest living as locksmiths, investigators, or exterminators,\
-      \ which can be a dangerous job in a world where dire rats and\
-      \ wererats haunt the sewers. As adventurers, rogues fall on both\
+      \ which can be a dangerous job in a world where dire rats\xE2\u20AC\u201Dand\
+      \ wererats\xE2\u20AC\u201Dhaunt the sewers. As adventurers, rogues fall on both\
       \ sides of the law. Some are hardened criminals who decide to seek their fortune\
       \ in treasure hoards, while others take up a life of adventure to escape from\
       \ the law. Some have learned and perfected their skills with the explicit purpose\
@@ -1344,8 +1383,8 @@ rogue:
       \ tools and picks the lock in the blink of an eye. Then she disappears into\
       \ the shadows as her fighter friend moves forward to kick the door open. A human\
       \ lurks in the shadows of an alley while his accomplice prepares for her part\
-      \ in the ambush. When their target a notorious slaver's\
-      \ the alleyway, the accomplice cries out, the slaver comes to investigate,\
+      \ in the ambush. When their target\xE2\u20AC\u201Da notorious slaver\xE2\u20AC\
+      \u201Dpasses the alleyway, the accomplice cries out, the slaver comes to investigate,\
       \ and the assassin's blade cuts his throat before he can make a sound. Suppressing\
       \ a giggle, a gnome waggles her fingers and magically lifts the key ring from\
       \ the guard's belt. In a moment, the keys are in her hand, the cell door is\
@@ -1364,46 +1403,52 @@ rogue:
       most, than wear an opponent down with a barrage of attacks. Rogues have an almost
       supernatural knack for avoiding danger, and a few learn magical tricks to supplement
       their other abilities.
-  equipment:
-  - - rapier
-    - shortsword
-  - - shortbow
-    - shortsword
-  - - burglar's pack
-    - dungeoneer's pack
-    - explorer's pack
-  - leather armor
-  - daggers: 2
-  - arrows: 20
-  - thieves' tools
-  hit dice:
-    d8: 1
-  hit points:
-    any: 8
-    con: 1
-  proficiency bonus: 2
-  traits:
-    Expertise: At 1st level, choose two of your skill proficiencies, or one of
-      your skill proficiencies and your proficiency with thieves' tools. Your
-      proficiency bonus is doubled for any ability check you make that uses either
-      of the chosen proficiencies. At 6th level, you can choose two more of your
-      proficiencies to gain this benefit.
-    Sneak Attack: Beginning at 1st level, you know how to strike subtly and exploit
-      a foe's distraction. Once per turn, you can deal an extra 1d6 damage to
-      one creature you hit with an attack if you have advantage on the attack
-      roll. The attack must use a finesse or a ranged weapon. You don't need advantage
-      on the attack roll if another enemy of the target is within 5 feet of it,
-      that enemy isn't incapacitated, and you don't have disadvantage on the attack
-      roll. The amount of extra damage increases as you gain levels in this class.
-    ThievesCant: During your rogue training you learned thieves' cant, a secret
-      mix of dialect, jargon, and code that allows you to hide messages in seemingly
-      normal conversation. Only another creature that knows thieves' cant understands
-      such messages. It takes four times longer to convey such a message than
-      it does to speak the same idea plainly. You also understand a set of secret
-      signs and symbols used to convey short, simple messages such as whether
-      an area is dangerous or the territory of a thieves' guild, whether loot
-      is nearby, or whether the people in an area are easy marks or will provide
-      a safe house for thieves on the run.
+  levels:
+    1:
+      equipment:
+        armor:
+        - leather
+        inventory:
+        - - burglars pack
+          - dungeoneers pack
+          - explorers pack
+        - - shortbow
+          - shortsword
+        - arrows: 20
+        - dagger
+        - dagger
+        - theives tools
+        main hand:
+        - rapier
+        - shortsword
+      hit dice:
+        d8: 1
+      hit points:
+        any: 8
+        con: 1
+      proficiency bonus: 2
+      traits:
+        Expertise: At 1st level, choose two of your skill proficiencies, or one of
+          your skill proficiencies and your proficiency with thieves' tools. Your
+          proficiency bonus is doubled for any ability check you make that uses either
+          of the chosen proficiencies. At 6th level, you can choose two more of your
+          proficiencies to gain this benefit.
+        Sneak Attack: Beginning at 1st level, you know how to strike subtly and exploit
+          a foe's distraction. Once per turn, you can deal an extra 1d6 damage to
+          one creature you hit with an attack if you have advantage on the attack
+          roll. The attack must use a finesse or a ranged weapon. You don't need advantage
+          on the attack roll if another enemy of the target is within 5 feet of it,
+          that enemy isn't incapacitated, and you don't have disadvantage on the attack
+          roll. The amount of extra damage increases as you gain levels in this class.
+        ThievesCant: During your rogue training you learned thieves' cant, a secret
+          mix of dialect, jargon, and code that allows you to hide messages in seemingly
+          normal conversation. Only another creature that knows thieves' cant understands
+          such messages. It takes four times longer to convey such a message than
+          it does to speak the same idea plainly. You also understand a set of secret
+          signs and symbols used to convey short, simple messages such as whether
+          an area is dangerous or the territory of a thieves' guild, whether loot
+          is nearby, or whether the people in an area are easy marks or will provide
+          a safe house for thieves on the run.
   name: rogue
   primary ability:
   - dex
@@ -1507,30 +1552,32 @@ sorcerer:
       full potential. Whatever their goals, sorcerers are every bit as useful to an
       adventuring party as wizards, making up for a comparative lack of breadth in
       their magical knowledge with enormous flexibility in using the spells they know.
-  cantrip list: 4
-  equipment:
-  - - light crossbow
-    - any simple weapon
-  - - component pouch
-    - arcane focus
-  - - dungeoneer's pack
-    - explorer's pack
-  - daggers: 2
-  - bolts: 20
-  hit dice:
-    d6: 1
-  hit points:
-    any: 6
-    con: 1
-  proficiency bonus: 2
-  spell 1: 2
-  spell list:
-    any: 2
-  traits:
-    Sorcerous Origin: 'Choose a sorcerous origin, which describes the source of
-      your innate magical power: Draconic Bloodline or Wild Magic, both detailed
-      at the end of the class description. Your choice grants you features when
-      you choose it at 1st level and again at 6th, 14th, and 18th level.'
+  levels:
+    1:
+      cantrip list: 4
+      equipment:
+        inventory:
+        - - component pouch
+          - arcane focus
+        - - dungeoneers pack
+          - explorers pack
+        main hand: dagger
+        off hand: dagger
+        ranged: light crossbow
+      hit dice:
+        d6: 1
+      hit points:
+        any: 6
+        con: 1
+      proficiency bonus: 2
+      spell 1: 2
+      spell list:
+        any: 2
+      traits:
+        Sorcerous Origin: 'Choose a sorcerous origin, which describes the source of
+          your innate magical power: Draconic Bloodline or Wild Magic, both detailed
+          at the end of the class description. Your choice grants you features when
+          you choose it at 1st level and again at 6th, 14th, and 18th level.'
   name: sorcerer
   primary ability:
   - cha
@@ -1718,7 +1765,7 @@ warlock:
       \ Sometimes the relationship between warlock and patron is like that of a cleric\
       \ and a deity, though the beings that serve as patrons for warlocks are not\
       \ gods. A warlock might lead a cult dedicated to a demon prince, an archdevil,\
-      \ or an utterly alien entity beings not typically served by clerics.\
+      \ or an utterly alien entity\xE2\u20AC\u201Dbeings not typically served by clerics.\
       \ More often, though, the arrangement is similar to that between a master and\
       \ an apprentice. The warlock learns and grows in power, at the cost of occasional\
       \ services performed on the patron's behalf. The magic bestowed on a warlock\
@@ -1739,36 +1786,41 @@ warlock:
       spectacular. Drawing on the ancient knowledge of beings such as fey nobles,
       demons, devils, hags, and alien entities of the Far Realm, warlocks piece together
       arcane secrets to bolster their own power.
-  cantrip list: 2
-  equipment:
-  - - light crossbow
-    - any simple weapon
-  - - component pouch
-    - arcane focus
-  - - scholar's pack
-    - dungeoneer's pack
-  - leather armor
-  - any simple weapon
-  - daggers: 2
-  - bolts: 20
-  hit dice:
-    d8: 1
-  hit points:
-    any: 8
-    con: 1
-  proficiency bonus: 2
-  spell 1: 1
-  spell list:
-    any: 2
-  traits:
-    Otherworldly Patron: 'You have struck a bargain with an otherworldly being
-      of your choice: the Archfey, the Fiend, or the Great Old One. Your choice
-      grants you features at 1st level and again at 6th, 10th, and 14th level.'
-    PactMagic: Your arcane research and the magic bestowed on you by your patron
-      have given you facility with spells. Charisma is your spellcasting ability
-      for your warlock spells, since your magic comes from your pact with your
-      patron. You use your Charisma whenever a spell refers to your spellcasting
-      ability.
+  level:
+    1:
+      cantrip list: 2
+      equipment:
+        armor:
+        - leather
+        inventory:
+        - - component pouch
+          - arcane focus
+        - - scolars pack
+          - dungeoneers pack
+        - dagger
+        - dagger
+        main hand:
+        - shortsword
+        ranged:
+        - light crossbow
+      hit dice:
+        d8: 1
+      hit points:
+        any: 8
+        con: 1
+      proficiency bonus: 2
+      spell 1: 1
+      spell list:
+        any: 2
+      traits:
+        Otherworldly Patron: 'You have struck a bargain with an otherworldly being
+          of your choice: the Archfey, the Fiend, or the Great Old One. Your choice
+          grants you features at 1st level and again at 6th, 10th, and 14th level.'
+        PactMagic: Your arcane research and the magic bestowed on you by your patron
+          have given you facility with spells. Charisma is your spellcasting ability
+          for your warlock spells, since your magic comes from your pact with your
+          patron. You use your Charisma whenever a spell refers to your spellcasting
+          ability.
   name: warlock
   primary ability:
   - cha
@@ -1921,24 +1973,28 @@ wizard:
       from other planes of existence, glimpses the future, or turns slain foes into
       zombies. Their mightiest spells change one substance into another, call meteors
       down from the sky, or open portals to other worlds.
-  cantrip list: 3
-  equipment:
-  - - quarterstaff
-    - dagger
-  - - component pouch
-    - arcane focus
-  - - scholars pack
-    - explorers pack
-  - spellbook
-  hit dice:
-    d6: 1
-  hit points:
-    any: 6
-    con: 1
-  proficiency bonus: 2
-  spell 1: 2
-  spell list:
-    any: 6
+  levels:
+    1:
+      cantrip list: 3
+      equipment:
+        inventory:
+        - - component pouch
+          - arcane focus
+        - - scolars pack
+          - explorers pack
+        - spellbook
+        main hand:
+        - quarterstaff
+        - dagger
+      hit dice:
+        d6: 1
+      hit points:
+        any: 6
+        con: 1
+      proficiency bonus: 2
+      spell 1: 2
+      spell list:
+        any: 6
   name: wizard
   primary ability:
   - int

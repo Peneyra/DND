@@ -14,7 +14,7 @@ acolyte:
       established temple structure, or even an occult group that served a fiendish
       master that you now deny.
   equipment:
-  - A holy symbol (a gift to you when you entered the priesthood)
+  - a holy symbol (a gift to you when you entered the priesthood)
   - a prayer book or prayer wheel
   - stick of incense: 5
   - vestments
@@ -66,30 +66,8 @@ charlatan:
   name: charlatan
   proficiencies:
     skills:
-    - - D
-      - E
-      - C
-      - E
-      - P
-      - T
-      - I
-      - O
-      - N
-    - - S
-      - L
-      - E
-      - I
-      - G
-      - H
-      - T
-      - ' '
-      - O
-      - F
-      - ' '
-      - H
-      - A
-      - N
-      - D
+    - - Deception
+    - - Slight of Hand
     tools:
     - disguise kit
     - forgery kit
@@ -129,7 +107,7 @@ criminal:
     - - Stealth
     tools:
     - gaming set (one type)
-    - thieves' tools
+    - thieves tools
   traits:
     criminal contact: You have a reliable and trustworthy contact who acts as your
       liaison to a network of other criminals. You know how to get messages to and
@@ -341,8 +319,8 @@ noble:
       \ with a disproportionate sense of entitlement. Or you could be an honest, hard-working\
       \ landowner who cares about the people who live and work on your land, aware\
       \ of your responsibility to them. Work with your DM to come up with an appropriate\
-      \ title and determine how much authority that title carries. A noble title doesn\xE2\
-      \u20AC\u2122t stand on its own it's connected to an entire family, and whatever\
+      \ title and determine how much authority that title carries. A noble title doesn't\
+      \ stand on its own it's connected to an entire family, and whatever\
       \ title you hold, you will pass it down to your own children. Not only do you\
       \ need to determine your noble title, but you should also work with the DM to\
       \ describe your family and their influence on you. Is your family old and established,\
@@ -352,9 +330,9 @@ noble:
       \ your position in the family? Are you the heir to the head of the family? Have\
       \ you already inherited the title? How do you feel about that responsibility?\
       \ Or are you so far down the line of inheritance that no one cares what you\
-      \ do, as long as you don\xE2\u20AC\u2122t embarrass the family? How does the\
-      \ head of your family feel about your adventuring career? Are you in your family\xE2\
-      \u20AC\u2122s good graces, or shunned by the rest of your family? Does your\
+      \ do, as long as you don't embarrass the family? How does the\
+      \ head of your family feel about your adventuring career? Are you in your family's\
+      \ good graces, or shunned by the rest of your family? Does your\
       \ family have a coat of arms? An insignia you might wear on a signet ring? Particular\
       \ colors you wear all the time? An animal you regard as a symbol of your line\
       \ or even a spiritual member of the family? These details help establish your\

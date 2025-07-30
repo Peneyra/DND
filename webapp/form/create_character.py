@@ -1,7 +1,7 @@
 import streamlit as st
 import yaml
 from collections import Counter
-
+None
 def form_create_character(DATA_DIR):
     print("------------------------------------------------------------")
     print("------------------------------------------------------------")
@@ -131,14 +131,14 @@ def form_create_character(DATA_DIR):
         # H i t   P o i n t s   /   D a m a g e
         hpd_col = st.columns([1,1])
         hit_points = 0
-        hp_list = sess.clas['levels'][1]['hit points']
+        hp_list = sess.clas['hit points']
         for abi, val in hp_list.items():
             if abi == 'any': hit_points += val
             else: hit_points += val * (sess[abi + "_modifier"]) 
         hpd_col[0].subheader(f"**Hit Points: {hit_points}**")
 
         damage_die = []
-        damage_list = sess.clas['levels'][1]['hit dice']
+        damage_list = sess.clas['hit dice']
         for die, val in damage_list.items():
             damage_die.append(str(val) + die)
         hpd_col[1].subheader(f"**Attack Damage: {','.join(damage_die)}**")
@@ -154,67 +154,37 @@ def form_create_character(DATA_DIR):
             #################################################################
             # B a s i c   S k i l l s
             st.header("Skills",divider = 'rainbow')
-            if 'skills' in sess.race['proficiencies']:
-                race_skills = sess.race['proficiencies']['skills']
-                st.subheader(f"**{sess.race['name']} skills:**".title())
-                skr_col = st.columns([1,1,1,1])
-                k = 0
-                for rs in race_skills:
-                    with skr_col[k]:
-                        st.selectbox(
-                            "Race Skills",
-                            sorted(rs),
-                            key = "race_skills_" + str(k),
-                            label_visibility = "collapsed",
-                            index = k)
-                    k += 1
-            if 'skills' in sess.clas['proficiencies']:
-                clas_skills = sess.clas['proficiencies']['skills']
-                st.subheader(f"**{sess.clas['name']} skills:**".title())
-                skc_col = st.columns([1,1,1,1])
-                k = 0
-                for cs in clas_skills:
-                    with skc_col[k]:
-                        st.selectbox(
-                            "Class Skills",
-                            sorted(cs),
-                            key = "clas_skills_" + str(k),
-                            label_visibility = "collapsed",
-                            index = k)
-                    k += 1
-            if 'skills' in sess.back['proficiencies']:
-                back_skills = sess.back['proficiencies']['skills']
-                st.subheader(f"**{sess.back['name']} skills:**".title())
-                skb_col = st.columns([1,1,1,1])
-                k = 0
-                for bs in back_skills:
-                    with skb_col[k]:
-                        if len(bs) == 1:
-                            st.markdown(f"**{bs[0]}**")
-                            sess['back_skills_' + str(k)] = bs[0]
-                        else:
-                            st.selectbox(
-                                "Background Skills",
-                                sorted(bs),
-                                key = "back_skills_" + str(k),
-                                label_visibility = "collapsed",
-                                index = k)
-                    k += 1
-
-            selected_skills = []
-            for k in range(4):
-                if "race_skills_" + str(k) in sess:
-                    selected_skills.append(sess['race_skills_' + str(k)])
-            for k in range(4):
-                if "clas_skills_" + str(k) in sess:
-                    selected_skills.append(sess['clas_skills_' + str(k)])
-            for k in range(4):
-                if "back_skills_" + str(k) in sess:
-                    selected_skills.append(sess['back_skills_' + str(k)])
-            skills_duplicate = [
-                sd for sd, 
-                count in Counter(selected_skills).items() if count > 1
-                ]
+            sess.selected_skills = []
+            for cat in ['race','clas','back']:
+                skills = []
+                skl_col = {}
+                if 'skills' in sess[cat]['proficiencies']:
+                    skills = sess[cat]['proficiencies']['skills']
+                    st.subheader(f"**{sess[cat]['name']} skills:**".title())
+                    skl_col[cat] = st.columns([1,1,1,1])
+                    k = 0
+                    for s in skills:
+                        with skl_col[cat][k]:
+                            if len(s) == 1:
+                                if s[0] in sess.selected_skills:
+                                    st.markdown(f"*{s[0]}*")
+                                else:
+                                    st.markdown(f"**{s[0]}**")
+                                    sess.selected_skills.append(s[0])
+                            else:
+                                st.selectbox(
+                                    cat.title() + " Skills",
+                                    sorted(s),
+                                    key = cat + "_skills_" + str(k),
+                                    label_visibility = "collapsed",
+                                    index = k)
+                        k += 1
+            for cat in ['race','clas','back']:
+                for k in range(4):
+                    key_name = cat + "_skills_" + str(k)
+                    if key_name in sess:
+                        sess.selected_skills.append(sess[cat + "_skills_" + str(k)])
+            skills_duplicate = [sd for sd, count in Counter(sess.selected_skills).items() if count > 1]
 
             if len(skills_duplicate) > 0:
                 form_error = True
@@ -227,8 +197,8 @@ def form_create_character(DATA_DIR):
         with scs_tab[1]:
             #################################################################
             # C a n t r i p s
-            if "cantrip list" in sess.clas['levels'][1]:
-                num_cantrip = sess.clas['levels'][1]['cantrip list']
+            if "cantrip list" in sess.clas:
+                num_cantrip = sess.clas['cantrip list']
                 cantrip_book = sess.clas['proficiencies']['spells'][0]
                 st.header("Cantrips",divider = 'rainbow')
                 st.subheader(f"**{sess.clas['name']} cantrips:**".title())
@@ -242,13 +212,13 @@ def form_create_character(DATA_DIR):
                             label_visibility = "collapsed",
                             index = k)
                             
-                selected_cantrips = []
+                sess.selected_cantrips = []
                 for k in range(num_cantrip):
                     if "cantrip_" + str(k) in sess:
-                        selected_cantrips.append(sess['cantrip_' + str(k)])
+                        sess.selected_cantrips.append(sess['cantrip_' + str(k)])
                 cantrips_duplicate = [
                     sd for sd, 
-                    count in Counter(selected_cantrips).items() if count > 1
+                    count in Counter(sess.selected_cantrips).items() if count > 1
                     ]
 
                 if len(cantrips_duplicate) > 0:
@@ -262,8 +232,8 @@ def form_create_character(DATA_DIR):
         with scs_tab[2]:
             #################################################################
             # S p e l l s
-            if "spell list" in sess.clas['levels'][1]:
-                spell_list = sess.clas['levels'][1]['spell list']
+            if "spell list" in sess.clas:
+                spell_list = sess.clas['spell list']
                 num_spell = 0
                 for abi, val in spell_list.items():
                     if abi == 'any': num_spell += val
@@ -292,13 +262,13 @@ def form_create_character(DATA_DIR):
                                 label_visibility = "collapsed",
                                 index = k)
             
-                selected_spells = []
+                sess.selected_spells = []
                 for k in range(num_spell):
                     if "spell_" + str(k) in sess:
-                        selected_spells.append(sess['spell_' + str(k)])
+                        sess.selected_spells.append(sess['spell_' + str(k)])
                 spells_duplicate = [
                     sd for sd, 
-                    count in Counter(selected_spells).items() if count > 1
+                    count in Counter(sess.selected_spells).items() if count > 1
                     ]
 
                 if len(spells_duplicate) > 0:
@@ -312,72 +282,91 @@ def form_create_character(DATA_DIR):
     with ccr_tab[2]:
         #################################################################
         # T r a i t s
-        if 'traits' in sess.race:
-            st.header(f"**{sess.race['name'].title()} Traits**",divider = 'rainbow')
-            for trait, description in sess.race['traits'].items():
-                st.subheader(f"{trait.title()}")
-                st.markdown(f"{description}")
-        if 'traits' in sess.clas['levels'][1]:
-            st.header(f"**{sess.clas['name'].title()} Traits**",divider = 'rainbow')
-            for trait, description in sess.clas['levels'][1]['traits'].items():
-                st.subheader(f"{trait.title()}")
-                st.markdown(f"{description}")
-        if 'traits' in sess.back:
-            st.header(f"**{sess.back['name'].title()} Traits**",divider = 'rainbow')
-            for trait, description in sess.back['traits'].items():
-                st.subheader(f"{trait.title()}")
-                st.markdown(f"{description}")
+        for cat in ['race','clas','back']:
+            if 'traits' in sess[cat]:
+                st.header(f"**{sess[cat]['name'].title()} Traits**",divider = 'rainbow')
+                for trait, description in sess[cat]['traits'].items():
+                    st.subheader(f"{trait.title()}")
+                    st.markdown(f"{description}")
 
     with ccr_tab[3]:
         #################################################################
         # P r o f i c i e n c i e s
-        pro_types = ['weapons','armor','tools','languages']
-        for p in pro_types:
+        for p in ['weapons','armor','tools','languages']:
             pro_list = []
-            if p in sess.clas['proficiencies']: pro_list += sess.clas['proficiencies'][p]
-            if p in sess.race['proficiencies']: pro_list += sess.race['proficiencies'][p]
-            if p in sess.back['proficiencies']: pro_list += sess.back['proficiencies'][p]
+            for cat in ['clas','race','back']:
+                if p in sess[cat]['proficiencies']: pro_list += sess[cat]['proficiencies'][p]
+            if p == 'languages':
+                language_choice_num = pro_list.count('any')
+                language_list = [
+                    "common",
+                    "dwarvish",
+                    "elvish",
+                    "giant",
+                    "gnomish",
+                    "goblin",
+                    "halfling",
+                    "orc",
+                    "abyssal",
+                    "celestial",
+                    "draconic",
+                    "deep speech",
+                    "infernal",
+                    "primordial",
+                    "sylvan",
+                    "undercommon"
+                    ]
             pro_list = sorted(list(set(pro_list)))
-            if p == 'languages': language_known = pro_list
+            sess[p + "_proficiencies"] = pro_list
             if len(pro_list) == 0: pro_list = ['None']
             st.header(p.title(),divider='rainbow')
             for pl in pro_list:
                 st.markdown(f"- {pl.title()}")
-        if 'any' in language_known:
-            language_list = [
-                "common",
-                "dwarvish",
-                "elvish",
-                "giant",
-                "gnomish",
-                "goblin",
-                "halfling",
-                "orc",
-                "abyssal",
-                "celestial",
-                "draconic",
-                "deep Speech",
-                "infernal",
-                "primordial",
-                "sylvan",
-                "undercommon"
-                ]
-            for l in language_known:
-                if l in language_list: language_list.remove(l)
-            lan_col = st.columns([1,2,1])
-            with lan_col[0]: st.markdown(f"**Choose a Language**")
-            with lan_col[1]:
-                st.selectbox(
-                    "Language",
-                    language_list,
-                    key='Language',
-                    label_visibility="collapsed"
-                    )
-
+        if language_choice_num > 0:
+            lan_col = {}
+            for k in range(language_choice_num):
+                lan_col[k] = st.columns([1,2,1],vertical_alignment = 'center')
+                with lan_col[k][0]: st.markdown(f"**Choose a Language**")
+                with lan_col[k][1]:
+                    st.selectbox(
+                        "Language",
+                        language_list,
+                        key='language_' + str(k),
+                        label_visibility="collapsed",
+                        index = k + 1
+                        )
+                sess["languages_proficiencies"] += [sess['language_' + str(k)]]
+        languages_duplicate = [sd for sd, count in Counter(sess["languages_proficiencies"]).items() if count > 1]
+        print(sess["languages_proficiencies"])
+        if len(languages_duplicate) > 0:
+            form_error = True
+            st.markdown(f"**W A R N I N G!!!**")
+            st.markdown(f"Turn back! You have duplicate languages chosen! {languages_duplicate}")
+            st.markdown(f"**W A R N I N G!!!**")
+        else:
+            form_error = False
+            
     with ccr_tab[4]:
-        None
         #################################################################
         # I n v e n t o r y / E q u i p m e n t
+        k = 0
+        for cat in ['race','clas','back']:
+            if 'equipment' in sess[cat]:
+                st.header(f"**{sess[cat]['name'].title()} Equipment**",divider = 'rainbow')
+                for e in sess[cat]['equipment']:
+                    if isinstance(e,dict):
+                        for k,v in e.items():
+                            st.markdown(f"- {k} *({v})*")
+                    elif isinstance(e,list):
+                        st.selectbox(
+                            "Equipment",
+                            e,
+                            key='equipment_' + str(k),
+                            label_visibility='collapsed'
+                        )
+                        k += 1
+                    else:
+                        st.markdown(f"- {e.title()}")
 
     with ccr_tab[5]:
         des_tab = st.tabs([
@@ -493,7 +482,7 @@ def form_create_character(DATA_DIR):
             st.header(f"{sess.race['name'].title()}",divider = 'rainbow')
             for sr in sup_race:
                 if sr in sess.race['name'] and sess.race['name'] not in sr:
-                    st.markdown(f"{sess.race['description'][sr]}")
+                    if sr in sess.race['description']: st.markdown(f"{sess.race['description'][sr]}")
             st.markdown(f"{sess.race['description'][sess.race['name']]}")
             for title, description in sess.race['description'].items():
                 if title != sess.race['name'] and title not in sup_race:

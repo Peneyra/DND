@@ -25,7 +25,7 @@ def update_1(data,val):
 #mode = "check spells"
 mode = "rebuild yaml"
 #FILE = "scratch.yaml"
-FILE = "phb_backgrounds.yaml"
+FILE = "phb_races.yaml"
 
 
 DATA_DIR = os.path.dirname(os.path.abspath(__file__)) + "/data/"
@@ -121,13 +121,4 @@ elif mode == "check spells":
                     print("  - " + s)
 
 elif mode == "rebuild yaml":
-    for k, v in data.items():
-        if 'skills' in data[k]['proficiencies']:
-            sk = []
-            for skill_list in data[k]['proficiencies']['skills']:
-                skills = []
-                for skill in skill_list:
-                    skills.append(skill.title())
-                sk.append(skills)
-        data[k]['proficiencies']['skills'] = sk
     save_yaml(DATA_DIR + FILE,data,data_old)
