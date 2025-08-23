@@ -2,48 +2,45 @@ import streamlit as st
 from streamlit_autorefresh import st_autorefresh
 
 def form_main(DATA_DIR):
-    st.title("🧙 Player Dashboard")
     st_autorefresh(interval=3000,key="refresh")
+    sess = st.session_state
+    char = sess.character
 
-    if st.session_state.character == {}:
-        st.session_state.character = next(iter(st.session_state.characters.values()))
-    print(st.session_state.initiative)
-    if st.session_state.initiative["visible"]:
-        st.subheader("⚔️ Initiative Tracker")
-        st.write(" || ".join(f"{v}" for \
-                v in st.session_state.initiative["order"]))
-
-    col1, col2, col3 = st.columns([3,1,1])
-
-    # Select a character
-    with col1:
+    hdr_col = st.columns([1,1], vertical_alignment = 'bottom')
+    with hdr_col[0]:
+        st.title("🧙Character")
+    with hdr_col[1]:
         char_name = st.selectbox(
             "Choose your character",
-            sorted(list(st.session_state.characters.keys())),
-            index=sorted(list(st.session_state.characters.keys())).index(st.session_state.character["name"]),
-            key="character_select"
+            sorted(list(char.keys())),
+            index=sorted(list(sess.characters.keys())).index(char["name"]),
+            key="character_select",
+            label_visibility="collapsed"
         )
-        st.session_state.character = st.session_state.characters[char_name]
+        char = sess.characters[char_name]
+
+    if char == {}:
+        char = next(iter(sess.characters.values()))
+    if sess.initiative["visible"]:
+        st.subheader("⚔️ Initiative Tracker")
+        st.write(" || ".join(f"{v}" for \
+                v in sess.initiative["order"]))
+
+    but_col = st.columns([1,1,2])
 
     # Create a character
-    with col2:
-        st.markdown("###")
+    with but_col[0]:
         if st.button("➕ Create New"):
-            st.session_state.display_form = "create_character"
-            st.experimental_rerun()
+            sess.display_form = "create_character"
+            st.rerun()
 
     # Shift to DM editing form
-    with col3:
-        st.markdown("###")
+    with but_col[1]:
         if st.button("🧠 I am the DM"):
-            st.session_state.display_form = "DM"
-            st.experimental_rerun()
-
-    st.subheader(f"""
-                🎭 {st.session_state.character['name'].title()} the
-                {st.session_state.character["race"].title()}
-                {st.session_state.character["class"].title()}
-                """)
+            sess.display_form = "DM"
+            st.rerun()
+    print(char)
+    st.subheader(f"🎭 {char['name'].title()} the {char['race'].title()} {char['class'].title()}")
     
     # Level
     st.write("Level: ", st.session_state.character["level"])

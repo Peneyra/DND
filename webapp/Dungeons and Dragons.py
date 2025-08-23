@@ -17,8 +17,7 @@ DATA_DIR = os.path.dirname(os.path.abspath(__file__)) + "/data/"
 if "utime" not in st.session_state: st.session_state.utime = time.time()
 # initialize/update characters
 if not "characters" in st.session_state or os.path.getmtime(DATA_DIR + 'characters.yaml') > st.session_state.utime:
-    st.session_state.characters = load_yaml(DATA_DIR + 'characters.yaml')["characters"]
-# initialize/update character
+    st.session_state.characters = load_yaml(DATA_DIR + 'characters.yaml')
 if not "character" in st.session_state:
     st.session_state.character = {}
 elif os.path.getmtime(DATA_DIR + 'characters.yaml') > st.session_state.utime:
